@@ -1,0 +1,7 @@
+Protótipo do Controle do GameCube.
+Protótipo é um produto de trabalho da fase de testes e/ou planejamento de um projeto.
+O termo protótipo é usado em uma variedade de contextos, incluindo semântica, design, eletrônica e programação de software. Um protótipo é geralmente usado para avaliar um novo design para aumentar a precisão por analistas de sistema e usuários. A prototipagem serve para fornecer especificações para um sistema real e funcional, ao invés de um sistema teórico.
+Em alguns modelos de fluxo de trabalho de design, a criação de um protótipo (um processo às vezes chamado de materialização) é a etapa entre a formalização e a avaliação de uma ideia.
+O termo pode se referir a um automóvel (como um carro conceptual), avião, nave espacial, navio ou qualquer outra embarcação, veículo de transporte, moveis ou produto da engenharia, como, por exemplo, um porto ou uma usina hidrelétrica, uma turbina, uma bomba hidráulica, etc. Geralmente estes produtos são testados antes em modelos físicos, em laboratórios especializados de aerodinâmica ou de hidrodinâmica.
+A grande diferença desse elemento para uma maquete, é que a maquete seria em miniatura e o protótipo é em tamanho real.
+Na Engenharia de Software, protótipo é um sistema/modelo (um website ou outro software) sem funcionalidades inteligentes (acesso a banco de dados, por exemplo), podendo conter apenas funcionalidades gráficas. Utilizado para fins de ilustração e melhor entendimento, geralmente em reuniões entre a equipe de Análise de Sistemas e o contratante.

@@ -1,0 +1,3 @@
+O fator de compressão é b/a em cada caso. Para a elipse, este factor é também a razão de aspecto da elipse.
+O valor obtido indica quanto o elipsóide se aproxima da forma esférica (razão 0).
+No seguinte, a representa a dimensão maior (e.g. semi-eixo maior), enquanto b é o (semi-eixo menor) menor. Todos os achatamentos são zero para um círculo (a=b).
