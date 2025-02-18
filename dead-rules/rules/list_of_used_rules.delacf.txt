@@ -1,0 +1,363 @@
+?36 A) s (_GS1 z
+?36 @) s (_G z
+&) a (_ ,&
+ã &~
+_) a (_ a
+a a
+&) a (_à ,&/
+á ''a
+âB) a (C@ &
+áC) a (C@ &
+áCC) a (C@ &
+âCC) e (C@ e
+áCC) i (A_ j
+âCC) i (A_ j
+áC) e (C@ e
+áC) el (_ eU
+áC) i (A_ j
+áC) o (C@ o
+ai aI
+a (iCK a
+ai (s aI
+ai) x (A S
+A_l) a (_ &
+ál (B ''aU
+a (lh+ a
+al (K aU
+a (ll+ a
+a (m &~
+â (m ''&~
+a (mA@ &
+a (mAr_ &
+am (C &~m
+âm (K ''&~m
+am (_ ,&U~
+a (n &~
+â (n ''&~
+a (nA@ &
+anh (A &~n^
+an (K+ &~N
+ân (K ''&~N
+ao (_ aU
+ão &U~
+A) r (A *
+&) a (s_ ,&
+A) s (_AS1 z
+A) s (A z
+A) s (_S1 s
+au aU
+au (CK aU
+A) x (A ks
+ay aI
+b b
+b) o (rL04_ O
+b) o (squL02_ O
+brA) x (A S
+_CaC) e (ta_ e
+C) ee (_ i
+_C) e (rdL04_ E
+_c) e (stL03_ e
+_chancel) e (L05_ E
+chr kR
+ch S
+c k
+ck k
+Cl) i i
+C) o (pL04_ O
+C) o (smA_ O
+_co) x (A S
+C) r (A R
+Cr) i i
+ç s
+c (Y s
+d d
+d (e_ dZ
+d (i dZ
+@d) o (ra_ o
+@d) o (re_ o
+e (_AN ,i/
+éC) a (C@ &
+êCC) a (C@ &
+êCC) i (A_ j
+e (cCL04_ E
+éC) i (A_ j
+êC) i (A_ j
+e (cL04_ E
+e (dL02_ E
+e (drL04_ E
+e e
+é ''E
+ê ''e
+ee (C_ i
+e (fL04_ E
+e (gL04_ E
+e (grL04_ E
+e (iCK e
+ei eI
+éi ''EI
+ei (s eI
+éi (s ''EI
+ei) x (A S
+él (B ''EU
+e (lh+ e
+el (K EU
+e (lL04_ E
+e (ll+ E
+em (C eIm
+em (_ ,eIN
+ém (_ ''eIN
+en (_ ,eIN
+enh en^
+en (K eIN
+ên (K ''eIN
+en (s_ ,eIN
+én (s_ ''eIN
+e (quL02_ E
+e (rbL04_ E
+e (rnL04_ E
+e (rrL04_ E
+e (rsL04_ E
+e (rtL04_ E
+e (rvL04_ E
+ese) s (_ s
+_esqu) e (rdL08_ e
+e (ssL04_ E
+e (stL04_ E
+e (strL04_ E
+e (s_ ,y
+et (_ EtS
+e (tL04_ E
+e (trL04_ E
+e (uCK e
+é (uCK ''E
+eu eU
+éu ''EU
+eu (s eU
+éu (s ''EU
+e (vL04_ E
+e) x (A ks
+_e) x (A z
+e (xL04_ E
+e (_ ,y
+ey eI
+f) e (rL04_ E
+f (f
+f f
+_f) o (L05_ o
+f) o (rmL03_ O
+_gal) e (gL08_ e
+_Gar) o (tL08_ o
+g g
+gra) x (A S
+g) u (a+ w
+gu (Y g
+g (Y Z
+h
+í) a (CA_ &
+i (a i
+i (á i
+i (ã i
+i (A j
+ib) e (rL04_ E
+íC) a (C@ &
+íCC) a (C@ &
+íCC) i (A_ j
+íC) e (C@ e
+íC) el (_ eU
+íC) i (A_ j
+i (e i
+i) e (r_ E
+_) i (_ i
+i (_ 'i
+i i
+í ''i
+i (L04_ 'i
+i (lh+ i
+il (K iU
+i (ll+ i
+im (C im
+ím (C ''im
+í (m ''i
+im (_ iN
+in (C iN
+in (g iN
+inh in^
+í (n ''i
+ín (K ''iN
+i (oCK i
+i (o i
+i (õ i
+io (_ iU
+io (s_ iU
+i (ú i
+iu (_ iU
+j Z
+k k
+_l) e (sL03_ E
+lh l^
+_lin) gu (A gw
+_li) x (A S
+l l
+l) l
+l) o (re_ o
+_ma@) o (r_ O
+_mar) x ks
+@m) e (L06_ e
+men) o (L05_ O
+me) x (A S
+m m
+m) o (lhL04_ O
+_mulh) e (L05_ E
+n) e (grL08_ e
+nh n^
+n n
+n) qu (en kw
+n) r (+ x
+ôBC) a (C@ &
+o (brL04_ O
+óCC) e (CA_ e
+óCC) i (A_ j
+óCC) o (C@ o
+óC) e (C@ e
+ôC) e (C@ e
+óC) i (A_ j
+ôC) i (A_ j
+o (cL04_ O
+o (dL04_ O
+õe o~j
+o (gL04_ O
+o (g_ O
+o (iCK o
+oi oI
+ói ''OI
+oi (s oI
+ói (s ''OI
+ol (B ow
+o (ldL04_ O
+_) o (lhL04_ O
+o (lL04_ O
+o (l_ 'O
+o (ltL04_ O
+o (ma_ o
+om (C om
+om (_ oN
+onh on^
+on (K oN
+ôn (K ''oN
+o o
+ó ''O
+ô ''o
+oo (C_ U
+o (pCL04_ O
+o (p_ O
+o (quL02_ O
+o (rCL04_ O
+o (rCo_ o
+o (rdens_ O
+o (rL04_ O
+o (sL04_ O
+o (so_N o
+o (ssL04_ O
+ossos (_G Os,Uz
+ossos (_ Os,Us#
+o (stL04_ O
+o (sto_ o
+o (strL04_ O
+o (s_ ,U
+o (tL04_ O
+@) o (_ ,U
+ou ow
+o (va_ O
+o (ve_ O
+ovos (_G Ov,Uz
+ovos (_ Ov,Us#
+_o) x (A S
+o (x_ O
+oy OI
+o (ze_ O
+o (z_ O
+p) e (çL03_ E
+p) e (rL04_ E
+_p) e (sL01_ E
+play pl'eI
+p) o (rL02_ o
+p) ostos (_ Ost,Us#
+p p
+_pr) e (tL08_ e
+pr) o (vL03_ O
+_pud) e (L05_ E
+pu) x (A S
+qu) e (brL04_ E
+_) que (_ ky
+qu) e (r_ E
+qu) e (rL04_ E
+qui) x (A S
+qu kw
+qü kw
+qu (Y k
+r (_A *
+r (C *@-
+&r) e (_AN ,i
+r (_h *
+ri) o (re_ o
+_ro) x (A S
+r (_ r
+rr x
+r) u (A u
+_) r x
+sc (Y s
+@s) e (L05_ E
+s (G z
+sh S
+s) o (rA_ o
+s (_ s#
+s s
+ss s
+t (e_ tS
+t (i tS
+t (í tS
+t) o (dA_ o
+@t) o (ra_ o
+@t) o (re_ o
+t (t
+t t
+t (_ tS
+u (a u
+u (A w
+úC) a (C@ &
+úCC) a (C@ &
+úCC) i (A_ j
+úC) e (C@ e
+u (eC u
+u) e (ta_ e
+u (iCK u
+u (íC u
+ui (_ 'uI
+ui uI
+u (L04_ 'u
+u (lh+ u
+ul (K uw
+u (ll+ u
+úm (A ''u~m
+um (C u~m
+um (_ u~N
+unh u~n^
+un (K u~N
+ún (K ''u~N
+_) u (_ u
+u u
+ú ''u
+_v) e (lhL08_ E
+v v
+w w
+x (A S
+x (C s
+xc (Y s
+x (_ ks
+y (A j
+y (_ i
+@) z (_A z
+_z) e (rL04_ E
+@) z (_G z
+@) z (_ s
+z z
