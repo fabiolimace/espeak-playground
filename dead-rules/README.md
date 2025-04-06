@@ -59,50 +59,58 @@ Function to generate list of all rules in `espeak-ng/dictsource/pt_rules`:
 
 ```bash
 function generate_list_of_all_rules {
-	cat $HOME/git/espeak-ng/dictsource/pt_rules \
+	cat -n $HOME/git/espeak-ng/dictsource/pt_rules \
 	| tr -s "\t" " " | sed -E 's,//.*,,' \
-	| grep -E -v '^[ ]*\.' \
-	| grep -E -v '^[ ]*$' \
-	| sed -E "s/(\?[!]?[0-9])[ ]+//" \
-	| sed -E "s/^[ ]+//;s/[ ]+$//" \
-	| sort
+	| sed -E "s/ +/ /g;s/^ //;s/ $//" \
+	| grep -E -v '^[ ]*[0-9]+[ ]*\.' \
+	| grep -E -v '^[ ]*[0-9]+[ ]*$' \
+	| sed -E 's/ /\t/'
 }
 ```
 
 Generate list of all rules in `espeak-ng/dictsource/pt_rules`:
 
 ```bash
-generate_list_of_all_rules > list_of_all_rules.txt
+generate_list_of_all_rules > rules/list_of_all_rules.txt
 ```
 
 ## Find the used rules
+
+First, you must compile with debug option, so that line numbers are printed with the rules.
+
+```bash
+cd ~/git/espeak-ng/dictsource
+sudo espeak-ng --compile-debug=pt-br
+```
 
 Function to generate list of used rules in a list of words:
 
 ```bash
 function generate_list_of_used_rules {
-	cat "$1" | espeak-ng -q -v pt-br -X \
-	| gawk -f ./count_used_rules.awk \
-	| tr -s "\t" " " | awk '{ $1 = ""; print $0; }' \
-	| sed -E "s/(\?[!]?[0-9])[ ]+//" \
-	| sed -E "s/^[ ]+//;s/[ ]+$//" | sort
+	zcat "$1" | espeak-ng -q -v pt-br -X | gawk -f ./count_used_rules.awk \
+	| sed -E "s/ +/ /g;s/^ //;s/ $//" \
+	| sort -n -r
 }
 ```
 
 Generate list of used rules for DELAS-PB, DELAF-PB and Linux dicts:
 
 ```bash
+cd ~/git/espeak-ng-playground/dead-rules
+```
+
+```bash
 # DELAS PB v2 (time: ~40s):
-time generate_list_of_used_rules list_of_words.delas.txt > list_of_used_rules.delas.txt
+time generate_list_of_used_rules words/list_of_words.delas.txt.gz > rules/list_of_used_rules.delas.txt
 
 # DELAF PB v2 (time: ~1h20min):
-time generate_list_of_used_rules list_of_words.delaf.txt > list_of_used_rules.delaf.txt
+time generate_list_of_used_rules words/list_of_words.delaf.txt.gz > rules/list_of_used_rules.delaf.txt
 
 # DELACF PB v1 (time: ~3s):
-time generate_list_of_used_rules list_of_words.delacf.txt > list_of_used_rules.delacf.txt
+time generate_list_of_used_rules words/list_of_words.delacf.txt.gz > rules/list_of_used_rules.delacf.txt
 
 # Linux dicts (time: ~5min):
-time generate_list_of_used_rules list_of_words.linux.txt > list_of_used_rules.linux.txt
+time generate_list_of_used_rules words/list_of_words.linux.txt.gz > rules/list_of_used_rules.linux.txt
 ```
 
 ## Find the dead the rules
@@ -111,43 +119,16 @@ Generate a list of DEAD rules DELAS-PB, DELAF-PB and Linux dicts (lines deleted 
 
 ```bash
 # DELAS PB v2:
-comm -23 list_of_all_rules.txt list_of_used_rules.delas.txt > list_of_dead_rules.delas.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delas.txt > rules/list_of_dead_rules.delas.txt
 
 # DELAF PB v2:
-comm -23 list_of_all_rules.txt list_of_used_rules.delaf.txt > list_of_dead_rules.delaf.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delaf.txt > rules/list_of_dead_rules.delaf.txt
 
 # DELACF PB v1:
-comm -23 list_of_all_rules.txt list_of_used_rules.delacf.txt > list_of_dead_rules.delacf.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delacf.txt > rules/list_of_dead_rules.delacf.txt
 
 # Linux dicts
-comm -23 list_of_all_rules.txt list_of_used_rules.linux.txt > list_of_dead_rules.linux.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.linux.txt > rules/list_of_dead_rules.linux.txt
 ```
-
-Generate a list of MIGHT NOT BE DEAD rules DELAS-PB and Linux dicts (lines changed in the second file):
-
-```bash
-# DELAS PB v2:
-comm -13 list_of_all_rules.txt list_of_used_rules.delas.txt > list_of_might_not_be_dead_rules.delas.txt
-
-# DELAF PB v2:
-comm -13 list_of_all_rules.txt list_of_used_rules.delaf.txt > list_of_might_not_be_dead_rules.delaf.txt
-
-# DELACF PB v1:
-comm -13 list_of_all_rules.txt list_of_used_rules.delacf.txt > list_of_might_not_be_dead_rules.delacf.txt
-
-# Linux dicts
-comm -13 list_of_all_rules.txt list_of_used_rules.linux.txt > list_of_might_not_be_dead_rules.linux.txt
-```
-
-> CAUTION:
-> Compare the `dead` list with the `might_not_be_dead` list, because some lines might have been changed by the `espeak-ng` executable.
-> Use `meld` to help do identify the rules that the executable updated; they are highlighted in blue color.
-
-> NOTE:
-> The output lists for DELAF PB and DELACF PB won't be uploaded to this Gist.
-
----
-
-_Github Gist URL_: <https://gist.github.com/fabiolimace/760bf4b8ba0ef536005fb29ad2b4c59d>
 
 

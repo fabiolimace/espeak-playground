@@ -2,6 +2,10 @@
 
 # Counts how many times each espeak-ng rule is used.
 #
+# First, you must compile with debug option, so that line numbers are printed with the rules.
+#
+#     sudo espeak-ng --compile-debug=pt-br
+#
 # Usage:
 #
 #     cat list_of_words.txt | espeak-ng -q -v pt-br -X | gawk -f ./count_used_rules.awk > list_of_used_rules.count.txt
@@ -14,24 +18,45 @@
 BEGIN {
 }
 
-/^$/ {
-	n = asorti(lines, indexes);
-	rule = lines[indexes[n]];
-	rules[rule]++;
-	for (i in lines) delete lines[i];
+/^Translate/ {
+    sub(/Translate/,"")
+    word=$0;
+    next;
+}
+
+/^$/ && rule {
+    rule = "";
+    # sort the candidates by score
+    n = asorti(candidates, scores);
+    # the winner has highest score
+    winner = candidates[scores[n]];
+    rules[winner]++;
+	for (i in candidates) delete candidates[i];
+    if (!examples[winner]) {
+        examples[winner] = word;
+    };
 }
 
 $1 ~ /[0-9]+/ {
-	number = $1
-	sub(number, "");
-	# format the number to 4 digits
-	number = sprintf("%4d", number);
-	# remove the square quotes: `[kir]`
-	$NF = substr($NF, 2, length($NF) - 2);
-	lines[number] = $0;
+	
+	sub(/:/,"",$2);
+	
+	# format the score value to 6 digits
+	score = sprintf("%6d", $1); $1 = "";
+	# format the line number to 6 digits and remove ":"
+	line = sprintf("%6d", $2); $2 = "";
+	
+	# squash spaces and tabs
+	gsub(/[ \t]+/," ", $0);
+	# trim the spaces
+	sub(/^[ ]/,"", $0);
+	sub(/[ ]$/,"", $0);
+	
+	rule = line "\t" $0;
+	candidates[score] = rule;
 }
 
 END {
-	for (i in rules) print rules[i], i;
+	for (i in rules) print rules[i] "\t" i "\t" examples[i];
 }
 

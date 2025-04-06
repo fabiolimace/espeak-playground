@@ -1,338 +1,320 @@
-&) a (_ =&
-a (_ =&
-_) a (_ a
-a (_a =&/
-&) a (_à =&/
-a (_à =&/
-A) cç s
-a_c) o (rte_ o
-A) ct t
-A_) - (_D _
-á (iCK ''a
-ái (s ''aI
-a (l_ 'A
-A_l) a (_ &
-ál ''Al
-_alca) gue (t gwe
-A) lh l^
-a (lK ,A
-A_l) o (_ U
-à (m &~
-am (C &~N
-àm (K &~m
-am (_ =&~N
-am (_ =&U~
-a (ñ &~
-à (n &~
-ành (A &~n^
-àn (K &~N
-A) nn n
-_apazí) gu (e gw
-A) que (nA_ ke
-A) r (_ r-
-&) a (s_ =&
-a (s_ =&
-_) às (_A ,a:z
-_) às (_ ,a:S
-A) s (_AS1 z
-A) s (C s#
-_) às (_G ,a:z
-_) às (_G ,a:Z
-A) s (_GS1 z
-A) s (_G+S1 Z
-A) s (G+ Z
-A) s (_KS1 s#
-A) ss s
-ation (_ 'eIS&~N
-_ave) x (A S
-_) a (_W 'a
-áy ''aI
-A) z (_C S
-A) z (C S
-A) z (_G+ Z
-A) z (G+ Z
-_barb) e (tA_ e
-b (B bI
-_) b (_ be
-b (_C b_
-b (s b
-C) acç 'a's
-Cã) e j
-c (B kI
-c (c
-c (_C k_
-C_) - (_D _
-C) e (a i
-C) e (ã i
-C) e (cC ,E
-C) ecç 'Es
-C) e (o 'i
-_c) e (rcL02_ E
-c) e (rea y
-C) e (ú i
-_C) o (CACAC u
-_Com) o (do_ o
-conta) ct (A kt
-C) oo (_ ow
-C) quê (_ ke
-_) c (_ se
-c (s k
-c (t k
-D_) ª %a
-d (B dZI
-d (_C d_
-D_) - (_D m'enUs
-d) e (CAA y
-d) e (CACAA y
-d) e (CACAC y
-d) e (CACC y
-d) e (CCAA y
-d) e (CCACA y
-d) e (CCACCA y
-d) e (fici y
-_d) e (fini y
-d) e (nCAA ,e
-d) e (nCACA ,e
-d) e (nCACCA ,e
-_d) e (slig y
-_d) e (sloc y
-__) - (_D m'enUs
-D_) º %o
-, (D v'irgul&
-e (_AN =i/
-_ecl) o (dL03_ o
-ection (_ 'EkS&~N
-_) e (dnL08_ E
-_) e (_ E
-e (e i
-_) e (f i
-ei ($w_alt EI
-é (iCK ''E
-e (_iN =i/
-e (l_ 'E
-el (ton_ 'EU
-em (_ =eIN
-em (s_ =eIN
-ém (s_ ''eIN
-_enc) e (dL03_ E
-_end) o (çL03_ O
-en (_ =eIN
-én (_ ''eIN
-ênh ''en^
-en (s_ =eIN
-_ent) e (sL04_ E
-enxá) gu (L02_ gw
-e (rquL02_ E
-_) es (C@@ S
-e (s_ =y
-é (uCK ''E
-e) x (CA S
-_expl) o (dL03_ o
-e (_ =y
-éy ''eI
-f (B fI
-f (_C f_
-_f) e (ch y
-_) f (_ Ef
-_) f (_ 'Efy
-_f) e (rramenta y
-_fle) x (a S
-flex) o (rA_
-_f) o (dL01_s o
-f) o (rmat u
-f) o (rmulá u
-_) f (_W Ef;
-g (B gI
-g (_C g_
-_) g (_ ge
-gu (ém_ g
-g) u (Y
-_) g (_W Ze
-_) g (_ Ze
-_) h (_ ag'a
-_) help _^_En
-_) hel (p x'EU
-_he) x (A z
-hip) e (r ,E
-ight (_ _^_EN
-ights (_ _^_EN
-im (C iN
-ím (_ ''iN
-_impl) o (dL03_ o
-@) ing (_ _^_EN
-@) ings (_ _^_EN
-_int) e (rn ,E
-_) i (ntern 'i
-interr) o (g u
-i (rton_ 'i
-i) x (a_ S
-i) x (as_ S
-j (B ZI
-j (_C Z_
-_) j (_ Z'Ot&
-k (B kI
-k (_C k_
-k (k
-_) k (_ ka
-_) k (_ k'ap&
-k (s k
-k (t k
-&l) e (_AN =i
-_) l (_ El
-_) l (_ 'Ely
-l) e (ta 'E
-lin) gu (i gw
-_) l (_W El;
-man) gu (ei g
-m (B mI
-m (_C m_
-_m) e (ga ,E
-_) m (_ Em
-_) m (_ 'eme
-menorr) ei (a_ EI
-m (m
-_) m (_W Em;
-n (B nI
-n (_C n_
-_) n (_ En
-_) ñ (_ enetil
-_n) e (nhu i
-_) ñ (_ 'enjE
-n) e (t 'E
-n) gu (A gw
-ñ n^
-_) n (_W En;
-_) o (_A u
-_) o (C O
-_) o (_C U
-o (gs_ O
-oi ($w_alt2++ oI
-oi ($w_alt OI
-ó (iCK ''O
-om (C oN
-ôm (_ ''oN
-ond) e (L07_ e
-ônh ''on^
-õ o~
-o (os_ o
-ortos (_A 'O*@-tUz
-ortos (_G 'O*@-tUz
-ortos (_G 'O*@-tUZ
-ortos (_ 'O*@-tUs
-ortos (_ O*@-t=Us#
-_) os (_A Uz
-_) os (_G Uz
-ossos (_A Os=Uz
-ossos (_G Os=Uz
-ossos (_G Os=UZ
-ossos (_ Os=Us#
-o (s_ =U
-@) o (_ =U
-óu ''Ow
-ovos (_A Ov=Uz novos, povos, etc.
-ovos (_G Ov=Uz novos, povos, etc.
-ovos (_G Ov=UZ novos, povos, etc.
-ovos (_ Ov=Us# novos, povos, etc.
-óy ''OI
-oz (_ Os#
-p) a (d_ =E
-p (B pI
-p (_C p_
-_p) e (rcentag y
-_p) e (squ y
-p) e (ssoa y
-_pe) xo (to_ So
-por_) que (_é ky
-por_) que (_ ke
-_p) o (rtuC u
-p) ostos (_A Ost=Uz
-p) ostos (_G Ost=Uz
-p) ostos (_G Ost=UZ
-p) ostos (_ Ost=Us#
-_) p (_ pe
-pr) e (cis y
-pr) e (f y
-pr) o (f u
-p (s p
-p (t p
-q (B kI
-_) q (_ ke
-q) u (a+ w
-queç kes
-_) quei (C k'eI
-_) que ke
-que (l ke
-que (r_ kE
-qui ki
-_) qu (inde ku
-qu (K ku
-_) quo kuo
-r *
-_r_) $
-_) r (_\$ xe'aU
-r (_A *
-&r) e (_AN =i
-_r) e (cicl y
-r) e (cor y
-_redar) gu (A gw
-r) e (luz y
-r) e (lva ,E
-_) r (_ 'Err
-r) e (smung y
-r) e (ss y
-r) e (vel y
-r) e (volv y
-_) r (_ 'Exe
-r (_h *
-r) u (_A u
-_) r (_W 'Err;
-_sa) gu (i gw
-_) s (C Is
-s_colh) e (res_ E
-_) s (_ Es
-@) s (_G z
-_) sobre (@P5 sob*e
-_s) o (lu u
-@s) on (_ %oN
-_sop) e (sL04_ E
-s) r x
-@) s (_ s#
-ssion (_ _^_EN
-ß s
-sup) e (r ,E
-_) s (_W Es|;
-t (B tSI
-t (_C t_
-_t) e (rmin y
-_tetran) e (tL08_ E
-th _^_EN
-tion (_ _^_EN
-_trin) e (tL08_ E
-_) t (_ te
-_ultr) a (leve_ &
-um (C u~N
-úm (C ''u~N
-úm (_ ''u~N
-_) u (_ u
-uy uI
-v (B vI
-v (_C v_
-v) e (l_ ,E
-_v) e (loci y
-_v) os (_A uz
-_v) os (_G uz
-v (v
-_) w (_ d'ablju
-_) w (_ d'&bl,iu
-w (_ _^_EN
-_) w u
-x (ó_ z
-y (_ %i
-_) y (_ 'ipsiloN
-_) y (_ 'ips,ilON
-@) z (_A z
-z (B zI
-z (_C z_
-@) z (_G z
-@) z (_ S
-_) z (_ ze
+29	_) a (_ a
+30	_) a (_W 'a
+34	A_l) a (_ &
+35	&) a (_à =&/
+36	?1 a (_ =&
+37	?1 a (s_ =&
+38	?1 a (_a =&/
+39	?1 a (_à =&/
+41	?1 p) a (d_ =E
+42	?1 a (l_ 'A
+43	?1 a (lK ,A
+51	a (ñ &~
+54	am (_ =&~N
+56	?4 am (C &~N
+61	?1 C) acç 'a's
+89	ation (_ 'eIS&~N
+92	_ultr) a (leve_ &
+108	?1 _) às (_ ,a:S
+109	?1 _) às (_G ,a:Z
+111	_) às (_A ,a:z
+112	?2 _) às (_G ,a:z
+113	à (m &~
+114	à (n &~
+115	àm (K &~m
+116	àn (K &~N
+117	ành (A &~n^
+123	ái (s ''aI
+124	á (iCK ''a
+125	áy ''aI
+129	?1 ál ''Al
+139	_) b (_ be
+142	?3 b (B bI
+143	?3 b (s b
+144	?3 b (_C b_
+148	_) c (_ se
+151	?3 c (B kI
+152	?3 c (s k
+153	?3 c (t k
+154	?3 c (_C k_
+158	?1 c (c
+159	?1 A) ct t
+160	?1 A) cç s
+161	?1 conta) ct (A kt
+168	?3 d (B dZI
+169	?3 d (_C d_
+177	_) e (_ E
+181	?2 e (_AN =i/
+182	?2 &l) e (_AN =i
+183	?2 &r) e (_AN =i
+184	?1 e (_iN =i/
+186	?1 e (e i
+231	e (rquL02_ E
+278	?1 d) e (CAA y
+279	?1 d) e (CACAA y
+280	?1 d) e (CACAC y
+281	?1 d) e (CACC y
+282	?1 d) e (CCAA y
+283	?1 d) e (nCAA ,e
+284	?1 d) e (CCACA y
+285	?1 d) e (nCACA ,e
+286	?1 d) e (CCACCA y
+287	?1 d) e (nCACCA ,e
+291	?1 _) es (C@@ S
+292	?1 _) e (f i
+293	?1 _n) e (nhu i
+294	?1 C) e (cC ,E
+295	?1 C) ecç 'Es
+296	?1 C) e (ã i
+297	?1 C) e (a i
+298	?1 C) e (o 'i
+299	?1 C) e (ú i
+300	?1 Cã) e j
+302	?1 c) e (rea y
+303	?1 d) e (fici y
+304	?1 _d) e (fini y
+305	?1 _d) e (slig y
+306	?1 _d) e (sloc y
+307	?1 _f) e (ch y
+308	?1 _p) e (rcentag y
+309	?1 p) e (ssoa y
+310	?1 pr) e (cis y
+311	?1 pr) e (f y
+312	?1 _r) e (cicl y
+313	?1 r) e (cor y
+314	?1 r) e (luz y
+315	?1 r) e (lva ,E
+316	?1 r) e (smung y
+317	?1 r) e (ss y
+318	?1 r) e (volv y
+319	?1 r) e (vel y
+320	?1 _t) e (rmin y
+321	?1 _v) e (loci y
+322	?1 _f) e (rramenta y
+323	?1 _p) e (squ y
+324	?1 hip) e (r ,E
+325	?1 sup) e (r ,E
+326	?1 _m) e (ga ,E
+327	?1 _int) e (rn ,E
+328	?1 n) e (t 'E
+329	?1 e (l_ 'E
+330	?1 v) e (l_ ,E
+331	?1 l) e (ta 'E
+353	ection (_ 'EkS&~N
+388	ond) e (L07_ e
+416	_sop) e (sL04_ E
+418	_barb) e (tA_ e
+426	_enc) e (dL03_ E
+431	_) e (dnL08_ E
+435	menorr) ei (a_ EI
+446	_tetran) e (tL08_ E
+447	_trin) e (tL08_ E
+451	?2 el (ton_ 'EU
+475	_c) e (rcL02_ E
+482	s_colh) e (res_ E
+495	_ent) e (sL04_ E
+544	é (iCK ''E
+545	éy ''eI
+549	é (uCK ''E
+551	ém (s_ ''eIN
+552	én (_ ''eIN
+561	ênh ''en^
+566	?1 _) f (_W Ef;
+567	?1 _) f (_ Ef
+568	_) f (_ 'Efy
+571	?3 f (B fI
+572	?3 f (_C f_
+576	?1 _) g (_ ge
+577	?1 _) g (_W Ze
+578	_) g (_ Ze
+581	?3 g (B gI
+582	?3 g (_C g_
+586	_alca) gue (t gwe
+588	_apazí) gu (e gw
+594	enxá) gu (L02_ gw
+597	lin) gu (i gw
+601	_redar) gu (A gw
+602	_sa) gu (i gw
+608	?1 n) gu (A gw
+609	?1 man) gu (ei g
+610	?1 gu (ém_ g
+614	_) h (_ ag'a
+616	?1 _) help _^_En
+617	?2 _) hel (p x'EU
+642	?4 im (C iN
+674	?1 _) i (ntern 'i
+675	?1 @) ing (_ _^_EN
+676	?1 @) ings (_ _^_EN
+677	?2 il (ton_ 'iU
+678	?2 i (rton_ 'i
+681	?1 ight (_ _^_EN
+682	?1 ights (_ _^_EN
+690	ím (_ ''iN
+698	_) j (_ Z'Ot&
+700	?3 j (B ZI
+701	?3 j (_C Z_
+705	?1 _) k (_ k'ap&
+706	?2 _) k (_ ka
+708	k (k
+709	?3 k (B kI
+710	?3 k (s k
+711	?3 k (t k
+712	?3 k (_C k_
+716	?1 _) l (_W El;
+717	?1 _) l (_ El
+718	_) l (_ 'Ely
+721	?1 lh l^
+724	?4 A) lh l^
+728	?1 _) m (_W Em;
+729	?1 _) m (_ Em
+730	_) m (_ 'eme
+732	m (m
+733	?3 m (B mI
+734	?3 m (_C m_
+738	?1 _) n (_W En;
+739	?1 _) n (_ En
+743	?3 n (B nI
+744	?3 n (_C n_
+746	?1 A) nn n
+750	_) ñ (_ 'enjE
+751	?1 _) ñ (_ enetil
+752	ñ n^
+760	_) o (_C U
+761	_) o (_A u
+763	?2 _) os (_A Uz
+764	?2 _) os (_G Uz
+766	?2 _v) os (_A uz
+767	?2 _v) os (_G uz
+778	o (os_ o
+779	?1 C) oo (_ ow
+788	A_l) o (_ U
+791	o (gs_ O
+825	?4 om (C oN
+850	?1 oz (_ Os#
+866	?1 _) o (C O
+867	?1 _C) o (CACAC u
+868	?1 f) o (rmat u
+869	?1 _p) o (rtuC u
+870	?1 pr) o (f u
+871	?1 _s) o (lu u
+872	?1 interr) o (g u
+873	?1 f) o (rmulá u
+906	_f) o (dL01_s o
+907	_ecl) o (dL03_ o
+908	_expl) o (dL03_ o
+909	_impl) o (dL03_ o
+932	flex) o (rA_
+948	a_c) o (rte_ o
+960	ossos (_A Os=Uz
+961	?1 ossos (_G Os=UZ
+962	?2 ossos (_G Os=Uz
+964	p) ostos (_A Ost=Uz
+965	?1 p) ostos (_G Ost=UZ
+966	?2 p) ostos (_G Ost=Uz
+967	ortos (_ 'O*@-tUs
+968	ortos (_A 'O*@-tUz
+969	?1 ortos (_G 'O*@-tUZ
+970	?2 ortos (_G 'O*@-tUz
+972	ovos (_A Ov=Uz novos, povos, etc.
+973	?1 ovos (_G Ov=UZ novos, povos, etc.
+974	?2 ovos (_G Ov=Uz novos, povos, etc.
+981	_Com) o (do_ o
+994	_end) o (çL03_ O
+1000	ôm (_ ''oN
+1003	ônh ''on^
+1011	ó (iCK ''O
+1012	óu ''Ow
+1013	óy ''OI
+1017	õ o~
+1022	_) p (_ pe
+1025	?3 p (B pI
+1026	?3 p (s p
+1027	?3 p (t p
+1028	?3 p (_C p_
+1035	_) q (_ ke
+1037	?3 q (B kI
+1041	qu (K ku
+1043	?2 por_) que (_ ke
+1044	?2 por_) que (_é ky
+1045	?1 _) que ke
+1046	?1 _) quei (C k'eI
+1064	?1 queç kes
+1065	?1 A) que (nA_ ke
+1066	?1 C) quê (_ ke
+1067	?1 que (l ke
+1068	?1 que (r_ kE
+1069	?1 qui ki
+1070	_) qu (inde ku
+1071	?1 _) quo kuo
+1075	?1 _) r (_W 'Err;
+1076	?1 _) r (_ 'Err
+1077	_) r (_ 'Exe
+1078	_) r (_\$ xe'aU
+1079	r *
+1083	r (_A *
+1084	r (_h *
+1090	s) r x
+1091	?1 A) r (_ r-
+1095	?1 _) s (_W Es|;
+1096	?1 _) s (_ Es
+1103	?4 _) s (C Is
+1105	?1 @) s (_ s#
+1108	?!4 @) s (_G z
+1111	A) s (_AS1 z
+1114	?!4 A) s (_GS1 z
+1116	?1 A) s (C s#
+1117	?1 A) ss s
+1118	?1 A) s (G+ Z
+1119	?1 A) s (_KS1 s#
+1120	?1 A) s (_G+S1 Z
+1128	?1 ssion (_ _^_EN
+1132	_) t (_ te
+1135	?3 t (B tSI
+1136	?3 t (_C t_
+1141	?1 th _^_EN
+1142	?1 tion (_ _^_EN
+1147	_) u (_ u
+1153	q) u (a+ w
+1156	r) u (_A u
+1165	uy uI
+1171	?4 um (C u~N
+1175	g) u (Y
+1181	úm (_ ''u~N
+1184	?4 úm (C ''u~N
+1190	v (v
+1191	?3 v (B vI
+1192	?3 v (_C v_
+1196	?1 _) w (_ d'&bl,iu
+1197	?2 _) w (_ d'ablju
+1199	?1 w (_ _^_EN
+1200	?4 _) w u
+1209	?1 e) x (CA S
+1221	x (ó_ z
+1229	_ave) x (A S
+1241	_fle) x (a S
+1243	_he) x (A z
+1258	_pe) xo (to_ So
+1274	?1 i) x (a_ S
+1275	?1 i) x (as_ S
+1281	?1 _) y (_ 'ips,ilON
+1282	?2 _) y (_ 'ipsiloN
+1289	_) z (_ ze
+1292	?3 z (B zI
+1293	?3 z (_C z_
+1294	?1 @) z (_ S
+1296	@) z (_A z
+1297	@) z (_G z
+1299	?1 A) z (C S
+1300	?1 A) z (G+ Z
+1301	?1 A) z (_C S
+1302	?1 A) z (_G+ Z
+1310	ß s
+1312	$ sifR'&U~
+1313	_r_) $
+1315	D_) º %o
+1316	D_) ª %a
+1319	, (D v'irgul&
+1322	__) - (_D m'enUs
+1323	D_) - (_D m'enUs
+1324	A_) - (_D _
+1325	C_) - (_D _
