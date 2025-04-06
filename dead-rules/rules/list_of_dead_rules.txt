@@ -1,0 +1,120 @@
+30	_) a (_W 'a
+39	?1 a (_à =&/
+41	?1 p) a (d_ =E
+51	a (ñ &~
+54	am (_ =&~N
+56	?4 am (C &~N
+109	?1 _) às (_G ,a:Z
+111	_) às (_A ,a:z
+112	?2 _) às (_G ,a:z
+113	à (m &~
+114	à (n &~
+115	àm (K &~m
+116	àn (K &~N
+117	ành (A &~n^
+125	áy ''aI
+142	?3 b (B bI
+143	?3 b (s b
+144	?3 b (_C b_
+151	?3 c (B kI
+152	?3 c (s k
+153	?3 c (t k
+154	?3 c (_C k_
+168	?3 d (B dZI
+169	?3 d (_C d_
+177	_) e (_ E
+231	e (rquL02_ E
+353	ection (_ 'EkS&~N
+426	_enc) e (dL03_ E
+451	?2 el (ton_ 'EU
+482	s_colh) e (res_ E
+545	éy ''eI
+551	ém (s_ ''eIN
+561	ênh ''en^
+566	?1 _) f (_W Ef;
+571	?3 f (B fI
+572	?3 f (_C f_
+577	?1 _) g (_W Ze
+581	?3 g (B gI
+582	?3 g (_C g_
+588	_apazí) gu (e gw
+642	?4 im (C iN
+700	?3 j (B ZI
+701	?3 j (_C Z_
+709	?3 k (B kI
+710	?3 k (s k
+711	?3 k (t k
+712	?3 k (_C k_
+716	?1 _) l (_W El;
+724	?4 A) lh l^
+728	?1 _) m (_W Em;
+733	?3 m (B mI
+734	?3 m (_C m_
+738	?1 _) n (_W En;
+743	?3 n (B nI
+744	?3 n (_C n_
+750	_) ñ (_ 'enjE
+751	?1 _) ñ (_ enetil
+752	ñ n^
+760	_) o (_C U
+761	_) o (_A u
+763	?2 _) os (_A Uz
+764	?2 _) os (_G Uz
+767	?2 _v) os (_G uz
+778	o (os_ o
+788	A_l) o (_ U
+791	o (gs_ O
+825	?4 om (C oN
+909	_impl) o (dL03_ o
+948	a_c) o (rte_ o
+960	ossos (_A Os=Uz
+964	p) ostos (_A Ost=Uz
+965	?1 p) ostos (_G Ost=UZ
+966	?2 p) ostos (_G Ost=Uz
+967	ortos (_ 'O*@-tUs
+968	ortos (_A 'O*@-tUz
+972	ovos (_A Ov=Uz novos, povos, etc.
+994	_end) o (çL03_ O
+1000	ôm (_ ''oN
+1003	ônh ''on^
+1012	óu ''Ow
+1013	óy ''OI
+1025	?3 p (B pI
+1026	?3 p (s p
+1027	?3 p (t p
+1028	?3 p (_C p_
+1037	?3 q (B kI
+1043	?2 por_) que (_ ke
+1044	?2 por_) que (_é ky
+1070	_) qu (inde ku
+1075	?1 _) r (_W 'Err;
+1078	_) r (_\$ xe'aU
+1079	r *
+1095	?1 _) s (_W Es|;
+1103	?4 _) s (C Is
+1128	?1 ssion (_ _^_EN
+1135	?3 t (B tSI
+1136	?3 t (_C t_
+1153	q) u (a+ w
+1156	r) u (_A u
+1171	?4 um (C u~N
+1175	g) u (Y
+1184	?4 úm (C ''u~N
+1190	v (v
+1191	?3 v (B vI
+1192	?3 v (_C v_
+1200	?4 _) w u
+1241	_fle) x (a S
+1258	_pe) xo (to_ So
+1292	?3 z (B zI
+1293	?3 z (_C z_
+1310	ß s
+1312	$ sifR'&U~
+1313	_r_) $
+1315	D_) º %o
+1316	D_) ª %a
+1319	, (D v'irgul&
+1322	__) - (_D m'enUs
+1323	D_) - (_D m'enUs
+1324	A_) - (_D _
+1325	C_) - (_D _

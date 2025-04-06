@@ -10,6 +10,7 @@ First you need lists of words:
 -   [DELAF PB v2](http://www.nilc.icmc.usp.br/nilc/projects/unitex-pb/web/dicionarios.html) (simple words with Inflection) from Unitex-PB project;
 -   [DELACF PB v1](http://www.nilc.icmc.usp.br/nilc/projects/unitex-pb/web/dicionarios.html) (compound words with Inflection) from Unitex-PB project;
 -   [Linux dictionaries](https://en.wikipedia.org/wiki/Words_\(Unix\)) for pt-br and pt-pt.
+-   [Aeiouadô](http://www.nilc.icmc.usp.br/aeiouado/).
 
 How to get the DELAS PB v2:
 
@@ -53,6 +54,13 @@ How to get the Linux dictionaries:
         | tr '[:upper:]' '[:lower:]' | sort | uniq > list_of_words.linux.txt
 ```
 
+How to get the Aeiouadô:
+
+```bash
+    wget http://www.nilc.icmc.usp.br/aeiouado/media/aeiouado-ipa-01.csv
+    gawk '{print tolower($1)}' aeiouado-ipa-01.csv > list_of_words.aeiouado.txt
+```
+
 ## Get all rules from `pt_rules`
 
 Function to generate list of all rules in `espeak-ng/dictsource/pt_rules`:
@@ -80,14 +88,16 @@ First, you must compile with debug option, so that line numbers are printed with
 
 ```bash
 cd ~/git/espeak-ng/dictsource
-sudo espeak-ng --compile-debug=pt-br
+sudo espeak-ng --compile-debug=pt
 ```
 
 Function to generate list of used rules in a list of words:
 
 ```bash
 function generate_list_of_used_rules {
-	zcat "$1" | espeak-ng -q -v pt-br -X | gawk -f ./count_used_rules.awk \
+    lang=${1:-pt-br};
+    gzip=${2};
+	zcat "$gzip" | espeak-ng -q -v ${lang} -X | gawk -f ./count_used_rules.awk \
 	| sed -E "s/ +/ /g;s/^ //;s/ $//" \
 	| sort -n -r
 }
@@ -101,34 +111,69 @@ cd ~/git/espeak-ng-playground/dead-rules
 
 ```bash
 # DELAS PB v2 (time: ~40s):
-time generate_list_of_used_rules words/list_of_words.delas.txt.gz > rules/list_of_used_rules.delas.txt
+time generate_list_of_used_rules pt-br words/list_of_words.delas.txt.gz > rules/list_of_used_rules.delas.br.txt
+time generate_list_of_used_rules pt-pt words/list_of_words.delas.txt.gz > rules/list_of_used_rules.delas.pt.txt
 
 # DELAF PB v2 (time: ~1h20min):
-time generate_list_of_used_rules words/list_of_words.delaf.txt.gz > rules/list_of_used_rules.delaf.txt
+time generate_list_of_used_rules pt-br words/list_of_words.delaf.txt.gz > rules/list_of_used_rules.delaf.br.txt
+time generate_list_of_used_rules pt-pt words/list_of_words.delaf.txt.gz > rules/list_of_used_rules.delaf.pt.txt
 
 # DELACF PB v1 (time: ~3s):
-time generate_list_of_used_rules words/list_of_words.delacf.txt.gz > rules/list_of_used_rules.delacf.txt
+time generate_list_of_used_rules pt-br words/list_of_words.delacf.txt.gz > rules/list_of_used_rules.delacf.br.txt
+time generate_list_of_used_rules pt-pt words/list_of_words.delacf.txt.gz > rules/list_of_used_rules.delacf.pt.txt
 
 # Linux dicts (time: ~5min):
-time generate_list_of_used_rules words/list_of_words.linux.txt.gz > rules/list_of_used_rules.linux.txt
+time generate_list_of_used_rules pt-br words/list_of_words.linux.txt.gz > rules/list_of_used_rules.linux.br.txt
+time generate_list_of_used_rules pt-pt words/list_of_words.linux.txt.gz > rules/list_of_used_rules.linux.pt.txt
+
+# Aeiouadô (time: ~1min):
+time generate_list_of_used_rules pt-br words/list_of_words.aeiouado.txt.gz > rules/list_of_used_rules.aeiouado.br.txt
+time generate_list_of_used_rules pt-pt words/list_of_words.aeiouado.txt.gz > rules/list_of_used_rules.aeiouado.pt.txt
 ```
+
+> NOTE:<br>
+> The rules that has a zero line number are provenient of other languages such as english `_^_EN`.
+> They are automatically ignored by the `find_dead_rules.awk` script.
 
 ## Find the dead the rules
 
-Generate a list of DEAD rules DELAS-PB, DELAF-PB and Linux dicts (lines deleted in the second file):
+Generate a list of DEAD rules DELAS-PB, DELAF-PB and Linux dicts and Aeiouador:
 
 ```bash
 # DELAS PB v2:
-gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delas.txt > rules/list_of_dead_rules.delas.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delas.br.txt > rules/list_of_dead_rules.delas.br.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delas.pt.txt > rules/list_of_dead_rules.delas.pt.txt
 
 # DELAF PB v2:
-gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delaf.txt > rules/list_of_dead_rules.delaf.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delaf.br.txt > rules/list_of_dead_rules.delaf.br.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delaf.pt.txt > rules/list_of_dead_rules.delaf.pt.txt
 
 # DELACF PB v1:
-gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delacf.txt > rules/list_of_dead_rules.delacf.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delacf.br.txt > rules/list_of_dead_rules.delacf.br.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.delacf.pt.txt > rules/list_of_dead_rules.delacf.pt.txt
 
 # Linux dicts
-gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.linux.txt > rules/list_of_dead_rules.linux.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.linux.br.txt > rules/list_of_dead_rules.linux.br.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.linux.pt.txt > rules/list_of_dead_rules.linux.pt.txt
+
+# Aeiouadô
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.aeiouado.br.txt > rules/list_of_dead_rules.aeiouado.br.txt
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.aeiouado.pt.txt > rules/list_of_dead_rules.aeiouado.pt.txt
+```
+
+## Merge dead rules files into one
+
+Generate a file that is the result of merging all dead rules files:
+
+```bash
+cat rules/list_of_used_rules.*.txt \
+    | awk -v FS="\t" -v OFS="\t" '{ $1=1; print }' | sort -k2 -rh | uniq \
+    | awk -v FS="\t" -v OFS="\t" 'line == $2 { word = $4; lines[line] = lines[line] "," word; next; } { line = $2; lines[line] = $0; } END { for (i in lines) print lines[i]; }' \
+    | sort -k2 -h > rules/list_of_used_rules.txt
+```
+
+```bash
+gawk -f ./find_dead_rules.awk -v ALL_RULES_FILE="rules/list_of_all_rules.txt" rules/list_of_used_rules.txt > rules/list_of_dead_rules.txt
 ```
 
 
