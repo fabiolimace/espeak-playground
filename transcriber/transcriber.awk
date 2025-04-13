@@ -43,13 +43,14 @@ BEGIN {
 
 function load_alphabets(    i, s, k) {
 
-	i = "ɦ          ɹ           ʎ   ɲ  ã  ẽ  ı͂  õ  u͂  a ə b d e ɛ f g gw h i ɪ  j ʒ k kw l m n o ɔ p ɾ ř s ʃ  t u ʊ v w x ɣ z";
-	k = "h<?>  r.    l^ n^ a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p * R s S t u U v w x Q z";
-	s = "h\\\\ r\\\\ L  J  a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p 4 R s S t u U v w x G z";
-	
-	split(i, ALPHABET_IPA);
-	split(k, ALPHABET_KIR);
-	split(s, ALPHABET_SAM);
+	# the `sam` (X-SAMPA) string must be escaped so it is treated as fixed text in the 1st parameter of `gsub()`
+	sam = "h\\\\  r\\\\ L  J  a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p 4 R s S t u U v w x G z";
+	kir = "h<?>   r.    l^ n^ a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p * R s S t u U v w x Q z";
+	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ı͂  õ  u͂  a ə b d e ɛ f g gw h i ɪ j ʒ k kw l m n o ɔ p ɾ ř s ʃ t u ʊ v w x ɣ z";
+
+	split(sam, ALPHABET_SAM);
+	split(kir, ALPHABET_KIR);
+	split(ipa, ALPHABET_IPA);
 }
 
 function read_rules_file(file,    n, r, F) {
@@ -81,15 +82,12 @@ function read_rules_file(file,    n, r, F) {
 	}
 }
 
-function translate_f4(rule,    i, before) {
-	before = RULES_F4[rule];
+function translate_f4(rule,    i) {
 	if (ALPHABET == 3) return;
 	for (i in ALPHABET_SAM) {
 		if (ALPHABET == 1) gsub(ALPHABET_SAM[i], ALPHABET_IPA[i], RULES_F4[rule]);
 		if (ALPHABET == 2) gsub(ALPHABET_SAM[i], ALPHABET_KIR[i], RULES_F4[rule]);
 	}
-	# for debug
-	# if (before != RULES_F4[rule]) print "\n" before "\t" RULES_F4[rule];
 }
 
 function error(msg) {
