@@ -10,9 +10,14 @@
 * https://www.scielo.br/j/delta/a/PWFpMjDBTNC4mJTgSwxH9CG/
 * http://cvc.instituto-camoes.pt/cpp/acessibilidade/capitulo3_1.html
 
+Pronúncia:
+
+* https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
+
 Transcrição fonética:
 
 * https://gepf.falar.org/entries/42
+* https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia
 * https://panglossa.fandom.com/wiki/International_Phonetic_Alphabet
 * https://ciberduvidas.iscte-iul.pt/consultorio/campos/16/pagina/1
 * http://cvc.instituto-camoes.pt/cpp/acessibilidade/capitulo2_1.html
