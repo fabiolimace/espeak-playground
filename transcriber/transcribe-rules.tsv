@@ -1,0 +1,149 @@
+
+// TODO: add as much rules as possible.
+
+// Conversão de ortografia em transcrição fonética, baseada em divisão silábica e expressão regular.
+
+// Este é um exemplo de TSV que contém exatamente quatro campos, F1 a F4.
+
+// F1: expressão regular da sílaba anterior
+// F2: expressão regular da sílaba atual
+// F3: expressão regular da sílaba posterior
+// F4: a tradução da sílaba atual usando caracteres Kirshenbaum (influencia do espeak-ng), que serão no final ser convertidos em caracteres IPA ou SAMPA.
+
+// Todo texto numa lina após duas barras é considerado um comentário e é, portanto, ignorado.
+
+// Recomenda-se que os parágrafos tenham larguras equivalentes a 8 espaços.
+
+// Se o F1 for "%", verifica se a sílaba atual é pós-tônica
+// Se o F3 for "%", verifica se a sílaba atual é pré-tônica
+
+// Se o F1 for "_", verifica se a sílaba atual é início de palavra
+// Se o F3 for "_", verifica se a sílaba atual é fim de palavra
+
+// Stress symbol `'` should be placed in the beginning of the syllable, not in the middle of the it (close to the vowel).
+
+
+// F1	F2	F3	F4
+
+	a		&
+	á		'a
+	ão		'&~U~
+%	ão		&~U~
+
+// b
+	
+	bo		bO
+	bo	_	bU
+
+// c
+	
+	ca		k&
+	ca	_	k&
+	cá		'ka
+	câ		'k&
+	cã		'k&~
+	car	^r	ka
+
+	ce		se
+	ce	_	sI
+	cé		sE
+	cê		'se
+	cen		se~
+	cên		'se~
+	cem		se~
+	cêm		'se~	// nao existe
+
+	ci		si
+	cí		'si
+	ci	_	'si
+	
+	co		ko
+	co	_	kU
+	có		'kO
+	cô		'ko
+
+	cu		ku
+	cu	_	'ku
+
+	ça		s&
+	ça	_	s&
+	çá		'sa
+	çâ		's&
+	çã		's&~
+	cão		'k&~U~
+	ção		s&~U~
+	çãos		s&~U~s
+	
+	ço		so
+	ço	_	sU
+	çó		'sO
+	çô		'so
+	ções	_	soIs
+
+	çu		'su
+	
+	la	_	l&
+
+// d
+
+	da		da
+	da	_	d&
+	
+	do		do
+	do	_	dU
+// e
+
+_	es		es
+
+// f
+
+	fa		fa
+	
+	fo		fo
+
+// g
+
+	ga		ga
+
+	gu		gu
+
+	gão		'g&~U~
+%	gão		g&~U~
+
+// h
+
+	ho		o
+
+// l
+
+	lho		LU
+// m
+	mem		meIN
+
+// s
+	sa		sa
+	sá		'sa
+	sa	_	z&
+[^lnrs]$	sa		za
+s$	sa		sa	// ss
+
+// o
+	or		o*
+	ór		'O*
+// r
+	ra		Ra
+	rá		'Ra
+[^lnrs]$	ra		*a
+r$	ra		Ra	// rr
+
+	ro		xo
+	ro	_	xU
+
+// t
+	to		to
+	tó		'to
+	to	_	tU
+// v
+	vi		vI
+
+//
