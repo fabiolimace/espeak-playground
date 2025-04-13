@@ -13,6 +13,7 @@
 Transcrição fonética:
 
 * https://gepf.falar.org/entries/42
+* https://panglossa.fandom.com/wiki/International_Phonetic_Alphabet
 * https://ciberduvidas.iscte-iul.pt/consultorio/campos/16/pagina/1
 * http://cvc.instituto-camoes.pt/cpp/acessibilidade/capitulo2_1.html
 * https://michaelis.uol.com.br/escolar-espanhol/transcricao-fonetica-do-portugues/
@@ -31,6 +32,7 @@ Ferramentas de transcrição:
 
 ### Sílaba
 
+* https://panglossa.fandom.com/wiki/Syllable
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/silaba-canonica
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/estrutura-silabica
 
@@ -38,6 +40,7 @@ Ferramentas de transcrição:
 
 > "Na língua portuguesa, é mais comum que a sílaba tônica recaia sobre a penúltima sílaba, então, muitas vezes, as paroxítonas não são acentuadas. Ainda assim, há casos específicos de palavras paroxítonas que precisam do acento gráfico para marcar sua sílaba tônica." Veja mais sobre "Palavras paroxítonas" em: https://brasilescola.uol.com.br/gramatica/palavras-paroxitonas.htm
 
+* https://panglossa.fandom.com/wiki/Stress_(linguistics)
 * https://brasilescola.uol.com.br/gramatica/palavras-paroxitonas.htm
 * https://pt.wikipedia.org/wiki/Acento_t%C3%B4nico
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/tonicidade
@@ -69,10 +72,38 @@ Falsos ditongos:
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/grafema
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/correspondencia-grafofonemica
 
+### Consoantes
+
+* https://panglossa.fandom.com/wiki/Implosive_consonant
+* https://panglossa.fandom.com/wiki/Voiced_bilabial_implosive
+* https://panglossa.fandom.com/wiki/Voiced_alveolar_implosive
+* https://panglossa.fandom.com/wiki/Voiced_alveolar_implosive
+* https://panglossa.fandom.com/wiki/Voiced_palatal_implosive
+* https://panglossa.fandom.com/wiki/Voiced_velar_implosive
+* https://panglossa.fandom.com/wiki/Voiced_uvular_implosive
+* https://panglossa.fandom.com/wiki/Sonorant
+* https://panglossa.fandom.com/wiki/Voiced_consonant
+* https://panglossa.fandom.com/wiki/Sibilant_consonant
+* https://panglossa.fandom.com/wiki/Lateral_consonant
+* https://panglossa.fandom.com/wiki/Approximant_consonant
+* https://panglossa.fandom.com/wiki/Liquid_consonant
+* https://panglossa.fandom.com/wiki/Trill_consonant
+* https://panglossa.fandom.com/wiki/Nasal_consonant
+* https://panglossa.fandom.com/wiki/Affricate_consonant
+* https://panglossa.fandom.com/wiki/Fricative_consonant
+* https://panglossa.fandom.com/wiki/Ejective_consonant
+
 ### Vogais
 
+* https://panglossa.fandom.com/wiki/Semivowel
+* https://panglossa.fandom.com/wiki/Vowel_reduction
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/vogais
 * https://www.youtube.com/watch?v=J4UwmjPZ7Eo
+
+#### Processos fonológicos
+
+* https://panglossa.fandom.com/wiki/Sandhi
+* https://panglossa.fandom.com/wiki/Elision
 
 ### Róticos
 
