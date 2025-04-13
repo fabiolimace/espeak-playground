@@ -39,12 +39,12 @@
 
 // c
 	
-	ca		k@
+	ca		ka
 	ca	_	k@
 	cá		'ka
-	câ		'k@
 	cã		'ka~
 	car	^r	ka
+	cas	^s	ka
 
 	ce		se
 	ce	_	sI
@@ -125,9 +125,9 @@ _	es		es
 // s
 	sa		sa
 	sá		'sa
-	sa	_	z@
+	sa		z@
 [^lnrs]$	sa		za
-s$	sa		sa	// ss
+	sa		sa	// ss
 
 // o
 	or		o4

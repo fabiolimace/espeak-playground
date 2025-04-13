@@ -51,6 +51,9 @@ function load_alphabets(    i, s, k) {
 	split(sam, ALPHABET_SAM);
 	split(kir, ALPHABET_KIR);
 	split(ipa, ALPHABET_IPA);
+	
+	# for debugging
+	# for (i in ALPHABET_SAM) print ALPHABET_SAM[i] " " ALPHABET_KIR[i] " " ALPHABET_IPA[i];
 }
 
 function read_rules_file(file,    n, r, F) {
@@ -60,8 +63,8 @@ function read_rules_file(file,    n, r, F) {
 	while(getline rule < file) {
 		r++; # the line number is the rule key
 			
-		# remove commented content
-		sub(/\/\/.*$/, EMPTY, rule);
+		# remove all commented content
+		sub(/[ \t]*\/\/.*$/, EMPTY, rule);
 
 		# separate rule fields
 		n = split(rule, F, TAB);
@@ -159,7 +162,16 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 		array[i] = found;
 	}
 	
+	# check all syllables
+	for (i = 1; i <= n; i++) {
+		if (!array[i]) {
+			error("Match not found for '" syl "' in '" word "'.");
+			return null;
+		}
+	}
+	
 	if (!stress) {
+		# set the defaul stress
 		if (STRESSED_SYLLABLE < 0) {
 			x  = n + 1 + STRESSED_SYLLABLE;
 			array[x] = APOSTROPHE array[x];
@@ -169,11 +181,8 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 		}
 	}
 	
+	# join all syllables
 	for (i = 1; i <= n; i++) {
-		if (!array[i]) {
-			error("Match not found for '" syl "' in '" word "'.");
-			return null;
-		}
 		if (result) result = result DOT;
 		result = result array[i];
 	}
