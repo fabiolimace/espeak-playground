@@ -100,6 +100,7 @@ Falsos ditongos:
 
 ### Vogais
 
+* http://taliesin.nvg.org/conlang/diphthongs.html
 * https://panglossa.fandom.com/wiki/Semivowel
 * https://panglossa.fandom.com/wiki/Vowel_reduction
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/vogais

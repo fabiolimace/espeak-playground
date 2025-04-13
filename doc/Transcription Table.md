@@ -94,7 +94,7 @@ Nasal decrescent diphthongs:
 |o͂ɪ̯ o͂j	|	|o~I o~j	|o~j   *	|o~I o~j|
 |u͂ɪ̯ u͂j	|	|u~I u~j	|_?_		|u~I u~j|
 |	|	|		|		|	|
-|ãʊ̯ ãw	|ɐ̃ʊ̃	|u~U u~w	|&U~   *	|u~U u~w|
+|ãʊ̯ ãw	|ɐ̃ʊ̃	|a~U a~w	|&U~   *	|a~U a~w|
 
 Oral crescent diphthongs:
 
