@@ -34,7 +34,7 @@ BEGIN {
 
 	if (!ALPHABET) ALPHABET = 1 # IPA
 	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = -2; # Penultimate
-	if (!RULES_FILE) RULES_FILE = "./transcribe-rules.tsv";
+	if (!RULES_FILE) RULES_FILE = "./transcriber-rules.tsv";
 	
 	load_alphabets();
 	
@@ -53,6 +53,9 @@ function load_alphabets(    i, s, k) {
 }
 
 function read_rules_file(file,    n, r, F) {
+
+	if (system("test -f " file) != 0) error("file not found: '" file "'.");
+	
 	while(getline rule < file) {
 		r++; # the line number is the rule key
 			
