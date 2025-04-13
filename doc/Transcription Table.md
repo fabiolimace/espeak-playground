@@ -48,11 +48,11 @@ Vowels:
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
 |a	|	|a		|		|a	|
-|ə ɐ	|ɐ æ	|&		|		|@ 6	|
+|ə ɐ	|ɐ/æ	|@ &"		|&		|@ 6	|
 |e	|	|e		|		|e	|
 |ɛ	|	|E		|		|E	|
 |i	|	|i		|		|i	|
-|ɪ	|ɨ y	|I		|y		|I	|
+|ɪ	|ɨ/y	|I		|y		|I	|
 |o	|	|o		|		|o	|
 |ɔ	|	|O		|		|O	|
 |u	|	|u		|		|u	|
@@ -125,6 +125,7 @@ References:
 * https://en.wikipedia.org/wiki/X-SAMPA
 * https://fonologia.org
 * https://panglossa.fandom.com/wiki/International_Phonetic_Alphabet
+* https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
 
 ---
 
