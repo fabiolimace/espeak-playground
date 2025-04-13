@@ -5,7 +5,7 @@
 # 
 # Usage
 #
-# 	# output: &.vI.'&~U~ 'bO.l& 'k&.za
+# 	# output: ə.vɪ.'ə~ʊ~ 'bɔ.lə 'kə.za
 #	echo "a.vi.ão bo.la ca.sa" | awk -f transcribe.awk
 #
 
@@ -25,8 +25,13 @@ BEGIN {
 	POS_TONIC = 1
 	PRE_TONIC = 2;
 
-	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = -2; # penultimate
+	if (!ALPHABET) ALPHABET = 1 # 1: IPA, 2: Kirshembaum, 3: X-SAMPA
+	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = -2; # Penultimate
 	if (!RULES_FILE) RULES_FILE = "./transcribe-rules.tsv";
+	
+	IPA="a ə  ɐ   b d e ɛ f g gw h ɦ     i ɪ j ʒ k kw  l ʎ  m n ɲ  o ɔ p ɾ ř ɹ     s ʃ t u ʊ v w x ɣ z";
+	SAM="a @ 6   b d e E f g gw h h\\\\ i I j Z k kw l L  m n J  o O p 4 R r\\\\ s S t u U v w x G z";
+	KIR="a @ &\" b d e E f g gw h h<?>  i I j Z k kw l l^ m n n^ o O p * R r.    s S t u U v w x Q z";
 	
 	load_rules(RULES_FILE);
 }
@@ -40,6 +45,22 @@ function load_rules(file,    n, r) {
 		n = split(rule, R, TAB);
 		if (n == 4) lines[R[2]] = lines[R[2]] TAB r;
 	}
+}
+
+function translate_alphabet(buffer,    i, j, trans, fields) {
+
+	split(SAM, sam);
+	split(KIR, kir);
+	split(IPA, ipa);
+	
+	if (ALPHABET == 3) return buffer;
+	
+	for (i in sam) {
+		if (ALPHABET == 1) gsub(sam[i], ipa[i], buffer);
+		if (ALPHABET == 2) gsub(sam[i], kir[i], buffer);
+	}
+	
+	return buffer;
 }
 
 function error(msg) {
@@ -143,16 +164,10 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 		buffer = buffer transcribe_word($i);
 	}
 	
-	print buffer;
+	print translate_alphabet(buffer);
 }
 
 END {
-
-#       # translation lists
-#	SAM="L  J  OI"; # X-SAMPA
-#	KIR="l^ n^ OI"; # Kirshenbaum
-#	IPA="ʎ    ɲ    ɔɪ̯"; # IPA
-	
 #	for (i in rules) # print i "\t" rules[i];
 #	for (i in lines) # print i "\t" lines[i];
 }

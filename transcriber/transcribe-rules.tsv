@@ -22,13 +22,15 @@
 
 // Stress symbol `'` should be placed in the beginning of the syllable, not in the middle of the it (close to the vowel).
 
+// References:
+* https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
 
 // F1	F2	F3	F4
 
-	a		&
+	a		@
 	á		'a
-	ão		'&~U~
-%	ão		&~U~
+	ão		'@~U~
+%	ão		@~U~
 
 // b
 	
@@ -37,11 +39,11 @@
 
 // c
 	
-	ca		k&
-	ca	_	k&
+	ca		k@
+	ca	_	k@
 	cá		'ka
-	câ		'k&
-	cã		'k&~
+	câ		'k@
+	cã		'k@~
 	car	^r	ka
 
 	ce		se
@@ -65,14 +67,14 @@
 	cu		ku
 	cu	_	'ku
 
-	ça		s&
-	ça	_	s&
+	ça		s@
+	ça	_	s@
 	çá		'sa
-	çâ		's&
-	çã		's&~
-	cão		'k&~U~
-	ção		s&~U~
-	çãos		s&~U~s
+	çâ		's@
+	çã		's@~
+	cão		'k@~U~
+	ção		s@~U~
+	çãos		s@~U~s
 	
 	ço		so
 	ço	_	sU
@@ -82,12 +84,12 @@
 
 	çu		'su
 	
-	la	_	l&
+	la	_	l@
 
 // d
 
 	da		da
-	da	_	d&
+	da	_	d@
 	
 	do		do
 	do	_	dU
@@ -107,8 +109,8 @@ _	es		es
 
 	gu		gu
 
-	gão		'g&~U~
-%	gão		g&~U~
+	gão		'g@~U~
+%	gão		g@~U~
 
 // h
 
@@ -123,17 +125,17 @@ _	es		es
 // s
 	sa		sa
 	sá		'sa
-	sa	_	z&
+	sa	_	z@
 [^lnrs]$	sa		za
 s$	sa		sa	// ss
 
 // o
-	or		o*
-	ór		'O*
+	or		o4
+	ór		'O4
 // r
 	ra		Ra
 	rá		'Ra
-[^lnrs]$	ra		*a
+[^lnrs]$	ra		4a
 r$	ra		Ra	// rr
 
 	ro		xo
