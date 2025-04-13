@@ -19,48 +19,74 @@ BEGIN {
 	UNDERLINE="_";
 	APOSTROPHE="'";
 	
-	rules[0] = null;
-	lines[0] = null;
+	RULES_F1[0] = null;
+	RULES_F2[0] = null;
+	RULES_F3[0] = null;
+	RULES_F4[0] = null;
+	RULES_INDEX[0] = null;
 	
 	POS_TONIC = 1
 	PRE_TONIC = 2;
 
-	if (!ALPHABET) ALPHABET = 1 # 1: IPA, 2: Kirshembaum, 3: X-SAMPA
+	ALPHABET_IPA[0] = null; # 1: IPA
+	ALPHABET_KIR[0] = null; # 2: Kirshembaum
+	ALPHABET_SAM[0] = null; # 3: X-SAMPA
+
+	if (!ALPHABET) ALPHABET = 1 # IPA
 	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = -2; # Penultimate
 	if (!RULES_FILE) RULES_FILE = "./transcribe-rules.tsv";
 	
-	IPA="a ə  ɐ   b d e ɛ f g gw h ɦ     i ɪ j ʒ k kw  l ʎ  m n ɲ  o ɔ p ɾ ř ɹ     s ʃ t u ʊ v w x ɣ z";
-	SAM="a @ 6   b d e E f g gw h h\\\\ i I j Z k kw l L  m n J  o O p 4 R r\\\\ s S t u U v w x G z";
-	KIR="a @ &\" b d e E f g gw h h<?>  i I j Z k kw l l^ m n n^ o O p * R r.    s S t u U v w x Q z";
+	load_alphabets();
 	
-	load_rules(RULES_FILE);
+	read_rules_file(RULES_FILE);
 }
 
-function load_rules(file,    n, r) {
+function load_alphabets(    i, s, k) {
+
+	i = "ɦ          ɹ           ʎ   ɲ  ã  ẽ  ı͂  õ  u͂  a ə b d e ɛ f g gw h i ɪ  j ʒ k kw l m n o ɔ p ɾ ř s ʃ  t u ʊ v w x ɣ z";
+	k = "h<?>  r.    l^ n^ a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p * R s S t u U v w x Q z";
+	s = "h\\\\ r\\\\ L  J  a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p 4 R s S t u U v w x G z";
+	
+	split(i, ALPHABET_IPA);
+	split(k, ALPHABET_KIR);
+	split(s, ALPHABET_SAM);
+}
+
+function read_rules_file(file,    n, r, F) {
 	while(getline rule < file) {
+		r++; # the line number is the rule key
+			
+		# remove commented content
 		sub(/\/\/.*$/, EMPTY, rule);
-		rules[++r] = rule;
+
+		# separate rule fields
+		n = split(rule, F, TAB);
 		
-		R[0] = null;
-		n = split(rule, R, TAB);
-		if (n == 4) lines[R[2]] = lines[R[2]] TAB r;
+		# ignore if not four
+		if (n != 4) continue;
+		
+		# put rule fields
+		RULES_F1[r]=F[1];
+		RULES_F2[r]=F[2];
+		RULES_F3[r]=F[3];
+		RULES_F4[r]=F[4];
+
+		translate_f4(r);
+		
+		# put the rule line number in tab-split list
+		RULES_INDEX[F[2]] = RULES_INDEX[F[2]] TAB r;
 	}
 }
 
-function translate_alphabet(buffer,    i, j, trans, fields) {
-
-	split(SAM, sam);
-	split(KIR, kir);
-	split(IPA, ipa);
-	
-	if (ALPHABET == 3) return buffer;
-	
-	for (i in sam) {
-		if (ALPHABET == 1) gsub(sam[i], ipa[i], buffer);
-		if (ALPHABET == 2) gsub(sam[i], kir[i], buffer);
+function translate_f4(rule,    i, before) {
+	before = RULES_F4[rule];
+	if (ALPHABET == 3) return;
+	for (i in ALPHABET_SAM) {
+		if (ALPHABET == 1) gsub(ALPHABET_SAM[i], ALPHABET_IPA[i], RULES_F4[rule]);
+		if (ALPHABET == 2) gsub(ALPHABET_SAM[i], ALPHABET_KIR[i], RULES_F4[rule]);
 	}
-	
-	return buffer;
+	# for debug
+	# if (before != RULES_F4[rule]) print "\n" before "\t" RULES_F4[rule];
 }
 
 function error(msg) {
@@ -68,29 +94,28 @@ function error(msg) {
 	exit 1;
 }
 
-function test_match(pre, syl, pos, rule, stress,   fields) {
-
-	split(rule, fields, TAB);
+function test_match(pre, syl, pos, rule, stress) {
 	
-	if (stress == POS_TONIC && fields[1] ~ PERCENT) pre = PERCENT;
-	if (stress == PRE_TONIC && fields[3] ~ PERCENT) pos = PERCENT;
+	if (stress == POS_TONIC && RULES_F1[rule] ~ PERCENT) pre = PERCENT;
+	if (stress == PRE_TONIC && RULES_F3[rule] ~ PERCENT) pos = PERCENT;
 	
-	if (fields[1] && pre !~ fields[1]) return null;
-	if (fields[2] && syl !~ fields[2]) return null;
-	if (fields[3] && pos !~ fields[3]) return null;
+	if (RULES_F1[rule] && pre !~ RULES_F1[rule]) return null;
+	if (RULES_F2[rule] && syl !~ RULES_F2[rule]) return null;
+	if (RULES_F3[rule] && pos !~ RULES_F3[rule]) return null;
 
-	return fields[4];
+	return RULES_F4[rule];
 }
 
 function find_match(pre, syl, pos, stress,    i, n, rule, numbers, matched) {
 
-	if (!(syl in lines)) {
+	if (!(syl in RULES_INDEX)) {
 		return null;
 	}
 	
-	n = split(lines[syl], numbers, TAB);
+	n = split(RULES_INDEX[syl], numbers, TAB);
 	for (i = n; i > 0; i--) {
-		matched = test_match(pre, syl, pos, rules[numbers[i]], stress);
+		rule = numbers[i];
+		matched = test_match(pre, syl, pos, rule, stress);
 		if (matched) return matched;
 	}
 	
@@ -125,8 +150,6 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 		syl = syllables[i];
 		if (i == 1) pre = UNDERLINE; else pre = syllables[i-1];
 		if (i == n) pos = UNDERLINE; else pos = syllables[i+1];
-		
-		print syl;
 
 		found = find_match(pre, syl, pos, stress);
 		
@@ -164,11 +187,10 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 		buffer = buffer transcribe_word($i);
 	}
 	
-	print translate_alphabet(buffer);
+	print buffer;
 }
 
 END {
-#	for (i in rules) # print i "\t" rules[i];
-#	for (i in lines) # print i "\t" lines[i];
+
 }
 

@@ -29,8 +29,8 @@
 
 	a		@
 	á		'a
-	ão		'@~U~
-%	ão		@~U~
+	ão		'a~U
+%	ão		a~U
 
 // b
 	
@@ -43,7 +43,7 @@
 	ca	_	k@
 	cá		'ka
 	câ		'k@
-	cã		'k@~
+	cã		'ka~
 	car	^r	ka
 
 	ce		se
@@ -71,10 +71,10 @@
 	ça	_	s@
 	çá		'sa
 	çâ		's@
-	çã		's@~
-	cão		'k@~U~
-	ção		s@~U~
-	çãos		s@~U~s
+	çã		'sa~
+	cão		'ka~U
+	ção		sa~U
+	çãos		sa~Us
 	
 	ço		so
 	ço	_	sU
@@ -109,8 +109,8 @@ _	es		es
 
 	gu		gu
 
-	gão		'g@~U~
-%	gão		g@~U~
+	gão		'ga~U
+%	gão		ga~U
 
 // h
 
