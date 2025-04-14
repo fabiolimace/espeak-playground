@@ -98,6 +98,8 @@ function error(msg) {
 	exit 1;
 }
 
+# FIXME: "á.dam" -> ERROR: Match not found for 'dam' in 'á.dam'.
+# TODO: implementar fronteira de palavra antes de F1 e depois de F3
 function test_match(pre, syl, pos, rule, stress, position) {
 
 	f1 = RULES_F1[rule];

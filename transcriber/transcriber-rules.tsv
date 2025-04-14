@@ -708,36 +708,45 @@ _	bel		bEU
 	dus		dus
 	dus	_	'dus
 	
-	e		?
-	e	_	?
-	é		?
-	é	_	?
-	ê		?
-	ê	_	?
-	ei		?
-	ei	_	?
-	eis		?
-	eis	_	?
-	el		?
-	el	_	?
-	em		?
-	em	_	?
-	en		?
-	en	_	?
-	ên		?
-	ên	_	?
-	er		?
-	er	_	?
-	es		?
-	es	_	?
-	és		?
-	és	_	?
-	et		?
-	et	_	?
-	eu		?
-	eu	_	?
-	ex		?
-	ex	_	?
+	e		e
+	e	_	I
+	
+	é		'E
+
+	ê		'e
+	
+	ei		eI
+
+	eis		eI
+
+	el		eU
+	el	_	eU
+	el	^.*_	EU	// TODO: implementar fronteira de palavra após F3
+	
+	em		e~
+
+	en		e~
+	en	_	'e~
+	
+	ên		'e~
+
+	er		e4
+	er	_	'e4
+	
+	es		es
+	es	_	Is
+	
+	és		'Es
+
+	et		et
+
+	eu		eU
+
+	ex		es	// TODO: eks, es
+	ex	_	Eks
+	ex	^c[ei]	e
+	ex	^s	e
+	
 	fa		?
 	fa	_	?
 	fá		?
