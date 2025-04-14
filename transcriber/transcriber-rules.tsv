@@ -318,294 +318,396 @@ _	bel		bEU
 
 	ceis		seIs
 
-	cem		?
-	cem	_	?
-	cen		?
-	cen	_	?
-	cên		?
-	cên	_	?
-	cep		?
-	cep	_	?
-	cer		?
-	cer	_	?
-	ces		?
-	ces	_	?
-	cês		?
-	cês	_	?
-	ceu		?
-	ceu	_	?
-	cha		?
-	cha	_	?
-	chá		?
-	chá	_	?
-	chai		?
-	chai	_	?
-	chais		?
-	chais	_	?
-	cham		?
-	cham	_	?
-	chan		?
-	chan	_	?
-	char		?
-	char	_	?
-	chas		?
-	chas	_	?
-	chás		?
-	chás	_	?
-	che		?
-	che	_	?
-	chei		?
-	chei	_	?
-	cheis		?
-	cheis	_	?
-	chem		?
-	chem	_	?
-	ches		?
-	ches	_	?
-	chi		?
-	chi	_	?
-	chil		?
-	chil	_	?
-	chim		?
-	chim	_	?
-	chin		?
-	chin	_	?
-	cho		?
-	cho	_	?
-	chos		?
-	chos	_	?
-	chou		?
-	chou	_	?
-	chu		?
-	chu	_	?
-	chum		?
-	chum	_	?
-	ci		?
-	ci	_	?
-	cí		?
-	cí	_	?
-	cin		?
-	cin	_	?
-	cir		?
-	cir	_	?
-	cis		?
-	cis	_	?
-	cís		?
-	cís	_	?
-	cla		?
-	cla	_	?
-	clas		?
-	clas	_	?
-	clau		?
-	clau	_	?
-	cle		?
-	cle	_	?
-	cli		?
-	cli	_	?
-	clo		?
-	clo	_	?
-	clu		?
-	clu	_	?
-	clui		?
-	clui	_	?
-	co		?
-	co	_	?
-	có		?
-	có	_	?
-	cô		?
-	cô	_	?
-	ço		?
-	ço	_	?
-	ções		?
-	ções	_	?
-	coi		?
-	coi	_	?
-	çoi		?
-	çoi	_	?
-	coin		?
-	coin	_	?
-	col		?
-	col	_	?
-	com		?
-	com	_	?
-	con		?
-	con	_	?
-	côn		?
-	côn	_	?
-	cons		?
-	cons	_	?
-	cor		?
-	cor	_	?
-	cos		?
-	cos	_	?
-	ços		?
-	ços	_	?
-	cou		?
-	cou	_	?
-	çou		?
-	çou	_	?
-	cra		?
-	cra	_	?
-	crá		?
-	crá	_	?
-	cras		?
-	cras	_	?
-	cre		?
-	cre	_	?
-	crei		?
-	crei	_	?
-	cren		?
-	cren	_	?
-	cres		?
-	cres	_	?
-	cri		?
-	cri	_	?
-	crí		?
-	crí	_	?
-	cris		?
-	cris	_	?
-	cro		?
-	cro	_	?
-	cros		?
-	cros	_	?
-	cru		?
-	cru	_	?
-	crus		?
-	crus	_	?
-	cu		?
-	cu	_	?
-	cú		?
-	cú	_	?
-	çu		?
-	çu	_	?
-	cui		?
-	cui	_	?
-	cul		?
-	cul	_	?
-	cum		?
-	cum	_	?
-	cun		?
-	cun	_	?
-	cuns		?
-	cuns	_	?
-	cur		?
-	cur	_	?
-	cus		?
-	cus	_	?
-	da		?
-	da	_	?
-	dá		?
-	dá	_	?
-	dai		?
-	dai	_	?
-	dais		?
-	dais	_	?
-	dal		?
-	dal	_	?
-	dam		?
-	dam	_	?
-	dan		?
-	dan	_	?
+	cem		se~
+
+	cen		se~
+	cen	_	'se~
+	
+	cên		'se~
+
+	cep		sep
+
+	cer		se4
+	cer	_	'se4
+	
+	ces		ses
+	ces	_	sIs
+	
+	cês		'ses
+	
+	ceu		seU
+	ceu	_	'seU
+	
+	cha		Sa
+	cha	_	S@
+	
+	chá		'Sa
+
+	chai		SaI
+	chai	_	'Sai
+	
+	chais		Sais
+	chais	_	'Sais
+	
+	cham		Sa~
+	
+	chan		Sa~
+	chan	_	'Sa~
+	
+	char		Sa4
+	char	_	'Sa4
+	
+	chas		Sas
+	chas	_	S@s
+	
+	chás		'Sas
+
+	che		Se
+	che	_	SI
+	
+	chei		SeI
+	chei	_	'SeI
+	
+	cheis		SeIs
+	cheis	_	'SeIs
+	
+	chem		Se~
+	
+	chen		Se~
+	chen	_	'Se~
+
+	ches		Ses
+	ches	_	SIs
+	
+	chi		Si
+	chi	_	'Si
+	
+	chil		SiU
+	chil	_	'SiU
+	
+	chim		Si~
+	chim	_	'Si~
+	
+	chin		Si~
+	chin	_	'Si~
+	
+	cho		So
+	cho	_	SU
+	
+	chos		So
+	chos	_	SUs
+	
+	chou		SoU
+
+	chu		Su
+	chu	_	'Su
+	
+	chum		Su~
+	chum	_	'Su~
+	
+	ci		si
+	ci	_	'si
+	
+	cí		'si
+
+	cin		si~
+	cin	_	'si~
+	
+	cir		si4
+	cir	_	'si4
+	
+	cis		sis
+	cis	_	'sis
+	
+	cís		'sis
+
+	cla		kla
+	cla	_	kl@
+	
+	clas		klas
+	clas	_	kl@s
+	
+	clau		klaU
+
+	cle		kle
+	cle	_	klI
+	
+	cli		'kli
+
+	clo		klo
+	clo	_	klU
+	
+	clu		'klu
+
+	clui		kluI
+	
+	co		ko
+	co	_	kU
+	
+	có		'kO
+
+	cô		'ko
+
+	ço		so
+	ço	_	sU
+	
+	ções	_	'so~Is
+%	ções	_	so~Is
+
+	coi		koI
+
+	çoi		soI
+
+	coin		koI~
+	
+	çoin		soI~
+
+	col		koU
+	col	_	'kOU
+	
+	com		ko~
+	com	_	'ko~
+	
+	con		ko~
+	con	_	'ko~
+	
+	côn		'ko~
+	
+	cons		ko~s
+	cons	_	'ko~s
+	
+	cor		ko4
+	cor	_	'ko4
+	
+	cos		kos
+	cos	_	kUs
+	
+	ços		sos
+	ços	_	'sUs
+	
+	cou		koU
+
+	çou		soU
+
+	cra		k4a
+	cra	_	k4@
+	
+	crá		'k4a
+
+	cras		'k4as
+
+	cre		k4e
+	cre	_	k4I
+	
+	crei		k4eI
+
+	cren		k4e~
+	cren	_	'k4e~
+	
+	cres		k4es
+	cres	_	k4Is
+	
+	cri		k4i
+	cri	_	'k4i
+	
+	crí		'k4i
+
+	cris		k4is
+	cris	_	'k4is
+	
+	cro		k4o
+	cro	_	k4U
+	
+	cros		k4os
+	cros	_	k4Us
+	
+	cru		'k4u
+
+	crus		'k4us
+
+	cu		ku
+	cu	_	'ku
+	
+	cú		'ku
+
+	çu		su
+	çu	_	'su
+	
+	cui		kuI
+	
+	cul		kuU
+
+	cum		ku~
+	cum	_	'ku~
+	
+	cun		ku~
+	cun	_	'ku~
+	
+	cuns		ku~s
+	cuns	_	'ku~s
+	
+	cur		ku4
+	cur	_	'ku4
+	
+	cus		kus
+	cus	_	'kus
+	
+	da		da
+	da	_	d@
+	
+	dá		'd@
+
+	dai		daI
+
+	dais		daIs
+
+	dal		daU
+	dal	_	'daU
+	
+	dam		da~
+
+	dan		da~
+	dan	_	'da~
 	
 	dão	_	'da~U
 %	dão	_	da~U
 	
-	dap		?
-	dap	_	?
-	dar		?
-	dar	_	?
-	das		?
-	das	_	?
-	dás		?
-	dás	_	?
-	de		?
-	de	_	?
-	dé		?
-	dé	_	?
-	dê		?
-	dê	_	?
-	dei		?
-	dei	_	?
-	deis		?
-	deis	_	?
-	del		?
-	del	_	?
-	dem		?
-	dem	_	?
-	den		?
-	den	_	?
-	dên		?
-	dên	_	?
-	der		?
-	der	_	?
-	des		?
-	des	_	?
-	dês		?
-	dês	_	?
-	deu		?
-	deu	_	?
-	di		?
-	di	_	?
-	dí		?
-	dí	_	?
-	din		?
-	din	_	?
-	dir		?
-	dir	_	?
-	dis		?
-	dis	_	?
-	dís		?
-	dís	_	?
-	diu		?
-	diu	_	?
-	do		?
-	do	_	?
-	dó		?
-	dó	_	?
-	dô		?
-	dô	_	?
-	dões		?
-	dões	_	?
-	dog		?
-	dog	_	?
-	doi		?
-	doi	_	?
-	don		?
-	don	_	?
-	dor		?
-	dor	_	?
-	dos		?
-	dos	_	?
-	dou		?
-	dou	_	?
-	dra		?
-	dra	_	?
-	drá		?
-	drá	_	?
-	drar		?
-	drar	_	?
-	dras		?
-	dras	_	?
-	dre		?
-	dre	_	?
-	dri		?
-	dri	_	?
-	dro		?
-	dro	_	?
-	dron		?
-	dron	_	?
-	dros		?
-	dros	_	?
-	dru		?
-	dru	_	?
-	du		?
-	du	_	?
-	dul		?
-	dul	_	?
-	dun		?
-	dun	_	?
-	dus		?
-	dus	_	?
+	dap		dap
+
+	dar		da4
+	dar	_	'da4
+	
+	das		das
+	das	_	d@s
+	
+	dás		'das
+
+	de		de
+	de	_	dZI
+	
+	dé		'dE
+
+	dê		'de
+
+	dei		'deI
+
+	deis		'deIs
+
+	del		deU
+	del	_	'dEU
+	
+	dem		de~
+
+	den		de~
+	den	_	'de~
+	
+	dên		'de~
+
+	der		de4
+	der	_	'de4
+	
+	des		des
+	des	_	dZIs
+	
+	dês		'des
+
+	deu		deU
+
+	di		di
+	di	_	'di
+	
+	dí		'di
+
+	din		di~
+	din	_	'di~
+	
+	dir		di4
+	dir	_	'di4
+	
+	dis		dis
+	dis	_	'dis
+	
+	dís		'dis
+
+	diu		'diU
+
+	do		do
+	do	_	dU
+	
+	dó		'dO
+
+	dô		'do
+
+	dões	_	'do~Is
+%	dões	_	do~Is
+
+	dog		dog
+
+	doi		doI
+	
+	dois		doIs
+
+	dom		do~
+	dom	_	'do~
+	
+	don		do~
+	don	_	'do~
+	
+	dor		do4
+	dor	_	'do4
+	
+	dos		dos
+	dos	_	dUs
+	
+	dou		doU
+
+	dra		d4a
+	dra	_	d4@
+	
+	drá		'd4a
+
+	drar		d4a4
+	drar	_	'd4a4
+	
+	dras		d4as
+	dras	_	d4@s
+	
+	dre		d4e
+	dre	_	d4I
+	
+	dri		d4i
+	dri	_	'd4i
+	
+	dro		d4o
+	dro	_	d4U
+
+	drom		d4o~
+	drom	_	'd4o~
+		
+	dron		d4o~
+	dron	_	'd4o~
+	
+	dros		d4os
+	dros	_	d4Us
+	
+	dru		d4u
+	dru	_	'd4u
+	
+	du		du
+	du	_	'du
+	
+	dul		dul
+	dul	_	'dul
+
+	dum		du~
+	dum	_	'du~
+		
+	dun		du~
+	dun	_	'du~
+	
+	dus		dus
+	dus	_	'dus
+	
 	e		?
 	e	_	?
 	é		?
@@ -1126,8 +1228,10 @@ _	bel		bEU
 	lhi	_	?
 	lho		?
 	lho	_	?
-	lhões		?
-	lhões	_	?
+	
+	lhões	_	'Lo~Is
+%	lhões	_	Lo~Is
+	
 	lhos		?
 	lhos	_	?
 	lhou		?
@@ -1380,8 +1484,10 @@ _	bel		bEU
 	ob	_	?
 	obs		?
 	obs	_	?
-	ões		?
-	ões	_	?
+	
+	ões	_	'o~Is
+%	ões	_	o~Is
+	
 	ol		?
 	ol	_	?
 	om		?
@@ -1490,8 +1596,8 @@ _	bel		bEU
 	põe	_	?
 	põem		?
 	põem	_	?
-	pões		?
-	pões	_	?
+	pões	_	'po~Is
+%	pões	_	po~Is
 	poi		?
 	poi	_	?
 	pol		?
@@ -1682,8 +1788,10 @@ r$	rão	_	'Ra~U	// rr
 	ró	_	?
 	rô		?
 	rô	_	?
-	rões		?
-	rões	_	?
+	rões	_	'4o~Is
+%	rões	_	4o~Is
+r$	rões	_	'Ro~Is
+%r$	rões	_	Ro~Is
 	rom		?
 	rom	_	?
 	ron		?
@@ -1715,8 +1823,8 @@ r$	rão	_	'Ra~U	// rr
 	san		?
 	san	_	?
 	
-	são	_	'sa~U
-%	são	_	sa~U
+	são	_	'za~U
+%	são	_	za~U
 s$	são	_	'sa~U	// ss
 %s$	são	_	sa~U	// ss
 	
@@ -1772,8 +1880,12 @@ s$	são	_	'sa~U	// ss
 	só	_	?
 	sô		?
 	sô	_	?
-	sões		?
-	sões	_	?
+	
+	sões	_	'zo~Is
+%	sões	_	zo~Is
+s$	sões	_	'so~Is
+%s$	sões	_	so~Is
+
 	sol		?
 	sol	_	?
 	som		?
@@ -1888,8 +2000,10 @@ s$	são	_	'sa~U	// ss
 	tó	_	?
 	tô		?
 	tô	_	?
-	tões		?
-	tões	_	?
+	
+	tões	_	'to~Is
+%	tões	_	to~Is
+	
 	tom		?
 	tom	_	?
 	ton		?
