@@ -182,10 +182,10 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 		# set the defaul stress
 		if (STRESSED_SYLLABLE < 0) {
 			x  = n + 1 + STRESSED_SYLLABLE;
-			array[x] = APOSTROPHE array[x];
+			if (array[x] !~ APOSTROPHE) array[x] = APOSTROPHE array[x];
 		} else {
 			x  = STRESSED_SYLLABLE;
-			array[x] = APOSTROPHE array[x];
+			if (array[x] !~ APOSTROPHE) array[x] = APOSTROPHE array[x];
 		}
 	}
 	
