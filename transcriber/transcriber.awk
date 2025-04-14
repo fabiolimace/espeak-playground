@@ -98,16 +98,24 @@ function error(msg) {
 	exit 1;
 }
 
-function test_match(pre, syl, pos, rule, stress) {
-	
-	if (stress == POS_TONIC && RULES_F1[rule] ~ PERCENT) pre = PERCENT;
-	if (stress == PRE_TONIC && RULES_F3[rule] ~ PERCENT) pos = PERCENT;
-	
-	if (RULES_F1[rule] && pre !~ RULES_F1[rule]) return null;
-	if (RULES_F2[rule] && syl !~ RULES_F2[rule]) return null;
-	if (RULES_F3[rule] && pos !~ RULES_F3[rule]) return null;
+function test_match(pre, syl, pos, rule, stress, position) {
 
-	return RULES_F4[rule];
+	f1 = RULES_F1[rule];
+	f2 = RULES_F2[rule];
+	f3 = RULES_F3[rule];
+	f4 = RULES_F4[rule];
+	
+	if (stress == POS_TONIC) pre = PERCENT pre;
+	if (stress == PRE_TONIC) pos = PERCENT pos;
+	
+	if (pre ~ PERCENT && f1 !~ PERCENT) return null;
+	if (pos ~ PERCENT && f3 !~ PERCENT) return null;
+	
+	if (f1 && pre !~ f1) return null;
+	if (f2 && syl !~ f2) return null;
+	if (f3 && pos !~ f3) return null;
+
+	return f4;
 }
 
 function find_match(pre, syl, pos, stress,    i, n, rule, numbers, matched) {
