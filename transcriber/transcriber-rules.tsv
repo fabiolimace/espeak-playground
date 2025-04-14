@@ -1,4 +1,3 @@
-
 // TODO: add as much rules as possible.
 
 // Conversão de ortografia em transcrição fonética, baseada em divisão silábica e expressão regular.
@@ -25,201 +24,2161 @@
 // References:
 * https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
 
-// F1	F2	F3	F4
-
 	a		a
 	a	_	@
+	á		'a
+	â		'@
+
+	ã		'a~
+%	ã		a~
+
+	ab		ab
+	abs		abs
+	
+	ad		ad
+	ads		ads
+	
+	ai		aI
+	ais		aIs
+	
+	al		aU
+	al	_	'aU
+
+	am		a~
+	
+	an		a~
+	an	_	'a~
+	
+	ão	_	'a~U
+%	ão	_	a~U
+	
+	ar		a4
+	ar	_	'a4
+	
 	as		as
 	as	_	@s
+	as	^s	a
 	
-	á		'a
-	à		a
-	ão		'a~U
-%	ão		a~U
+	ás		as
+	ás	_	@s
+	ás	^s	a
+	
+	au		aU
+	aus		aUs
 
-// b
 	ba		ba
 	ba	_	b@
 	
+	bá		'ba
+	
 	bai		baI
+	bais		baI
+	
+	bal		baU
+	bal	_	baUs
+	
+	bam		ba~
+	
+	ban		ba~
+	ban	_	'ba~
 
-	bas	_	ba
+	bar		ba4
+	bar	_	'ba4
+	
+	bas		bas
 	bas	_	b@s
 	
-	bo		bO
-	bo	_	bU
+	bás		'bas
+	
+	bau		baU
+	
+	be		be
+	be	_	bI
+	
+	bé		'bE
+	bê		'be
 
-// c
+	bei		beI
+	beis		beIs
+
+	bel		beU
+_	bel		bEU
+	bel	_	bEU
+	
+	bem		be~
+
+	ben		be~
+	ben	_	'be~
+
+	ber		be4
+	ber	_	'be4
+	
+	bes		bes
+	bes	_	bIs
+	
+	bi		bi
+	bi	_	'bi
+	
+	bí		'bi
+
+	bir		bir
+	bir	_	'bir
+	
+	bis		bis
+	bis	_	bIs
+	
+	bla		bla
+	bla	_	bl@
+	
+	blas		blas
+	blas	_	bl@s
+	
+	ble		ble
+	ble	_	blI
+	
+	bli		bli
+	bli	_	'bli
+	
+	blin		bli~
+	blin	_	'bli~
+	
+	blo		blo
+	blo	_	blU
+	
+	blu		blu
+	blu	_	'blu
+	
+	bo		bo
+	bo	_	bU
+	
+	bó		bO
+
+	boi		boI
+
+	bol		boU
+	bol	_	'bOU
+	
+	bom		bo~
+	bom	_	'bo~
+	
+	bon		bo~
+	bon	_	'bo~
+	
+	bor		bo4
+	bor	_	'bo4
+	
+	bos		bos
+	bos	_	bUs
+	
+	bou		boU
+	bou	_	'boU
+
+	bra		b4a
+	bra	_	b4@
+	
+	brá		'b4a
+	
+	brai		b4aI
+
+	brais		b4aIs
+
+	bram		b4a~
+	
+	bran		b4a~
+	bran	_	'b4a~
+	
+	brar		b4a4
+	brar	_	'b4a4
+	
+	bras		b4as
+	bras	_	b4@s
+	
+	brás		'b4as
+
+	bre		b4es
+	bre	_	b4Is
+	
+	brei		b4eI
+	
+	breis		b4eIs
+	
+	brem		b4e~
+
+	bres		b4es
+	bres	_	b4Is
+	
+	bri		b4i
+	bri	_	'b4i
+	
+	brí		'b4i
+	
+	brin		b4in
+	brin	_	'b4in
+	
+	brir		b4i4
+	brir	_	'b4i4
+	
+	bris		b4is
+	bris	_	'b4i4
+	
+	bro		b4o
+	bro	_	b4U
+	
+	bron		b4on
+	bron	_	'b4on
+	
+	brou		b4oU
+	brou	_	'b4oU
+	
+	bru		b4u
+	bru	_	'b4u
+	
+	bu		bu
+	bu	_	'bu
+	
+	bui		buI
+
+	bun		bu~
+	bun	_	'bu~
+	
+	bur		bu4
+	bur	_	'bu4
+	
+	bus		bus
+	bus	_	'bus
 	
 	ca		ka
 	ca	_	k@
+	
 	cá		'ka
-	cã		'ka~
-	car	^r	ka
-	cas	^s	ka
+
+	câ		'c@
+
+	ça		sa
+	ça	_	s@
+	
+	çá		'sa
+
+	cai		kaI
+
+	çai		saI
+
+	cais		kaIs
+
+	çais		saIs
+
+	cal		kaU
+
+	cam		ka~
+
+	çam		sa~
+
+	can		ka~
+	can	_	'ka~
+	
+	cân		'ka~
+	
+	çan		sa~
+	çan	_	'sa~
+	
+	cão	_	'ka~U
+%	cão	_	ka~U
+	
+	ção	_	'sa~U
+%	ção	_	sa~U
+
+	cap		kap
+
+	car		ka4
+	car	_	'ka4
+	
+	çar		sa4
+	çar	_	'sa4
+	
+	cas		kas
+	cas	_	'k@s
+	
+	cás		'kas
+
+	ças		sas
+	ças	_	'sas
+	
+	çás		'sas
+
+	cau		kaU
 
 	ce		se
 	ce	_	sI
-	cé		sE
+	
+	cé		'sE
+
 	cê		'se
-	cen		se~
-	cên		'se~
-	cem		se~
-	cêm		'se~	// nao existe
 
-	ci		si
-	cí		'si
-	ci	_	'si
+	cei		seI
+
+	ceis		seIs
+
+	cem		?
+	cem	_	?
+	cen		?
+	cen	_	?
+	cên		?
+	cên	_	?
+	cep		?
+	cep	_	?
+	cer		?
+	cer	_	?
+	ces		?
+	ces	_	?
+	cês		?
+	cês	_	?
+	ceu		?
+	ceu	_	?
+	cha		?
+	cha	_	?
+	chá		?
+	chá	_	?
+	chai		?
+	chai	_	?
+	chais		?
+	chais	_	?
+	cham		?
+	cham	_	?
+	chan		?
+	chan	_	?
+	char		?
+	char	_	?
+	chas		?
+	chas	_	?
+	chás		?
+	chás	_	?
+	che		?
+	che	_	?
+	chei		?
+	chei	_	?
+	cheis		?
+	cheis	_	?
+	chem		?
+	chem	_	?
+	ches		?
+	ches	_	?
+	chi		?
+	chi	_	?
+	chil		?
+	chil	_	?
+	chim		?
+	chim	_	?
+	chin		?
+	chin	_	?
+	cho		?
+	cho	_	?
+	chos		?
+	chos	_	?
+	chou		?
+	chou	_	?
+	chu		?
+	chu	_	?
+	chum		?
+	chum	_	?
+	ci		?
+	ci	_	?
+	cí		?
+	cí	_	?
+	cin		?
+	cin	_	?
+	cir		?
+	cir	_	?
+	cis		?
+	cis	_	?
+	cís		?
+	cís	_	?
+	cla		?
+	cla	_	?
+	clas		?
+	clas	_	?
+	clau		?
+	clau	_	?
+	cle		?
+	cle	_	?
+	cli		?
+	cli	_	?
+	clo		?
+	clo	_	?
+	clu		?
+	clu	_	?
+	clui		?
+	clui	_	?
+	co		?
+	co	_	?
+	có		?
+	có	_	?
+	cô		?
+	cô	_	?
+	ço		?
+	ço	_	?
+	ções		?
+	ções	_	?
+	coi		?
+	coi	_	?
+	çoi		?
+	çoi	_	?
+	coin		?
+	coin	_	?
+	col		?
+	col	_	?
+	com		?
+	com	_	?
+	con		?
+	con	_	?
+	côn		?
+	côn	_	?
+	cons		?
+	cons	_	?
+	cor		?
+	cor	_	?
+	cos		?
+	cos	_	?
+	ços		?
+	ços	_	?
+	cou		?
+	cou	_	?
+	çou		?
+	çou	_	?
+	cra		?
+	cra	_	?
+	crá		?
+	crá	_	?
+	cras		?
+	cras	_	?
+	cre		?
+	cre	_	?
+	crei		?
+	crei	_	?
+	cren		?
+	cren	_	?
+	cres		?
+	cres	_	?
+	cri		?
+	cri	_	?
+	crí		?
+	crí	_	?
+	cris		?
+	cris	_	?
+	cro		?
+	cro	_	?
+	cros		?
+	cros	_	?
+	cru		?
+	cru	_	?
+	crus		?
+	crus	_	?
+	cu		?
+	cu	_	?
+	cú		?
+	cú	_	?
+	çu		?
+	çu	_	?
+	cui		?
+	cui	_	?
+	cul		?
+	cul	_	?
+	cum		?
+	cum	_	?
+	cun		?
+	cun	_	?
+	cuns		?
+	cuns	_	?
+	cur		?
+	cur	_	?
+	cus		?
+	cus	_	?
+	da		?
+	da	_	?
+	dá		?
+	dá	_	?
+	dai		?
+	dai	_	?
+	dais		?
+	dais	_	?
+	dal		?
+	dal	_	?
+	dam		?
+	dam	_	?
+	dan		?
+	dan	_	?
 	
-	co		ko
-	co	_	kU
-	có		'kO
-	cô		'ko
-
-	cu		ku
-	cu	_	'ku
-
-	ça		s@
-	ça	_	s@
-	çá		'sa
-	çâ		's@
-	çã		'sa~
-	cão		'ka~U
-	ção		sa~U
-	çãos		sa~Us
+	dão	_	'da~U
+%	dão	_	da~U
 	
-	ço		so
-	ço	_	sU
-	çó		'sO
-	çô		'so
-	ções	_	soIs
-
-	çu		'su
+	dap		?
+	dap	_	?
+	dar		?
+	dar	_	?
+	das		?
+	das	_	?
+	dás		?
+	dás	_	?
+	de		?
+	de	_	?
+	dé		?
+	dé	_	?
+	dê		?
+	dê	_	?
+	dei		?
+	dei	_	?
+	deis		?
+	deis	_	?
+	del		?
+	del	_	?
+	dem		?
+	dem	_	?
+	den		?
+	den	_	?
+	dên		?
+	dên	_	?
+	der		?
+	der	_	?
+	des		?
+	des	_	?
+	dês		?
+	dês	_	?
+	deu		?
+	deu	_	?
+	di		?
+	di	_	?
+	dí		?
+	dí	_	?
+	din		?
+	din	_	?
+	dir		?
+	dir	_	?
+	dis		?
+	dis	_	?
+	dís		?
+	dís	_	?
+	diu		?
+	diu	_	?
+	do		?
+	do	_	?
+	dó		?
+	dó	_	?
+	dô		?
+	dô	_	?
+	dões		?
+	dões	_	?
+	dog		?
+	dog	_	?
+	doi		?
+	doi	_	?
+	don		?
+	don	_	?
+	dor		?
+	dor	_	?
+	dos		?
+	dos	_	?
+	dou		?
+	dou	_	?
+	dra		?
+	dra	_	?
+	drá		?
+	drá	_	?
+	drar		?
+	drar	_	?
+	dras		?
+	dras	_	?
+	dre		?
+	dre	_	?
+	dri		?
+	dri	_	?
+	dro		?
+	dro	_	?
+	dron		?
+	dron	_	?
+	dros		?
+	dros	_	?
+	dru		?
+	dru	_	?
+	du		?
+	du	_	?
+	dul		?
+	dul	_	?
+	dun		?
+	dun	_	?
+	dus		?
+	dus	_	?
+	e		?
+	e	_	?
+	é		?
+	é	_	?
+	ê		?
+	ê	_	?
+	ei		?
+	ei	_	?
+	eis		?
+	eis	_	?
+	el		?
+	el	_	?
+	em		?
+	em	_	?
+	en		?
+	en	_	?
+	ên		?
+	ên	_	?
+	er		?
+	er	_	?
+	es		?
+	es	_	?
+	és		?
+	és	_	?
+	et		?
+	et	_	?
+	eu		?
+	eu	_	?
+	ex		?
+	ex	_	?
+	fa		?
+	fa	_	?
+	fá		?
+	fá	_	?
+	fai		?
+	fai	_	?
+	fais		?
+	fais	_	?
+	fal		?
+	fal	_	?
+	fam		?
+	fam	_	?
+	fan		?
+	fan	_	?
+	far		?
+	far	_	?
+	fas		?
+	fas	_	?
+	fás		?
+	fás	_	?
+	fe		?
+	fe	_	?
+	fé		?
+	fé	_	?
+	fec		?
+	fec	_	?
+	fei		?
+	fei	_	?
+	feis		?
+	feis	_	?
+	fem		?
+	fem	_	?
+	fen		?
+	fen	_	?
+	fer		?
+	fer	_	?
+	fes		?
+	fes	_	?
+	fi		?
+	fi	_	?
+	fí		?
+	fí	_	?
+	fil		?
+	fil	_	?
+	fin		?
+	fin	_	?
+	fir		?
+	fir	_	?
+	fis		?
+	fis	_	?
+	fla		?
+	fla	_	?
+	flá		?
+	flá	_	?
+	flau		?
+	flau	_	?
+	fle		?
+	fle	_	?
+	fli		?
+	fli	_	?
+	flo		?
+	flo	_	?
+	flu		?
+	flu	_	?
+	flui		?
+	flui	_	?
+	fo		?
+	fo	_	?
+	fó		?
+	fó	_	?
+	fô		?
+	fô	_	?
+	foi		?
+	foi	_	?
+	fol		?
+	fol	_	?
+	for		?
+	for	_	?
+	fos		?
+	fos	_	?
+	fou		?
+	fou	_	?
+	fra		?
+	fra	_	?
+	frá		?
+	frá	_	?
+	frag		?
+	frag	_	?
+	fran		?
+	fran	_	?
+	fras		?
+	fras	_	?
+	frau		?
+	frau	_	?
+	fre		?
+	fre	_	?
+	frei		?
+	frei	_	?
+	fren		?
+	fren	_	?
+	fres		?
+	fres	_	?
+	fri		?
+	fri	_	?
+	frí		?
+	frí	_	?
+	fric		?
+	fric	_	?
+	frin		?
+	frin	_	?
+	fro		?
+	fro	_	?
+	fron		?
+	fron	_	?
+	frou		?
+	frou	_	?
+	fru		?
+	fru	_	?
+	frui		?
+	frui	_	?
+	frus		?
+	frus	_	?
+	fu		?
+	fu	_	?
+	ful		?
+	ful	_	?
+	fun		?
+	fun	_	?
+	fur		?
+	fur	_	?
+	fus		?
+	fus	_	?
+	ga		?
+	ga	_	?
+	gá		?
+	gá	_	?
+	gai		?
+	gai	_	?
+	gais		?
+	gais	_	?
+	gal		?
+	gal	_	?
+	gam		?
+	gam	_	?
+	gan		?
+	gan	_	?
 	
-	la	_	l@
-
-// d
-
-	da		da
-	da	_	d@
-	das		das
-	das	_	d@s
+	gão	_	'ga~U
+%	gão	_	ga~U
 	
-	de		de
-	de	_	dZI
-	des		des
-	des	_	dZIs
+	gar		?
+	gar	_	?
+	gas		?
+	gas	_	?
+	gás		?
+	gás	_	?
+	ge		?
+	ge	_	?
+	gé		?
+	gé	_	?
+	gê		?
+	gê	_	?
+	gei		?
+	gei	_	?
+	gem		?
+	gem	_	?
+	gen		?
+	gen	_	?
+	gên		?
+	gên	_	?
+	gens		?
+	gens	_	?
+	ger		?
+	ger	_	?
+	ges		?
+	ges	_	?
+	gi		?
+	gi	_	?
+	gí		?
+	gí	_	?
+	gin		?
+	gin	_	?
+	gir		?
+	gir	_	?
+	gis		?
+	gis	_	?
+	gís		?
+	gís	_	?
+	giu		?
+	giu	_	?
+	gli		?
+	gli	_	?
+	glo		?
+	glo	_	?
+	glu		?
+	glu	_	?
+	gna		?
+	gna	_	?
+	gná		?
+	gná	_	?
+	gnar		?
+	gnar	_	?
+	gnas		?
+	gnas	_	?
+	gnás		?
+	gnás	_	?
+	gne		?
+	gne	_	?
+	gni		?
+	gni	_	?
+	gno		?
+	gno	_	?
+	gnos		?
+	gnos	_	?
+	go		?
+	go	_	?
+	gó		?
+	gó	_	?
+	goi		?
+	goi	_	?
+	gol		?
+	gol	_	?
+	gon		?
+	gon	_	?
+	gor		?
+	gor	_	?
+	gos		?
+	gos	_	?
+	gou		?
+	gou	_	?
+	gra		?
+	gra	_	?
+	grá		?
+	grá	_	?
+	gram		?
+	gram	_	?
+	gran		?
+	gran	_	?
+	grar		?
+	grar	_	?
+	gras		?
+	gras	_	?
+	grás		?
+	grás	_	?
+	gre		?
+	gre	_	?
+	grei		?
+	grei	_	?
+	gres		?
+	gres	_	?
+	gri		?
+	gri	_	?
+	grin		?
+	grin	_	?
+	gro		?
+	gro	_	?
+	gros		?
+	gros	_	?
+	gru		?
+	gru	_	?
+	gu		?
+	gu	_	?
+	gua		?
+	gua	_	?
+	guá		?
+	guá	_	?
+	guai		?
+	guai	_	?
+	guar		?
+	guar	_	?
+	guas		?
+	guas	_	?
+	gue		?
+	gue	_	?
+	guei		?
+	guei	_	?
+	gueis		?
+	gueis	_	?
+	guem		?
+	guem	_	?
+	guen		?
+	guen	_	?
+	güen		?
+	güen	_	?
+	guer		?
+	guer	_	?
+	gues		?
+	gues	_	?
+	gui		?
+	gui	_	?
+	guí		?
+	guí	_	?
+	güi		?
+	güi	_	?
+	guin		?
+	guin	_	?
+	guir		?
+	guir	_	?
+	guis		?
+	guis	_	?
+	gun		?
+	gun	_	?
+	gur		?
+	gur	_	?
+	gus		?
+	gus	_	?
+	ha		?
+	ha	_	?
+	har		?
+	har	_	?
+	has		?
+	has	_	?
+	hau		?
+	hau	_	?
+	he		?
+	he	_	?
+	her		?
+	her	_	?
+	hi		?
+	hi	_	?
+	his		?
+	his	_	?
+	ho		?
+	ho	_	?
+	hon		?
+	hon	_	?
+	hor		?
+	hor	_	?
+	hos		?
+	hos	_	?
+	hou		?
+	hou	_	?
+	hu		?
+	hu	_	?
+	i		?
+	i	_	?
+	í		?
+	í	_	?
+	im		?
+	im	_	?
+	in		?
+	in	_	?
+	ín		?
+	ín	_	?
+	ins		?
+	ins	_	?
+	ir		?
+	ir	_	?
+	is		?
+	is	_	?
+	ís		?
+	ís	_	?
+	ja		?
+	ja	_	?
+	já		?
+	já	_	?
+	jai		?
+	jai	_	?
+	jais		?
+	jais	_	?
+	jam		?
+	jam	_	?
+	jan		?
+	jan	_	?
+	jar		?
+	jar	_	?
+	jas		?
+	jas	_	?
+	jás		?
+	jás	_	?
+	jau		?
+	jau	_	?
+	je		?
+	je	_	?
+	jei		?
+	jei	_	?
+	jeis		?
+	jeis	_	?
+	jem		?
+	jem	_	?
+	jes		?
+	jes	_	?
+	ji		?
+	ji	_	?
+	jo		?
+	jo	_	?
+	jor		?
+	jor	_	?
+	jos		?
+	jos	_	?
+	jou		?
+	jou	_	?
+	ju		?
+	ju	_	?
+	jui		?
+	jui	_	?
+	jul		?
+	jul	_	?
+	jun		?
+	jun	_	?
+	jus		?
+	jus	_	?
+	la		?
+	la	_	?
+	lá		?
+	lá	_	?
+	lai		?
+	lai	_	?
+	lais		?
+	lais	_	?
+	lam		?
+	lam	_	?
+	lan		?
+	lan	_	?
+	lân		?
+	lân	_	?
 	
-	di		dZi
-	di	_	'dZi
-	dis		dZi
-	dis	_	'dZIs
+	lão	_	'la~U
+%	lão	_	la~U
 	
-	do		do
-	do	_	dU
-// e
-
-_	es		es
-
-// f
-
-	fa		fa
-	fa	_	f@
-	fas		fas
-	fas	_	f@s
-
-	fan		fa~
-	far		fa4
-
-	fe		fe
-	fe	_	fI
-	fes		fes
-	fes	_	fIs
-		
-	fo		fo
-
-// g
-
-	ga		ga
-
-	gu		gu
-
-	gão		'ga~U
-%	gão		ga~U
-
-// h
-
-	ho		o
-
-// l
-	la		la
+	lar		?
+	lar	_	?
+	las		?
+	las	_	?
+	lás		?
+	lás	_	?
+	lau		?
+	lau	_	?
+	le		?
+	le	_	?
+	lé		?
+	lé	_	?
+	lê		?
+	lê	_	?
+	lec		?
+	lec	_	?
+	lei		?
+	lei	_	?
+	leis		?
+	leis	_	?
+	lem		?
+	lem	_	?
+	len		?
+	len	_	?
+	lên		?
+	lên	_	?
+	ler		?
+	ler	_	?
+	les		?
+	les	_	?
+	lês		?
+	lês	_	?
+	lha		?
+	lha	_	?
+	lhá		?
+	lhá	_	?
+	lhai		?
+	lhai	_	?
+	lhais		?
+	lhais	_	?
+	lham		?
+	lham	_	?
+	lhan		?
+	lhan	_	?
 	
-	lho		LU
-// m
-	mem		meIN
-
-// s
-	sa		sa
-	sá		'sa
-	sa		z@
-[^lnrs]$	sa		za
-	sa		sa	// ss
-
-// o
-	or		o4
-	ór		'O4
-// r
-
-	ra		4a
-	ra	_	4@
-	ras		4as
-	ras	_	4@s
+	lhão	_	'La~U
+%	lhão	_	La~U
 	
-	ra		Ra
-	rá		'Ra
-[^lnrs]$	ra		4a
-r$	ra		Ra	// rr
+	lhar		?
+	lhar	_	?
+	lhas		?
+	lhas	_	?
+	lhás		?
+	lhás	_	?
+	lhe		?
+	lhe	_	?
+	lhei		?
+	lhei	_	?
+	lheis		?
+	lheis	_	?
+	lhem		?
+	lhem	_	?
+	lher		?
+	lher	_	?
+	lhes		?
+	lhes	_	?
+	lhi		?
+	lhi	_	?
+	lho		?
+	lho	_	?
+	lhões		?
+	lhões	_	?
+	lhos		?
+	lhos	_	?
+	lhou		?
+	lhou	_	?
+	li		?
+	li	_	?
+	lí		?
+	lí	_	?
+	lim		?
+	lim	_	?
+	lin		?
+	lin	_	?
+	lir		?
+	lir	_	?
+	lis		?
+	lis	_	?
+	lís		?
+	lís	_	?
+	lo		?
+	lo	_	?
+	ló		?
+	ló	_	?
+	lô		?
+	lô	_	?
+	lon		?
+	lon	_	?
+	los		?
+	los	_	?
+	lou		?
+	lou	_	?
+	lu		?
+	lu	_	?
+	lú		?
+	lú	_	?
+	lui		?
+	lui	_	?
+	lum		?
+	lum	_	?
+	lus		?
+	lus	_	?
+	ma		?
+	ma	_	?
+	má		?
+	má	_	?
+	mã		?
+	mã	_	?
+	mai		?
+	mai	_	?
+	mais		?
+	mais	_	?
+	mal		?
+	mal	_	?
+	mam		?
+	mam	_	?
+	man		?
+	man	_	?
+	
+	mão	_	'ma~U
+%	mão	_	ma~U
+	
+	mar		?
+	mar	_	?
+	mas		?
+	mas	_	?
+	más		?
+	más	_	?
+	me		?
+	me	_	?
+	mé		?
+	mé	_	?
+	mê		?
+	mê	_	?
+	mei		?
+	mei	_	?
+	meis		?
+	meis	_	?
+	mem		?
+	mem	_	?
+	men		?
+	men	_	?
+	mer		?
+	mer	_	?
+	mes		?
+	mes	_	?
+	mi		?
+	mi	_	?
+	mí		?
+	mí	_	?
+	min		?
+	min	_	?
+	mir		?
+	mir	_	?
+	mis		?
+	mis	_	?
+	mís		?
+	mís	_	?
+	miu		?
+	miu	_	?
+	mo		?
+	mo	_	?
+	mó		?
+	mó	_	?
+	mô		?
+	mô	_	?
+	moi		?
+	moi	_	?
+	mol		?
+	mol	_	?
+	mon		?
+	mon	_	?
+	mons		?
+	mons	_	?
+	mor		?
+	mor	_	?
+	mos		?
+	mos	_	?
+	mou		?
+	mou	_	?
+	mu		?
+	mu	_	?
+	mul		?
+	mul	_	?
+	mun		?
+	mun	_	?
+	mur		?
+	mur	_	?
+	mus		?
+	mus	_	?
+	na		?
+	na	_	?
+	ná		?
+	ná	_	?
+	nâ		?
+	nâ	_	?
+	nai		?
+	nai	_	?
+	nais		?
+	nais	_	?
+	nal		?
+	nal	_	?
+	nam		?
+	nam	_	?
+	nan		?
+	nan	_	?
+	nar		?
+	nar	_	?
+	nas		?
+	nas	_	?
+	nás		?
+	nás	_	?
+	nau		?
+	nau	_	?
+	ne		?
+	ne	_	?
+	né		?
+	né	_	?
+	nec		?
+	nec	_	?
+	nei		?
+	nei	_	?
+	neis		?
+	neis	_	?
+	nem		?
+	nem	_	?
+	nen		?
+	nen	_	?
+	ner		?
+	ner	_	?
+	nes		?
+	nes	_	?
+	nês		?
+	nês	_	?
+	neu		?
+	neu	_	?
+	nex		?
+	nex	_	?
+	nha		?
+	nha	_	?
+	nhá		?
+	nhá	_	?
+	nhai		?
+	nhai	_	?
+	nhais		?
+	nhais	_	?
+	nham		?
+	nham	_	?
+	nhan		?
+	nhan	_	?
+	nhar		?
+	nhar	_	?
+	nhas		?
+	nhas	_	?
+	nhás		?
+	nhás	_	?
+	nhe		?
+	nhe	_	?
+	nhei		?
+	nhei	_	?
+	nheis		?
+	nheis	_	?
+	nhem		?
+	nhem	_	?
+	nhes		?
+	nhes	_	?
+	nho		?
+	nho	_	?
+	nhos		?
+	nhos	_	?
+	nhou		?
+	nhou	_	?
+	ni		?
+	ni	_	?
+	ní		?
+	ní	_	?
+	nin		?
+	nin	_	?
+	nir		?
+	nir	_	?
+	nis		?
+	nis	_	?
+	nís		?
+	nís	_	?
+	no		?
+	no	_	?
+	nó		?
+	nó	_	?
+	nô		?
+	nô	_	?
+	noi		?
+	noi	_	?
+	nor		?
+	nor	_	?
+	nos		?
+	nos	_	?
+	nou		?
+	nou	_	?
+	nu		?
+	nu	_	?
+	nui		?
+	nui	_	?
+	nun		?
+	nun	_	?
+	o		?
+	o	_	?
+	ó		?
+	ó	_	?
+	ô		?
+	ô	_	?
+	ob		?
+	ob	_	?
+	obs		?
+	obs	_	?
+	ões		?
+	ões	_	?
+	ol		?
+	ol	_	?
+	om		?
+	om	_	?
+	on		?
+	on	_	?
+	op		?
+	op	_	?
+	or		?
+	or	_	?
+	os		?
+	os	_	?
+	ou		?
+	ou	_	?
+	pa		?
+	pa	_	?
+	pá		?
+	pá	_	?
+	pac		?
+	pac	_	?
+	pai		?
+	pai	_	?
+	pais		?
+	pais	_	?
+	pal		?
+	pal	_	?
+	pam		?
+	pam	_	?
+	pan		?
+	pan	_	?
+	par		?
+	par	_	?
+	pas		?
+	pas	_	?
+	pás		?
+	pás	_	?
+	pau		?
+	pau	_	?
+	pe		?
+	pe	_	?
+	pé		?
+	pé	_	?
+	pê		?
+	pê	_	?
+	pec		?
+	pec	_	?
+	pei		?
+	pei	_	?
+	peis		?
+	peis	_	?
+	pem		?
+	pem	_	?
+	pen		?
+	pen	_	?
+	per		?
+	per	_	?
+	pers		?
+	pers	_	?
+	pes		?
+	pes	_	?
+	pi		?
+	pi	_	?
+	pí		?
+	pí	_	?
+	pig		?
+	pig	_	?
+	pin		?
+	pin	_	?
+	pir		?
+	pir	_	?
+	pis		?
+	pis	_	?
+	pla		?
+	pla	_	?
+	plá		?
+	plá	_	?
+	plai		?
+	plai	_	?
+	plan		?
+	plan	_	?
+	plas		?
+	plas	_	?
+	plau		?
+	plau	_	?
+	ple		?
+	ple	_	?
+	plei		?
+	plei	_	?
+	pli		?
+	pli	_	?
+	plo		?
+	plo	_	?
+	plu		?
+	plu	_	?
+	pneu		?
+	pneu	_	?
+	pno		?
+	pno	_	?
+	po		?
+	po	_	?
+	pó		?
+	pó	_	?
+	pô		?
+	pô	_	?
+	põe		?
+	põe	_	?
+	põem		?
+	põem	_	?
+	pões		?
+	pões	_	?
+	poi		?
+	poi	_	?
+	pol		?
+	pol	_	?
+	pom		?
+	pom	_	?
+	pon		?
+	pon	_	?
+	por		?
+	por	_	?
+	pos		?
+	pos	_	?
+	pôs		?
+	pôs	_	?
+	pou		?
+	pou	_	?
+	pra		?
+	pra	_	?
+	prá		?
+	prá	_	?
+	prai		?
+	prai	_	?
+	pran		?
+	pran	_	?
+	pras		?
+	pras	_	?
+	pre		?
+	pre	_	?
+	prei		?
+	prei	_	?
+	pren		?
+	pren	_	?
+	pres		?
+	pres	_	?
+	pri		?
+	pri	_	?
+	prin		?
+	prin	_	?
+	pris		?
+	pris	_	?
+	pro		?
+	pro	_	?
+	pró		?
+	pró	_	?
+	proi		?
+	proi	_	?
+	pron		?
+	pron	_	?
+	pror		?
+	pror	_	?
+	pros		?
+	pros	_	?
+	pru		?
+	pru	_	?
+	psa		?
+	psa	_	?
+	psi		?
+	psi	_	?
+	psu		?
+	psu	_	?
+	pu		?
+	pu	_	?
+	pú		?
+	pú	_	?
+	pul		?
+	pul	_	?
+	pur		?
+	pur	_	?
+	pus		?
+	pus	_	?
+	qua		?
+	qua	_	?
+	quá		?
+	quá	_	?
+	quan		?
+	quan	_	?
+	quar		?
+	quar	_	?
+	que		?
+	que	_	?
+	qüe		?
+	qüe	_	?
+	quei		?
+	quei	_	?
+	queis		?
+	queis	_	?
+	quem		?
+	quem	_	?
+	quen		?
+	quen	_	?
+	qüen		?
+	qüen	_	?
+	ques		?
+	ques	_	?
+	qües		?
+	qües	_	?
+	qui		?
+	qui	_	?
+	quí		?
+	quí	_	?
+	qüi		?
+	qüi	_	?
+	quin		?
+	quin	_	?
+	quis		?
+	quis	_	?
+	quo		?
+	quo	_	?
+	ra		?
+	ra	_	?
+	rá		?
+	rá	_	?
+	râ		?
+	râ	_	?
+	rã		?
+	rã	_	?
+	rac		?
+	rac	_	?
+	rai		?
+	rai	_	?
+	rais		?
+	rais	_	?
+	ral		?
+	ral	_	?
+	ram		?
+	ram	_	?
+	ran		?
+	ran	_	?
+	
+	rão	_	'4a~U
+%	rão	_	4a~U
+r$	rão	_	'Ra~U	// rr
+%r$	rão	_	Ra~U	// rr
 
-	re		4e
-	re	_	4I
-	res		4es
-	res	_	4Is
+	rap		?
+	rap	_	?
+	rar		?
+	rar	_	?
+	ras		?
+	ras	_	?
+	rás		?
+	rás	_	?
+	re		?
+	re	_	?
+	ré		?
+	ré	_	?
+	rê		?
+	rê	_	?
+	rei		?
+	rei	_	?
+	rein		?
+	rein	_	?
+	reis		?
+	reis	_	?
+	rem		?
+	rem	_	?
+	ren		?
+	ren	_	?
+	rên		?
+	rên	_	?
+	rer		?
+	rer	_	?
+	res		?
+	res	_	?
+	rês		?
+	rês	_	?
+	reu		?
+	reu	_	?
+	ri		?
+	ri	_	?
+	rí		?
+	rí	_	?
+	rim		?
+	rim	_	?
+	rin		?
+	rin	_	?
+	rir		?
+	rir	_	?
+	ris		?
+	ris	_	?
+	rís		?
+	rís	_	?
+	riu		?
+	riu	_	?
+	ro		?
+	ro	_	?
+	ró		?
+	ró	_	?
+	rô		?
+	rô	_	?
+	rões		?
+	rões	_	?
+	rom		?
+	rom	_	?
+	ron		?
+	ron	_	?
+	ros		?
+	ros	_	?
+	rou		?
+	rou	_	?
+	ru		?
+	ru	_	?
+	rui		?
+	rui	_	?
+	rup		?
+	rup	_	?
+	rus		?
+	rus	_	?
+	sa		?
+	sa	_	?
+	sá		?
+	sá	_	?
+	sai		?
+	sai	_	?
+	sais		?
+	sais	_	?
+	sal		?
+	sal	_	?
+	sam		?
+	sam	_	?
+	san		?
+	san	_	?
 	
-	ri		4i
-	ri	_	'4i
-	ris		4is
-	ris	_	'4is
+	são	_	'sa~U
+%	são	_	sa~U
+s$	são	_	'sa~U	// ss
+%s$	são	_	sa~U	// ss
 	
-	ro		4o
-	ro	_	4U
-	ros		4os
-	ros	_	4Us
-	
-r$	ro		xo
-r$	ro	_	xU
-r$	ros		xos
-r$	ros	_	xUs
-
-// t
-
-	te		te
-	te	_	tSI
-	
-	tei		teI
-	
-	tes		tes
-	tes	_	tSIs
-	
-	to		to
-	tó		'to
-	to	_	tU
-// v
-
-	va		va
-	va	_	v@
-	vas		vas
-	vas	_	v@s
-	
-	vi		vI
-
-//
+	sar		?
+	sar	_	?
+	sas		?
+	sas	_	?
+	sás		?
+	sás	_	?
+	sau		?
+	sau	_	?
+	se		?
+	se	_	?
+	sé		?
+	sé	_	?
+	seg		?
+	seg	_	?
+	sei		?
+	sei	_	?
+	seis		?
+	seis	_	?
+	sem		?
+	sem	_	?
+	sen		?
+	sen	_	?
+	ser		?
+	ser	_	?
+	ses		?
+	ses	_	?
+	sés		?
+	sés	_	?
+	si		?
+	si	_	?
+	sí		?
+	sí	_	?
+	sil		?
+	sil	_	?
+	sim		?
+	sim	_	?
+	sin		?
+	sin	_	?
+	sín		?
+	sín	_	?
+	sis		?
+	sis	_	?
+	sís		?
+	sís	_	?
+	sla		?
+	sla	_	?
+	so		?
+	so	_	?
+	só		?
+	só	_	?
+	sô		?
+	sô	_	?
+	sões		?
+	sões	_	?
+	sol		?
+	sol	_	?
+	som		?
+	som	_	?
+	son		?
+	son	_	?
+	sor		?
+	sor	_	?
+	sos		?
+	sos	_	?
+	sou		?
+	sou	_	?
+	su		?
+	su	_	?
+	sub		?
+	sub	_	?
+	subs		?
+	subs	_	?
+	sui		?
+	sui	_	?
+	sul		?
+	sul	_	?
+	sun		?
+	sun	_	?
+	sur		?
+	sur	_	?
+	sus		?
+	sus	_	?
+	ta		?
+	ta	_	?
+	tá		?
+	tá	_	?
+	tâ		?
+	tâ	_	?
+	tã		?
+	tã	_	?
+	tai		?
+	tai	_	?
+	tais		?
+	tais	_	?
+	tal		?
+	tal	_	?
+	tam		?
+	tam	_	?
+	tan		?
+	tan	_	?
+	tân		?
+	tân	_	?
+	tão	_	'ta~U
+%	tão	_	ta~U
+	tar		?
+	tar	_	?
+	tas		?
+	tas	_	?
+	tás		?
+	tás	_	?
+	tau		?
+	tau	_	?
+	te		?
+	te	_	?
+	té		?
+	té	_	?
+	tê		?
+	tê	_	?
+	tec		?
+	tec	_	?
+	tei		?
+	tei	_	?
+	teis		?
+	teis	_	?
+	tem		?
+	tem	_	?
+	ten		?
+	ten	_	?
+	tên		?
+	tên	_	?
+	ter		?
+	ter	_	?
+	tér		?
+	tér	_	?
+	tes		?
+	tes	_	?
+	tês		?
+	tês	_	?
+	teu		?
+	teu	_	?
+	tex		?
+	tex	_	?
+	ti		?
+	ti	_	?
+	tí		?
+	tí	_	?
+	tig		?
+	tig	_	?
+	til		?
+	til	_	?
+	tim		?
+	tim	_	?
+	tin		?
+	tin	_	?
+	tir		?
+	tir	_	?
+	tis		?
+	tis	_	?
+	tís		?
+	tís	_	?
+	tiu		?
+	tiu	_	?
+	to		?
+	to	_	?
+	tó		?
+	tó	_	?
+	tô		?
+	tô	_	?
+	tões		?
+	tões	_	?
+	tom		?
+	tom	_	?
+	ton		?
+	ton	_	?
+	tor		?
+	tor	_	?
+	tos		?
+	tos	_	?
+	tou		?
+	tou	_	?
+	tra		?
+	tra	_	?
+	trá		?
+	trá	_	?
+	trai		?
+	trai	_	?
+	trair		?
+	trair	_	?
+	trais		?
+	trais	_	?
+	tral		?
+	tral	_	?
+	tram		?
+	tram	_	?
+	tran		?
+	tran	_	?
+	trans		?
+	trans	_	?
+	trar		?
+	trar	_	?
+	tras		?
+	tras	_	?
+	trás		?
+	trás	_	?
+	trau		?
+	trau	_	?
+	tre		?
+	tre	_	?
+	trei		?
+	trei	_	?
+	treis		?
+	treis	_	?
+	trem		?
+	trem	_	?
+	tres		?
+	tres	_	?
+	tri		?
+	tri	_	?
+	trí		?
+	trí	_	?
+	trin		?
+	trin	_	?
+	tris		?
+	tris	_	?
+	triun		?
+	triun	_	?
+	tro		?
+	tro	_	?
+	tró		?
+	tró	_	?
+	trom		?
+	trom	_	?
+	tron		?
+	tron	_	?
+	tros		?
+	tros	_	?
+	trou		?
+	trou	_	?
+	tru		?
+	tru	_	?
+	trui		?
+	trui	_	?
+	trun		?
+	trun	_	?
+	tu		?
+	tu	_	?
+	tú		?
+	tú	_	?
+	tui		?
+	tui	_	?
+	tuir		?
+	tuir	_	?
+	tum		?
+	tum	_	?
+	tun		?
+	tun	_	?
+	tur		?
+	tur	_	?
+	u		?
+	u	_	?
+	ú		?
+	ú	_	?
+	ui		?
+	ui	_	?
+	ul		?
+	ul	_	?
+	un		?
+	un	_	?
+	ur		?
+	ur	_	?
+	va		?
+	va	_	?
+	vá		?
+	vá	_	?
+	vai		?
+	vai	_	?
+	vais		?
+	vais	_	?
+	val		?
+	val	_	?
+	vam		?
+	vam	_	?
+	van		?
+	van	_	?
+	var		?
+	var	_	?
+	vas		?
+	vas	_	?
+	vás		?
+	vás	_	?
+	ve		?
+	ve	_	?
+	vé		?
+	vé	_	?
+	vê		?
+	vê	_	?
+	vei		?
+	vei	_	?
+	veis		?
+	veis	_	?
+	vel		?
+	vel	_	?
+	vem		?
+	vem	_	?
+	ven		?
+	ven	_	?
+	ver		?
+	ver	_	?
+	ves		?
+	ves	_	?
+	vés		?
+	vés	_	?
+	vês		?
+	vês	_	?
+	veu		?
+	veu	_	?
+	vi		?
+	vi	_	?
+	ví		?
+	ví	_	?
+	vil		?
+	vil	_	?
+	vin		?
+	vin	_	?
+	vir		?
+	vir	_	?
+	vis		?
+	vis	_	?
+	vís		?
+	vís	_	?
+	viu		?
+	viu	_	?
+	vo		?
+	vo	_	?
+	vol		?
+	vol	_	?
+	vor		?
+	vor	_	?
+	vos		?
+	vos	_	?
+	vou		?
+	vou	_	?
+	vra		?
+	vra	_	?
+	vre		?
+	vre	_	?
+	vu		?
+	vu	_	?
+	vul		?
+	vul	_	?
+	xa		?
+	xa	_	?
+	xá		?
+	xá	_	?
+	xai		?
+	xai	_	?
+	xais		?
+	xais	_	?
+	xal		?
+	xal	_	?
+	xam		?
+	xam	_	?
+	xan		?
+	xan	_	?
+	xar		?
+	xar	_	?
+	xas		?
+	xas	_	?
+	xás		?
+	xás	_	?
+	xau		?
+	xau	_	?
+	xe		?
+	xe	_	?
+	xei		?
+	xei	_	?
+	xeis		?
+	xeis	_	?
+	xem		?
+	xem	_	?
+	xer		?
+	xer	_	?
+	xes		?
+	xes	_	?
+	xi		?
+	xi	_	?
+	xí		?
+	xí	_	?
+	xin		?
+	xin	_	?
+	xis		?
+	xis	_	?
+	xo		?
+	xo	_	?
+	xor		?
+	xor	_	?
+	xos		?
+	xos	_	?
+	xou		?
+	xou	_	?
+	xu		?
+	xu	_	?
+	xul		?
+	xul	_	?
+	za		?
+	za	_	?
+	zá		?
+	zá	_	?
+	zai		?
+	zai	_	?
+	zais		?
+	zais	_	?
+	zam		?
+	zam	_	?
+	zan		?
+	zan	_	?
+	zar		?
+	zar	_	?
+	zas		?
+	zas	_	?
+	zás		?
+	zás	_	?
+	ze		?
+	ze	_	?
+	zê		?
+	zê	_	?
+	zei		?
+	zei	_	?
+	zeis		?
+	zeis	_	?
+	zem		?
+	zem	_	?
+	zen		?
+	zen	_	?
+	zer		?
+	zer	_	?
+	zes		?
+	zes	_	?
+	zi		?
+	zi	_	?
+	zí		?
+	zí	_	?
+	zir		?
+	zir	_	?
+	zis		?
+	zis	_	?
+	zís		?
+	zís	_	?
+	zo		?
+	zo	_	?
+	zom		?
+	zom	_	?
+	zos		?
+	zos	_	?
+	zou		?
+	zou	_	?
+	zu		?
+	zu	_	?
+	zum		?
+	zum	_	?
+	zur		?
+	zur	_	?
