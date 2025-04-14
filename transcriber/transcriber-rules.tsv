@@ -27,12 +27,24 @@
 
 // F1	F2	F3	F4
 
-	a		@
+	a		a
+	a	_	@
+	as		as
+	as	_	@s
+	
 	á		'a
+	à		a
 	ão		'a~U
 %	ão		a~U
 
 // b
+	ba		ba
+	ba	_	b@
+	
+	bai		baI
+
+	bas	_	ba
+	bas	_	b@s
 	
 	bo		bO
 	bo	_	bU
@@ -90,6 +102,18 @@
 
 	da		da
 	da	_	d@
+	das		das
+	das	_	d@s
+	
+	de		de
+	de	_	dZI
+	des		des
+	des	_	dZIs
+	
+	di		dZi
+	di	_	'dZi
+	dis		dZi
+	dis	_	'dZIs
 	
 	do		do
 	do	_	dU
@@ -100,7 +124,18 @@ _	es		es
 // f
 
 	fa		fa
-	
+	fa	_	f@
+	fas		fas
+	fas	_	f@s
+
+	fan		fa~
+	far		fa4
+
+	fe		fe
+	fe	_	fI
+	fes		fes
+	fes	_	fIs
+		
 	fo		fo
 
 // g
@@ -117,7 +152,8 @@ _	es		es
 	ho		o
 
 // l
-
+	la		la
+	
 	lho		LU
 // m
 	mem		meIN
@@ -133,19 +169,57 @@ _	es		es
 	or		o4
 	ór		'O4
 // r
+
+	ra		4a
+	ra	_	4@
+	ras		4as
+	ras	_	4@s
+	
 	ra		Ra
 	rá		'Ra
 [^lnrs]$	ra		4a
 r$	ra		Ra	// rr
 
-	ro		xo
-	ro	_	xU
+	re		4e
+	re	_	4I
+	res		4es
+	res	_	4Is
+	
+	ri		4i
+	ri	_	'4i
+	ris		4is
+	ris	_	'4is
+	
+	ro		4o
+	ro	_	4U
+	ros		4os
+	ros	_	4Us
+	
+r$	ro		xo
+r$	ro	_	xU
+r$	ros		xos
+r$	ros	_	xUs
 
 // t
+
+	te		te
+	te	_	tSI
+	
+	tei		teI
+	
+	tes		tes
+	tes	_	tSIs
+	
 	to		to
 	tó		'to
 	to	_	tU
 // v
+
+	va		va
+	va	_	v@
+	vas		vas
+	vas	_	v@s
+	
 	vi		vI
 
 //
