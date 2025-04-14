@@ -39,7 +39,9 @@
 	ads		ads
 	
 	ai		aI
+	
 	ais		aIs
+	ais	_	'aIs
 	
 	al		aU
 	al	_	'aU
@@ -99,11 +101,13 @@
 	bê		'be
 
 	bei		beI
+	
 	beis		beIs
+	beis	_	'beIs
 
 	bel		beU
-_	bel		bEU
-	bel	_	bEU
+_	bel	^.*_	bEU
+	bel	_	'bEU
 	
 	bem		be~
 
@@ -1099,6 +1103,10 @@ _	bel		bEU
 	is	_	?
 	ís		?
 	ís	_	?
+	
+	iu		iU
+	iu	_	'iU
+	
 	ja		?
 	ja	_	?
 	já		?
@@ -1496,6 +1504,10 @@ _	bel		bEU
 	
 	ões	_	'o~Is
 %	ões	_	o~Is
+	
+	oi		oI
+	
+	ois		oIs
 	
 	ol		?
 	ol	_	?
@@ -2105,8 +2117,10 @@ s$	sões	_	'so~Is
 	u	_	?
 	ú		?
 	ú	_	?
-	ui		?
-	ui	_	?
+	
+	ui		uI
+	ui	_	'uI
+	
 	ul		?
 	ul	_	?
 	un		?
