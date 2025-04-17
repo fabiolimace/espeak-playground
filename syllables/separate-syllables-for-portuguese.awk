@@ -10,7 +10,10 @@
 #     # split all words from a Linux dictionary
 #     awk -f separate-syllables-for-portuguese.awk /usr/share/dict/brazilian
 #
-# This script can has a very low level of error or imprecision.
+# This script can has a low level of error or imprecision.
+#
+# FIXME: tra.ir; ca.ir; tri.un.fo; cons.tru.ir; obs.tru.í
+# FIXME: tran.sla.ção
 #
 
 BEGIN {
