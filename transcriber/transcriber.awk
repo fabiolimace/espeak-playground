@@ -5,7 +5,7 @@
 # 
 # Usage
 #
-# 	# output: ə.vɪ.'ə~ʊ~ 'bɔ.lə 'kə.za
+# 	# output: a.vi.'a~ʊ 'bɔ.lə 'ka.zə
 #	echo "a.vi.ão bo.la ca.sa" | awk -f transcribe.awk
 #
 
@@ -24,17 +24,27 @@ BEGIN {
 	RULES_F3[0] = null;
 	RULES_F4[0] = null;
 	RULES_INDEX[0] = null;
+	RULES_STRESS[0] = null;
+	RULES_BOUNDARY[0] = null;
 	
-	POS_TONIC = 1
-	PRE_TONIC = 2;
+	STRESS_LEFT = 1
+	STRESS_RIGHT = -1;
+	
+	BOUNDARY_LEFT_1 = 1
+	BOUNDARY_LEFT_2 = 2
+	BOUNDARY_RIGHT_1 = -1;
+	BOUNDARY_RIGHT_2 = -2;
 
 	ALPHABET_IPA[0] = null; # 1: IPA
 	ALPHABET_KIR[0] = null; # 2: Kirshembaum
 	ALPHABET_SAM[0] = null; # 3: X-SAMPA
-
+	
+	SYLLABLE_PENULTIMATE=-2;
+	SYLLABLE_ULTIMATE=-1;
+	
 	if (!ALPHABET) ALPHABET = 1 # IPA
-	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = -2; # Penultimate
 	if (!RULES_FILE) RULES_FILE = "./transcriber-rules.tsv";
+	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = SYLLABLE_PENULTIMATE;
 	
 	load_alphabets();
 	
@@ -51,9 +61,6 @@ function load_alphabets(    i, s, k) {
 	split(sam, ALPHABET_SAM);
 	split(kir, ALPHABET_KIR);
 	split(ipa, ALPHABET_IPA);
-	
-	# for debugging
-	# for (i in ALPHABET_SAM) print ALPHABET_SAM[i] " " ALPHABET_KIR[i] " " ALPHABET_IPA[i];
 }
 
 function read_rules_file(file,    n, r, F) {
@@ -62,9 +69,9 @@ function read_rules_file(file,    n, r, F) {
 	
 	while(getline rule < file) {
 		r++; # the line number is the rule key
-			
+		
 		# remove all commented content
-		sub(/[ \t]*\/\/.*$/, EMPTY, rule);
+		sub(/[ \t]*(\/\/.*)?$/, EMPTY, rule);
 
 		# separate rule fields
 		n = split(rule, F, TAB);
@@ -77,8 +84,22 @@ function read_rules_file(file,    n, r, F) {
 		RULES_F2[r]=F[2];
 		RULES_F3[r]=F[3];
 		RULES_F4[r]=F[4];
-
 		translate_f4(r);
+
+		# find stress side
+		RULES_STRESS[r] = 0;
+		if (F[1] ~ PERCENT) RULES_STRESS[r] = STRESS_LEFT;
+		if (F[3] ~ PERCENT) RULES_STRESS[r] = STRESS_RIGHT;
+		
+		# find boundary side
+		RULES_BOUNDARY[r] = 0;
+		if (F[1] ~ "^" UNDERLINE "$") RULES_BOUNDARY[r] = BOUNDARY_LEFT_1;
+		if (F[1] ~ "^" UNDERLINE ".+$") RULES_BOUNDARY[r] = BOUNDARY_LEFT_2;
+		if (F[3] ~ "^" UNDERLINE "$") RULES_BOUNDARY[r] = BOUNDARY_RIGHT_1;
+		if (F[3] ~ "^.+" UNDERLINE "$") RULES_BOUNDARY[r] = BOUNDARY_RIGHT_2;
+		
+		gsub("[" PERCENT UNDERLINE "]", EMPTY, RULES_F1[r]);
+		gsub("[" PERCENT UNDERLINE "]", EMPTY, RULES_F3[r]);
 		
 		# put the rule line number in tab-split list
 		RULES_INDEX[F[2]] = RULES_INDEX[F[2]] TAB r;
@@ -98,76 +119,78 @@ function error(msg) {
 	exit 1;
 }
 
-# FIXME: "á.dam" -> ERROR: Match not found for 'dam' in 'á.dam'.
-# TODO: implementar fronteira de palavra antes de F1 e depois de F3
-function test_match(pre, syl, pos, rule, stress, position) {
+function stress_side(syllable_position, stress_position) {
+	if (stress_position && stress_position < syllable_position) return  STRESS_LEFT;
+	if (stress_position && syllable_position < stress_position) return STRESS_RIGHT;
+	return 0;
+}
+
+function boundary_side(syllable_position, word_syllables) {
+	if (syllable_position == 1) return BOUNDARY_LEFT_1;
+	if (syllable_position + 0 == word_syllables) return BOUNDARY_RIGHT_1;
+	if (word_syllables > 2) {
+		if (syllable_position == 2) return BOUNDARY_LEFT_2;
+		if (syllable_position + 1 == word_syllables) return BOUNDARY_RIGHT_2;
+	}
+	return 0;
+}
+
+
+# TODO: se `^` e `$` não forem incluídos, colocá-los em F1, F2 e F3.
+# TEST VECTOR: a.ba.da á.ba.da a.ba.dá a.dão á.dão a.dam á.dam a.dan á.dan
+function test_match(pre, syl, pos, rule, stress, boundary) {
 
 	f1 = RULES_F1[rule];
 	f2 = RULES_F2[rule];
 	f3 = RULES_F3[rule];
 	f4 = RULES_F4[rule];
+	fs = RULES_STRESS[rule];
+	fb = RULES_BOUNDARY[rule];
 	
-	if (stress == POS_TONIC) pre = PERCENT pre;
-	if (stress == PRE_TONIC) pos = PERCENT pos;
+	if (fs && fs != stress) return null;
+	if (fb && fb != boundary) return null;
 	
-	if (pre ~ PERCENT && f1 !~ PERCENT) return null;
-	if (pos ~ PERCENT && f3 !~ PERCENT) return null;
-	
-	if (f1 && pre !~ f1) return null;
-	if (f2 && syl !~ f2) return null;
-	if (f3 && pos !~ f3) return null;
+	if ((pre ~ f1) && (syl ~ f2) && (pos ~ f3)) return f4;
 
-	return f4;
+	return null;
 }
 
-function find_match(pre, syl, pos, stress,    i, n, rule, numbers, matched) {
+function find_match(pre, syl, pos, stress, boundary,   i, n, rule, numbers, matched) {
 
 	if (!(syl in RULES_INDEX)) {
 		return null;
 	}
 	
-	n = split(RULES_INDEX[syl], numbers, TAB);
+	n = split(RULES_INDEX[syl], numbers);
 	for (i = n; i > 0; i--) {
 		rule = numbers[i];
-		matched = test_match(pre, syl, pos, rule, stress);
+		matched = test_match(pre, syl, pos, rule, stress, boundary);
 		if (matched) return matched;
 	}
 	
 	return null;
 }
 
-function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, result, syllables) {
+function transcribe_word(word,    i, s, b, x, n, syl, pre, pos, found, array, stress, result, syllables) {
 
+	stress = 0;
+	
 	n = split(word, syllables, DOT);
 	
-	# 1nd pass (forwards):
-	# for post-tonic syllables
 	for (i = 1; i <= n; i++) {
 	
 		syl = syllables[i];
-		if (i == 1) pre = UNDERLINE; else pre = syllables[i-1];
-		if (i == n) pos = UNDERLINE; else pos = syllables[i+1];
+		if (i == 1) pre = EMPTY; else pre = syllables[i-1];
+		if (i == n) pos = EMPTY; else pos = syllables[i+1];
+		
+		s = stress_side(i, stress);
+		b = boundary_side(i, n);
 
-		found = find_match(pre, syl, pos, stress);
+		found = find_match(pre, syl, pos, s, b);
 		
-		if (found ~ APOSTROPHE) stress = POS_TONIC;
-		
-		array[i] = found;
-	}
-	
-	# 2nd pass (backwards):
-	# for pre-tonic syllables
-	for (i = n; i >= 1; i--) {
-	
-		if (array[i]) { continue };
-	
-		syl = syllables[i];
-		if (i == 1) pre = UNDERLINE; else pre = syllables[i-1];
-		if (i == n) pos = UNDERLINE; else pos = syllables[i+1];
-
-		found = find_match(pre, syl, pos, stress);
-		
-		if (found ~ APOSTROPHE) stress = PRE_TONIC;
+		if (found ~ APOSTROPHE) {
+			if (!stress) stress = i; else continue;
+		}
 		
 		array[i] = found;
 	}
@@ -175,13 +198,13 @@ function transcribe_word(word,    i, x, n, syl, pre, pos, found, array, stress, 
 	# check all syllables
 	for (i = 1; i <= n; i++) {
 		if (!array[i]) {
-			error("Match not found for '" syl "' in '" word "'.");
+			error("Match not found for syllable " i " in '" word "'.");
 			return null;
 		}
 	}
 	
 	if (!stress) {
-		# set the defaul stress
+		# set the default stress
 		if (STRESSED_SYLLABLE < 0) {
 			x  = n + 1 + STRESSED_SYLLABLE;
 			if (array[x] !~ APOSTROPHE) array[x] = APOSTROPHE array[x];
