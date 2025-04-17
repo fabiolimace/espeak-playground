@@ -116,7 +116,7 @@ function translate_f4(rule,    i) {
 
 function error(msg) {
 	print "ERROR: " msg > "/dev/stderr";
-	exit 1;
+	# exit 1;
 }
 
 function stress_side(syllable_position, stress_position) {
