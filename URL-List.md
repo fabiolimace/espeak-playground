@@ -74,6 +74,7 @@ Falsos ditongos:
 
 ### Ortografia
 
+* https://www.linguabrasil.com.br/acordo-ortografico
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/grafema
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/correspondencia-grafofonemica
 

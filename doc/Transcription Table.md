@@ -85,6 +85,8 @@ Oral decrescent diphthongs:
 |oʊ̯ ow	|	|oU ow		|ow    *	|oU ow	|
 |iʊ̯ iw	|	|iU iw		|iU		|iU iw	|
 
+Dúvida: o digonto [uʊ̯] existe, como em "ultra" e "azul"?
+
 Nasal decrescent diphthongs:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
@@ -95,6 +97,8 @@ Nasal decrescent diphthongs:
 |u͂ɪ̯ u͂j	|	|u~I u~j	|_?_		|u~I u~j|
 |	|	|		|		|	|
 |ãʊ̯ ãw	|ɐ̃ʊ̃	|a~U a~w	|&U~   *	|a~U a~w|
+
+Dúvida: o digonto [õʊ̯] existe, como em "bom" e "dom" (quando pronunciados *boum e *doum)?
 
 Oral crescent diphthongs:
 
