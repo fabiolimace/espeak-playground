@@ -46,4 +46,14 @@ Description
 Demonstration
 ----------------------------------
 
+Run the `transcriber.awk` script:
+
+```bash
+cat /usr/share/dict/brazilian /usr/share/dict/portuguese | sort | uniq \
+    | awk -f ../syllables/separate-syllables-for-portuguese.awk \
+    | awk -f transcriber.awk 2>&1 | awk 'NF' \
+    | tee transcriber.output.txt
+```
+
+You need the syllable separators to generate the input to `transcriber.awk`.
 
