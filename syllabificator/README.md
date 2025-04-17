@@ -1,18 +1,18 @@
-Separate into syllables
+Syllabificator
 ==================================
 
 Description
 ----------------------------------
 
-The `separate-syllables-for-portuguese.awk` script separates words into syllables for Portuguese language.
+The `syllabificator.awk` script separates words into syllables for Portuguese language.
 
 Usage:
 
     # produces: in.cons.ti.tu.cio.na.lis.si.ma.men.te
-    echo inconstitucionalissimamente | awk -f separate-syllables-for-portuguese.awk
+    echo inconstitucionalissimamente | awk -f syllabificator.awk
     
     # split all words from a Linux dictionary
-    awk -f separate-syllables-for-portuguese.awk /usr/share/dict/brazilian
+    awk -f syllabificator.awk /usr/share/dict/brazilian
 
 This script can has a very low level of error or imprecision.
 
@@ -22,7 +22,7 @@ Demonstrations
 Separate into syllables the words from Linux dictionary:
 
 ```bash
-cat /usr/share/dict/brazilian | awk -f separate-syllables-for-portuguese.awk | awk -f separate-syllables-for-portuguese.awk 2> /dev/null | shuf | head -n 10;
+cat /usr/share/dict/brazilian | awk -f syllabificator.awk | awk -f syllabificator.awk 2> /dev/null | shuf | head -n 10;
 ```
 ```
 a.zu.le.ja.do
@@ -40,7 +40,7 @@ trans.mi.tais
 Separate into syllables the words from Linux dictionary and then count the frequencies of every syllable:
 
 ```bash
-cat /usr/share/dict/brazilian | awk -f separate-syllables-for-portuguese.awk  2> /dev/null \
+cat /usr/share/dict/brazilian | awk -f syllabificator.awk  2> /dev/null \
     | awk '{ for (i = 1; i <= NF; i++) { split($i, sy, "."); for (s in sy) list[sy[s]]++ } } END { for (s in list) { print list[s] "\t" s } }' \
     | sort -nr | head -n 10;
 ```
@@ -60,7 +60,7 @@ cat /usr/share/dict/brazilian | awk -f separate-syllables-for-portuguese.awk  2>
 Separate into syllables the words from Linux dictionary and then count the frequencies of every pair of syllables (bigrams):
 
 ```bash
-cat /usr/share/dict/brazilian | awk -f separate-syllables-for-portuguese.awk  2> /dev/null | awk '{ for (i = 1; i <= NF; i++) { n = split($i, sy, "."); for (j = 1; j < n; j++) list[sy[j] "." sy[j+1]]++ } } END { for (s in list) { print list[s] "\t" s } }' | sort -nr | head -n 10;
+cat /usr/share/dict/brazilian | awk -f syllabificator.awk  2> /dev/null | awk '{ for (i = 1; i <= NF; i++) { n = split($i, sy, "."); for (j = 1; j < n; j++) list[sy[j] "." sy[j+1]]++ } } END { for (s in list) { print list[s] "\t" s } }' | sort -nr | head -n 10;
 ```
 ```
 5238	a.mos

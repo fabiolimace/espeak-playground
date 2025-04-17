@@ -50,12 +50,12 @@ Run the `transcriber.awk` script:
 
 ```bash
 cat /usr/share/dict/brazilian /usr/share/dict/portuguese | sort | uniq \
-    | awk -f ../syllables/separate-syllables-for-portuguese.awk  | sort | uniq \
+    | awk -f ../syllabificator/syllabificator.awk  | sort | uniq \
     | awk -f transcriber.awk | awk 'NF' \
     > transcriber.output.txt
 ```
 
-You need the syllable separators to generate the input to `transcriber.awk`.
+You need the syllabificator to generate the input for `transcriber.awk`.
 
 Output sample:
 
