@@ -1,12 +1,12 @@
-#!/usr/bin/mawk -f
+#!/usr/bin/gawk -f
 
 # 
 # Generates a phonetic transcription of a text.
 # 
 # Usage
 #
-# 	# output: a.vi.'a~ʊ 'bɔ.lə 'ka.zə
-#	echo "a.vi.ão bo.la ca.sa" | awk -f transcribe.awk
+# 	# output: a.vi.'ãʊ 'bo.lə 'ka.zə
+#	echo "a.vi.ão bo.la ca.sa" | awk -f transcriber.awk
 #
 
 BEGIN {
@@ -233,7 +233,4 @@ function transcribe_word(word,    i, s, b, x, n, syl, pre, pos, found, array, st
 	print buffer;
 }
 
-END {
-
-}
 

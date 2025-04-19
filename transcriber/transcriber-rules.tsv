@@ -1,4 +1,4 @@
-// TODO: add as much rules as possible.
+// TODO: update rules to use <ss> and <rr> in the same syllable.
 //
 // Conversão de ortografia em transcrição fonética, baseada em divisão silábica e expressão regular.
 //
@@ -24,6 +24,7 @@
 // References:
 //* https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
 //
+
 	a		a
 	a	_	@
 	á		'a
