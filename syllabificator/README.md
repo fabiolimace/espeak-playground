@@ -4,12 +4,12 @@ Syllabificator
 Description
 ----------------------------------
 
-The `syllabificator.awk` script separates words into syllables for Portuguese language.
+The `syllabificator.awk` script an Awk script that separates words into syllables for Portuguese language.
 
 Usage:
 
-    # produces: in.cons.ti.tu.cio.na.lis.si.ma.men.te
-    echo inconstitucionalissimamente | awk -f syllabificator.awk
+    # produces: in.cons.ti.tu.ci.o.nal.men.te
+    echo inconstitucionalmente | awk -f syllabificator.awk
     
     # split all words from a Linux dictionary
     awk -f syllabificator.awk /usr/share/dict/brazilian
@@ -22,19 +22,25 @@ Demonstrations
 Separate into syllables the words from Linux dictionary:
 
 ```bash
-cat /usr/share/dict/brazilian | awk -f syllabificator.awk | awk -f syllabificator.awk 2> /dev/null | shuf | head -n 10;
+cat /usr/share/dict/brazilian | awk -f syllabificator.awk 2> /dev/null | shuf | head -n 10;
 ```
 ```
-a.zu.le.ja.do
-ben.zes.tes
-bra.da.rá
-ca.le.ja.rão
-ca.mu.fla.res
-de.sau.to.ri.za.ram
-e.ri.ças.se
-ou.çais
-ra.ci.o.ci.ná.ra.mos
-trans.mi.tais
+di.li.gen.ci.ais
+co.te.ja.ri.a
+re.di.gis.ses
+sub.ver.te.rí.eis
+su.ge.rin.do
+ma.la.ba.ris.tas
+a.cer.ca.vam
+ca.ças.sem
+a.cre.di.tá
+in.te.greis
+```
+
+Separate into syllables the words from Linux dictionary and print the result into an output file:
+
+```bash
+cat /usr/share/dict/brazilian | awk -f syllabificator.awk 2> /dev/null > syllabificator.output.txt
 ```
 
 Separate into syllables the words from Linux dictionary and then count the frequencies of every syllable:
@@ -45,16 +51,16 @@ cat /usr/share/dict/brazilian | awk -f syllabificator.awk  2> /dev/null \
     | sort -nr | head -n 10;
 ```
 ```
-56858	a
-32845	mos
-32199	re
-23264	ra
-23154	ri
-21083	mo
-20686	ta
+56768	a
+32835	mos
+32430	re
+23255	ra
+23155	ri
+21063	mo
+20624	ta
 19823	de
-17463	ti
-16933	ca
+17444	ti
+16872	ca
 ```
 
 Separate into syllables the words from Linux dictionary and then count the frequencies of every pair of syllables (bigrams):
@@ -63,15 +69,15 @@ Separate into syllables the words from Linux dictionary and then count the frequ
 cat /usr/share/dict/brazilian | awk -f syllabificator.awk  2> /dev/null | awk '{ for (i = 1; i <= NF; i++) { n = split($i, sy, "."); for (j = 1; j < n; j++) list[sy[j] "." sy[j+1]]++ } } END { for (s in list) { print list[s] "\t" s } }' | sort -nr | head -n 10;
 ```
 ```
-5238	a.mos
-5081	ri.a
-4560	ri.as
-4527	re.mo
-4330	ra.mos
-4284	re.mos
+5237	a.mos
+5080	ri.a
+4559	ri.as
+4526	re.mo
+4329	ra.mos
+4283	re.mos
 4141	se.mos
-4067	ri.am
-4057	rí.a
-4054	rí.eis
+4066	ri.am
+4056	rí.a
+4053	rí.eis
 ```
 
