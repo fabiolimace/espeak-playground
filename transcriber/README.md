@@ -49,10 +49,8 @@ Demonstration
 Run the `transcriber.awk` script:
 
 ```bash
-cat /usr/share/dict/brazilian /usr/share/dict/portuguese | sort | uniq \
-    | awk -f ../syllabificator/syllabificator.awk  | sort | uniq \
-    | awk -f transcriber.awk | awk 'NF' \
-    > transcriber.output.txt
+cat /usr/share/dict/brazilian | awk -f ../syllabificator/syllabificator.awk  \
+    | awk -f transcriber.awk 2> /dev/null | awk 'FN' > transcriber.output.txt
 ```
 
 You need the syllabificator to generate the input for `transcriber.awk`.
