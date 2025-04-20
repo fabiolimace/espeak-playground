@@ -14,28 +14,42 @@
 #
 # If you need separate <ss> and <rr> in different syllables, use the flag `-v ORTHOGRAPHICALLY_CORRECT=1`.
 #
+# If you are looking for a syllabificator for another other language, this script will probably fail miserably.
+#
+# Although this script splits a few words wrongly, such as "continuidade" and "intuição," its success rate far outweighs its failures.
+#
 
 BEGIN {
 	
 	C = "[bcdfghjklmnpqrstvwxyzç]"   # consonants
-	D = "gu|qu|gü|qü|ch|lh|nh|rr|ss" # digraphs
+	D = "rr|ss|ch|nh|lh|qu|gu|qü|gü" # digraphs
 	E = "[bcdfgkptv][rl]"            # clusters
 	F = "[bgjkptswz][h]"             # ph, sh, th, wh...
 	
-	O = "[" "aeiou" "àáâã" "èéê" "ìí" "óôõ" "úü" "wy" "]"
+	O = "[" "aeiou" "àáâã" "èéê" "ìí" "òóôõ" "ùúü" "wy" "]"
 	G = "[" "iu" "yw" "]"
 	N = "[" "ãõ" "]"
 	H = "[" "eo" "]"
 	
+	# The onset can be a single consonant (C), or a common pair of letters known
+	# as digraph (D), or a cluster formed of a consonant followed by the letters
+	# `r` or `l` (E), or cluster of a consonant followed by the letter `h` (F).
+	
 	ONSET = "(" C "|" D "|" E "|" F ")"
+	
+	# The nucleous may be a single vowel (O), or a vowel followed
+	# by a glide (OG), or a nasal voewel followed by a glide (NH).
 	
 	NUCLEUS = "(" O "|" O G "|" N H ")"
 	
+	# In Portuguese, only /L/, /N/, /S/, /R/ arquiphonemes can be in coda position,
+	# but here we allow for any combination of consonants in the end of a syllable.
+	
 	CODA = "(" C "+" ")"
 	
-	RIMA = NUCLEUS CODA "?"
+	RHYME = NUCLEUS CODA "?"
 	
-	SYLLABLE = ONSET "?" RIMA
+	SYLLABLE = ONSET "?" RHYME
 	
 }
 
@@ -51,10 +65,20 @@ BEGIN {
 		while (wrd) {
 
 			if (wrd ~ "^" ONSET O G SYLLABLE) {
+			
+				# This `if` joins a vowel with its neighbour semivowel,
+				# forming a diththong, and off course it's not perfect.
 
 				match(wrd, "^" ONSET O G);
 				
 			} else if (wrd ~ "^" ONSET O G "[^s]" && wrd ~ "^[^gq]") {
+			
+				# This `if` tries create hiatus in the right place,
+				# but it often fails due to reasons related to word
+				# semantics and morphology, for example "dei.da.de"
+				# has a semantic radical that forces the diphthong.
+				# In contrast, "con.ti.nu.i.da.de" must have hiatus
+				# due to it's morphology: con.ti.nu.ar plus i.da.de.
 
 				match(wrd, "^" ONSET O G "[^s]");
 				pair = substr(wrd, RSTART, RLENGTH);
@@ -66,6 +90,11 @@ BEGIN {
 				match(wrd, "^" first);
 
 			} else if (wrd ~ "^" SYLLABLE ONSET NUCLEUS) {
+
+				# This `if` block sets a line between coda and onset
+				# in words with complex coda, like "pers.pec.ti.va".
+				# It's impossible to figure out where the conda ends
+				# without looking ahead at the next sillable's onset.
 
 				match(wrd, "^" SYLLABLE ONSET NUCLEUS);
 				pair = substr(wrd, RSTART, RLENGTH);
