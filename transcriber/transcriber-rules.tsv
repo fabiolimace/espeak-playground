@@ -1,4 +1,18 @@
+
+
+
+
+
+
+
 // TODO: update rules to use <ss> and <rr> in the same syllable.
+
+
+
+
+
+
+
 //
 // Conversão de ortografia em transcrição fonética, baseada em divisão silábica e expressão regular.
 //
@@ -104,6 +118,7 @@
 	
 	be		be
 	be	_	bI
+_	be	la	bE	// be.la, be.la.do.na
 	
 	bé		'bE
 	bê		'be
@@ -115,8 +130,8 @@
 	beis	_	'beIs
 
 	bel		beU
-_	bel	^.*_	bEU
 	bel	_	'bEU
+_	bel	^.*_	bEU	// bel.ga
 	
 	bem		be~
 
@@ -805,9 +820,10 @@ _	bel	^.*_	bEU
 
 	el		eU
 	el	_	eU
-	el	^.*_	EU	// TODO: implementar fronteira de palavra após F3
+	el	^.*_	EU
 	
 	em		e~
+	em	_	e~I
 _	em	_	e~I	// em (prep.)
 
 	en		e~
@@ -3192,7 +3208,7 @@ do	xa	_	ks@	// pa.ra.do.xa
 fi	xa	_	ks@	// fi.xa
 ne	xa	_	ks@	// a.ne.xa
 ve	xa	_	ks@	// con.ve.xa
-_ve	xa	_	ks@	// ve.xa (v. ve.xar) // TODO: fazer `_` funcionar
+_ve	xa	_	S@	// ve.xa (v. ve.xar)
 fle	xa	_	ks@	// re.fle.xa
 ple	xa	_	ks@	// com.ple.xa
 	
@@ -3291,6 +3307,14 @@ tá	xis	_	ksIs	// tá.xis
 	
 	xo		So
 	xo	_	SU
+de	xo	_	ksU	// in.de.xo
+do	xo	_	ksU	// pa.ra.do.xo
+fi	xo	_	ksU	// fi.xo
+ne	xo	_	ksU	// a.ne.xo
+ve	xo	_	ksU	// con.ve.xo
+_ve	xo	_	SU	// ve.xo (v. ve.xar)
+fle	xo	_	ksU	// re.fle.xo
+ple	xo	_	ksU	// com.ple.xo
 	
 	xor		So4
 	xor	_	'So4

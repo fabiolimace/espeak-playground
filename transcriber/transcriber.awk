@@ -25,15 +25,16 @@ BEGIN {
 	RULES_F4[0] = null;
 	RULES_INDEX[0] = null;
 	RULES_STRESS[0] = null;
-	RULES_BOUNDARY[0] = null;
+	RULES_BOUNDARY_L[0] = null;
+	RULES_BOUNDARY_R[0] = null;
 	
-	STRESS_LEFT = 1
-	STRESS_RIGHT = -1;
+	STRESS_CODE_L1 = -1;
+	STRESS_CODE_R1 = 1;
 	
-	BOUNDARY_LEFT_1 = 1
-	BOUNDARY_LEFT_2 = 2
-	BOUNDARY_RIGHT_1 = -1;
-	BOUNDARY_RIGHT_2 = -2;
+	BOUNDARY_CODE_L1 = -1
+	BOUNDARY_CODE_L2 = -2
+	BOUNDARY_CODE_R1 = 1;
+	BOUNDARY_CODE_R2 = 2;
 
 	ALPHABET_IPA[0] = null; # 1: IPA
 	ALPHABET_KIR[0] = null; # 2: Kirshembaum
@@ -89,15 +90,16 @@ function read_rules_file(file,    n, r, F) {
 
 		# find stress side
 		RULES_STRESS[r] = 0;
-		if (F[1] ~ PERCENT) RULES_STRESS[r] = STRESS_LEFT;
-		if (F[3] ~ PERCENT) RULES_STRESS[r] = STRESS_RIGHT;
+		if (F[1] ~ PERCENT) RULES_STRESS[r] = STRESS_CODE_L1;
+		if (F[3] ~ PERCENT) RULES_STRESS[r] = STRESS_CODE_R1;
 		
 		# find boundary side
-		RULES_BOUNDARY[r] = 0;
-		if (F[1] ~ "^" UNDERLINE "$") RULES_BOUNDARY[r] = BOUNDARY_LEFT_1;
-		if (F[1] ~ "^" UNDERLINE ".+$") RULES_BOUNDARY[r] = BOUNDARY_LEFT_2;
-		if (F[3] ~ "^" UNDERLINE "$") RULES_BOUNDARY[r] = BOUNDARY_RIGHT_1;
-		if (F[3] ~ "^.+" UNDERLINE "$") RULES_BOUNDARY[r] = BOUNDARY_RIGHT_2;
+		RULES_BOUNDARY_L[r] = 0;
+		RULES_BOUNDARY_R[r] = 0;
+		if (F[1] ~ "^.*" UNDERLINE "$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L1;
+		if (F[1] ~ "^" UNDERLINE ".+$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L2;
+		if (F[3] ~ "^" UNDERLINE ".*$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R1;
+		if (F[3] ~ "^.+" UNDERLINE "$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R2;
 		
 		gsub("[" PERCENT UNDERLINE "]", EMPTY, RULES_F1[r]);
 		gsub("[" PERCENT UNDERLINE "]", EMPTY, RULES_F3[r]);
@@ -120,43 +122,50 @@ function error(msg) {
 	# exit 1;
 }
 
-function stress_side(syllable_position, stress_position) {
-	if (stress_position && stress_position < syllable_position) return  STRESS_LEFT;
-	if (stress_position && syllable_position < stress_position) return STRESS_RIGHT;
+function stress_code(syllable_position, stress_position) {
+	if (stress_position && stress_position < syllable_position) return STRESS_CODE_L1;
+	if (stress_position && syllable_position < stress_position) return STRESS_CODE_R1;
 	return 0;
 }
 
-function boundary_side(syllable_position, word_syllables) {
-	if (syllable_position == 1) return BOUNDARY_LEFT_1;
-	if (syllable_position + 0 == word_syllables) return BOUNDARY_RIGHT_1;
-	if (word_syllables > 2) {
-		if (syllable_position == 2) return BOUNDARY_LEFT_2;
-		if (syllable_position + 1 == word_syllables) return BOUNDARY_RIGHT_2;
+function boundary_code_l(syllable_position, word_syllables) {
+	if (syllable_position == 1) return BOUNDARY_CODE_L1;
+	if (word_syllables >= 2) {
+		if (syllable_position == 2) return BOUNDARY_CODE_L2;
 	}
 	return 0;
 }
 
+function boundary_code_r(syllable_position, word_syllables) {
+	if (syllable_position == word_syllables) return BOUNDARY_CODE_R1;
+	if (word_syllables >= 2) {
+		if (syllable_position + 1 == word_syllables) return BOUNDARY_CODE_R2;
+	}
+	return 0;
+}
 
 # TODO: se `^` e `$` não forem incluídos, colocá-los em F1, F2 e F3.
 # TEST VECTOR: a.ba.da á.ba.da a.ba.dá a.dão á.dão a.dam á.dam a.dan á.dan
-function test_match(pre, syl, pos, rule, stress, boundary) {
+function test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r) {
 
 	f1 = RULES_F1[rule];
 	f2 = RULES_F2[rule];
 	f3 = RULES_F3[rule];
 	f4 = RULES_F4[rule];
 	fs = RULES_STRESS[rule];
-	fb = RULES_BOUNDARY[rule];
+	bl = RULES_BOUNDARY_L[rule];
+	br = RULES_BOUNDARY_R[rule];
 	
 	if (fs && fs != stress) return null;
-	if (fb && fb != boundary) return null;
+	if (bl && bl != boundary_l) return null;
+	if (br && br != boundary_r) return null;
 	
 	if ((pre ~ f1) && (syl ~ f2) && (pos ~ f3)) return f4;
 
 	return null;
 }
 
-function find_match(pre, syl, pos, stress, boundary,   i, n, rule, numbers, matched) {
+function find_match(pre, syl, pos, stress, boundary_l, boundary_r,   i, n, rule, numbers, matched) {
 
 	if (!(syl in RULES_INDEX)) {
 		return null;
@@ -165,14 +174,14 @@ function find_match(pre, syl, pos, stress, boundary,   i, n, rule, numbers, matc
 	n = split(RULES_INDEX[syl], numbers);
 	for (i = n; i > 0; i--) {
 		rule = numbers[i];
-		matched = test_match(pre, syl, pos, rule, stress, boundary);
+		matched = test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r);
 		if (matched) return matched;
 	}
 	
 	return null;
 }
 
-function transcribe_word(word,    i, s, b, x, n, syl, pre, pos, found, array, stress, result, syllables) {
+function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, found, array, stress, result, syllables) {
 
 	stress = 0;
 	
@@ -184,10 +193,11 @@ function transcribe_word(word,    i, s, b, x, n, syl, pre, pos, found, array, st
 		if (i == 1) pre = EMPTY; else pre = syllables[i-1];
 		if (i == n) pos = EMPTY; else pos = syllables[i+1];
 		
-		s = stress_side(i, stress);
-		b = boundary_side(i, n);
+		s = stress_code(i, stress);
+		bl = boundary_code_l(i, n);
+		br = boundary_code_r(i, n);
 
-		found = find_match(pre, syl, pos, s, b);
+		found = find_match(pre, syl, pos, s, bl, br);
 		
 		if (found ~ APOSTROPHE) {
 			if (!stress) stress = i; else continue;
