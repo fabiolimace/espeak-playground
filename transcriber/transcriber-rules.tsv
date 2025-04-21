@@ -502,7 +502,8 @@ _	bel	^.*_	bEU	// bel.ga
 	cle		kle
 	cle	_	klI
 	
-	cli		'kli
+	cli		kli
+	cli	_	'kli
 
 	clo		klo
 	clo	_	klU
@@ -649,6 +650,7 @@ _	bel	^.*_	bEU	// bel.ga
 	dam	_	da~U
 
 	dan		da~
+	dan	_	'da~
 
 	dão		'da~U	// cidadão
 %	dão	_	da~U	// acórdão
@@ -668,6 +670,9 @@ _	bel	^.*_	bEU	// bel.ga
 	
 	dás		'das
 	dás	^s	'da
+
+	daz		das
+	daz	_	'das
 
 	de		de
 	de	_	dZI

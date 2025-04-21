@@ -160,7 +160,9 @@ function test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r) {
 	if (bl && bl != boundary_l) return null;
 	if (br && br != boundary_r) return null;
 	
-	if ((pre ~ f1) && (syl ~ f2) && (pos ~ f3)) return f4;
+	if ((pre ~ f1) && (syl ~ f2) && (pos ~ f3)) {
+		if (stress && f4 ~ APOSTROPHE) return null; else return f4;
+	}
 
 	return null;
 }
@@ -181,7 +183,7 @@ function find_match(pre, syl, pos, stress, boundary_l, boundary_r,   i, n, rule,
 	return null;
 }
 
-function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, found, array, stress, result, syllables) {
+function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, array, stress, result, syllables) {
 
 	stress = 0;
 	
@@ -197,13 +199,9 @@ function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, found, arra
 		bl = boundary_code_l(i, n);
 		br = boundary_code_r(i, n);
 
-		found = find_match(pre, syl, pos, s, bl, br);
+		array[i] = find_match(pre, syl, pos, s, bl, br);
 		
-		if (found ~ APOSTROPHE) {
-			if (!stress) stress = i; else continue;
-		}
-		
-		array[i] = found;
+		if (!stress && array[i] ~ APOSTROPHE) stress = i;
 	}
 	
 	# check all syllables
