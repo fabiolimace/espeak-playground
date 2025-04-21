@@ -77,7 +77,8 @@
 	as		as
 	as	_	@s
 	as	^s	a
-	
+_	as	_^V	@z	// <as a.mi.gas> -> [əz a.'mi.gəs]
+
 	ás		as
 	ás	_	@s
 	ás	^s	a
@@ -667,6 +668,7 @@ _	bel	^.*_	bEU	// bel.ga
 	das		das
 	das	_	d@s
 	das	^s	da
+_	das	_^V	d@z	// <das a.mi.gas> -> [dəz a.'mi.gəs]
 	
 	dás		'das
 	dás	^s	'da

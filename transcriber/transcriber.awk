@@ -67,6 +67,9 @@ function load_alphabets(    i, s, k) {
 
 function read_rules_file(file,    n, r, F) {
 
+	V = "[aàáâãeèéêiíoóòôõuúü]";
+	C = "[bcdfghjklmnpqrstvwxz]";
+	
 	if (system("test -f " file) != 0) error("file not found: '" file "'.");
 	
 	while(getline rule < file) {
@@ -87,6 +90,12 @@ function read_rules_file(file,    n, r, F) {
 		RULES_F3[r]=F[3];
 		RULES_F4[r]=F[4];
 		translate_f4(r);
+		
+		# replace the wildcards
+		gsub(/V/, V, RULES_F1[r]);
+		gsub(/V/, V, RULES_F3[r]);
+		gsub(/C/, C, RULES_F1[r]);
+		gsub(/C/, C, RULES_F3[r]);
 
 		# find stress side
 		RULES_STRESS[r] = 0;
@@ -96,9 +105,9 @@ function read_rules_file(file,    n, r, F) {
 		# find boundary side
 		RULES_BOUNDARY_L[r] = 0;
 		RULES_BOUNDARY_R[r] = 0;
-		if (F[1] ~ "^" UNDERLINE "$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L1;
+		if (F[1] ~ "^.*" UNDERLINE "$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L1;
 		if (F[1] ~ "^" UNDERLINE ".+$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L2;
-		if (F[3] ~ "^" UNDERLINE "$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R1;
+		if (F[3] ~ "^" UNDERLINE ".*$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R1;
 		if (F[3] ~ "^.+" UNDERLINE "$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R2;
 		
 		gsub("[" PERCENT UNDERLINE "]", EMPTY, RULES_F1[r]);
@@ -146,7 +155,7 @@ function boundary_code_r(syllable_position, word_syllables) {
 
 # TODO: se `^` e `$` não forem incluídos, colocá-los em F1, F2 e F3.
 # TEST VECTOR: a.ba.da á.ba.da a.ba.dá a.dão á.dão a.dam á.dam a.dan á.dan
-function test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r) {
+function test_match(prev_word_syl, pre, syl, pos, next_word_syl, rule, stress, boundary_l, boundary_r) {
 
 	f1 = RULES_F1[rule];
 	f2 = RULES_F2[rule];
@@ -159,6 +168,9 @@ function test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r) {
 	if (fs && fs != stress) return null;
 	if (bl && bl != boundary_l) return null;
 	if (br && br != boundary_r) return null;
+
+	if (f1 && bl == BOUNDARY_CODE_L1) pre = prev_word_syl;
+	if (f3 && br == BOUNDARY_CODE_R1) pos = next_word_syl;
 	
 	if ((pre ~ f1) && (syl ~ f2) && (pos ~ f3)) {
 		if (stress && f4 ~ APOSTROPHE) return null; else return f4;
@@ -167,7 +179,7 @@ function test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r) {
 	return null;
 }
 
-function find_match(pre, syl, pos, stress, boundary_l, boundary_r,   i, n, rule, numbers, matched) {
+function find_match(prev_word_syl, pre, syl, pos, next_word_syl, stress, boundary_l, boundary_r,   i, n, rule, numbers, matched) {
 
 	if (!(syl in RULES_INDEX)) {
 		return null;
@@ -176,17 +188,23 @@ function find_match(pre, syl, pos, stress, boundary_l, boundary_r,   i, n, rule,
 	n = split(RULES_INDEX[syl], numbers);
 	for (i = n; i > 0; i--) {
 		rule = numbers[i];
-		matched = test_match(pre, syl, pos, rule, stress, boundary_l, boundary_r);
+		matched = test_match(prev_word_syl, pre, syl, pos, next_word_syl, rule, stress, boundary_l, boundary_r);
 		if (matched) return matched;
 	}
 	
 	return null;
 }
 
-function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, array, stress, result, syllables) {
+function transcribe_word(prev_word, word, next_word,   i, s, x, n, bl, br, syl, pre, pos, array, stress, result, prev_word_syl, next_word_syl, syllables) {
 
 	stress = 0;
 	
+	if (prev_word) n = split(prev_word, syllables, DOT);
+	if (n) prev_word_syl = syllables[n];
+	
+	if (next_word) n = split(next_word, syllables, DOT);
+	if (n) next_word_syl = syllables[1];
+
 	n = split(word, syllables, DOT);
 	
 	for (i = 1; i <= n; i++) {
@@ -199,7 +217,7 @@ function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, array, stre
 		bl = boundary_code_l(i, n);
 		br = boundary_code_r(i, n);
 
-		array[i] = find_match(pre, syl, pos, s, bl, br);
+		array[i] = find_match(prev_word_syl, pre, syl, pos, next_word_syl, s, bl, br);
 		
 		if (!stress && array[i] ~ APOSTROPHE) stress = i;
 	}
@@ -236,7 +254,9 @@ function transcribe_word(word,    i, s, x, n, bl, br, syl, pre, pos, array, stre
 	buffer = EMPTY;
 	for (i = 1; i <= NF; i++) {
 		if (buffer) buffer = buffer SPACE;
-		buffer = buffer transcribe_word($i);
+		if (i > 1) prev_word = $(i-1);
+		if (i < NF) next_word = $(i+1);
+		buffer = buffer transcribe_word(prev_word, $i, next_word);
 	}
 	
 	print buffer;

@@ -27,6 +27,9 @@ Structure of rules for a triad of syllables:
 * `%`: an optional underline symbol that indicates the current syllable is near to the start or end of a word (the boundaries).
 * `_`: an optional percent symbol that indicates that the strongest syllable (the stress) in a word is before or after the current syllable.
 
+* `V`: is a wildcard for a vowel.
+* `C`: is a wildcard for a consonant.
+
 Note: The apostrophe is also important to find rule matches. If a stress has been detected for a word, all following rules that have an apostrophe in F4 won't match. This is to avoid that a word has more than one stressed syllable.
 
 ```
