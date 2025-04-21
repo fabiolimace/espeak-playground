@@ -96,9 +96,9 @@ function read_rules_file(file,    n, r, F) {
 		# find boundary side
 		RULES_BOUNDARY_L[r] = 0;
 		RULES_BOUNDARY_R[r] = 0;
-		if (F[1] ~ "^.*" UNDERLINE "$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L1;
+		if (F[1] ~ "^" UNDERLINE "$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L1;
 		if (F[1] ~ "^" UNDERLINE ".+$") RULES_BOUNDARY_L[r] = BOUNDARY_CODE_L2;
-		if (F[3] ~ "^" UNDERLINE ".*$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R1;
+		if (F[3] ~ "^" UNDERLINE "$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R1;
 		if (F[3] ~ "^.+" UNDERLINE "$") RULES_BOUNDARY_R[r] = BOUNDARY_CODE_R2;
 		
 		gsub("[" PERCENT UNDERLINE "]", EMPTY, RULES_F1[r]);
