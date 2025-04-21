@@ -53,10 +53,11 @@ BEGIN {
 
 function load_alphabets(    i, s, k) {
 
-	# the `sam` (X-SAMPA) string must be escaped so it is treated as fixed text in the 1st parameter of `gsub()`
-	sam = "h\\\\  r\\\\ L  J  a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p 4 R s S t u U v w x G z";
-	kir = "h<?>   r.    l^ n^ a~ e~ i~ o~ u~ a @ b d e E f g gw h i I j Z k kw l m n o O p * R s S t u U v w x Q z";
-	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ı͂  õ  u͂  a ə b d e ɛ f g gw h i ɪ j ʒ k kw l m n o ɔ p ɾ ř s ʃ t u ʊ v w x ɣ z";
+	# The `sam` (X-SAMPA) string must be escaped so it is treated
+	# as a fixed text in the first parameter of `gsub()` functon.
+	sam = "h\\\\  r\\\\ L  J  a~ e~ i~ o~ u~ 6   @ E I Z O 4 R S U G";
+	kir = "h<?>   r.    l^ n^ a~ e~ i~ o~ u~ &\" @ E I Z O * R S U Q";
+	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ı͂  õ  u͂  ɐ   ə ɛ ɪ ʒ ɔ ɾ ř ʃ ʊ ɣ";
 
 	split(sam, ALPHABET_SAM);
 	split(kir, ALPHABET_KIR);

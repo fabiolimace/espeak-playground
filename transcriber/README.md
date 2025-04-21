@@ -7,20 +7,22 @@ Description
 
 ### Structure
 
+Structure of rules for a triad of syllables:
+
 ```
 +---------------------------------------------------------------------------------------+
 |                              Structure of Transcriber Rules                           |
 +--------------------------+---------------+-------------------------+------------------+
 |          F1              |       F2      |          F3             |        F4        |
 +--------------------------+---------------+-------------------------+------------------+
-| [_] [Prev. Syllable] [%] | Cur. Syllable | [%] [Next Syllable] [_] | X-SAMPA Syllable |
+| [_] [Prev. Syllable] [%] | Cur. Syllable | [%] [Next Syllable] [_] |  X-SAMPA For F2  |
 +--------------------------+---------------+-------------------------+------------------+
 ```
 
 * `F1`: an optional regex for the previous syllable.
 * `F2`: a regex for the current syllable.
 * `F3`: an optional regex for the next syllable.
-* `F4`: a X-SAMPA transcription of the current syllable.
+* `F4`: a X-SAMPA transcription of the current syllable (F2).
 
 * `%`: an optional underline symbol that indicates the current syllable is near to the start or end of a word (the boundaries).
 * `_`: an optional percent symbol that indicates that the strongest syllable (the stress) in a word is before or after the current syllable.
@@ -43,6 +45,27 @@ Description
 +--------------------------+---------------+-------------------------+------------------+
 ```
 
+Alternative structure of rules for a pair of syllables around a space:
+
+```
++---------------------------------------------------------------------------------------+
+|                      Alternative Structure of Transcriber Rules                       |
++--------------------------+---------------+-------------------------+------------------+
+|           F1             |       F2      |          F3             |        F4        |
++--------------------------+---------------+-------------------------+------------------+
+|      Cur. Syllable       |       _       |      Next Syllable      |  X-SAMPA for F1  |
++--------------------------+---------------+-------------------------+------------------+
+```
+
+* `F1`: a regex for the current syllable.
+* `F2`: a fixed underline character denoting a space between words.
+* `F3`: a regex for the next syllable.
+* `F4`: a X-SAMPA transcription of the previous syllable (F1).
+
+This alternative structure allows for ressilabification of codas as onsets of the next word and other processes that occur in the context between two words.
+
+Note: this alternative structure is to be implemented.
+
 Demonstration
 ----------------------------------
 
@@ -50,7 +73,7 @@ Run the `transcriber.awk` script:
 
 ```bash
 cat /usr/share/dict/brazilian | awk -f ../syllabificator/syllabificator.awk  \
-    | awk -f transcriber.awk 2> /dev/null | awk 'FN' > transcriber.output.txt
+    | awk -f transcriber.awk 2> /dev/null | awk 'NF' > transcriber.output.txt
 ```
 
 You need the syllabificator to generate the input for `transcriber.awk`.
