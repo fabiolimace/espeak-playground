@@ -1,6 +1,8 @@
 Transcription Table
 =====================================
 
+A fazer: usar como base a tabela de Plínio Barbosa e Eleonora Albanoy.
+
 Consonants:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
@@ -48,7 +50,8 @@ Vowels:
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
 |a	|	|a		|		|a	|
-|ə ɐ	|ɐ/æ	|@ &"		|&		|@ 6	|
+|ɐ	|ɐ/æ	|&"		|&		|6	|
+|ə	|-	|@		|-		|@	|
 |e	|	|e		|		|e	|
 |ɛ	|	|E		|		|E	|
 |i	|	|i		|		|i	|
@@ -57,6 +60,10 @@ Vowels:
 |ɔ	|	|O		|		|O	|
 |u	|	|u		|		|u	|
 |ʊ	|	|U		|		|U	|
+
+Nota: o `espeak-ng` usa `æ`, na voz do pt-BR, para representar a vogal quase baixa reduzida em posição pós-tônica. Mas o som desse caractere não existe no português. O símbolo do Kirshenbaum que representa esse som é o `&`. Já o símbolo Kirshenbaum que representa o som `ɐ` é `&"`, portanto este deveria ser utilizado.
+
+Nota: o `espeak-ng` usa `y`, na voz do pt-BR, para representar a vogal alta anterior reduzida. Esse caractere está associado a uma vogal arredondada no IPA; além disso, esse som dele existe no português. O símbolo Kirshenbaum que deveria ser usado é `I`.
 
 Nasal Vowels:
 
@@ -87,6 +94,16 @@ Oral decrescent diphthongs:
 
 Dúvida: o digonto [uʊ̯] existe, como em "ultra" e "azul"?
 
+Resposta à dúvida acima sobre ditongos ditongo formado com o alofone brasileiro de /L/:
+
+> Due to the realisation of /L/ as a labial-velar offglide, which has a vocalic quality
+> in BP, it is possible to add an inventory of phonetic diphthongs to the preceding list, 
+> which yields a larger diphthong inventory than that of EP (see, for instance, sol sO U8 
+> ‘sun’ and sul suU 8 ‘South’ in the transcribed passages).
+> 
+> IN ILLUSTRATIONS OF THE IPA: Brazilian Portuguese, by Plínio Barbosa, Eleonora Albanoy
+> 
+
 Nasal decrescent diphthongs:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
@@ -99,6 +116,8 @@ Nasal decrescent diphthongs:
 |ãʊ̯ ãw	|ɐ̃ʊ̃	|a~U a~w	|&U~   *	|a~U a~w|
 
 Dúvida: o digonto [õʊ̯] existe, como em "bom" e "dom" (quando pronunciados *boum e *doum)?
+
+A resposta para a dúvida acima deve ter algum a explicação parecido com a resposta anterior.
 
 Oral crescent diphthongs:
 
@@ -130,6 +149,7 @@ References:
 * https://fonologia.org
 * https://panglossa.fandom.com/wiki/International_Phonetic_Alphabet
 * https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
+* https://en.wikipedia.org/wiki/Comparison_of_ASCII_encodings_of_the_International_Phonetic_Alphabet
 
 ---
 

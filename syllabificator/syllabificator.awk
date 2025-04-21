@@ -42,7 +42,7 @@ BEGIN {
 	
 	NUCLEUS = "(" O "|" O G "|" N H ")"
 	
-	# In Portuguese, only /L/, /N/, /S/, /R/ arquiphonemes can be in coda position,
+	# In Portuguese, only /L/, /N/, /S/, /R/ archiphonemes can be in coda position,
 	# but here we allow for any combination of consonants in the end of a syllable.
 	
 	CODA = "(" C "+" ")"
