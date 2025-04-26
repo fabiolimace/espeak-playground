@@ -29,6 +29,9 @@ Structure of rules for a triad of syllables:
 
 * `V`: is a wildcard for a vowel.
 * `C`: is a wildcard for a consonant.
+* `S`: is a wildcard for a voiced consonant.
+* `U`: is a wildcard for a unvoiced consonant.
+* `K`: is a wildcard for a coda consonant.
 
 Note: The apostrophe is also important to find rule matches. If a stress has been detected for a word, all following rules that have an apostrophe in F4 won't match. This is to avoid that a word has more than one stressed syllable.
 
@@ -50,26 +53,48 @@ Note: The apostrophe is also important to find rule matches. If a stress has bee
 +--------------------------+---------------+-------------------------+------------------+
 ```
 
-Alternative structure of rules for a pair of syllables around a space:
+### Generic syllable
+
+A generic syllable a combination of a fixed onset with a rhyme regex.
+
+An onset in the generic syllable is a fixed string of up to 2 characters.
+
+A rhyme regex in the generic syllable is a regular expression that matches a set of existing rhymes in the rule list.
+
+Generic syllables also take into account the context hints: boundary (first syllable, second syllable, penultimate syllable, last syllable) and stress (pre-stress, pos-stress).
 
 ```
 +---------------------------------------------------------------------------------------+
-|                      Alternative Structure of Transcriber Rules                       |
+|                          Structure a Rule with Generic Onset                          |
 +--------------------------+---------------+-------------------------+------------------+
 |           F1             |       F2      |          F3             |        F4        |
 +--------------------------+---------------+-------------------------+------------------+
-|      Cur. Syllable       |       _       |      Next Syllable      |  X-SAMPA for F1  |
+|                          |     br/Vs     |                         |        b4        |
 +--------------------------+---------------+-------------------------+------------------+
 ```
 
-* `F1`: a regex for the current syllable.
-* `F2`: a fixed underline character denoting a space between words.
-* `F3`: a regex for the next syllable.
-* `F4`: a X-SAMPA transcription of the previous syllable (F1).
+* `br`: the fixed onset "br"
+* `/`: a symbol that separates fixed onset from the rhyme regex.
+* `Vs`: a regular expression for a rhyme formed by a vowel nucleus and an "s" coda.
 
-This alternative structure allows for ressilabification of codas as onsets of the next word and other processes that occur in the context between two words.
+Algorithm:
 
-Note: this alternative structure is to be implemented.
+* Say we current syllable is `bras`;
+* If there's no rule for the rule `bras`...;
+* The script checks if there's one that matches the onset of `bras`, which is "br";
+* The script finds the rule for the generic onset "br/";
+* The script finds a list for the generic onset "br/" that contains rhime regex "br/Vs";
+* Then the script looks for a rule that matches the rhyme regex "Vs" and in the same context, i.e, the same border and stress hints;
+* The script finds a list of rules that match the rhyme regex "Vs": as, es, is...
+* The script joins each rhyme found with the onset: bras, bres, bris;
+* The script tries to match each joined syllable with the current syllabe.
+* The script finds a match for the syllable "bras";
+* The script joins the transcriptions of "br" (b4) and "as" (as) to form "/b4as/";
+* The script replaces the current syllable with the joined transcription "/b4as/".
+
+The generic syllable is to be implemented.
+
+Note: there's no need to implement a generic syllable which the nucleus or coda is fixed. The idea of generic syllables started with a fixed coda, but a fixed onset is better because it follows the pattern ONSET + RHYME and is more efficient, requiring less rules in the rule list.
 
 Demonstration
 ----------------------------------

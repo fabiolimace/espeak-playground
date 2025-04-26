@@ -67,8 +67,11 @@ function load_alphabets(    i, s, k) {
 
 function read_rules_file(file,    n, r, F) {
 
-	V = "[aàáâãeèéêiíoóòôõuúü]";
-	C = "[bcdfghjklmnpqrstvwxz]";
+	V = "[aàáâãeèéêiíoóòôõuúü]";  # vowels
+	C = "[bcdfghjklmnpqrstvwxz]"; # consonants
+	S = "[bdgjlmnrvz]";           # voiced consonants
+	U = "[cfkpqstx]";             # unvoiced consonants
+	K = "[lmnrs]";                # coda consonants
 	
 	if (system("test -f " file) != 0) error("file not found: '" file "'.");
 	
@@ -96,6 +99,12 @@ function read_rules_file(file,    n, r, F) {
 		gsub(/V/, V, RULES_F3[r]);
 		gsub(/C/, C, RULES_F1[r]);
 		gsub(/C/, C, RULES_F3[r]);
+		gsub(/S/, S, RULES_F1[r]);
+		gsub(/S/, S, RULES_F3[r]);
+		gsub(/U/, U, RULES_F1[r]);
+		gsub(/U/, U, RULES_F3[r]);
+		gsub(/K/, K, RULES_F1[r]);
+		gsub(/K/, K, RULES_F3[r]);
 
 		# find stress side
 		RULES_STRESS[r] = 0;

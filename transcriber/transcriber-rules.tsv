@@ -705,6 +705,7 @@ _	das	_^V	d@z	// <das a.mi.gas> -> [dəz a.'mi.gəs]
 	des		des
 	des	_	dZIs
 	des	^s	de
+	des	^S	dez	// des.de, mes.mo
 	
 	dês		'des
 	dês	^s	'de
@@ -2291,133 +2292,133 @@ me	nor	_	'nO4	// me.nor
 	ra		4a	// pa.ra.da
 	ra	_	4@	// ho.ra
 _	ra		xa	// ra.to
-[lnrs]$	ra		xa	// pal.rar, hon.ra.do, ter.ra.ço, is.ra.el
-[lnrs]$	ra	_	x@	// gel.r@, hon.r@, hur.ra
+K$	ra		xa	// pal.rar, hon.ra.do, ter.ra.ço, is.ra.el
+K$	ra	_	x@	// gel.r@, hon.r@, hur.ra
 
 	
 	rá		'4a	// da.rá
 _	rá		'xa	// rá.pi.do
-[lnrs]$	rá		'xa	// er.rá.ti.co
+K$	rá		'xa	// er.rá.ti.co
 
 	râ	^[nm]	'4a~	// ce.râ.mi.co
-[lnrs]$	râ	^[nm]	'xa~	// sub.ter.râ.neo
+K$	râ	^[nm]	'xa~	// sub.ter.râ.neo
 
 	rã	_	'4a~
-[lnrs]$	rã	_	'xa~U	// fer.rão
+K$	rã	_	'xa~U	// fer.rão
 	
 	rac		4ak	// ca.rac.te.re
 
 	rai		4aI	// pa.rai.ba.no
 	rai	_	'4aI	// o.rai
 _	rai		xaI	// rai.o
-[lnrs]$	rai		xaI	// en.rai.zar, ar.rai.al
+K$	rai		xaI	// en.rai.zar, ar.rai.al
 	
 	rais		4aIs	// Pa.rai.só.po.lis
 	rais	_	'4aIs	// ge.rais
-[lnrs]$	rais	_	'xaIs	// er.rais
+K$	rais	_	'xaIs	// er.rais
 	
 	ral		4aU
 	ral	_	'4aU	// ge.ral
-[lnrs]$	ral	_	'xaU	// cur.ral
+K$	ral	_	'xaU	// cur.ral
 
 	ram		4a~U	// pe.ram.bu.ar, pa.ram
 _	ram		xa~U	// ram.pa
-[lnrs]$	ram	_	xa~U	// er.ram
+K$	ram	_	xa~U	// er.ram
 	
 	ran		4a~
 _	ran		xa~	// ran.cor
-[lnrs]$	ran		xa~	// gar.ran.cho
+K$	ran		xa~	// gar.ran.cho
 	
 	rão	_	'4a~U	// fa.rão
-[lnrs]$	rão	_	'xa~U	// ma.car.rão
+K$	rão	_	'xa~U	// ma.car.rão
 
 	rap		4ap	// pa.rap.si.có.lo.go
 _	rap		xap	// rap.tar
 
 	rar		4a4	// hi.e.rar.qui.a
 	rar	_	'4@4	// es.pe.rar
-[lnrs]$	rar		x@4	// er.rar.mos
-[lnrs]$	rar	_	'x@4	// er.rar
+K$	rar		x@4	// er.rar.mos
+K$	rar	_	'x@4	// er.rar
 
 	ras		4as	// cu.ras.te
 	ras	_	4@s	// a.mo.ras
 	ras	^s	4a	// se.pa.ras.se
 _	ras		xas	// ras.tro
-[lnrs]$	ras		xas	// er.ras.te
-[lnrs]$	ras	_	x@s	// er.ras
-[lnrs]$	ras	^s	xa	// er.ras.se
+K$	ras		xas	// er.ras.te
+K$	ras	_	x@s	// er.ras
+K$	ras	^s	xa	// er.ras.se
 	
 	rás		'4as	// fa.rás
 	rás	^s	'4as	// cu.rás.seis
-[lnrs]$	rás	_	'xas	// 
-[lnrs]$	rás	^s	'xa	// er.rás.seis
+K$	rás	_	'xas	// 
+K$	rás	^s	'xa	// er.rás.seis
 	
 	re		4e
 	re	_	4I
 _	re		xe
-[lnrs]$	re		xe
-[lnrs]$	re	_	xI
+K$	re		xe
+K$	re	_	xI
 	
 	ré		'4E
 _	ré		'xE
-[lnrs]$	ré		'xE
+K$	ré		'xE
 	
 	rê		'4e
 _	rê		'xe
-[lnrs]$	rê		'xe
+K$	rê		'xe
 	
 	rei		4eI
 	rei	_	'4eI
 _	rei		xeI	// rei.na.do
-[lnrs]$	rei		xeI	// cor.rei.ção
-[lnrs]$	rei	_	'xeI	// per.cor.rei
+K$	rei		xeI	// cor.rei.ção
+K$	rei	_	'xeI	// per.cor.rei
 
 	reis		4eIs
 	reis	_	'4eIs	// fa.la.reis
-[lnrs]$	reis	_	'xeIs	// er.reis
+K$	reis	_	'xeIs	// er.reis
 	
 	rem		4e~	// pa.rem
 	rem	_	4e~I	// pa.rem
-[lnrs]$	rem	_	xe~I	// er.rem
+K$	rem	_	xe~I	// er.rem
 	
 	remp		4e~p	// pe.remp.tó.ri.o	// TODO: epêntese ou elisão?
 	
 	ren		4e~	// a.ren.gar
 _	ren		xe~	// ren.dar
-[lnrs]$	ren		xe~	// cor.ren.do
+K$	ren		xe~	// cor.ren.do
 
 	rên		'4e~	// ge.rên.ci.a
-[lnrs]$	rên	_	'xe~	// o.cor.rên.ci.a
+K$	rên	_	'xe~	// o.cor.rên.ci.a
 
 	rer		4er
 	rer	_	'4er	// que.rer
-[lnrs]$	rer	_	'xer	// cor.rer
+K$	rer	_	'xer	// cor.rer
 	
 	res		4es	
 	res	_	4Is	// pa.res
 	res	^s	4e	// in.te.res.se
 _	res		xes	// res.pei.to
-[lnrs]$	res		xes	// cor.res.se
-[lnrs]$	res	_	xIs	// cor.res
-[lnrs]$	res	^s	xe
+K$	res		xes	// cor.res.se
+K$	res	_	xIs	// cor.res
+K$	res	^s	xe
 	
 	rês		'res
-[lnrs]$	rês		'xes
+K$	rês		'xes
 
 	reu		4eU
 	reu	_	'4eU
-[lnrs]$	reu		xeU
-[lnrs]$	reu	_	'xeU
+K$	reu		xeU
+K$	reu	_	'xeU
 
 	ri		4i
 	ri	_	'4i
 _	ri		xi	// ri.ma
-[lnrs]$	ri		xi	// sor.ri.mos
-[lnrs]$	ri	_	'xi	// sor.ri
+K$	ri		xi	// sor.ri.mos
+K$	ri	_	'xi	// sor.ri
 	
 	rí		'4i
 _	rí		'xi	// rí.gi.da
-[lnrs]$	rí		'xi	// cor.rí.a.mos
+K$	rí		'xi	// cor.rí.a.mos
 	
 	rim		4i~	// ca.rim.bo, be.rim.bau
 	rim	_	'4i~	// a.le.crim, flo.rim
@@ -2428,38 +2429,38 @@ _	rí		'xi	// rí.gi.da
 	rir		4i4	// a.de.rir.mos
 	rir	_	'4i4	// a.de.rir
 _	rir		xi4	// rir.mos
-[lnrs]$	rir		xi4	// sor.rir.mos
+K$	rir		xi4	// sor.rir.mos
 	
 	ris		4is	// a.ris.ca.do
 	ris	_	'4is	// ga.ris
 	ris	^s	4i
 _	ris		xis	// ris.co
-[lnrs]$	ris		xis	// ar.ris.car
-[lnrs]$	ris	_	xis	// bar.ris
-[lnrs]$	ris	^s	xi
+K$	ris		xis	// ar.ris.car
+K$	ris	_	xis	// bar.ris
+K$	ris	^s	xi
 	
 	rís		'4is	// tu.rís.ti.co
 _	rís		'xis	// rís.pi.do
-[lnrs]$	rís	^s	'xi	// sor.rís.se.mos
+K$	rís	^s	'xi	// sor.rís.se.mos
 	
 	riu		4iU
 	riu	_	'4iU
-[lnrs]$	riu		xiU
-[lnrs]$	riu	_	'xiU
+K$	riu		xiU
+K$	riu	_	'xiU
 
 	ro		4o	// co.ro.nel
 	ro	_	rU	// ca.ro
 _	ro		xo	// ro.do
-[lnrs]$	ro		xo	// ar.ro.ba
-[lnrs]$	ro	_	xU	// car.ro
+K$	ro		xo	// ar.ro.ba
+K$	ro	_	xU	// car.ro
 	
 	ró		'4O	// e.ró.ti.co
 _	ró		'xO	// ró.se.o
-[lnrs]$	ró		'xO	// for.ró
+K$	ró		'xO	// for.ró
 	
 	rô		'4o	// i.rô.ni.co
 _	rô		'xo	// rô.o	(pré 1990)
-[lnrs]$	rô		'xo	// er.rô.ne.o
+K$	rô		'xo	// er.rô.ne.o
 	
 	rões	_	'4o~Is
 %	rões	_	4o~Is
@@ -2469,8 +2470,8 @@ r$	rões	_	'xo~Is
 	rom		4o~
 	rom	_	'4o~	
 _	rom		xo~	// rom.per
-[lnrs]$	rom		xo~	// cor.rom.per
-[lnrs]$	rom	_	xo~U	// mar.rom, ron.rom
+K$	rom		xo~	// cor.rom.per
+K$	rom	_	xo~U	// mar.rom, ron.rom
 	
 	ron		4o~	// ri.no.ce.ron.te
 	ron	_	'4o~	
@@ -2480,24 +2481,24 @@ _	ron		4o~	// ron.car
 	ros	_	4Us	// ca.ros
 	ros	^s	4o
 _	ros		xos	// ros.to
-[lnrs]$	ros		xos	// en.ros.car
-[lnrs]$	ros	_	xUs	// car.ros
-[lnrs]$	ros	^s	xo
+K$	ros		xos	// en.ros.car
+K$	ros	_	xUs	// car.ros
+K$	ros	^s	xo
 	
 	rós		'4Os	// ai.ro.sa
 	rós	_	'4Os	// Quei.rós
-[lnrs]$	rós	_	'xOs	// for.rós
+K$	rós	_	'xOs	// for.rós
 	
 	rou		4oU
 	rou	_	'4oU	// a.ti.rou
 _	rou		xoU	// rou.bo
-[lnrs]$	rou		xoU	// ar.rou.bo
-[lnrs]$	rou	_	'xoU	// ber.rou
+K$	rou		xoU	// ar.rou.bo
+K$	rou	_	'xoU	// ber.rou
 	
 	ru		4u	// ga.ru.pa
 	ru	_	'4u	// pe.ru
 _	ru		xu	// ru.mo
-[lnrs]$	ru		xu	// ar.ru.mar
+K$	ru		xu	// ar.ru.mar
 	
 	rui		4uI
 	rui	_	'4uI
@@ -2508,113 +2509,113 @@ _	rup		xup	// rup.tu.ra
 	rus		4us	// 
 	rus	_	'4us	// pe.rus
 _	rus		xus	// rus.ga
-[lnrs]$	rus		xus	// far.rus.ca
-[lnrs]$	rus	^s	xu	// bi.e.lor.rus.sa
+K$	rus		xus	// far.rus.ca
+K$	rus	^s	xu	// bi.e.lor.rus.sa
 	
 	sa		za	// ca.sa.do
 	sa	_	z@	// ca.sa
 _	sa		sa	// sa.bi.do
-[lnrs]$	sa		sa	// pas.sa.do
-[lnrs]$	sa	_	sa	// pas.sa
+K$	sa		sa	// pas.sa.do
+K$	sa	_	sa	// pas.sa
 	
 	sá		'za	// em.pre.sá.ri.o
 _	sá		'sa	// sá.ba.do
-[lnrs]$	sá		'sa	// pas.sá.va.mos
+K$	sá		'sa	// pas.sá.va.mos
 
 	sai		zaI	// pro.sai.co
 	sai	_	'zaI	// u.sai
 _	sai		saI	// sai.dei.ra
-[lnrs]$	sai		saI	// so.bres.sai.rá
-[lnrs]$	sai	_	'saI	// so.bres.sai
+K$	sai		saI	// so.bres.sai.rá
+K$	sai	_	'saI	// so.bres.sai
 
 	sais		zaIs
 	sais	_	'zaIs	// u.sais
 _	sais		saIs	// sais
-[lnrs]$	sais	_	'saIs	// so.bres.sais
+K$	sais	_	'saIs	// so.bres.sais
 	
 	sal		zaU	// de.sal.ma.do
 	sal	_	'zaU	// na.sal
 _	sal		saU	// sal.ga.do
-[lnrs]$	sal		saU	// as.sal.to
-[lnrs]$	sal	_	'saU	// mis.sal
+K$	sal		saU	// as.sal.to
+K$	sal	_	'saU	// mis.sal
 	
 	sam		za~	// de.sam.pa.ro
 	sam	_	za~U	// pi.sam
 _	sam		sa~	// sam.ba
-[lnrs]$	sam	_	sa~U	// pas.sam
+K$	sam	_	sa~U	// pas.sam
 
 	san		sa~	// u.san.do
 _	san		sa~	// san.to
-[lnrs]$	san		sa~	// pos.san.te
+K$	san		sa~	// pos.san.te
 	
 	são	_	'za~U	// vi.são, con.fu.são
 _	são		sa~U	// são.pau.li.no, são.ma.ri.nhen.se
-[lnrs]$	são		sa~U	// pen.são.zi.nha
-[lnrs]$	são	_	'sa~U	// pen.são
+K$	são		sa~U	// pen.são.zi.nha
+K$	são	_	'sa~U	// pen.são
 
 _	sar		sa4	// sar.na
 _	sar	^r	sa
-[lnrs]$	sar		sa4	// pas.sar.mos
-[lnrs]$	sar	_	'sa4	// a.mas.sar
+K$	sar		sa4	// pas.sar.mos
+K$	sar	_	'sa4	// a.mas.sar
 
 	sas		zas	// u.sas.te
 	sas	_	z@s	// a.sas, ro.sas
 	sas	^s	za
 _	sas		sas
-[lnrs]$	sas		sas	// pas.sas.te
-[lnrs]$	sas	_	s@s	// pas.sas
-[lnrs]$	sas	^s	sa
+K$	sas		sas	// pas.sas.te
+K$	sas	_	s@s	// pas.sas
+K$	sas	^s	sa
 	
 	sás		'zas	// u.sás.seis
 	sás	^s	'za
-[lnrs]$	sás		'sas	// pas.sás.seis
-[lnrs]$	sás	^s	'sa
+K$	sás		'sas	// pas.sás.seis
+K$	sás	^s	'sa
 
 	sau		zaU	// de.sau.to.ri.zar
 _	sau		saU	// sau.rí.de.o
-[lnrs]$	sau		saU	// di.nos.sau.ro
-[lnrs]$	sau	_	saU	// Bis.sau
+K$	sau		saU	// di.nos.sau.ro
+K$	sau	_	saU	// Bis.sau
 	
 	se		ze	// su.se.ra.no
 	se	_	zI	// u.se, pau.se
 _	se		se	// se.de
-[lnrs]$	se		se	// in.se.rir
-[lnrs]$	se	_	sI	// pos.se, pen.se
+K$	se		se	// in.se.rir
+K$	se	_	sI	// pos.se, pen.se
 	
 	sé		zE	// pre.sé.pi.o
 _	sé		'sE	// sé.ti.mo
-[lnrs]$	sé		'sE	// dis.sé.ra.mos
+K$	sé		'sE	// dis.sé.ra.mos
 	
 
 	sê		'ze	// co.sê.reis
 _	sê		se	// sê
 _	sê	^[mn]	'se~	// sê.mo.la
-[lnrs]$	sê		'se	// Sos.sê.go
+K$	sê		'se	// Sos.sê.go
 
 	seg		seg	// seg.men.to
 
 	sei		zeI	// ro.sei.ra
 	sei	_	'zeI	// re.u.sei
 _	sei		seI	// sei.ta
-[lnrs]$	sei		seI	// gros.sei.ra
-[lnrs]$	sei	_	'seI	// pen.sei
+K$	sei		seI	// gros.sei.ra
+K$	sei	_	'seI	// pen.sei
 
 	seis	_	'zeIs	// re.u.seis
 _	seis		seIs
 _	seis	cen	seI	// seis.cen.tos
-[lnrs]$	seis		seIs
-[lnrs]$	seis	_	'seIs	// de.zes.seis
-[lnrs]$	seis	_	seIs	// dis.sés.seis
+K$	seis		seIs
+K$	seis	_	'seIs	// de.zes.seis
+K$	seis	_	seIs	// dis.sés.seis
 	
 	sem		ze~	// de.sem.pre.go
 	sem	_	ze~I	// u.sem
 _	sem		se~	// sem.pre
-[lnrs]$	sem		se~	// as.sem.blei.a
-[lnrs]$	sem	_	se~I	// pas.sem
+K$	sem		se~	// as.sem.blei.a
+K$	sem	_	se~I	// pas.sem
 
 	sen		ze~	// de.sen.vol.ver
 _	sen		se~	// se.na.do
-[lnrs]$	sen		se~	// as.sen.tar
+K$	sen		se~	// as.sen.tar
 
 	ser		ze4	// de.ser.to
 	ser	_	'zE4	// pu.ser
@@ -2623,145 +2624,145 @@ gei	ser	_	ze4	// gei.ser
 _	ser		se4	// ser.tão
 _	ser	^r	se	// ser.ra.lhei.ro
 _	ser	^ra_	sE	// ser.ra
-[lnrs]$	ser		se4	// con.ser.tar
-[lnrs]$	ser	_	'sE4	// ben.dis.ser
+K$	ser		se4	// con.ser.tar
+K$	ser	_	'sE4	// ben.dis.ser
 	
 	ses		zes	// de.ses.pe.ro
 	ses	_	zIs	// deu.ses
 	ses	^s	ze
 _	ses		ses	// ses.ma.ria
-[lnrs]$	ses		ses	// pos.ses.si.vo
-[lnrs]$	ses	_	sIs	// pas.ses, pen.ses
-[lnrs]$	ses	^s	se
+K$	ses		ses	// pos.ses.si.vo
+K$	ses	_	sIs	// pas.ses, pen.ses
+K$	ses	^s	se
 	
 	sés		'zEs	// pu.sés.se
 	sés	^s	'zE
 _	sés		'sEs	// sé.sa.mo
-[lnrs]$	sés		'sEs	// dis.sés.seis
-[lnrs]$	sés	^s	'sE
+K$	sés		'sEs	// dis.sés.seis
+K$	sés	^s	'sE
 
 	si		zi	// vi.si.ta
 co	si		'zi	// co.si
 _	si		si	// si.ga
-[lnrs]$	si		si	// be.lís.si.ma
-[lnrs]$	si	_	si	// pros.si.ga
+K$	si		si	// be.lís.si.ma
+K$	si	_	si	// pros.si.ga
 	
 	sí		'zi	// ri.sí.vel, re.sí.du.o
 sub	sí		'si	// sub.sí.dio
 _	sí		'si	// sí.ti.o
-[lnrs]$	sí		'si	// pos.sí.vel
+K$	sí		'si	// pos.sí.vel
 
 	sil		ziU	// Bra.sil.zi.nho, Bra.sil.zão
 	sil	_	'ziU	// Bra.sil
 _	sil		siU	// sil.vo
-[lnrs]$	sil		siU	// Tran.sil.vâ.ni.a
-[lnrs]$	sil	_	siU	// mís.sil
+K$	sil		siU	// Tran.sil.vâ.ni.a
+K$	sil	_	siU	// mís.sil
 
 	sim		zi~	// de.sim.pe.di.do
 	sim	_	zi~	// fre.ne.sim
 _	sim		si~	// sim.ples
-[lnrs]$	sim		si~	// as.simptótico
-[lnrs]$	sim	_	'si~	// as.sim, ou.tros.sim
+K$	sim		si~	// as.simptótico
+K$	sim	_	'si~	// as.sim, ou.tros.sim
 
-[lnrs]$	simp		si~p	// as.simp.tó.ti.co
+K$	simp		si~p	// as.simp.tó.ti.co
 
 	sin		zi~	// de.sin.te.res.se
 	sin		si~	// sin.ta
-[lnrs]$	sin		si~	// des.sin.to.ni.zar
-[lnrs]$	sin	_	'si~
+K$	sin		si~	// des.sin.to.ni.zar
+K$	sin	_	'si~
 
 _	sín		'si~	// sín.dro.me
-[lnrs]$	sín		'si~	// as.sín.cro.no
+K$	sín		'si~	// as.sín.cro.no
 
 	sis		zis	// re.sis.tir
 _	sis		sis	// sis.te.ma
-[lnrs]$	sis		sis	// as.sis.tir
-[lnrs]$	sis	_	'sis	// As.sis, tos.sis
-[lnrs]$	sis	^s	'si
+K$	sis		sis	// as.sis.tir
+K$	sis	_	'sis	// As.sis, tos.sis
+K$	sis	^s	'si
 
 	sís	^s	'zi	// coi.sís.si.ma, tei.mo.sís.si.ma
 _	sís		'sis	// sís.to.le, sís.mi.co
-[lnrs]$	sís		'sis	// as.sís.mi.co
+K$	sís		'sis	// as.sís.mi.co
 	
 	so		zo	// ri.so.nho
 	so	_	zU	// u.so, ru.so, tei.mo.so
 _	so		so	// so.nho
-[lnrs]$	so		so	// res.so.nar
-[lnrs]$	so	_	'sU	// co.los.so
+K$	so		so	// res.so.nar
+K$	so	_	'sU	// co.los.so
 	
 	só		'zO	// pro.só.di.a
 _	só		'sO
-[lnrs]$	só		'sO	// su.ces.só.ri.a
+K$	só		'sO	// su.ces.só.ri.a
 
 	sô		'zo	// ga.sô.me.tro
 _	sô		'so	// sô.ni.co
 sub	sô 		'so	// sub.sô.ni.co
-[lnrs]$	sô		'so	// cro.mos.sô.mi.ca, su.per.sô.ni.co
+K$	sô		'so	// cro.mos.sô.mi.ca, su.per.sô.ni.co
 	
 	sões	_	'zo~Is	// i.lu.sões, visões
-[lnrs]$	sões	_	'so~Is
+K$	sões	_	'so~Is
 
 	sol		zoU	// re.sol.ver
 _	sol		soU	// sol.tar
 ab	sol		soU	// ab.sol.ver
-[lnrs]$	sol		soU	// as.so.lar
-[lnrs]$	sol	_	'sOU	// gi.ras.sol
+K$	sol		soU	// as.so.lar
+K$	sol	_	'sOU	// gi.ras.sol
 
 _	som		so~	// som.bra
-[lnrs]$	som		so~	// as.som.brar
-[lnrs]$	som	_	'so~U	// ul.tras.som
+K$	som		so~	// as.som.brar
+K$	som	_	'so~U	// ul.tras.som
 	
 	son		zo~	// li.son.ja
 _	son		so~	// son.da
-[lnrs]$	son		so~	// ra.di.os.son.da
+K$	son		so~	// ra.di.os.son.da
 
-[lnrs]$	sons		'so~Us	// ul.tras.sons
+K$	sons		'so~Us	// ul.tras.sons
 
 	sor		zor	// de.sor.ga.ni.zar
 	sor	_	'zor	// in.va.sor
 _	sor		so4	// sor.tir
 _	sor	^r	so	// sor.rir
 ab	sor		so4	// ab.sor.ver
-[lnrs]$	sor	_	so4	// res.sor.ver
-[lnrs]$	sor	_	'so4	// de.fen.sor
+K$	sor	_	so4	// res.sor.ver
+K$	sor	_	'so4	// de.fen.sor
 	
 	sos		zos
 	sos	_	zUs	// va.sos
 	sos	^s	zo	// de.sos.sar
 _	sos		sos
-[lnrs]$	sos		sos
-[lnrs]$	sos	_	sUs
-[lnrs]$	sos	^s	so
+K$	sos		sos
+K$	sos	_	sUs
+K$	sos	^s	so
 	
 	sou		zou	// te.sou.ro
 	sou	_	'zou	// ra.pou.sou
 _	sou		soU
-[lnrs]$	sou		soU
-[lnrs]$	sou	_	'soU
+K$	sou		soU
+K$	sou	_	'soU
 
 	su		zu	// u.su.fru.ir
 	su	_	'zu	// SI.SU
 _	su		su
-[lnrs]$	su		su
-[lnrs]$	su	_	'su
+K$	su		su
+K$	su	_	'su
 
 _	sub		sub	// sub.ma.ri.no
-[lnrs]$	sub		sub	// an.tis.sub.ma.ri.no
+K$	sub		sub	// an.tis.sub.ma.ri.no
 
 _	subs		subs
 
 	sui		zuI	// je.sui.tis.mo
 _	sui		suI	// sui.ci.da
-[lnrs]$	sui		suI
-[lnrs]$	sui	_	'suI	// pos.sui
+K$	sui		suI
+K$	sui	_	'suI	// pos.sui
 
 	sul		zuU	// re.sul.ta.do
 _	sul		suU	// sul.tão
-[lnrs]$	sul	_	'suU	// in.sul.tar
-[lnrs]$	sul	_	'suU	// Ri.ver.sul
+K$	sul	_	'suU	// in.sul.tar
+K$	sul	_	'suU	// Ri.ver.sul
 
 _	sum		su~	
-[lnrs]$	sum	_	'su~	// mus.sum
+K$	sum	_	'su~	// mus.sum
 	
 _	sump		su~p	// sump.tu.o.so
 	
@@ -2771,14 +2772,14 @@ _	sun		su~	// sun.tu.o.so
 	sur		zu4	// u.sur.par
 _	sur		su4	// sur.fe
 _	sur	^r	su	// sur.fe
-[lnrs]$	sur		su4	// res.sur.gir
-[lnrs]$	sur	^r	su	// res.sur.gir
+K$	sur		su4	// res.sur.gir
+K$	sur	^r	su	// res.sur.gir
 
 	sus	_	zus	// Je.sus
 	sus	^s	su
 _	sus		sus	// sus.to
-[lnrs]$	sus		sus	// as.sus.tar
-[lnrs]$	sus	_	'sus	// ver.sus
+K$	sus		sus	// as.sus.tar
+K$	sus	_	'sus	// ver.sus
 	
 	ta		ta
 	ta	_	t@
