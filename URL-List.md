@@ -108,6 +108,7 @@ Falsos ditongos:
 
 * https://en.wikipedia.org/wiki/Voiced_palatal_nasal
 * https://en.wikipedia.org/wiki/Voiced_palatal_lateral_approximant
+* https://www.encyclopedia.com/literature-and-arts/language-linguistics-and-literary-terms/language-and-linguistics/consonant#1O29CONSONANT
 
 * https://panglossa.fandom.com/wiki/Implosive_consonant
 * https://panglossa.fandom.com/wiki/Voiced_bilabial_implosive
@@ -138,6 +139,13 @@ Falsos ditongos:
 * https://panglossa.fandom.com/wiki/Vowel_reduction
 * https://www.ceale.fae.ufmg.br/glossarioceale/verbetes/vogais
 * https://www.youtube.com/watch?v=J4UwmjPZ7Eo
+* https://www.encyclopedia.com/literature-and-arts/language-linguistics-and-literary-terms/language-and-linguistics/vowel
+* https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/vowel-quality
+
+Vogais "e" e "o":
+* https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/fonetica-e-e-o-abertos/7872#
+* https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/vogais-atonas-abertas/23284
+
 
 #### Processos fonológicos
 
