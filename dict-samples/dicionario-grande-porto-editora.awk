@@ -45,7 +45,7 @@ $1 ~ /^[[:alpha:].-]+$/ && $2 ~ /\[[^]]+\]/ && $3 ~ /([[:alnum:]]+\.)+/ {
 	tags = null;
 	if (word ~ /(-se|\(-se\))$/) {
 		gsub(/(-se|\(-se\))$/, "", word);
-		tags = " v.pron.";
+		tags = "v.pron.";
 	}
 	for (i = 3; i <= NF; i++) {
 		if ($i in TAGS) tags = tags (tags ? ";" : "") $i;

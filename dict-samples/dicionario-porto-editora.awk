@@ -1,7 +1,7 @@
 #!/usr/bin/gawk -f
 
 # Extrai palavras do "Dicionário Porto Editora da Língua Portuguesa", da Porto Editora.
-# Este script gera um arquivo TSV de três colunas que contém apenas: as palavras e as listas de classes gramaticais de cada palavra, separadas por ponto e vírgula.
+# Este script gera um arquivo TSV de duas colunas que contém apenas: as palavras e as listas de classes gramaticais de cada palavra, separadas por ponto e vírgula.
 #
 # Exemplo de linhas geradas pelo script:
 #
@@ -38,7 +38,7 @@ $1 ~ /^[[:alpha:].-]+$/ && $2 ~ /([[:alnum:]]+\.)+/ {
 	tags = null;
 	if (word ~ /-se$/) {
 		gsub(/-se$/, "", word);
-		tags = " v.pron.";
+		tags = "v.pron.";
 	}
 	for (i = 2; i <= NF; i++) {
 		if ($i in TAGS) tags = tags (tags ? ";" : "") $i;
