@@ -4,36 +4,57 @@
 # This script inserts spaces between words and punctuation.
 # 
 # Example:
-#	Input: this is a "example".
-#   Output: this is a " example " .
 #
-# The output is more useful for tokenization.
+#  *  Input:  This is... a '(very)' ('especial') example!
+#  *  Output: This is ... a ' ( very ) ' ( ' especial ' ) example !
+#
+# The output is useful for tokenization.
 #
 # Usage:
 #
 #     gawk -f word-spacer.awk input.txt > output.txt
 #
-# This script only works with GNU's Awk (gawk). Other implementations, such as mawk and busybox, don't work well with multibyte characters (Unicode).
-#
-# Interesting text about tokenization:
-# https://www.ixopay.com/blog/what-is-nlp-natural-language-processing-tokenization
+# This script only works with GNU's Awk (gawk).
 #
 
+function sub_wrapper(regex, str, i) {
+	match($i, regex);
+	if (length($i) > RLENGTH) {
+		sub(regex, str, $i);
+	}
+}
+
+function puncts() {
+	for (i = 1; i <= NF; i++) {
+		sub_wrapper(@/^[.…,:;!?¿]+/, "& ", i);
+		sub_wrapper(@/[.…,:;!?¿]+$/, " &", i);
+	} $0=$0
+}
+
+function quotes() {
+	for (i = 1; i <= NF; i++) {
+		sub_wrapper(@/^[\042\047‘’“”‚„«»‹›—―]+/, "& ", i);
+		sub_wrapper(@/[\042\047‘’“”‚„«»‹›—―]+$/, " &", i);
+	} $0=$0
+}
+
+function braces() {
+	for (i = 1; i <= NF; i++) {
+		sub_wrapper(@/^[][{}()<>]+/, "& ", i);
+		sub_wrapper(@/[][{}()<>]+$/, " &", i);
+	} $0=$0
+}
+
+function push_away() {
+	puncts();
+	quotes();
+	braces();
+}
+
 {
-	for (i = 1; i <= NF; i++) {
-		if (length($i) > 1) {
-			sub(/^[.…,:;!?¿]/, "& ", $i);
-			sub(/[.…,:;!?¿]$/, " &", $i);
-		}
-	} $0=$0
-	
-	for (i = 1; i <= NF; i++) {
-		if (length($i) > 1) {
-			sub(/^[]{}()<>\042\047‘’“”«»‹›—–]/, "& ", $i);
-			sub(/[]{}()<>\042\047‘’“”«»‹›—–]$/, " &", $i);
-		}
-	} $0=$0
-	
+	# 2x is OK
+	push_away();
+	push_away();
 	print;
 }
 
