@@ -1,0 +1,558 @@
+# Estrangeirismos grafados sem itálico ou aspas
+# Se o termo estrangeiro já foi incorporado à língua portuguesa na sua forma original, use-o sem itálico. Em geral, esses termos estão registrados nos dicionários e no Vocabulário Ortográfico da Língua Portuguesa, da Academia Brasileira de Letras. São palavras de uso amplo, como marketing, office boy, blog, startup, royalty, commodity, design, download, free shop, on-line, iceberg.
+# Não use itálico (ou aspas, no caso da TV) nos seguintes estrangeirismos:
+# URL: https://www12.senado.leg.br/manualdecomunicacao/estilos/estrangeirismo (acessado em 25 de junho de 2025)
+# URL: https://www12.senado.leg.br/manualdecomunicacao/estilos/estrangeirismos-grafados-sem-italico-ou-aspas (acessado em 25 de junho de 2025)
+# Palavra TAB Prefira/Use
+abstract
+ad hoc
+affaire
+airbag
+à la carte
+antidoping
+antispam
+apartheid
+a posteriori
+a priori
+apud
+avant-première	pré-estreia
+baby
+baby-beef
+baby-doll
+baby-sitter
+backup
+bacon
+band-aid
+banner
+barman
+bar-mitzvá
+beagle
+best-seller
+bet
+bit
+blitz
+blockchain
+blog
+blues
+blush
+body-board
+body-boarder
+boiler
+bon-vivant
+boogie-woogie
+bookmarker
+boom
+booster
+boulevard	bulevar
+boutique
+boy
+brandy
+brasserie
+break
+breakfast
+brie
+briefing
+broadcast
+broadcasting
+brownie
+browser
+brunch
+buffet	bufê
+bug
+bullying
+bunker
+bureau
+byte
+cameraman
+campi
+camping
+campus
+caput
+carpaccio
+cartoon	cartum
+cashmere
+champignon
+chantilly	chantili
+chardonnay
+chat
+check-in
+checklist
+check-out
+check-up
+cheddar
+chef
+cherry
+chester
+chip
+chop-suey
+chutney
+clip
+clipper
+clipping
+close
+close-shot
+closet
+close-up
+club	clube
+cluster
+coach
+coaching
+cockpit
+coffee-break
+commodity
+compact-disc
+compliance
+copyright
+corpus
+cowboy	caubói
+coworking
+crack
+crossfit
+curriculum	currículo
+curry
+cyberpunk
+data center
+data venia
+deadline
+default	valor padrão
+design
+designer
+desktop
+dial
+diesel
+diet	dietético
+display
+doping
+download
+drink	drinque
+drive-in
+drone
+drops
+dumping
+e-book
+ecstasy
+e-mail
+emoji
+ensemble
+entourage
+expert
+expertise
+factoring
+fade
+fade-in
+fade-out
+fake news
+fast-food
+fax
+feed
+feedback
+feeling
+ferryboat
+flamboyant
+flan	flã
+flash
+flashback
+flat
+fog
+fondant
+fondue
+footing
+foyer
+franchise	franquia
+freelance
+freelancer
+free shop
+freeware
+freezer
+frisson
+front	linha de frente
+funk
+gadget
+game 
+gay
+gentleman
+gestalt
+ghost-writer
+gigabit
+gigabyte
+girl
+glamour
+glasnost
+globe-trotter
+golf
+gospel
+gourmet
+grid
+grill
+gruyère
+habeas corpus
+habeas data
+habitat
+hacker
+haddock	hadoque
+hall
+Halloween
+hamster
+happy hour
+hardcore
+hardware
+hashtag
+hi-fi
+hip-hop
+hippie
+hit
+hobby
+holding
+home office
+homus
+hooligan
+hors-concours
+hotsite
+hyperlink
+ibidem
+iceberg
+id
+idem
+impeachment
+influencer	influenciador/a digital
+influenza
+in loco
+in natura
+in octavo
+input
+insight
+in vitro
+ipsis litteris
+ipsis verbis
+ipso facto
+jam session
+jazz
+jazz-band
+jeans
+jeton	jetom
+jingle
+jogging
+joystick
+kart
+ketchup
+kibutz
+kibutzes
+kids
+kit
+Klaxon
+know-how
+kombucha
+kosher
+lady
+laissez-faire
+laptop
+laser
+lato sensu
+layout	leiaute
+lead
+leasing
+light
+like	curtir/curtida
+lingerie
+link
+live
+lobby	lobista
+lockdown
+lockout
+locus	lócus
+log in
+login
+log off
+log on
+logout
+long-play	LP
+loop
+looping
+macintosh
+madeleine	madalena
+make-up	maquiagem
+mambo
+management
+manager
+marchand
+marketing
+marshmallow
+match
+match-point
+mayday
+media	mídia
+meeting	reunião
+ménage
+menu	cardápio
+merchandising
+mezzosoprano	meio-soprano
+mignon
+milady
+milk-shake
+mini-show
+mini-system
+mise-en-plis
+mise-en-scène
+miss
+mister
+mitzvá
+mock-up
+modem
+modus vivendi
+motocross
+mouse
+mousse	musse
+muffin
+music-hall	casa de espetáculo
+naïf
+nécessaire
+net	internet, network
+network
+newsletter
+nobreak
+notebook
+nuance	nuança
+nylon
+off
+office-boy
+off-line
+offset
+off the record
+o.k.
+ombudsman
+on-line
+opus
+origami
+ossobuco
+outdoor
+outlet
+output
+outsider
+overbooking
+overdose
+oxford
+paddock
+paella
+palmier
+palmtop
+papier-mâché	papel machê
+pas-de-deux
+pastrami
+patchwork
+pedigree
+pen drive
+per capita
+performance
+pet
+petit-four
+petit-pois	ervilha
+pet shop
+pickles	picles
+pickup
+pidgin
+piercing
+pilotis
+pinscher
+pin-up
+pipeline
+pit-bull
+pixel
+pizza
+pizzaiolo
+play
+playback
+playboy
+playground
+play-off
+plush
+podcast
+pole-position
+poodle
+pool
+post
+poster	pôster
+pot-pourri
+première	estreia
+premier	primeiro-ministro
+press-release
+prêt-à-porter
+print
+pro forma
+pro labore	pró-labore
+pub
+punk
+quantum
+quiche
+quorum	quórum
+rack
+raclette
+radicchio
+rafting
+rallye	rali
+ranking
+rap
+rapper
+rash
+rave
+ravioli	ravióli
+recall
+récamier
+réchaud
+record	recorde
+reels
+reggae
+reggaeton
+reich
+relax
+release
+remake
+rendez-vous
+replay
+reprise
+resort
+restaurateur
+réveillon
+revival
+riesling
+ring	ringue
+rock
+rock-and-roll
+rôtisserie	rotisseria
+rough	rafe
+round
+royalty
+rubber
+rush
+sanctus
+sans-culotte
+sashimi
+sauvignon
+savoir-faire
+scanner	escanear
+scooter
+scraper
+script
+sedan	sedã
+self-service
+set
+sex appeal
+sexy
+shalom
+shampoo	xampu
+shareware
+shopping
+shopping center
+short
+show
+showbiz
+show business
+showroom
+shoyu
+sic
+sidecar
+site
+skate
+sketch	esquete
+skinhead
+slide	eslaide
+slogan
+smartphone
+smoking
+software
+sommelier
+sommelière
+sommier
+soul
+spa
+spaghetti	espaguete
+spam
+spot
+spray
+spread
+Sputinik
+squash
+staff
+standard
+stand-by
+stand	estande
+startup
+status
+status quo
+storyboard
+story/stories
+strass
+streaming
+stress	estresse
+stretch
+stricto sensu
+striptease
+strogonoff	estrogonofe
+surf	surfe
+sushi
+swap
+swing	suingue
+tablet
+tailleur
+teenager	adolescente
+teflon
+telemarketing
+thesaurus
+ticket
+tik toker
+timer
+tiramisu
+tofu
+toilette	toalete
+top
+topless
+tour	viagem, passeio
+trading
+trailer
+training
+transfer
+trash
+travelling
+trekking
+tricot	tricô
+tsunami
+umami
+underground
+upgrade
+upload
+up-to-date
+van
+vaudeville	vaudevile
+vernissage
+versus
+vide
+videobook
+videogame
+videolaser
+videomaker viking
+vis
+vis-à-vis	face a face
+vison
+vitrine
+volleyball	voleibol
+volley	vôlei
+voyer
+voyeur
+waffle
+walkie-talkie
+web
+webmaster
+weekend
+whisky	uísque
+wi-fi
+workaholic
+workshop
+yakisoba
+yang
+yin
+yin-yang
+yorkshire-terrier
+youtuber
+yuppie
+zabaione
+zeitgeist
+zoom
