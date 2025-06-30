@@ -104,7 +104,7 @@ function load_formats() {
 	push_formats("E=^[[:alnum:]-]+(\\.[[:alnum:]-]+)*@[[:alnum:]-]+(\\.[[:alnum:]-]+)*$");
 	
 	# URL
-	push_formats("R=^(http[s]?|ftp)://[[:alnum:]-]+(\\.[[:alnum:]-]+)*(\\/[[:alnum:]-]+)*(\\/[[:alnum:]%?#&=~,.+-]+)?$");
+	push_formats("R=^(http[s]?|ftp)://[[:alnum:]-]+(\\.[[:alnum:]-]+)*(\\/[[:alnum:]-]+)*(\\/[[:alnum:]%?#&=~,.+-]*)?$");
 	
 	# Hashtag
 	push_formats("H=^#[[:alnum:]]+$");
