@@ -7,12 +7,14 @@
 # 
 #  1. TOKEN: the token, i.e. a "word".
 #  2. COUNT: the token's absolute frequency, i.e. the number of occurrences of a token.
-#  3. RATIO: the token's relative frequency, i.e. the number of occurrences of a token divided by the total number of tokens.
+#  3. FRAC: the token's relative frequency, i.e. the number of occurrences of a token divided by the total number of tokens.
 #
 # Usage:
 #
 #     gawk -f word-counter.awk input.txt > output.txt
 #     gawk -f word-spacer.awk input.txt | gawk -f word-counter.awk - > output.txt
+#
+# The table rows are sorted using this command via pipe: `sort -t'	' -k1,1`.
 #
 # This script only works with GNU's Awk (gawk).
 #
@@ -30,13 +32,12 @@ function insert(token) {
 }
 
 END {
-
-    print "TOKEN\tCOUNT\tRATIO";
-    
+	OFS="\t"
+    print "TOKEN", "COUNT", "FRAC";
     for (token in counters) {
         count = counters[token];
-        ratio = counters[token] / total;
-        printf "%s\t%d\t%.9f\n", token, count, ratio;
+        frac = counters[token] / total;
+        print token, count, frac | "sort -t'	' -k1,1";
     }
 }
 
