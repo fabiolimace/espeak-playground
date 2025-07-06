@@ -183,6 +183,8 @@ Vídeos sobre processos fonológicos:
 
 ### Português europeu
 
+* Publicações de João Veloso: https://ojoaoveloso.wordpress.com/publications/
+
 * https://pt.wikipedia.org/wiki/Portugu%C3%AAs_europeu
 * https://pt.wikipedia.org/wiki/Processo_do_vocalismo_%C3%A1tono_do_portugu%C3%AAs_europeu
 
