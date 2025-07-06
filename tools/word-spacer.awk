@@ -5,8 +5,8 @@
 # 
 # Example:
 #
-#  *  Input:  This is... a '(very)' ('especial') example!
-#  *  Output: This is ... a ' ( very ) ' ( ' especial ' ) example !
+#  *  Input:  This is... a '(very)' ('special') example!
+#  *  Output: This is ... a ' ( very ) ' ( ' special ' ) example !
 #
 # The output is useful for tokenization.
 #
@@ -17,44 +17,52 @@
 # This script only works with GNU's Awk (gawk).
 #
 
-function sub_wrapper(regex, str, i) {
-	match($i, regex);
-	if (length($i) > RLENGTH) {
-		sub(regex, str, $i);
+function separate_punctuation() {
+	for (i = 1; i <= NF; i++) {
+		sub(/^[.…,:;!¡?¿]+/, "& ", $i);
+		sub(/[.…,:;!¡?¿]+$/, " &", $i);
 	}
 }
 
-function puncts() {
+function separate_quotation() {
 	for (i = 1; i <= NF; i++) {
-		sub_wrapper(@/^[.…,:;!?¿]+/, "& ", i);
-		sub_wrapper(@/[.…,:;!?¿]+$/, " &", i);
-	} $0=$0
+		sub(/^[\042\047‘’“”‚„«»‹›—―]+/, "& ", $i);
+		sub(/[\042\047‘’“”‚„«»‹›—―]+$/, " &", $i);
+	}
 }
 
-function quotes() {
+function separate_parenthesis() {
 	for (i = 1; i <= NF; i++) {
-		sub_wrapper(@/^[\042\047‘’“”‚„«»‹›—―]+/, "& ", i);
-		sub_wrapper(@/[\042\047‘’“”‚„«»‹›—―]+$/, " &", i);
-	} $0=$0
+		sub(/^[][{}()<>]+/, "& ", $i);
+		sub(/[][{}()<>]+$/, " &", $i);
+	}
 }
 
-function braces() {
-	for (i = 1; i <= NF; i++) {
-		sub_wrapper(@/^[][{}()<>]+/, "& ", i);
-		sub_wrapper(@/[][{}()<>]+$/, " &", i);
-	} $0=$0
+function separate() {
+	separate_punctuation();
+	separate_quotation();
+	separate_parenthesis();
 }
 
-function push_away() {
-	puncts();
-	quotes();
-	braces();
+function begin_line() {
+	gsub(/[[:space:]]+/, " "); # SP TAB NBSP
+	gsub(/[[{(<][[:alnum:]]+[]})>]/, " & "); # (1) [a] {1} <a>
+	gsub(/[][{}()<>\042\047‘’“”‚„«»‹›—―.…,:;!¡?¿]{2,}/, " & "); # ?! ...
+}
+
+function end_line() {
+	gsub(/[ ]{2,}/, " "); # squeeze spaces after `separate()`
 }
 
 {
+	begin_line();
+	
 	# 2x is OK
-	push_away();
-	push_away();
+	separate();
+	separate();
+	
+	end_line();
+	
 	print;
 }
 
