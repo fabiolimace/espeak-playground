@@ -3,9 +3,9 @@ Extract tokens from text collection
 
 This directory contains lists of words extracted from 3 collections of texts:
 
-* 777 ebooks (~500MiB);
-* 100k news (~500MiB);
-* 100k wikis (~500MiB).
+* 777 ebooks (500 MiB);
+* 100k news (500 MiB);
+* 100k wikis (500 MiB).
 
 Summary of extracted words:
 
@@ -51,7 +51,7 @@ time find tmp/ -type f -name "*.text-tokens.tsv" -exec cat "{}" \; | awk '$1 == 
 
 Filter words from `collection-tokens.tsv`:
 
-```
+```bash
 MIN_DOC_FREC=0.0001 # empricic value for 100k texts
 awk 'BEGIN { OFS="\t"; } NR==1; $2 ~ /^(L|LH|U|UH|S|SH|C)$/ && $6 >= '"$MIN_DOC_FREC"' { if ($2 ~ /^(L|LH)$/) { LOWER[tolower($1)]; } else { if (tolower($1) in LOWER) next; } print; }' collection-tokens.tsv > collection-words.tsv
 ```
@@ -63,7 +63,7 @@ Pre-selection of texts
 
 Sometimes it's not possible to process all texts in our collection. This command can be used to randomly select a small part of a big collection of texts:
 
-```
+```bash
 find my-big-collection/ -type f -size +4k -size -9k | shuf | while read -r i; do [ $(( $RANDOM % 100 )) -gt 10 ] && continue; cp -v --update=none --parents "$i" smaller-collection/; done;
 ```
 
