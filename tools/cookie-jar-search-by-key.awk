@@ -23,7 +23,7 @@
 # %% key3
 # value3
 #
-# Gist: https://gist.github.com/fabiolimace/7bc48d3b3c91a7509c746e119a89fd61
+# Repository: https://github.com/fabiolimace/awk-tools/
 #
 
 /^%%/ && KEY {
