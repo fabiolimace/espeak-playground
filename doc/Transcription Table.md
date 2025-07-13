@@ -1,8 +1,6 @@
 Transcription Table
 =====================================
 
-A fazer: usar como base a tabela de Plínio Barbosa e Eleonora Albanoy.
-
 Consonants:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
@@ -14,9 +12,9 @@ Consonants:
 |d	|	|d		|		|d	|
 |	|	|		|		|	|
 |k	|	|k		|		|k	|
-|kw	|	|kw		|		|kw	|
+|kʊ̯ kw	|	|kw		|		|kw	|
 |g	|	|g		|		|g	|
-|gw	|	|gw		|		|kw	|
+|gʊ̯ gw	|	|gw		|		|gw	|
 |	|	|		|		|	|
 |f	|	|f		|		|f	|
 |v	|	|v		|		|v	|
@@ -36,14 +34,14 @@ Consonants:
 |	|	|		|		|	|
 |m	|	|m		|		|m	|
 |n	|	|n		|		|n	|
-|ɲ ỹ	|	|n^		|		|J	|
+|ɲ	|	|n^		|		|J	|
 |	|	|		|		|	|
 |ɾ	|	|*		|		|4	|
 |ř ʁ	|R	|r\<trl\>	|		|R	|
 |ɹ	|	|r.		|		|r\	|
 |	|	|		|		|	|
 |l ɫ w	|	|l l\<vzd\> w	|		|l 5 w	|
-|ʎ lj y?|ʎ lj   |l^		|l^ lj		|L      |
+|ʎ lj   |ʎ lj   |l^		|l^ lj		|L      |
 
 Vowels:
 
@@ -51,7 +49,6 @@ Vowels:
 |---	|---	|---		|---		|---	|
 |a	|	|a		|		|a	|
 |ɐ	|ɐ/æ	|&"		|&		|6	|
-|ə	|-	|@		|-		|@	|
 |e	|	|e		|		|e	|
 |ɛ	|	|E		|		|E	|
 |i	|	|i		|		|i	|
@@ -63,7 +60,7 @@ Vowels:
 
 Nota: o `espeak-ng` usa `æ`, na voz do pt-BR, para representar a vogal quase baixa reduzida em posição pós-tônica. Mas o som desse caractere não existe no português. O símbolo do Kirshenbaum que representa esse som é o `&`. Já o símbolo Kirshenbaum que representa o som `ɐ` é `&"`, portanto este deveria ser utilizado.
 
-Nota: o `espeak-ng` usa `y`, na voz do pt-BR, para representar a vogal alta anterior reduzida. Esse caractere está associado a uma vogal arredondada no IPA; além disso, esse som dele existe no português. O símbolo Kirshenbaum que deveria ser usado é `I`.
+Nota: o `espeak-ng` usa `y`, na voz do pt-BR, para representar a vogal alta anterior reduzida. Esse caractere está associado a uma vogal arredondada no IPA; além disso, esse som não existe no português. O símbolo Kirshenbaum que deveria ser usado é `I`.
 
 Nasal Vowels:
 
@@ -117,31 +114,26 @@ Nasal decrescent diphthongs:
 
 Dúvida: o digonto [õʊ̯] existe, como em "bom" e "dom" (quando pronunciados *boum e *doum)?
 
-A resposta para a dúvida acima deve ter algum a explicação parecido com a resposta anterior.
+A resposta para a dúvida acima deve ter algum a explicação parecida com a resposta anterior.
 
 Oral crescent diphthongs:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
-|ɪ̯ə jə	|jæ ɪʲˈa	|I& j&		|j& I;a	 (I&?)	|I& j&	|
+|ɪ̯ɐ jɐ	|jæ ɪʲˈa	|I& j&		|j& I;a	 (I&?)	|I& j& ?|
 |ɪ̯ɪ jɪ	|jɨ jy *|II jI		|jy      (II?)	|II jI	|
 |ɪ̯ʊ jʊ	|jʊ ɪʲʊ  *|IU jU		|jU I;U  (IU?)	|IU jU	|
 |ɪ̯o jo	|ɪʲo 	|Io jo		|I;o     (maiô)	|Io jo	|
 |	|	|		|		|	|
-|ʊ̯ə wə	|_?_	|U& w&		|_?_		|U& w&	|
+|ʊ̯ɐ wɐ	|_?_	|U& w&		|_?_		|U& w&	|
 |ʊ̯ɪ wɪ	|_?_	|UI wI		|_?_		|UI wI	|
 |ʊ̯ʊ wʊ	|uʊ	|UU wU		|uU      (UU?)	|UU wU	|
 
 Columns:
-* IPA: IPA symbols. Cristofaro's IPA chart was chosen as the base IPA transcription in this document.
+* IPA: IPA symbols.
 * KIR: Kirshenbaum symbols.
 * IPA-E: Espeak-ng's IPA for Portuguese.
 * KIR-E: Espeak-ng's Kirshenbaum for Portuguese.
-
-Notes on the adopted IPA chart:
-* Cristofaro uses \[ə\] to represent the reduced \<a\>, while other of linguists seem to prefer \[ɐ\].
-* Cristofaro uses a diacritic to signal non-syllabical vowels (glides), while other linguists seem to prefer \[j\] (or \[y]\) and \[w\] for representing glides.
-* Cristofaro uses \[y\], which is a rounded voewel in the official IPA chart, as an allophone of \[ʎ\], while the dialectal \<lh\> is not rounded.
 
 References:
 * https://en.wikipedia.org/wiki/Kirshenbaum
@@ -151,7 +143,4 @@ References:
 * https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
 * https://en.wikipedia.org/wiki/Comparison_of_ASCII_encodings_of_the_International_Phonetic_Alphabet
 
----
-
-_Os símbolos do IPA são os da Tabela Fonética do Português Brasileiro, de Thaïs Cristófaro Silva. Em alguns casos, são incluídos símbolos equivalentes utilizados por outros linguistas, como no caso da vogal \<a\> reduzida, que está representada por dois símbolos: \[ə\] \[ɐ\]. Another example of such cases is is the strong \<r\>: \[ř\] \[ʁ\]._
 
