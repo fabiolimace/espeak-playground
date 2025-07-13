@@ -24,18 +24,17 @@ BEGIN {
 	C = "[bcdfghjklmnpqrstvwxyzç]"   # consonants
 	D = "rr|ss|ch|nh|lh|qu|gu|qü|gü" # digraphs
 	E = "[bcdfgkptv][rl]"            # clusters
-	F = "[bgjkptswz][h]"             # ph, sh, th, wh...
 	
-	O = "[" "aeiou" "àáâã" "èéê" "ìí" "òóôõ" "ùúü" "wy" "]"
-	G = "[" "iu" "yw" "]"
+	O = "[" "aeiou" "àáâã" "èéê" "ìí" "òóôõ" "ùúü" "]"
+	G = "[" "iu" "]"
 	N = "[" "ãõ" "]"
 	H = "[" "eo" "]"
 	
 	# The onset can be a single consonant (C), or a common pair of letters known
 	# as digraph (D), or a cluster formed of a consonant followed by the letters
-	# `r` or `l` (E), or cluster of a consonant followed by the letter `h` (F).
+	# `r` or `l` (E).
 	
-	ONSET = "(" C "|" D "|" E "|" F ")"
+	ONSET = "(" C "|" D "|" E ")"
 	
 	# The nucleous may be a single vowel (O), or a vowel followed
 	# by a glide (OG), or a nasal voewel followed by a glide (NH).
@@ -60,6 +59,7 @@ BEGIN {
 		buf = "";
 		err = "";
 
+		# original = wrd;
 		wrd = tolower(wrd);
 		
 		while (wrd) {
@@ -123,9 +123,8 @@ BEGIN {
 		}
 	
 		if (err) { print "ERROR: " $i > "/dev/stderr"; }
+		# else { print original, buf };
 		else { print buf };
 	}
 }
-
-
 
