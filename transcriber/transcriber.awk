@@ -56,9 +56,9 @@ function load_alphabets(    i, s, k) {
 
 	# The `sam` (X-SAMPA) string must be escaped so it is treated
 	# as a fixed text in the first parameter of `gsub()` functon.
-	sam = "h\\\\  r\\\\ L  J  a~ e~ i~ o~ u~ 6   @ E I Z O 4 R S U G";
-	kir = "h<?>   r.    l^ n^ a~ e~ i~ o~ u~ &\" @ E I Z O * R S U Q";
-	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ı͂  õ  u͂  ɐ   ə ɛ ɪ ʒ ɔ ɾ ř ʃ ʊ ɣ";
+	sam = "h\\\\  r\\\\ L  J  a~ e~ i~ o~ u~ 6~   6   @ E I Z O 4 R S U G";
+	kir = "h<?>   r.    l^ n^ a~ e~ i~ o~ u~ &\"~ &\" @ E I Z O * R S U Q";
+	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ı͂  õ  u͂  ɐ̃    ɐ   ə ɛ ɪ ʒ ɔ ɾ ř ʃ ʊ ɣ";
 
 	split(sam, ALPHABET_SAM);
 	split(kir, ALPHABET_KIR);
@@ -255,6 +255,8 @@ function transcribe_word(prev_word, word, next_word,   i, s, x, n, bl, br, syl, 
 		if (result) result = result DOT;
 		result = result array[i];
 	}
+	
+	sub(DOT APOSTROPHE, APOSTROPHE, result);
 	
 	return result;
 }
