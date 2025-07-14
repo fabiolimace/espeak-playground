@@ -12,9 +12,9 @@ Consonants:
 |d	|	|d		|		|d	|
 |	|	|		|		|	|
 |k	|	|k		|		|k	|
-|kʊ̯ kw	|	|kw		|		|kw	|
+|kʊ̯ kw	|kw	|kw		|		|kw	|
 |g	|	|g		|		|g	|
-|gʊ̯ gw	|	|gw		|		|gw	|
+|gʊ̯ gw	|gw	|gw		|		|gw	|
 |	|	|		|		|	|
 |f	|	|f		|		|f	|
 |v	|	|v		|		|v	|
@@ -66,7 +66,7 @@ Nasal Vowels:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
-|ã	|ɐ̃ŋ ãm	|a~		|&~N &~m	|a~	|
+|ã	|ɐ̃ŋ ãm	|a~		|&~N &~m	|a~	|	// FIXME: a~ or 6~?
 |ẽ	|eɪŋ	|e~		|eIN		|e~	|
 |ı͂	|iŋ in/m|i~		|iN in/m	|i~	|
 |õ	|oŋ om	|o~		|oN bom		|o~	|
@@ -127,7 +127,7 @@ Oral crescent diphthongs:
 |	|	|		|		|	|
 |ʊ̯ɐ wɐ	|_?_	|U& w&		|_?_		|U& w&	|
 |ʊ̯ɪ wɪ	|_?_	|UI wI		|_?_		|UI wI	|
-|ʊ̯ʊ wʊ	|uʊ	|UU wU		|uU      (UU?)	|UU wU	|
+|ʊ̯ʊ wʊ	|uʊ	|UU wU		|uU      (UU?)	|UU wU	|	// XXX: u assílábico, mas não ʊ̯ assilábico?
 
 Columns:
 * IPA: IPA symbols.
