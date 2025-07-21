@@ -220,3 +220,9 @@ https://github.com/cmusphinx/pocketsphinx
 
 https://ufpafalabrasil.gitlab.io/
 https://github.com/falabrasil/speech-datasets
+
+### Outros links
+
+https://en.wikipedia.org/wiki/Word_list
+https://en.wikipedia.org/wiki/Corpus_linguistics
+https://www.newgeneralservicelist.com/new-general-service-list

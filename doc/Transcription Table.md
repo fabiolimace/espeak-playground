@@ -10,11 +10,13 @@ Consonants:
 |	|	|		|		|	|
 |t	|	|t		|		|t	|
 |d	|	|d		|		|d	|
+|tʃ	|	|tS		|tS		|tS	|
+|dʒ	|	|tZ		|tZ		|tZ	|
 |	|	|		|		|	|
 |k	|	|k		|		|k	|
-|kʊ̯ kw	|kw	|kw		|		|kw	|
 |g	|	|g		|		|g	|
-|gʊ̯ gw	|gw	|gw		|		|gw	|
+|kw	|kw	|kw		|		|kw	|
+|gw	|gw	|gw		|		|gw	|
 |	|	|		|		|	|
 |f	|	|f		|		|f	|
 |v	|	|v		|		|v	|
@@ -24,70 +26,79 @@ Consonants:
 |ʃ	|	|S		|		|S	|
 |ʒ	|	|Z		|		|Z	|
 |	|	|		|		|	|
+|ɾ	|	|*		|		|4	|
+|r	|R	|r\<trl\>	|		|R	|
+|ɹ	|	|r.		|		|r\	|
+|	|	|		|		|	|
 |x	|	|x		|		|x	|
 |ɣ	|	|Q		|		|G	|
+|χ  (?)	|	|		|		|	|
+|ʁ  (?)	|	|		|		|	|
 |h	|	|h		|		|h	|
 |ɦ	|	|h<?>		|		|h\	|
 |	|	|		|		|	|
-|tʃ	|	|tS		|tS		|tS	|
-|dʒ	|	|tZ		|tZ		|tZ	|
-|	|	|		|		|	|
 |m	|	|m		|		|m	|
 |n	|	|n		|		|n	|
+|	|	|		|		|	|
 |ɲ	|	|n^		|		|J	|
+|ỹ  (?) |	|		|		|	|
 |	|	|		|		|	|
-|ɾ	|	|*		|		|4	|
-|ř ʁ	|R	|r\<trl\>	|		|R	|
-|ɹ	|	|r.		|		|r\	|
+|l	|	|l		|		|l	|
+|ɫ	|	|l\<vzd\>	|		|5	|
+|w	|	|w		|		|w	|
 |	|	|		|		|	|
-|l ɫ w	|	|l l\<vzd\> w	|		|l 5 w	|
-|ʎ lj   |ʎ lj   |l^		|l^ lj		|L      |
+|ʎ	|ʎ	|l^		|l^		|L	|
+|lj (?)	|	|		|		|	|
 
 Vowels:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
 |a	|	|a		|		|a	|
-|ɐ	|ɐ/æ	|&"		|&		|6	|
+|ɐ	|ɐ	|&"		|&		|6	|
+|ə  (?)	|	|		|		|	|
 |e	|	|e		|		|e	|
 |ɛ	|	|E		|		|E	|
 |i	|	|i		|		|i	|
-|ɪ	|ɨ/y	|I		|y		|I	|
+|ɪ	|ɪ	|I		|y		|I	|
+|ɨ  (?)	|ɨ	|		|		|	|
 |o	|	|o		|		|o	|
 |ɔ	|	|O		|		|O	|
 |u	|	|u		|		|u	|
 |ʊ	|	|U		|		|U	|
 
-Nota: o `espeak-ng` usa `æ`, na voz do pt-BR, para representar a vogal quase baixa reduzida em posição pós-tônica. Mas o som desse caractere não existe no português. O símbolo do Kirshenbaum que representa esse som é o `&`. Já o símbolo Kirshenbaum que representa o som `ɐ` é `&"`, portanto este deveria ser utilizado.
-
-Nota: o `espeak-ng` usa `y`, na voz do pt-BR, para representar a vogal alta anterior reduzida. Esse caractere está associado a uma vogal arredondada no IPA; além disso, esse som não existe no português. O símbolo Kirshenbaum que deveria ser usado é `I`.
+Notas:
+* o `espeak-ng` v1.51 usa `æ`, na voz do pt-BR, para representar a vogal quase baixa reduzida em posição pós-tônica. Mas o som desse caractere não existe no português. O símbolo do Kirshenbaum que representa esse som é o `&`. Já o símbolo Kirshenbaum que representa o som `ɐ` é `&"`, portanto este deveria ser utilizado.
+* o `espeak-ng` v1.51 usa `y`, na voz do pt-BR, para representar a vogal alta anterior reduzida. Esse caractere está associado a uma vogal arredondada no IPA; além disso, esse som não existe no português. O símbolo Kirshenbaum que deveria ser usado é `I`.
 
 Nasal Vowels:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
-|ã	|ɐ̃ŋ ãm	|a~		|&~N &~m	|a~	|	// FIXME: a~ or 6~?
+|ɐ̃	|ɐ̃ŋ ɐ̃m	|&"~ (?)	|&~N &~m	|6~	|
 |ẽ	|eɪŋ	|e~		|eIN		|e~	|
 |ı͂	|iŋ in/m|i~		|iN in/m	|i~	|
-|õ	|oŋ om	|o~		|oN bom		|o~	|
+|õ	|oŋ om	|o~		|oN om		|o~	|
 |u͂	|ũŋ ũm	|u~		|uN um		|u~	|
 
 Oral decrescent diphthongs:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
-|aɪ̯ aj	|	|aI aj		|aI		|aI aj	|
-|eɪ̯ ej	|	|eI ej		|eI		|eI ej	|
-|ɛɪ̯ ɛj	|	|EI ej		|EI		|EI ej	|
-|oɪ̯ oj	|	|oI oj		|oI		|oI oj	|
-|ɔɪ̯ ɔj	|	|OI oj		|OI		|OI oj	|
-|uɪ̯ uj	|	|uI uj		|uI		|uI uj	|
+|aɪ̯	|	|aj		|aI		|aj	|
+|eɪ̯	|	|ej		|eI		|ej	|
+|ɛɪ̯	|	|ej		|EI		|Ej	|
+|oɪ̯	|	|oj		|oI		|oj	|
+|ɔɪ̯	|	|oj		|OI		|Oj	|
+|uɪ̯	|	|uj		|uI		|uj	|
 |	|	|		|		|	|
-|aʊ̯ aw	|	|aU aw		|aU		|aU aw	|
-|eʊ̯ ew	|	|eU ew		|eI		|eU ew	|
-|ɛʊ̯ ɛw	|	|EU Ew		|EU		|EU Ew	|
-|oʊ̯ ow	|	|oU ow		|ow    *	|oU ow	|
-|iʊ̯ iw	|	|iU iw		|iU		|iU iw	|
+|aʊ̯	|	|aw		|aU		|aw	|
+|eʊ̯	|	|ew		|eI		|ew	|
+|ɛʊ̯	|	|Ew		|EU		|Ew	|
+|oʊ̯	|	|ow		|ow    *	|ow	|
+|iʊ̯	|	|iw		|iU		|iw	|
+
+Nota: os glides são representados por \[j] e \[w] nas colunas KIR e X-SAMPA, devido à simplicidade e amplo uso, evitando sinais diacríticos.
 
 Dúvida: o digonto [uʊ̯] existe, como em "ultra" e "azul"?
 
@@ -105,14 +116,14 @@ Nasal decrescent diphthongs:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
-|ãɪ̯ ãj 	|ɐ̃y ɐ̃ɨ	|a~I a~j	|&~y   *	|a~I a~j|
-|e͂ɪ̯ e͂j	|	|e~I e~j	|_?_		|e~I e~j|
-|o͂ɪ̯ o͂j	|	|o~I o~j	|o~j   *	|o~I o~j|
-|u͂ɪ̯ u͂j	|	|u~I u~j	|_?_		|u~I u~j|
+|ãɪ̯	|ɐ̃y ɐ̃ɨ	|a~j		|&~y   *	|a~j	|
+|e͂ɪ̯	|	|e~j		|_?_		|e~j	|
+|o͂ɪ̯	|	|o~j		|o~j   *	|o~j	|
+|u͂ɪ̯	|	|u~j		|_?_		|u~j	|
 |	|	|		|		|	|
-|ãʊ̯ ãw	|ɐ̃ʊ̃	|a~U a~w	|&U~   *	|a~U a~w|
+|ãʊ̯	|ɐ̃ʊ̃	|a~w		|&U~   *	|a~w	|
 
-Dúvida: o digonto [õʊ̯] existe, como em "bom" e "dom" (quando pronunciados *boum e *doum)?
+Dúvida: o digonto \[õʊ̯] existe, como em "bom" e "dom" (quando pronunciados *boum e *doum)?
 
 A resposta para a dúvida acima deve ter algum a explicação parecida com a resposta anterior.
 
@@ -120,14 +131,36 @@ Oral crescent diphthongs:
 
 |IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
 |---	|---	|---		|---		|---	|
-|ɪ̯ɐ jɐ	|jæ ɪʲˈa	|I& j&		|j& I;a	 (I&?)	|I& j& ?|
-|ɪ̯ɪ jɪ	|jɨ jy *|II jI		|jy      (II?)	|II jI	|
-|ɪ̯ʊ jʊ	|jʊ ɪʲʊ  *|IU jU		|jU I;U  (IU?)	|IU jU	|
-|ɪ̯o jo	|ɪʲo 	|Io jo		|I;o     (maiô)	|Io jo	|
+|ɪ̯ɐ	|jæ ɪʲˈa|j&"		|j& I;a		|j6	|
+|ɪ̯a	|  (*)	|ja		|		|ja	|
 |	|	|		|		|	|
-|ʊ̯ɐ wɐ	|_?_	|U& w&		|_?_		|U& w&	|
-|ʊ̯ɪ wɪ	|_?_	|UI wI		|_?_		|UI wI	|
-|ʊ̯ʊ wʊ	|uʊ	|UU wU		|uU      (UU?)	|UU wU	|	// XXX: u assílábico, mas não ʊ̯ assilábico?
+|ɪ̯ɪ ~ ɪ	|jɨ jy *|jI		|jy		|jI	|
+|ɪ̯i (*)	|	|ji		|		|ji	|
+|ɪ̯e (*)	|	|je		|		|je	|
+|	|	|		|		|	|
+|ɪ̯ʊ (*)	|jʊ ɪʲʊ*|jU		|jU I;U		|jU	|
+|ɪ̯o (*)	|	|jo		|		|jo	|
+|	|	|		|		|	|
+|ɪ̯on(**)|	|jon		|		|jon	|
+
+|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
+|---	|---	|---		|---		|---	|
+|ʊ̯ɐ	|_?_	|w&"		|_?_		|w6	|
+|ʊ̯a (*)	|	|wa		|		|wa	|
+|	|	|		|		|	|
+|ʊ̯ɪ	|_?_	|wI		|_?_		|wI	|
+|ʊ̯e (*)	|	|we		|		|we	|
+|	|	|		|		|	|
+|ʊ̯ʊ ~ ʊ |_?_	|wU		|_?_		|wU	|
+|ʊ̯u (*)	|	|wu		|		|wu	|
+|ʊ̯o (*)	|	|wo		|		|wo	|
+
+(*) Pronunciados por falantes com maior diversidade de vogais pós-tônicas finais. (Cristófaro, p. 95-97)
+(**) Ditongo crescente obrigatório em sílabas pré-tônicas, como em nac\[ion]al, estac\[ion]amento etc, nas quais o <o> é sempre \[o]. (Cristófaro, p. 95-97)
+
+Notas:
+
+* Falantes que pronunciam os ditongos \[ɪ̯ɪ] e \[ʊ̯ʊ] tendem a reduzi-los a \[ɪ] e \[ʊ]: sér\[ɪ], vác\[ʊ]. (Cristófaro, p. 95-97)
 
 Columns:
 * IPA: IPA symbols.

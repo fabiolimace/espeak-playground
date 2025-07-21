@@ -62,6 +62,7 @@ BEGIN {
 		# original = wrd;
 		wrd = tolower(wrd);
 		
+		# TODO: reler Cristófaro, p. 95-96, sobre ditongos crescentes
 		while (wrd) {
 
 			if (wrd ~ "^" ONSET O G SYLLABLE) {
