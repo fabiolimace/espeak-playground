@@ -87,8 +87,10 @@ _	à	_	a
 
 	ar		a4
 	ar	_	'a4
+	ar	^r	a
 
 	ár		'a4
+	ár	^r	'a
 
 	as		as
 	as	_	6s
@@ -113,7 +115,12 @@ _	as	_^V	6z	// <as a.mi.gas> -> [əz a.'mi.gəs]
 	bac		bak	// bac.té.ri.a
 
 	bai		baI
-	bais		baI
+	bai	_	'baI
+
+	bair	^r	baI
+
+	bais		baIs
+	bais	_	'baIs
 
 	bal		baU
 	bal	_	baUs
@@ -129,8 +136,10 @@ _	as	_^V	6z	// <as a.mi.gas> -> [əz a.'mi.gəs]
 
 	bar		ba4
 	bar	_	'ba4
+	bar	^r	ba
 
 	bár		'ba4
+	bár	^r	'ba
 
 	bas		bas
 	bas	_	b6s
@@ -173,8 +182,10 @@ _	bens	_	'be~Is	// bens
 
 	ber		be4
 	ber	_	'be4
+	ber	^r	be
 
 	bér		'bE4	// tu.bér.cu.lo
+	bér	^r	bE
 
 	bes		bes
 	bes	_	bIs
@@ -200,6 +211,7 @@ _	bens	_	'be~Is	// bens
 
 	bir		bir
 	bir	_	'bir
+	bir	^r	bi
 
 	bis		bis
 	bis	_	bIs
@@ -268,6 +280,7 @@ _	bens	_	'be~Is	// bens
 
 	bor		bo4
 	bor	_	'bo4
+	bor	^r	bo
 
 	bos		bos
 	bos	_	bUs
@@ -300,6 +313,7 @@ _	bens	_	'be~Is	// bens
 
 	brar		b4a4
 	brar	_	'b4a4
+	brar	^r	b4a
 
 	bras		b4as
 	bras	_	b46s
@@ -391,11 +405,15 @@ _	brim	_	b4i~	// brim
 
 	bur		bu4
 	bur	_	'bu4
+	bur	^r	bu
 
 	búr		'bu4	// su.búr.bio
 
 	bus		bus
 	bus	_	'bus
+
+	bús		'bus
+	bús	^r	'bu
 
 	buz	_	'bus	// ar.ca.buz
 
@@ -465,16 +483,21 @@ _	cã	_	'k6~	// cã
 
 	car		ka4
 	car	_	'ka4
+	car	^r	ca
 
 	cár		'ka4	// es.cár.ni.o
+	cár	^r	'ka
 
 	çar		sa4
 	çar	_	'sa4
+	çar	^r	sa
 
 	cas		kas
 	cas	_	'k6s
+	cas	^s	ka
 
 	cás		'kas
+	cás	^s	'ka
 
 	ças		sas
 	ças	_	'sas
@@ -528,6 +551,7 @@ ex	cep		sep	// ex.cep.ci.o.nal
 
 	cer		se4
 	cer	_	'se4
+	cer	^r	se
 
 	cér		'sE4	// a.cér.ri.mo, cér.be.ro
 
@@ -563,6 +587,7 @@ _	ceu	_	sEU	// céu
 
 	char		Sa4
 	char	_	'Sa4
+	char	^r	Sa
 
 	chas		Sas
 	chas	_	S6s
@@ -590,6 +615,7 @@ _	ceu	_	sEU	// céu
 	chen	_	'Se~I
 
 	cher	_	'Se4
+	cher	^r	Se
 
 	ches		Ses
 	ches	_	SIs
@@ -616,6 +642,10 @@ _	ceu	_	sEU	// céu
 	chol		Sol	// chol.da
 	chol	_	'SOl
 
+	chor		So4
+	chor	_	'So4
+	chor	^r	So
+
 	chos		So
 	chos	_	SUs	// pe.tre.chos
 
@@ -632,6 +662,10 @@ _	ceu	_	sEU	// céu
 %	chua	_	Su6	// quí.chua
 
 	chum		Su~	// chum.bo
+
+	chur		Su4
+	chur	_	'Su4
+	chur	^r	'Su
 
 	chus		Sus	// chus.ma
 
@@ -663,8 +697,10 @@ _	ceu	_	sEU	// céu
 
 	cir		si4
 	cir	_	'si4
+	cir	^r	si
 
 	cír		'si4
+	cír	^r	si
 
 	cis		sis
 	cis	_	'sis
@@ -776,11 +812,11 @@ fi	cit	_	sit	// dé.fi.cit
 
 	cor		ko4
 	cor	_	'ko4
+	cor	^r	ko
 
 	cór		'kO4
 
 	çor		so4	// a.çor.da
-
 	çor	_	'so4	// a.çor
 
 	cos		kos
@@ -805,6 +841,7 @@ fi	cit	_	sit	// dé.fi.cit
 	cras		'k4as
 
 	crar	_	'k4a4	// lu.crar, mas.sa.crar
+	crar	^r	k4a
 
 	cre		k4e
 	cre	_	k4I
@@ -821,6 +858,7 @@ fi	cit	_	sit	// dé.fi.cit
 	cren	_	'k4e~
 
 	crer	_	'k4e4	// des.crer
+	crer	^r	k4e
 
 	cres		k4es
 	cres	_	k4Is
@@ -847,6 +885,10 @@ fi	cit	_	sit	// dé.fi.cit
 	crô		'k4o	// crô.ni.ca
 
 	cróp		'k4Op	// ne.crop.si.a
+
+	cror		k4o4
+	cror	_	'k4o4
+	cror	^r	k4o
 
 	cros		k4os
 	cros	_	k4Us
@@ -898,6 +940,7 @@ _	cruz	_	'k4us	// cruz
 
 	cur		ku4
 	cur	_	'ku4
+	cur	^r	ku
 
 	cúr		'ku4	// cúr.cu.ma
 
@@ -952,6 +995,7 @@ _	cruz	_	'k4us	// cruz
 
 	dar		da4
 	dar	_	'da4
+	dar	^r	da
 
 	das		das
 	das	_	d6s
@@ -1000,6 +1044,7 @@ _	das	_^V	d6z	// <das a.mi.gas> -> [dəz a.'mi.gəs]
 
 	der		de4
 	der	_	'de4
+	der	^r	de
 
 	des		des
 	des	_	dZIs
@@ -1042,6 +1087,7 @@ _	dez	_	'dEs
 
 	dir		dZi4
 	dir	_	'dZi4
+	dir	^r	di
 
 	dis		dZis
 	dis	_	'dZis
@@ -1086,6 +1132,7 @@ _	dez	_	'dEs
 
 	dor		do4
 	dor	_	'do4
+	dor	^r	do
 
 	dos		dos
 	dos	_	dUs
@@ -1108,6 +1155,7 @@ _	dez	_	'dEs
 
 	drar		d4a4
 	drar	_	'd4a4
+	drar	^r	d4a
 
 	dras		d4as
 	dras	_	d46s
@@ -1120,6 +1168,10 @@ _	dez	_	'dEs
 	drei		d4eI	// pe.drei.ro, ci.drei.ra
 	drei	a_	d4EI	// An.drei.a
 
+	dres		d4es
+	dres	_	d4Is
+	dres	^s	d4e
+
 	drez	_	'd4es	// xa.drez
 
 	dri		d4i
@@ -1128,6 +1180,10 @@ _	dez	_	'dEs
 	drí		'd4i	// qua.drí.cu.lo
 
 	dril	_	'd4iU	// qua.dril
+
+	dris		d4is
+	dris	_	'd4is
+	dris	^s	d4i
 
 	dro		d4o
 	dro	_	d4U
@@ -1175,6 +1231,7 @@ _	dez	_	'dEs
 %	duo	_	duU	// ár.duo, as.sí.duo
 
 	dur		du4
+	dur	^r	du
 
 	dus		dus
 	dus	_	'dus
@@ -1206,6 +1263,7 @@ _	em	_	e~I	// em (prep.)
 
 	er		e4
 	er	_	'e4
+	er	^r	e
 
 	es		es
 	es	_	Is
@@ -1215,6 +1273,8 @@ _	em	_	e~I	// em (prep.)
 	et		et
 
 	eu		eU
+
+	eur	^r	eu	// eur.rit.mi.a
 
 	ex		es	// TODO: eks, es
 	ex	_	Eks
@@ -1250,6 +1310,7 @@ _	em	_	e~I	// em (prep.)
 
 	far		fa4
 	far	_	'fa4
+	far	^r	fa
 
 	fas		fas
 	fas	_	f6s
@@ -1284,6 +1345,7 @@ _	em	_	e~I	// em (prep.)
 
 	fer		fe4
 	fer	_	'fe4
+	fer	^r	fe
 
 	fér		'fE4
 
@@ -1311,9 +1373,13 @@ _	em	_	e~I	// em (prep.)
 
 	fir		fi4
 	fir	_	'fi4
+	fir	^r	fi
 
 	fis		fis
 	fis	_	'fis
+
+	fís		'fis
+	fís	^s	'fi
 
 	fla		fla
 	fla	_	fl6
@@ -1322,6 +1388,7 @@ _	em	_	e~I	// em (prep.)
 
 	fla	_	fla	// in.fla.ma.tó.rio
 	flar	_	'fla4	// in.flar
+	flar	^r	fla
 
 	flau		flaU
 
@@ -1369,8 +1436,10 @@ _	flor	_	flo4	// flor
 
 	for		fo4
 	for	_	'fo4
+	for	^r	fo
 
 	fór		'fO4	// fór.ceps, fór.mi.ca
+	fór	^r	fO
 
 	fos		fos
 	fos	_	fUs
@@ -1401,6 +1470,7 @@ _	flor	_	flo4	// flor
 	fras	_	f46s
 
 	frar	_	'f4a4
+	frar	^r	f4a
 
 	frau		f4aU
 
@@ -1435,6 +1505,10 @@ _	flor	_	flo4	// flor
 	fro		f4o
 	fro	_	f4U
 
+	fror		f4o4
+	fror	_	'fror
+	fror	^r	f4o
+
 	frô		'f4o~
 
 	fron		f4o~
@@ -1460,6 +1534,7 @@ _	flor	_	flo4	// flor
 	fún		'fu~	// la.ti.fún.dio
 
 	fur		fu4
+	fur	^r	fu
 
 	fus		fus
 	fus	_	'fus
@@ -1493,11 +1568,16 @@ _	flor	_	flo4	// flor
 
 	gar		ga4
 	gar	_	'ga4
+	gar	^r	ga
+
+	gár		'ga4
+	gár	^r	'ga
 
 	gas		gas
 	gas	_	g6s
 
 	gás		'gas
+	gás	^s	'ga
 
 	gau		gaU	// gau.lês
 	gau	_	'gaU	// min.gau
@@ -1531,6 +1611,10 @@ _	gel	_	ZEU
 
 	ger		Ze4
 	ger	_	'Ze4
+	ger	^r	Ze
+
+	gér		'ZE4
+	gér	^r	'ZE
 
 	ges		Zes
 	ges	_	'ZIs
@@ -1560,6 +1644,7 @@ _	gel	_	ZEU
 
 	gir		Zi4
 	gir	_	'Zi4
+	gir	^r	Zi
 
 	gis		Zis
 	gis	_	'Zis
@@ -1588,6 +1673,10 @@ _	giz	_	Ziz
 	glo	_	glU
 
 	gló		'glO
+
+	glos		glos
+	glos	_	glUs
+	glos	^s	glo
 
 	glu		glu
 	glu	_	'glu
@@ -1635,6 +1724,7 @@ _	giz	_	Ziz
 
 	gor		go4
 	gor	_	'go4
+	gor	^r	go
 
 	gos		gos
 	gos	_	gUs
@@ -1665,6 +1755,7 @@ _	grão	_	g46U
 
 	grar		g4ar
 	grar	_	'g4ar
+	grar	^r	g4a
 
 	gras		g4as
 	gras	_	g46s
@@ -1720,6 +1811,7 @@ _	grão	_	g46U
 
 	guar		gwa4
 	guar	_	'gwa4
+	guar	^r	gwa
 
 	guas		gwas
 	guas	_	gw6s
@@ -1759,6 +1851,7 @@ a	guen	to	gwe~	// a.gue.to
 
 	guer		ge4
 	guer	_	'ge4
+	guer	^r	ge
 
 	gues		ges
 	gues	_	gIs
@@ -1784,6 +1877,7 @@ san	gui		gwi	// san.gui.ná.rio
 
 	guir		gi4
 	guir	_	'gi4
+	guir	^r	gi
 
 	guis		gis
 	guis	_	'gis
@@ -1797,6 +1891,7 @@ san	gui		gwi	// san.gui.ná.rio
 	gún		'gu~	// bur.gún.di.o
 
 	gur		gu4
+	gur	^r	gu
 
 	gus		gus
 	gus	_	'gus	// Gu.gus, an.gus
@@ -1813,6 +1908,7 @@ _	han		an	// han.gar
 _	han	se	xan	// han.se.ní.a.se
 
 _	har		ar	// har.mo.ni.a, har.pa
+_	har	^r	a
 
 _	has		as	// has.te
 
@@ -1822,9 +1918,12 @@ _	hé		E	// hé.li.ce, hé.lio
 
 _	hec		ek	// hec.ta.re
 
+_	hen		e~	// hen.de.cas.sí.la.bo
+
 _	hep		ep	// hep.ta.cam.pe.ão
 
 _	her		e4
+_	her	^r	e
 
 _	hér		'E4	// hér.cu.les, hér.ni.a
 
@@ -1841,6 +1940,7 @@ _	hip		ip	// hip.no.ti.zar
 _	his		is
 
 _	hir		ir	// hir.to
+_	hir	^r	i
 
 _	ho		o
 
@@ -1849,6 +1949,7 @@ _	hó		'O	// hó.quei
 _	hon		o~
 
 _	hor		o4	// hor.te.lã
+_	hor	^r	o
 
 _	hos		os
 
@@ -1859,6 +1960,10 @@ _	hou		oU
 _	hu		u	// hu.mil.de
 
 _	hún		'u~	// hún.ga.ro
+
+	hur		u4
+	hur	_	'u4
+	hur	^r	u
 
 	i		i
 	i	_	'i
@@ -1883,6 +1988,7 @@ _	hún		'u~	// hún.ga.ro
 
 	ir		i4
 	ir	_	'i4
+	ir	^r	i
 
 	is		is
 	is	_	'is
@@ -1914,6 +2020,7 @@ _	hún		'u~	// hún.ga.ro
 
 	jar		Za4
 	jar	_	'Za4
+	jar	^r	Za
 
 	jas		Zas
 	jas	_	Z6s
@@ -1962,6 +2069,7 @@ _	hún		'u~	// hún.ga.ro
 
 	jor		Zo4
 ma	jor	_	ZO4	// ma.jor
+	jor	^r	Zo
 
 	jos		Zos
 	jos	_	ZUs
@@ -1983,6 +2091,7 @@ ma	jor	_	ZO4	// ma.jor
 	jun		Zu~
 
 	jur	_	'Zu~	// a.ba.jur
+	jur	^r	Zu
 
 	jus		Zus
 	jus	_	'Zus
@@ -2038,6 +2147,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	lar		la4
 	lar	_	'la4
+	lar	^r	la
 
 	las		las
 	las	_	l6s
@@ -2081,6 +2191,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	ler		le4
 	ler	_	'le4
+	ler	^r	le
 
 	lér		'lE4
 
@@ -2117,6 +2228,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	lhar		La4
 	lhar	_	'La4
+	lhar	^r	La
 
 	lhas		La4s
 
@@ -2140,6 +2252,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	lher		Le4
 	lher	_	'Le4	// colher
+	lher	^r	Le
 
 	lhes		Les
 	lhes	_	'LIs
@@ -2167,8 +2280,9 @@ ma	jor	_	ZO4	// ma.jor
 	lhou		LoU
 	lhou	_	'LoU
 
-	lhor		'Lo4	// ca.lhor.da
+	lhor		Lo4	// ca.lhor.da
 	lhor	_	'LO4	// me.lhor
+	lhor	^r	Lo
 
 	lhu		LU	// o.lhu.do, o.re.lhu.do
 
@@ -2196,6 +2310,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	lir		li4
 	lir	_	'li4
+	lir	^r	li
 
 	lis		lis
 	lis	_	'lis
@@ -2222,6 +2337,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	lor		lor	// lor.pa
 	lor	_	'lor	// va.lor, bo.lor
+	lor	^r	lo
 
 	los		los
 	los	_	lUs
@@ -2246,6 +2362,7 @@ ma	jor	_	ZO4	// ma.jor
 	lup		lup	// vo.lup.tu.o.so
 
 	lur		lu4	// lur.des
+	lur	^r	lu
 
 	lúr		'lu4	// me.ta.lúr.gi.ca
 
@@ -2295,8 +2412,10 @@ ma	jor	_	ZO4	// ma.jor
 
 	mar		ma4
 	mar	_	'ma4
+	mar	^r	ma
 
 	már		'ma4	// már.mo.re, már.tir
+	már	^r	'ma
 
 	mas		mas
 	mas	_	m6s
@@ -2348,15 +2467,19 @@ ma	jor	_	ZO4	// ma.jor
 
 	mer		me4
 	mer	_	'me4
+	mer	^r	me
 
 	mér		'mE4	// co.mér.ci.o
 
 	mes		mes
 	mes	_	mIs
+	mes	^s	me
 
 	més		'mEs	// do.més.ti.co
+	més	^s	'mE
 
 	mês		'mes	// mês, si.a.mês
+	mês	^s	'me
 
 	meu		meU	// meu
 	meu	_	'meU	// co.meu
@@ -2388,11 +2511,14 @@ ma	jor	_	ZO4	// ma.jor
 
 	mir		mi4
 	mir	_	'mi4
+	mir	^r	mi
 
 	mis		mis
 	mis	_	mIs
+	mis	^s	mi
 
 	mís		'mis	// mís.ti.co
+	mís	^s	'mi
 
 	miu		miU
 	miu	_	'miU
@@ -2426,6 +2552,7 @@ ma	jor	_	ZO4	// ma.jor
 
 	mor		mo4
 	mor	_	'mo4
+	mor	^r	mo
 
 	mór		'mO4	// mór.bi.do, mór.mon
 
@@ -2451,6 +2578,7 @@ ma	jor	_	ZO4	// ma.jor
 	mun	_	'mu~
 
 	mur		mu4
+	mur	^r	mu
 
 	mus		mus
 
@@ -2465,6 +2593,8 @@ ma	jor	_	ZO4	// ma.jor
 
 	nã		n6~	// a.nã.zi.nha
 	nã	_	'n6~	// a.nã
+
+	nad		nad	// i.nad.mis.sí.vel
 
 	naf		naf	// naf.ta.li.na
 
@@ -2494,6 +2624,7 @@ _	não	_	n6~U	// não (adv.)
 
 	nar		na4
 	nar	_	'na4
+	nar	^r	na
 
 	nas		nas
 	nas	_	n6s
@@ -2541,6 +2672,7 @@ _	não	_	n6~U	// não (adv.)
 
 	ner		ne4
 	ner	_	'ne4
+	ner	^r	ne
 
 	nér		'nE4	// e.nér.gi.co
 
@@ -2582,6 +2714,7 @@ _	não	_	n6~U	// não (adv.)
 
 	nhar		Ja4
 	nhar	_	'Ja4
+	nhar	^r	Ja
 
 	nhas		Jas
 	nhas	_	J6s
@@ -2612,6 +2745,7 @@ _	não	_	n6~U	// não (adv.)
 	nhi		Ji
 
 	nhir	_	'Ji4	// gru.nhir
+	nhir	^r	Ji
 
 	nhis		Jis	// ba.nhis.ta
 
@@ -2629,6 +2763,7 @@ _	não	_	n6~U	// não (adv.)
 	nhol	_	'JOU
 
 	nhor	_	'JO4	// se.nhor
+	nhor	^r	Jo
 
 	ni		ni
 	ni	_	'ni
@@ -2649,6 +2784,7 @@ _	não	_	n6~U	// não (adv.)
 
 	nir		ni4
 	nir	_	'ni4
+	nir	^r	ni
 
 	nis		nis
 	nis	_	'nis
@@ -2679,6 +2815,7 @@ _	não	_	n6~U	// não (adv.)
 
 	nor		no4
 	nor	_	'no4
+	nor	^r	no
 me	nor	_	'nO4	// me.nor
 
 	nos		nos
@@ -2760,6 +2897,7 @@ me	nor	_	'nO4	// me.nor
 
 	or		o4
 	or	_	'o4
+	or	^r	o
 
 	ór		'O4	// ór.fão, ór.gão, ór.bi.ta
 
@@ -2803,6 +2941,7 @@ me	nor	_	'nO4	// me.nor
 
 	par		pa4
 	par	_	'pa4
+	par	^r	pa
 
 	pas		pas
 	pas	_	p6s
@@ -2843,6 +2982,7 @@ me	nor	_	'nO4	// me.nor
 
 	per		pe4	// hi.per.cro.mia
 	per	_	'pe4
+	per	^r	pe
 
 	pér		'pE4	// hi.pér.bo.le
 
@@ -2880,6 +3020,7 @@ me	nor	_	'nO4	// me.nor
 
 	pir		pi4
 	pir	_	'pi4
+	pir	^r	pi
 
 	pis		pis
 	pis	_	'pis
@@ -2935,6 +3076,10 @@ me	nor	_	'nO4	// me.nor
 
 	plir	_	'pli4
 
+	plis		plis
+	plis	_	'plis
+	plis	^s	pli
+
 	plo		plo
 	plo	_	plU
 
@@ -2982,6 +3127,7 @@ me	nor	_	'nO4	// me.nor
 
 	por		po4
 	por	_	'po4
+	por	^r	po
 
 	pór		'pO4	// re.pór.ter
 
@@ -3010,7 +3156,9 @@ me	nor	_	'nO4	// me.nor
 
 	pran		p46~
 
+	prar		p4a4
 	prar	_	'p4a4
+	prar	^r	p4a
 
 	pras		p4as
 	pras	_	p46s
@@ -3033,6 +3181,11 @@ me	nor	_	'nO4	// me.nor
 	prem	_	'p4e~I	// cum.prem
 
 	pren		p4e~
+	pren	_	'p4e~
+
+	prer		p4e4
+	prer	_	'p4e4
+	prer	^r	p4e
 
 	pres		p4es
 	pres	_	p4Is
@@ -3074,6 +3227,14 @@ _	prol	_	prOU	// prol
 	pros	_	p4Us
 
 	pru		p4u
+	pru	_	'p4u
+
+	prus		p4us
+	prus	_	'p4us
+	prus	^s	p4u
+
+	prús		'p4us
+	prús	^s	'p4u
 
 	psa		psa
 	psa	_	ps6
@@ -3105,6 +3266,7 @@ _	prol	_	prOU	// prol
 
 	pur		pu4
 	pur	_	'pu4
+	pur	^r	pu
 
 	púr		'pu4	// púr.pu.ra
 
@@ -3131,6 +3293,7 @@ _	prol	_	prOU	// prol
 
 	quar		kwa4
 	quar	_	'kwa4
+	quar	^r	kwa
 
 	quart		kwa4t
 
@@ -3168,6 +3331,7 @@ _	prol	_	prOU	// prol
 
 	quer		ke4	// quer.mes.se
 	quer	_	kE4	// qual.quer
+	quer	^r	ke
 
 	ques		kes
 
@@ -3178,6 +3342,9 @@ _	prol	_	prOU	// prol
 	qui	_	'ki
 
 	quí		'ki
+
+	quí		'ki
+	quís	^s	'ki
 
 	qüi		kwi
 
@@ -3193,6 +3360,7 @@ _	prol	_	prOU	// prol
 %	quio	_	kiU	// brôn.quio, ob.sé.quio
 
 	quir	_	'kwi4	// de.lin.quir
+	quir	^r	qi
 
 	quis		kis
 	quis	_	'kis
@@ -3268,6 +3436,8 @@ V$	rap		'4ap
 	rar	_	'x64	// bar.rar
 V$	rar		4a4	// hi.e.rar.qui.a
 V$	rar	_	'464	// es.pe.rar
+	rar	^r	xa
+V$	rar	^r	4a
 
 	ras		xas	// ras.tro
 	ras	_	x6s	// mas.mor.ras
@@ -3336,9 +3506,9 @@ V$	rém	_	4e~	// po.rém
 V$	remp		4e~p	// pe.remp.tó.ri.o
 
 	ren		xe~	// ar.ren.dar		TODO: xe~I ?
-	ren	_	xe~	//			TODO: xe~I ?
+	ren	_	'xe~	//			TODO: xe~I ?
 V$	ren		4e~	// a.ren.gar		TODO: xe~I ?
-V$	ren	_	4e~				TODO: xe~I ?
+V$	ren	_	'4e~				TODO: xe~I ?
 
 	rên		'xe~	// o.cor.rên.cia
 V$	rên		'4e~	// ge.rên.ci.a
@@ -3358,6 +3528,8 @@ V$	rép		'4Ep
 	rer	_	'xer	// cor.rer
 V$	rer		4er
 V$	rer	_	'4er	// que.rer
+	rer	^r	xe
+V$	rer	^r	4e
 
 	res		xes	// res.pei.to	(TODO: rEs.tU)
 	res	_	xIs	// cor.res
@@ -3417,6 +3589,8 @@ V$%	rio	_	4iU	// a.be.ce.dá.rio
 	rir		'xi4	// sor.rir
 V$	rir		4i4	// a.de.rir.mos
 V$	rir	_	'4i4	// a.de.rir
+	rir	^r	xi
+V$	rir	^r	4i
 
 	ris		xis	// ris.co, a.ris.ca.do
 	ris	_	'xis
@@ -3430,6 +3604,9 @@ V$	rís		'4is	// tu.rís.ti.co
 	rit	_	xit
 V$	rit		4it	// al.go.rit.mo
 V$	rit	_	4it
+
+	rít		'xit	// po.lir.rít.mi.co
+V$	rít		'4it
 
 	riu		xiU
 	riu	_	'xiU	// sor.riu
@@ -3482,11 +3659,15 @@ V$	ron	_	'4o~
 	ror	_	'xor	// hor.ror, ter.ror
 V$	ror		4or
 V$	ror	_	'4o	// fu.ror
+	ror	^r	xo
+V$	ror	^r	4o
 
 	ros		xos	// ros.nar
 	ros	_	xUs	// fer.ros
 V$	ros		4os	// se.ros.san.guí.ne.o
 V$	ros	_	4Us	// ca.ros
+	ros	^s	xo
+V$	ros	^s	4o
 
 	rós	_	'xOs	// for.rós
 V$	rós	_	'4Os	// Quei.rós
@@ -3538,6 +3719,8 @@ V$	rup	_	'4up
 	rur	_	'xu4
 V$	rur		4u4	// ci.rur.gi.a
 V$	rur	_	'4u4
+	rur	^r	xu
+V$	rur	^r	4u
 
 	rúr		'xu4
 V$	rúr		'4u4	// ci.rúr.gi.co
@@ -3611,6 +3794,8 @@ V$	são	_	'z6~U	// vi.são, con.fu.são
 	sar	_	'sa4	// pen.sar
 V$	sar		za4	// ca.sas.te
 V$	sar	_	'za4	// ca.sar
+	sar	^r	sa
+V$	sar	^r	za
 
 	sas		sas	// pen.sas.te
 	sas	_	s6s	// pen.sas
@@ -3698,6 +3883,8 @@ V$	sép		'sEp
 	ser	_	'se4
 V$	ser		ze4	// de.ser.to
 V$	ser	_	'ze4	// pu.ser
+	ser	^r	se
+V$	ser	^r	ze
 
 	sér		'sE4
 V$	sér		'zE4	// de.sér.ti.co
@@ -3774,6 +3961,13 @@ V$	sio	_	'ziU
 %	sio	_	siU
 V$%	sio	_	ziU	// cé.sio, mag.né.sio
 
+	sir		si4
+	sir	_	'sir
+V$	sir		zi4
+V$	sir	_	'zi4
+	sir	^r	si
+V$	sir	^r	zi
+
 	sis		sis	// sis.te.ma
 	sis	_	'sis
 V$	sis		zis	// re.sis.tir
@@ -3830,6 +4024,8 @@ V$	son		'zo~	// bó.son
 	sor	_	'so4	// pro.pul.sor
 V$	sor		zor	// de.sor.ga.ni.zar
 V$	sor	_	'zor	// in.va.sor
+	sor	^r	so
+V$	sor	^r	zo
 
 	sór		'sO4	// sór.di.do
 V$	sór		'zO4
@@ -3845,7 +4041,7 @@ V$	sou		zou	// te.sou.ro
 V$	sou	_	'zou	// ra.pou.sou
 
 	su		su
-	su		'su
+	su	_	'su
 V$	su		zu	// u.su.fru.ir
 V$	su	_	'zu	// SI.SU
 
@@ -3892,6 +4088,8 @@ V$	sun	_	'zu~
 	sur		'su4
 V$	sur		zu4	// u.sur.par
 V$	sur		'zu4
+	sur	^r	su
+V$	sur	^r	zu
 
 	sus		sus	// sus.to
 	sus		'sus
@@ -3934,8 +4132,10 @@ V$	sus		'zus	// Je.sus
 
 	tar		ta4
 	tar	_	'ta4
+	tar	^r	ta
 
 	tár		't64	// tár.ta.ro
+	tár	^r	'ta
 
 	tas		tas
 	tas	_	t6s
@@ -3988,6 +4188,7 @@ V$	sus		'zus	// Je.sus
 
 	ter		te4
 	ter	_	'te4
+	ter	^r	te
 
 	tér		'tEr
 
@@ -4034,6 +4235,7 @@ V$	sus		'zus	// Je.sus
 
 	tir		tSi4	// már.tir
 	tir	_	'tSi4
+	tir	^r	tSi
 
 	tis		tSis
 	tis	_	'tSis
@@ -4087,6 +4289,10 @@ V$	sus		'zus	// Je.sus
 
 	tor		to4
 	tor	_	'to4	// tra.tor
+	tor	^r	to
+
+	tór		'tO4
+	tór	^r	tO
 
 	tos		tos
 	tos	_	tUs
@@ -4126,6 +4332,7 @@ V$	sus		'zus	// Je.sus
 
 	trar		t4a4
 	trar	_	't4a4
+	trar	^r	t4a
 
 	tras		t4as
 	tras	_	't46s
@@ -4240,8 +4447,13 @@ V$	sus		'zus	// Je.sus
 
 	tur		tu4
 	tur	_	'tu4
+	tur	^r	tu
 
 	túr		'tu4	// dis.túr.bi.o
+
+	tus		tus
+	tus	_	'tus
+	tus	^s	tu
 
 	tru		t4u
 	tru	_	't4u
@@ -4279,6 +4491,7 @@ V$	sus		'zus	// Je.sus
 	un		u~	// un.gir
 
 	ur		u4	// ur.gên.ci.a
+	ur	^r	u
 
 	úr		'u4	// de.mi.úr.gi.co
 
@@ -4316,8 +4529,10 @@ V$	sus		'zus	// Je.sus
 
 	var		va4
 	var	_	'va4	// ui.var
+	var	^r	va
 
 	vár		'va4	// vár.zea
+	vár	^r	'va
 
 	vas		vas
 	vas	_	v6s
@@ -4355,8 +4570,10 @@ V$	sus		'zus	// Je.sus
 
 	ver		ve4	// ver.são
 	ver	_	've4	// vi.ver
+	ver	^r	ve
 
 	vér		'vE4	// ad.vér.bio
+	vér	^r	vE
 
 	ves		ves
 	ves	_	vIs
@@ -4397,8 +4614,10 @@ V$	sus		'zus	// Je.sus
 
 	vir		vi4
 	vir	_	'vi4
+	vir	^r	vi
 
 	vír		'vi4
+	vír	^r	vi
 
 	vis		vis
 	vis	_	vIs
@@ -4429,8 +4648,10 @@ V$	sus		'zus	// Je.sus
 
 	vor		vo4	// di.vor.ci.ar
 	vor	_	'vo4	// lou.vor
+	vor	^r	vo
 
 	vór		'vO4	// di.vór.ci.o
+	vór	^r	vO
 
 	vos		vos
 	vos	_	vUs
@@ -4509,6 +4730,7 @@ do	xal	_	ksaU	// pa.ra.do.xal
 de	xar	_	'ks64	// in.de.xar
 fi	xar	_	'ks64	// fi.xar
 ne	xar	_	'ks64	// a.ne.xar
+	xar	^r	Sa
 
 	xas		Sas
 	xas	_	S6s
@@ -4549,6 +4771,7 @@ ne	xei	_	'kseI	// a.ne.xei
 	xer	_	'Se4
 e	xer		zer	// e.xer.cer
 trou	xer		sE4	// trou.xer
+	xer	^r	Se
 
 e	xér		zer	// e.xér.ci.to
 
@@ -4611,6 +4834,7 @@ a	xô		'kso	// a.xô.ni.o
 
 	xor		So4
 	xor	_	'So4
+	xor	^r	So
 fle	xor	_	'kso4
 
 	xos		Sos
@@ -4628,6 +4852,10 @@ e	xu		zu	// e.xu.mar
 e	xul		zuU	// e.xul.tar
 
 ca	xum			// ca.xum.ba
+
+	xur		Su4
+	xur	_	'Su4
+	xur	^r	Su
 
 	za		za
 	za	_	z6
@@ -4653,6 +4881,7 @@ ca	xum			// ca.xum.ba
 
 	zar		zar	// zar.par
 	zar	_	'zar	// re.zar
+	zar	^r	za
 
 	zas		zas
 	zas	_	z6s
@@ -4682,6 +4911,7 @@ ca	xum			// ca.xum.ba
 
 	zer		ze4	// fa.zer.mos
 	zer	_	'ze4	// fa.zer
+	zer	^r	ze
 
 	zes		zes	// fi.zes.sem
 	zes	_	zIs	// pa.zes
@@ -4705,6 +4935,7 @@ ca	xum			// ca.xum.ba
 
 	zir		zi4
 	zir	_	'zir
+	zir	^r	zi
 
 	zis		zis
 	zis	_	'zis
@@ -4717,6 +4948,8 @@ ca	xum			// ca.xum.ba
 	zoi		zoI	// de.zoi.to
 
 	zor		zo4
+	zor	^r	zo
+	zor	^r	zo
 
 	zol		zoU
 	zol	_	zOU
@@ -4748,5 +4981,6 @@ ca	xum			// ca.xum.ba
 	zum	_	'zum	// zun.zum
 
 	zur		zu4	// zur.zir
+	zur	^r	zu
 
 
