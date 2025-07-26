@@ -3,69 +3,70 @@ Transcription Table
 
 Consonants:
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|p	|	|p		|		|p	|
-|b	|	|b		|		|b	|
-|	|	|		|		|	|
-|t	|	|t		|		|t	|
-|d	|	|d		|		|d	|
-|tʃ	|	|tS		|tS		|tS	|
-|dʒ	|	|tZ		|tZ		|tZ	|
-|	|	|		|		|	|
-|k	|	|k		|		|k	|
-|g	|	|g		|		|g	|
-|kw	|kw	|kw		|		|kw	|
-|gw	|gw	|gw		|		|gw	|
-|	|	|		|		|	|
-|f	|	|f		|		|f	|
-|v	|	|v		|		|v	|
-|	|	|		|		|	|
-|s	|	|s		|		|s	|
-|z	|	|z		|		|z	|
-|ʃ	|	|S		|		|S	|
-|ʒ	|	|Z		|		|Z	|
-|	|	|		|		|	|
-|ɾ	|	|*		|		|4	|
-|r	|R	|r\<trl\>	|		|R	|
-|ɹ	|	|r.		|		|r\	|
-|	|	|		|		|	|
-|x	|	|x		|		|x	|
-|ɣ	|	|Q		|		|G	|
-|χ  (?)	|	|		|		|	|
-|ʁ  (?)	|	|		|		|	|
-|h	|	|h		|		|h	|
-|ɦ	|	|h<?>		|		|h\	|
-|	|	|		|		|	|
-|m	|	|m		|		|m	|
-|n	|	|n		|		|n	|
-|	|	|		|		|	|
-|ɲ	|	|n^		|		|J	|
-|ỹ  (?) |	|		|		|	|
-|	|	|		|		|	|
-|l	|	|l		|		|l	|
-|ɫ	|	|l\<vzd\>	|		|5	|
-|w	|	|w		|		|w	|
-|	|	|		|		|	|
-|ʎ	|ʎ	|l^		|l^		|L	|
-|lj (?)	|	|		|		|	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|p	|	|p	|	|p	|
+|b	|	|b	|	|b	|
+|	|	|	|	|	|
+|t	|	|t	|	|t	|
+|d	|	|d	|	|d	|
+|tʃ	|	|tS	|tS	|tS	|
+|dʒ	|	|tZ	|tZ	|tZ	|
+|	|	|	|	|	|
+|k	|	|k	|	|k	|
+|g	|	|g	|	|g	|
+|kw	|kw	|kw	|	|kw	|
+|gw	|gw	|gw	|	|gw	|
+|	|	|	|	|	|
+|f	|	|f	|	|f	|
+|v	|	|v	|	|v	|
+|	|	|	|	|	|
+|s	|	|s	|	|s	|
+|z	|	|z	|	|z	|
+|ʃ	|	|S	|	|S	|
+|ʒ	|	|Z	|	|Z	|
+|	|	|	|	|	|
+|ɾ	|	|*	|	|4	|
+|r	|R	|r\<trl>|	|R	|
+|ɹ	|	|r.	|	|r\	|
+|	|	|	|	|	|
+|x  (*)	|	|x	|	|x	|
+|ɣ	|	|Q	|	|G	|
+|χ  (?)	|	|	|	|	|
+|ʁ  (?)	|	|	|	|	|
+|h	|	|h	|	|h	|
+|ɦ	|	|h\<?>	|	|h\	|
+|	|	|	|	|	|
+|m	|	|m	|	|m	|
+|n	|	|n	|	|n	|
+|	|	|	|	|	|
+|ɲ	|	|n^	|	|J	|
+|ỹ  (?) |	|	|	|	|
+|	|	|	|	|	|
+|l	|	|l	|	|l	|
+|ɫ	|	|l\<vzd>|	|5	|
+|w	|	|w	|	|w	|
+|	|	|	|	|	|
+|ʎ	|ʎ	|l^	|l^	|L	|
+|lj (?)	|	|	|	|	|
 
 Vowels:
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|a	|	|a		|		|a	|
-|ɐ	|ɐ	|&"		|&		|6	|
-|ə  (?)	|	|		|		|	|
-|e	|	|e		|		|e	|
-|ɛ	|	|E		|		|E	|
-|i	|	|i		|		|i	|
-|ɪ	|ɪ	|I		|y		|I	|
-|ɨ  (?)	|ɨ	|		|		|	|
-|o	|	|o		|		|o	|
-|ɔ	|	|O		|		|O	|
-|u	|	|u		|		|u	|
-|ʊ	|	|U		|		|U	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|a	|	|a	|	|a	|
+|ɐ	|ɐ	|&"	|&	|6	|
+|e	|	|e	|	|e	|
+|ɛ	|	|E	|	|E	|
+|i	|	|i	|	|i	|
+|ɪ	|ɪ	|I	|y	|I	|
+|ɨ  (?)	|ɨ	|	|	|	|
+|o	|	|o	|	|o	|
+|ɔ	|	|O	|	|O	|
+|u	|	|u	|	|u	|
+|ʊ	|	|U	|	|U	|
+
+(*) Pelo menos um linguista afirma que esse som não pertence ao português, mas sim ao espanhol, como em "jamón"; embora a maioria dos linguistas que consultei o utiliza em alternância com o glotal.
 
 Notas:
 * o `espeak-ng` v1.51 usa `æ`, na voz do pt-BR, para representar a vogal quase baixa reduzida em posição pós-tônica. Mas o som desse caractere não existe no português. O símbolo do Kirshenbaum que representa esse som é o `&`. Já o símbolo Kirshenbaum que representa o som `ɐ` é `&"`, portanto este deveria ser utilizado.
@@ -73,32 +74,32 @@ Notas:
 
 Nasal Vowels:
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|ɐ̃	|ɐ̃ŋ ɐ̃m	|&"~ (?)	|&~N &~m	|6~	|
-|ẽ	|eɪŋ	|e~		|eIN		|e~	|
-|ı͂	|iŋ in/m|i~		|iN in/m	|i~	|
-|õ	|oŋ om	|o~		|oN om		|o~	|
-|u͂	|ũŋ ũm	|u~		|uN um		|u~	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|ɐ̃	|ɐ̃ŋ ɐ̃m	|&"~	|&~N &~m|6~	|
+|ẽ	|eɪŋ	|e~	|eIN	|e~	|
+|ı͂	|iŋ in/m|i~	|iN in/m|i~	|
+|õ	|oŋ om	|o~	|oN om	|o~	|
+|u͂	|ũŋ ũm	|u~	|uN um	|u~	|
 
 Oral decrescent diphthongs:
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|aɪ̯	|	|aj		|aI		|aj	|
-|eɪ̯	|	|ej		|eI		|ej	|
-|ɛɪ̯	|	|ej		|EI		|Ej	|
-|oɪ̯	|	|oj		|oI		|oj	|
-|ɔɪ̯	|	|oj		|OI		|Oj	|
-|uɪ̯	|	|uj		|uI		|uj	|
-|	|	|		|		|	|
-|aʊ̯	|	|aw		|aU		|aw	|
-|eʊ̯	|	|ew		|eI		|ew	|
-|ɛʊ̯	|	|Ew		|EU		|Ew	|
-|oʊ̯	|	|ow		|ow    *	|ow	|
-|iʊ̯	|	|iw		|iU		|iw	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|aɪ̯	|	|aj	|aI	|aj	|
+|eɪ̯	|	|ej	|eI	|ej	|
+|ɛɪ̯	|	|ej	|EI	|Ej	|
+|oɪ̯	|	|oj	|oI	|oj	|
+|ɔɪ̯	|	|oj	|OI	|Oj	|
+|uɪ̯	|	|uj	|uI	|uj	|
+|	|	|	|	|	|
+|aʊ̯	|	|aw	|aU	|aw	|
+|eʊ̯	|	|ew	|eI	|ew	|
+|ɛʊ̯	|	|Ew	|EU	|Ew	|
+|oʊ̯	|	|ow	|ow    *|ow	|
+|iʊ̯	|	|iw	|iU	|iw	|
 
-Nota: os glides são representados por \[j] e \[w] nas colunas KIR e X-SAMPA, devido à simplicidade e amplo uso, evitando sinais diacríticos.
+Nota: os glides são representados por \[j] e \[w] nas colunas KIR e X-SAMPA, devido à simplicidade e ao amplo uso, evitando sinais diacríticos.
 
 Dúvida: o digonto [uʊ̯] existe, como em "ultra" e "azul"?
 
@@ -114,14 +115,14 @@ Resposta à dúvida acima sobre ditongos ditongo formado com o alofone brasileir
 
 Nasal decrescent diphthongs:
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|ãɪ̯	|ɐ̃y ɐ̃ɨ	|a~j		|&~y   *	|a~j	|
-|e͂ɪ̯	|	|e~j		|_?_		|e~j	|
-|o͂ɪ̯	|	|o~j		|o~j   *	|o~j	|
-|u͂ɪ̯	|	|u~j		|_?_		|u~j	|
-|	|	|		|		|	|
-|ãʊ̯	|ɐ̃ʊ̃	|a~w		|&U~   *	|a~w	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|ãɪ̯	|ɐ̃y ɐ̃ɨ	|a~j	|&~y *	|a~j	|
+|e͂ɪ̯	|	|e~j	|_?_	|e~j	|
+|o͂ɪ̯	|	|o~j	|o~j *	|o~j	|
+|u͂ɪ̯	|	|u~j	|_?_	|u~j	|
+|	|	|	|	|	|
+|ãʊ̯	|ɐ̃ʊ̃	|a~w	|&U~ *	|a~w	|
 
 Dúvida: o digonto \[õʊ̯] existe, como em "bom" e "dom" (quando pronunciados *boum e *doum)?
 
@@ -129,31 +130,31 @@ A resposta para a dúvida acima deve ter algum a explicação parecida com a res
 
 Oral crescent diphthongs:
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|ɪ̯ɐ	|jæ ɪʲˈa|j&"		|j& I;a		|j6	|
-|ɪ̯a	|  (*)	|ja		|		|ja	|
-|	|	|		|		|	|
-|ɪ̯ɪ ~ ɪ	|jɨ jy *|jI		|jy		|jI	|
-|ɪ̯i (*)	|	|ji		|		|ji	|
-|ɪ̯e (*)	|	|je		|		|je	|
-|	|	|		|		|	|
-|ɪ̯ʊ (*)	|jʊ ɪʲʊ*|jU		|jU I;U		|jU	|
-|ɪ̯o (*)	|	|jo		|		|jo	|
-|	|	|		|		|	|
-|ɪ̯on(**)|	|jon		|		|jon	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|ɪ̯ɐ	|jæ ɪʲˈa|j&"	|j& I;a	|j6	|
+|ɪ̯a	|  (*)	|ja	|	|ja	|
+|	|	|	|	|	|
+|ɪ̯ɪ ~ ɪ	|jɨ jy *|jI	|jy	|jI	|
+|ɪ̯i (*)	|	|ji	|	|ji	|
+|ɪ̯e (*)	|	|je	|	|je	|
+|	|	|	|	|	|
+|ɪ̯ʊ (*)	|jʊ ɪʲʊ*|jU	|jU I;U	|jU	|
+|ɪ̯o (*)	|	|jo	|	|jo	|
+|	|	|	|	|	|
+|ɪ̯on(**)|	|jon	|	|jon	|
 
-|IPA	|IPA-E	|KIR		|KIR-E		|X-SAMPA|
-|---	|---	|---		|---		|---	|
-|ʊ̯ɐ	|_?_	|w&"		|_?_		|w6	|
-|ʊ̯a (*)	|	|wa		|		|wa	|
-|	|	|		|		|	|
-|ʊ̯ɪ	|_?_	|wI		|_?_		|wI	|
-|ʊ̯e (*)	|	|we		|		|we	|
-|	|	|		|		|	|
-|ʊ̯ʊ ~ ʊ |_?_	|wU		|_?_		|wU	|
-|ʊ̯u (*)	|	|wu		|		|wu	|
-|ʊ̯o (*)	|	|wo		|		|wo	|
+|IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
+|---	|---	|---	|---	|---	|
+|ʊ̯ɐ	|_?_	|w&"	|_?_	|w6	|
+|ʊ̯a (*)	|	|wa	|	|wa	|
+|	|	|	|	|	|
+|ʊ̯ɪ	|_?_	|wI	|_?_	|wI	|
+|ʊ̯e (*)	|	|we	|	|we	|
+|	|	|	|	|	|
+|ʊ̯ʊ ~ ʊ |_?_	|wU	|_?_	|wU	|
+|ʊ̯u (*)	|	|wu	|	|wu	|
+|ʊ̯o (*)	|	|wo	|	|wo	|
 
 (*) Pronunciados por falantes com maior diversidade de vogais pós-tônicas finais. (Cristófaro, p. 95-97)
 (**) Ditongo crescente obrigatório em sílabas pré-tônicas, como em nac\[ion]al, estac\[ion]amento etc, nas quais o <o> é sempre \[o]. (Cristófaro, p. 95-97)
