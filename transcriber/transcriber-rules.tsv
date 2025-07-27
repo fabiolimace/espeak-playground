@@ -563,9 +563,9 @@ ex	cep		sep	// ex.cep.ci.o.nal
 	ceu		seU
 	ceu	_	'seU
 
-_	ceu	_	sEU	// céu
-
 	céu		'sEU	// es.car.céu
+
+	cêu		'seU 	// far.ma.cêu.ti.co
 
 	cha		Sa
 	cha	_	S6
@@ -1046,6 +1046,9 @@ _	das	_^V	d6z	// <das a.mi.gas> -> [dəz a.'mi.gəs]
 	der	_	'de4
 	der	^r	de
 
+	dér		'dE4	// e.pi.dér.mi.co
+	dér	^r	'dE
+
 	des		des
 	des	_	dZIs
 
@@ -1248,6 +1251,9 @@ _	dez	_	'dEs
 
 	ê		'e
 
+	ec		ek	// ec.ze.ma
+	ec	_	'Ek
+
 	ei		eI
 
 	eis		eIs
@@ -1315,12 +1321,17 @@ _	em	_	e~I	// em (prep.)
 	far	_	'fa4
 	far	^r	fa
 
+	fár		'fa4
+	fár	^r	'fa
+
 	fas		fas
 	fas	_	f6s
 
 	fás		'fas
 
 	fau		faU	// fau.na
+
+	faus		faUs	// faus.to
 
 	fe		fe
 	fe	_	fI
@@ -1770,6 +1781,8 @@ _	grão	_	g46U
 	gre		g4e
 	gre	_	g4I
 
+	gré		'grE	// e.gré.gi.o
+
 	grei		g4eI
 	grei	_	'g4eI
 
@@ -1861,6 +1874,8 @@ a	guen	to	gwe~	// a.gue.to
 
 	guês	_	'ges
 
+	guez	_	'ges	// em.bri.a.guez
+
 	gui		gi
 	gui	_	'gi
 
@@ -1884,6 +1899,11 @@ san	gui		gwi	// san.gui.ná.rio
 
 	guis		gis
 	guis	_	'gis
+
+	guís		'gis	// lin.guís.ti.ca
+lin	guís		'gwis	// lin.guís.ti.ca
+
+	güís		'gwis	// lin.guís.ti.ca
 
 %	guo	_	guU	// am.bí.guo, con.tí.guo
 
@@ -1977,6 +1997,8 @@ _	hún		'u~	// hún.ga.ro
 
 	ig		ig	// ig.no.rar
 
+	íg		'ig	// íg.ne.o
+
 	im		i~
 	im	_	'i~
 
@@ -2013,6 +2035,9 @@ _	hún		'u~	// hún.ga.ro
 
 	jais		ZaIs
 	jais	_	'ZaIs
+
+	jal		ZaU
+	jal	_	'ZaU	// la.ran.jal
 
 	jam		Za~	// jam.bo
 	jam	_	Z6~U
@@ -2159,6 +2184,8 @@ ma	jor	_	ZO4	// ma.jor
 
 	lau		laU
 
+	láu		'laU	// láu.re.a, láu.da.no, fi.láu.ci.a
+
 	laus		laUs	// ba.laus.tra.da
 
 	le		le
@@ -2174,6 +2201,8 @@ ma	jor	_	ZO4	// ma.jor
 
 	lei		leI
 	lei	_	'leI
+
+	lêi		'lei	// lêi.ser
 
 	leis		leIs
 
@@ -2274,11 +2303,15 @@ ma	jor	_	ZO4	// ma.jor
 	lho		Lo
 	lho	_	LU
 
+	lhó		'LO	// fi.lhó
+
 	lhões	_	'Lo~Is
 %	lhões	_	Lo~Is
 
 	lhos		Lus
 	lhos	_	LUs
+
+	lhós		'LOs	// fi.lhós
 
 	lhou		LoU
 	lhou	_	'LoU
