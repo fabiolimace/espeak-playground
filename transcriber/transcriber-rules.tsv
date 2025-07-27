@@ -687,7 +687,7 @@ _	ceu	_	sEU	// céu
 	cim		si~	// ca.cim.ba
 	cim	_	'si~I	// ro.cim, re.lan.cim
 
-	cím	_	'si~	// cím.ba.lo
+	cím		'si~	// cím.ba.lo
 
 	cin		si~
 	cin	_	'si~I
@@ -834,7 +834,7 @@ fi	cit	_	sit	// dé.fi.cit
 
 	crá		'k4a
 
-	crân		'k46~	// crâ.ni.o
+	crâ		'k46	// crâ.ni.o
 
 	crai		k4aI	// la.crai.a
 
@@ -1096,6 +1096,9 @@ _	dez	_	'dEs
 
 	dio		dZio	// ra.dio.a.ma.dor, ra.dio.a.ti.vi.da.de
 %	dio	_	dZiU	// as.sé.dio
+
+	dip		dip	// dip.so.ma.ni.a
+	dip	_	'dip
 
 	díp		'dip	// díp.te.ro
 
@@ -2392,7 +2395,7 @@ ma	jor	_	ZO4	// ma.jor
 	mal		maU
 	mal	_	'maU
 
-	mal		'maU	// a.mál.ga.ma
+	mál		'maU	// a.mál.ga.ma
 
 	mam		m6~
 	mam	_	m6~U
@@ -2546,7 +2549,7 @@ ma	jor	_	ZO4	// ma.jor
 	môn		'mo~	// al.môn.de.ga
 
 	mons		mo~s
-	mons		'mo~s
+	mons	_	'mo~s
 
 	mop		mop	// he.mop.ti.se
 
@@ -3392,7 +3395,7 @@ V$	rã		'46~
 	rac		xak
 	rac	_	'xak
 V$	rac		4ak	// ca.rac.te.re
-V$	rac		'4ak
+V$	rac	_	'4ak
 
 	rai		xaI	// rai.o
 	rai	_	'xaI	// hon.rai
@@ -3669,16 +3672,18 @@ V$	ros	_	4Us	// ca.ros
 	ros	^s	xo
 V$	ros	^s	4o
 
-	rós	_	'xOs	// for.rós
-V$	rós	_	'4Os	// Quei.rós
+	rós		'xOs	// for.rós
+V$	rós		'4Os	// Quei.rós
 
 	rou		xoU	// rou.bo
 	rou	_	'xoU	// fer.rou
 V$	rou		4oU	// a.rou.quês
 V$	rou	_	'4oU	// a.ti.rou
 
-	rox	_	'xOs
-V$	rox	_	'4Os
+	rox		xOks
+	rox	_	'xOks
+V$	rox		4Oks
+V$	rox	_	'4Oks
 
 	roz	_	'xOs	// al.ge.roz
 V$	roz	_	'4Os	// fe.roz
@@ -4067,8 +4072,8 @@ V$	sui		zuI	// je.sui.tis.mo
 V$	sui	_	'zuI
 
 	sul		suU	// sul.tão
-	sul		'suU	// sul
-V$	sul	_	zuU	// re.sul.ta.do
+	sul	_	'suU	// sul
+V$	sul		zuU	// re.sul.ta.do
 V$	sul	_	'zuU
 
 	sum		su~
@@ -4092,9 +4097,9 @@ V$	sur		'zu4
 V$	sur	^r	zu
 
 	sus		sus	// sus.to
-	sus		'sus
+	sus	_	'sus
 V$	sus		zus
-V$	sus		'zus	// Je.sus
+V$	sus	_	'zus	// Je.sus
 
 
 	ta		ta
@@ -4296,6 +4301,7 @@ V$	sus		'zus	// Je.sus
 
 	tos		tos
 	tos	_	tUs
+	tos	^s	to
 
 	tou		toU
 	tou	_	'toU
@@ -4505,6 +4511,9 @@ V$	sus		'zus	// Je.sus
 	vá		'va
 
 	vâ		'v6
+
+	vã		va~
+	vã	_	'va~
 
 	vai		vaI
 	vai	_	'vaI
@@ -4851,7 +4860,8 @@ e	xu		zu	// e.xu.mar
 	xul		SuU
 e	xul		zuU	// e.xul.tar
 
-ca	xum			// ca.xum.ba
+	xum		Su~	// ca.xum.ba
+	xum		'Su~	// ca.xum.ba
 
 	xur		Su4
 	xur	_	'Su4
