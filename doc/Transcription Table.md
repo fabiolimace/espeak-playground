@@ -113,6 +113,17 @@ Resposta à dúvida acima sobre ditongos ditongo formado com o alofone brasileir
 > IN ILLUSTRATIONS OF THE IPA: Brazilian Portuguese, by Plínio Barbosa, Eleonora Albanoy
 > 
 
+Apêndice nasal*:
+
+|IPA	|Unicode|Contextos	|Exemplos	|
+|---	|---	|---		|---		|
+|xⁿ	|0x207F	|/t, d.../	|['lẽⁿ.dɐ]	|
+|xᵐ	|U+1D50	|/m, n, ɲ/	|['sɐ̃ᵐ.bɐ]	|
+|xᵑ	|U+1D51	|/k, g/		|['sɐ̃ᵑ.gɪ]	|
+|xᶬ	|U+1DAC	|/f, v/		|['ɐ̃ᶬ.fo.ɾɐ]	|
+
+(*) movimento de soltura também conhecido, menos apropriadamente, como murmúrio nasal.
+
 Nasal decrescent diphthongs:
 
 |IPA	|IPA-E	|KIR	|KIR-E	|X-SAMPA|
