@@ -10,10 +10,6 @@
 #     # split all words from a Linux dictionary
 #     awk -f syllabificator.awk /usr/share/dict/brazilian
 #
-# This script puts <ss> and <rr> in the same syllable, for simplicity of the transcriber rules.
-#
-# If you need separate <ss> and <rr> in different syllables, use the flag `-v ORTHOGRAPHICALLY_CORRECT=1`.
-#
 # If you are looking for a syllabificator for another other language, this script will probably fail miserably.
 #
 # Although this script splits a few words wrongly, such as "continuidade" and "intuição," its success rate far outweighs its failures.
@@ -118,10 +114,8 @@ BEGIN {
 			wrd = substr(wrd, RSTART + RLENGTH);
 		}
 
-		if (ORTHOGRAPHICALLY_CORRECT) {
-			gsub(/\.rr/, "r.r", buf);
-			gsub(/\.ss/, "s.s", buf);
-		}
+		gsub(/\.rr/, "r.r", buf);
+		gsub(/\.ss/, "s.s", buf);
 	
 		if (err) { print "ERROR: " $i > "/dev/stderr"; }
 		# else { print original, buf };
