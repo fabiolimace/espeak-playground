@@ -18,6 +18,7 @@ BEGIN {
 	PERCENT="%";
 	UNDERLINE="_";
 	APOSTROPHE="'";
+	STRESSMARK="ˈ"; # U+02C8
 	
 	RULES_F1[0] = null;
 	RULES_F2[0] = null;
@@ -58,7 +59,7 @@ function load_alphabets(    i, s, k) {
 	# as a fixed text in the first parameter of `gsub()` functon.
 	sam = "h\\\\  r\\\\ L  J  a~ e~ i~ o~ u~ 6~   6   @ E I Z O 4 R S U G";
 	kir = "h<?>   r.    l^ n^ a~ e~ i~ o~ u~ &\"~ &\" @ E I Z O * R S U Q";
-	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ı͂  õ  u͂  ɐ̃    ɐ   ə ɛ ɪ ʒ ɔ ɾ ř ʃ ʊ ɣ";
+	ipa = "ɦ      ɹ     ʎ  ɲ  ã  ẽ  ĩ  õ  ũ  ɐ̃    ɐ   ə ɛ ɪ ʒ ɔ ɾ ř ʃ ʊ ɣ";
 
 	split(sam, ALPHABET_SAM);
 	split(kir, ALPHABET_KIR);
@@ -256,9 +257,35 @@ function transcribe_word(prev_word, word, next_word,   i, s, x, n, bl, br, syl, 
 		result = result array[i];
 	}
 	
+	result = adjust_digraphs(result);
+	
 	sub(DOT APOSTROPHE, APOSTROPHE, result);
+	sub(APOSTROPHE, STRESSMARK, result);
 	
 	return result;
+}
+
+function adjust_digraphs(word) {
+
+	gsub(/[s][.]s/, ".s", word);
+	gsub(/[s][.][']s/, ".'s", word);
+	
+	if (ALPHABET == 1) {
+		gsub(/[ɾ][.]x/, ".x", word);
+		gsub(/[ɾ][.][']x/, ".'x", word);
+	}
+	
+	if (ALPHABET == 2) {
+		gsub(/[*][.]x/, ".x", word);
+		gsub(/[*][.][']x/, ".'x", word);
+	}
+
+	if (ALPHABET == 3) {
+		gsub(/[4][.]x/, ".x", word);
+		gsub(/[4][.][']x/, ".'x", word);
+	}
+
+	return word;
 }
 
 {
