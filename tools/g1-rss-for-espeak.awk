@@ -20,7 +20,7 @@ function get() {
 }
 
 function ready() {
-	return LINK && DESCRIPTION;
+	return LINK && TITLE && DESCRIPTION;
 }
 
 function clear() {
@@ -38,20 +38,26 @@ function output() {
 	clear();
 }
 
-/^LINK:/ {
-	if ($0 ~ LINK_REGEX) LINK=$0; else clear();
+/^TITLE:/ {
+        clear();
+	TITLE=get();
+	next;
 }
 
-/^TITLE:/ {
-	TITLE=get();
+/^LINK:/ {
+	if ($0 ~ LINK_REGEX) LINK=get();
+	else clear();
+	next;
 }
 
 /^SUBTITLE:/ {
 	SUBTITLE=get();
+	next;
 }
 
 /^DESCRIPTION:/ {
 	DESCRIPTION=get();
+	next;
 }
 
 {
