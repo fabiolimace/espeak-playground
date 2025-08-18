@@ -31,6 +31,51 @@
 //* https://pt.wiktionary.org/wiki/Ajuda:Guia_de_pron%C3%BAncia/Portugu%C3%AAs
 //
 
+///////////////////////////////////////////////////////////
+//
+//      TODO
+//
+//	// Generic Nucleus
+//	
+//	-a-		a	// is the nucleous "-x-" necessary?
+//	-a-	_	6
+//	
+//	-e-		e
+//	-e-	_	I
+//	
+//	-i-		i
+//	-i-	_	'i
+//	
+//	-o-		o
+//	-o-		U
+//	
+//	// Generic Onset
+//	
+//	c-		k	// ca, co
+//	c-	^[ei]	s	// ce, ci
+//	cr-		k4	// cra, cre, cri...
+//	ch-		S	// cha, che, chi...
+//	
+//	// Generic Coda
+//	
+//	-s		s	// cas, cras, chas ...
+//	-s	^S	z
+//	-s	^s		// s.s -> .s
+//	-s	_^V	z	// as amigas -> az amigas
+//	
+//	-ns		ns	// trans.por.te
+//	-ns	^S	nz	// trans.ma.ri.no
+//	
+//	-rs		rs	// pers.pec.ti.va
+//	
+//	ce+		se	// onset <c> + nucleous <e> and can be combined with a coda "-x"
+//	que+		ke	// onset <qu> + nucleous <e> and can be combined with a coda "-x"
+//	
+//	+am	^[bp]	a~	// nucleus <a> + "coda" <m> before <b> and <p> and can be combined with an onset "x-"
+//	+am	_	a~U~	// nucleus <a> + "coda" <m> in the end of word and can be combined with an onset "x-"
+//	
+///////////////////////////////////////////////////////////
+
 	a		a
 	a	_	6
 %	a		6
