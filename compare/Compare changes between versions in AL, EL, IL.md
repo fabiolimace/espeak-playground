@@ -1,0 +1,399 @@
+Compare changes between versions in AL, EL, IL...
+=================================================
+
+grep -Eih "[aâáeêéiíoôóuú]l[^aâáeêéiíoôóuú]" /usr/share/dict/*(brazilian|portuguese) | grep -Ev "[mnrs]" | grep -Ev "ou$" | sort | uniq | espeak-ng -v pt -x -q > ~/al.old.txt # version 1.51
+grep -Eih "[aâáeêéiíoôóuú]l[^aâáeêéiíoôóuú]" /usr/share/dict/*(brazilian|portuguese) | grep -Ev "[mnrs]" | grep -Ev "ou$" | sort | uniq | espeak-ng -v pt -x -q > ~/al.new.txt # version 1.53 (dev)
+
+diff ~/al.old.txt ~/al.new.txt
+
+comm -12 <(sort ~/al.old.txt) <(sort ~/al.new.txt) | wc -l
+1430
+
+comm -3 <(sort ~/al.old.txt) <(sort ~/al.new.txt) | wc -l
+382
+
+comm -3 <(sort ~/al.old.txt) <(sort ~/al.new.txt)
+'al
+	,Alg'alj&
+,Alg'Alj&
+	,Alg&l'i;U
+,Alg&l'iU
+,Alg'Os#
+	,Alg'OS
+	'AlkUl
+'aUkUl
+	b,Albus'i;U
+b,Albus'iU
+	b,Ald'i;U
+b,Ald'iU
+	b'Altik&
+	b'AltikU
+	b'AltikU
+b'aUtik&
+b'aUtikU
+b'aUtikU
+	b'ElZik&
+b'EUZik&
+	b,ulb'il^U
+	b'ulbU
+	b,uld'Ogy
+b,uwb'il^U
+b'uwbU
+b,uwd'Ogy
+	d'ElfikU
+d'EUfikU
+	d,ifikuld'ady
+	d,ifik'ult&
+	d,ifikult'a
+	d,ifikult'ad&
+	d,ifikult'adU
+	d,ifikult'aI
+	d,ifikult'av&
+	d,ifikult'eI
+	d,ifik,ult&s'&U~
+	d,ifik'ultU
+	d,ifik'ulty
+d,ifikuwd'ady
+d,ifik'uwt&
+d,ifikuwt'a
+d,ifikuwt'ad&
+d,ifikuwt'adU
+d,ifikuwt'aI
+d,ifikuwt'av&
+d,ifikuwt'eI
+d,ifik,uwt&s'&U~
+d,ifik'uwtU
+d,ifik'uwty
+	d,iv'ulg&
+	d,ivulg'a
+	d,ivulg'ad&
+	d,ivulg'adU
+	d,ivulg'aI
+	d,ivulg'av&
+	d,ivulg'eI
+	d,ivulg&s'&U~
+	d,iv'ulgU
+	d,iv'ulgy
+d,iv'uwg&
+d,ivuwg'a
+d,ivuwg'ad&
+d,ivuwg'adU
+d,ivuwg'aI
+d,ivuwg'av&
+d,ivuwg'eI
+d,ivuwg&s'&U~
+d,iv'uwgU
+d,iv'uwgy
+	d,ulsif'ik&
+	d,ulsifik'a
+	d,ulsifik'ad&
+	d,ulsifik'adU
+	d,ulsifik'aI
+	d,ulsifik'av&
+	d,ulsifik'eI
+	d,ulsif'ikU
+	d,ulsif'iky
+	d'ulsy
+	,&d'ult&
+	,&d'ultU
+d,uwsif'ik&
+d,uwsifik'a
+d,uwsifik'ad&
+d,uwsifik'adU
+d,uwsifik'aI
+d,uwsifik'av&
+d,uwsifik'eI
+d,uwsif'ikU
+d,uwsif'iky
+d'uwsy
+,&d'uwt&
+,&d'uwtU
+	,ez'ult&
+	,ezult'a
+	,ezult'ad&
+	,ezult'adU
+	,ezult'aI
+	,ezult'av&
+	,ezult'eI
+	,ezult&s'&U~
+	,ez'ultU
+	,ez'ulty
+,ez'uwt&
+,ezuwt'a
+,ezuwt'ad&
+,ezuwt'adU
+,ezuwt'aI
+,ezuwt'av&
+,ezuwt'eI
+,ezuwt&s'&U~
+,ez'uwtU
+,ez'uwty
+	f,Alk'oU
+f,Alk'ow
+	f,il&d'Elfj&
+f,il&d'EUfj&
+	f,&kuld'ady
+	f,&k'ult&
+	f,&kult'a
+	f,&kult'ad&
+	f,&kult'adU
+	f,&kult'aI
+	f,&kult'av&
+	f,&kult'eI
+	f,&kult&t'iv&
+	f,&kult&t'ivU
+	f,&k'ultU
+	f,&k'ulty
+f,&kuwd'ady
+f,&k'uwt&
+f,&kuwt'a
+f,&kuwt'ad&
+f,&kuwt'adU
+f,&kuwt'aI
+f,&kuwt'av&
+f,&kuwt'eI
+f,&kuwt&t'iv&
+f,&kuwt&t'ivU
+f,&k'uwtU
+f,&k'uwty
+	f,ulZ'i;&
+	fulZ'i
+	f,ulZ'id&
+	f,ulZ'idU
+	fulZ'iU
+	f'ulZy
+f,uwZ'i;&
+fuwZ'i
+f,uwZ'id&
+f,uwZ'idU
+fuwZ'iU
+f'uwZy
+g'aUly
+	,&gil^'oU
+,&gil^'ow
+	g'oly
+	h'Ol
+	h,Oliw'Ud
+	k'AlkulU
+	k'Alsik&
+	k'AlsikU
+	k'AlsjU
+k'aUkulU
+k'aUsik&
+k'aUsikU
+k'aUsjU
+	k&l^'oU
+k&l^'ow
+	k,&t&p'ult&
+	k,&t&pult'a
+	k,&t&pult'ad&
+	k,&t&pult'adU
+	k,&t&pult'aI
+	k,&t&pult'av&
+	k,&t&pult'eI
+	k,&t&p'ultU
+	k,&t&p'ulty
+k,&t&p'uwt&
+k,&t&puwt'a
+k,&t&puwt'ad&
+k,&t&puwt'adU
+k,&t&puwt'aI
+k,&t&puwt'av&
+k,&t&puwt'eI
+k,&t&p'uwtU
+k,&t&p'uwty
+	k,ub'AltikU
+k,ub'aUtikU
+	k'ulp&
+	kulp'a
+	k,ulp'ad&
+	k,ulp'adU
+	kulp'aI
+	k,ulp'av&
+	k,ulp'av,El
+	k,ulp&b,ilid'ady
+	k,ulp&bil'iz&
+	k,ulp&b,iliz'a
+	k,ulp&b,iliz'ad&
+	k,ulp&b,iliz'adU
+	k,ulp&b,iliz'aI
+	k,ulp&b,iliz'av&
+	k,ulp&b,iliz'eI
+	k,ulp&b,iliz&s'&U~
+	k,ulp&bil'izU
+	k,ulp&bil'izy
+	kulp'eI
+	k'ulpU
+	k'ulpy
+	,&kulS'oU
+	kulS'oU
+,&kulS'ow
+kulS'ow
+	k'ult&
+	k,ult'iv&
+	k,ultiv'a
+	k,ultiv'ad&
+	k,ultiv'adU
+	k,ultiv'aI
+	k,ultiv'av&
+	k,ultiv'av,El
+	k,ultiv'eI
+	k,ultiv&s'&U~
+	k,ult'ivU
+	k,ult'ivy
+	k,ult'u&
+	k'ultU
+	k,ultu'ad&
+	k,ultu'adU
+	k,ultu'aI
+	k,ultu'av&
+	k,ultu'eI
+	k,ult'uU
+	k,ult'uy
+	kultw'a
+k'uwp&
+kuwp'a
+k,uwp'ad&
+k,uwp'adU
+kuwp'aI
+k,uwp'av&
+k,uwp'av,El
+k,uwp&b,ilid'ady
+k,uwp&bil'iz&
+k,uwp&b,iliz'a
+k,uwp&b,iliz'ad&
+k,uwp&b,iliz'adU
+k,uwp&b,iliz'aI
+k,uwp&b,iliz'av&
+k,uwp&b,iliz'eI
+k,uwp&b,iliz&s'&U~
+k,uwp&bil'izU
+k,uwp&bil'izy
+kuwp'eI
+k'uwpU
+k'uwpy
+k'uwt&
+k,uwt'iv&
+k,uwtiv'a
+k,uwtiv'ad&
+k,uwtiv'adU
+k,uwtiv'aI
+k,uwtiv'av&
+k,uwtiv'av,El
+k,uwtiv'eI
+k,uwtiv&s'&U~
+k,uwt'ivU
+k,uwt'ivy
+k,uwt'u&
+k'uwtU
+k,uwtu'ad&
+k,uwtu'adU
+k,uwtu'aI
+k,uwtu'av&
+k,uwtu'eI
+k,uwt'uU
+k,uwt'uy
+kuwtw'a
+	l,i;up'oldU
+l,i;up'OldU
+	,O,Elp'e
+	,Ok'ult&
+	,Okult'a
+	,Okult'ad&
+	,Okult'adU
+	,Okult'aI
+	,Okult'av&
+	,Okult'eI
+	,Okult&s'&U~
+	,Ok'ultU
+	,Ok'ulty
+,Ok'uwt&
+,Okuwt'a
+,Okuwt'ad&
+,Okuwt'adU
+,Okuwt'aI
+,Okuwt'av&
+,Okuwt'eI
+,Okuwt&s'&U~
+,Ok'uwtU
+,Ok'uwty
+'Olp
+	p'Elvik&
+	p'ElvikU
+p'EUvik&
+p'EUvikU
+	p'ulg&
+	p,ulg'edU
+	pulg'&U~
+p'uwg&
+p,uwg'edU
+puwg'&U~
+	s,ef&l'AlZikU
+s,ef&l'aUZikU
+	s'Eltik&
+	s'EltikU
+s'EUtik&
+s'EUtikU
+	s'ilvj&
+	s'ilvjU
+s'IUvj&
+s'IUvjU
+	,&t&b&l^'oU
+,&t&b&l^'ow
+,uliw'Ud
+	v'Alvul&
+v'aUvul&
+	v,iv'Aldi
+viv,Ald'i
+	v,ulg'at&
+	v,ulg'at&
+	v'ulgU
+	vulk'&U~
+	,&v'ult&
+	,&vult'a
+	,&vult'ad&
+	,&vult'adU
+	,&vult'aI
+	,&vult'av&
+	,&vult'eI
+	,&v'ultU
+	v'ultU
+	,&v'ulty
+	v'ulv&
+v,uwg'at&
+v,uwg'at&
+v'uwgU
+vuwk'&U~
+,&v'uwt&
+,&vuwt'a
+,&vuwt'ad&
+,&vuwt'adU
+,&vuwt'aI
+,&vuwt'av&
+,&vuwt'eI
+,&v'uwtU
+v'uwtU
+,&v'uwty
+v'uwv&
+	w'aIld
+w'ildy
+	Z'ulg&
+	Zulg'a
+	Z,ulg'ad&
+	Z,ulg'adU
+	Zulg'aI
+	Z,ulg'av&
+	Zulg'eI
+	Z'ulgU
+	Z'ulgy
+Z'uwg&
+Zuwg'a
+Z,uwg'ad&
+Z,uwg'adU
+Zuwg'aI
+Z,uwg'av&
+Zuwg'eI
+Z'uwgU
+Z'uwgy
+
+
