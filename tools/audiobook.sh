@@ -22,7 +22,7 @@
 # Dependencies: espeak-ng, lame (or ffmpeg), and id3v2 (or id3tool).
 #
 
-DEFAULT_VOICE="fr";
+DEFAULT_VOICE="pt-br";
 
 RED='\033[0;31m';
 NOCOLOR='\033[0m';
