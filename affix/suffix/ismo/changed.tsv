@@ -1,0 +1,30 @@
+paste ~/ismo.a.txt ~/ismo.b.txt | awk '$2 != $4 { print $1, $2, $4}'
+
+alienismo	ˌalienˈizmʊ	alˌienˈizmʊ
+anticivismo	ˌɐ̃ntʃisˌivˈizmʊ	ˌɐ̃ntʃisivˈizmʊ
+antifascismo	ˌɐ̃ntʃifˌasˈizmʊ	ˌɐ̃ntʃifasˈizmʊ
+antilogismo	ˌɐ̃ntʃilˌoʒˈizmʊ	ˌɐ̃ntʃiloʒˈizmʊ
+antinazismo	ˌɐ̃ntʃinˌazˈizmʊ	ˌɐ̃ntʃinazˈizmʊ
+antinomismo	ˌɐ̃ntʃinˌomˈizmʊ	ˌɐ̃ntʃinomˈizmʊ
+antipapismo	ˌɐ̃ntʃipˌapˈizmʊ	ˌɐ̃ntʃipapˈizmʊ
+antirracismo	ˌɐ̃ntʃixˌasˈizmʊ	ˌɐ̃ntʃixasˈizmʊ
+autocratismo	ˌaʊtokɾˌatʃˈizmʊ	ˌaʊtokɾatʃˈizmʊ
+autoctonismo	ˌaʊtoktˌonˈizmʊ	ˌaʊtoktonˈizmʊ
+automatismo	ˌaʊtomˌatʃˈizmʊ	ˌaʊtomatʃˈizmʊ
+automorfismo	ˌaʊtomˌoɾfˈizmʊ	ˌaʊtomoɾfˈizmʊ
+autonomismo	ˌaʊtonˌomˈizmʊ	ˌaʊtonomˈizmʊ
+autotrofismo	ˌaʊtotɾˌofˈizmʊ	ˌaʊtotɾofˈizmʊ
+baconismo	bˌakonˈizmʊ	beɪkonˈizmʊ
+behaviorismo	bˌeavˌioɾˈizmʊ	bˌɪheɪvˌioɾˈizmʊ
+daltonismo	dˌaʊtonˈizmʊ	dˌawtonˈizmʊ
+darwinismo	dˌaɾvinˈizmʊ	darvinˈizmʊ
+discutívelismo	dʒˌiskutʃˈivelizmʊ	dʒˌiskutʃˈivelˈizmʊ
+freudismo	fɾˌeʊdʒˈizmʊ	fɾɔɪdʒˈizmʊ
+gestaltismo	ʒˌestaʊtʃˈizmʊ	ɡˌeʃtawtʃˈizmʊ
+hegelismo	ˌeʒelˈizmʊ	heɡelˈizmʊ
+Hitlerismo	ˌitleɾˈizmʊ	hitleɾˈizmʊ
+Leninismo	lˌeninˈizmʊ	leninˈizmʊ
+personalismo	pˌeɾsonalˈizmʊ	peɾsˌonalˈizmʊ
+Taylorismo	tˌaɪloɾˈizmʊ	teɪloɾˈizmʊ
+tolerávelismo	tˌoleɾˈavelizmʊ	tˌoleɾˈavelˈizmʊ
+

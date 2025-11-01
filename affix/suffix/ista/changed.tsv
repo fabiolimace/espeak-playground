@@ -1,0 +1,34 @@
+paste ~/ista.a.txt ~/ista.b.txt | awk '$2 != $4 { print $1, $2, $4}'
+
+alienista	ˌalienˈistɐ	alˌienˈistɐ
+altista	ˌaʊtʃˈistɐ	aʊtʃˈistɐ
+antifascista	ˌɐ̃ntʃifˌasˈistɐ	ˌɐ̃ntʃifasˈistɐ
+antigrevista	ˌɐ̃ntʃiɡɾˌevˈistɐ	ˌɐ̃ntʃiɡɾevˈistɐ
+antinazista	ˌɐ̃ntʃinˌazˈistɐ	ˌɐ̃ntʃinazˈistɐ
+antipapista	ˌɐ̃ntʃipˌapˈistɐ	ˌɐ̃ntʃipapˈistɐ
+antirracista	ˌɐ̃ntʃixˌasˈistɐ	ˌɐ̃ntʃixasˈistɐ
+autonomista	ˌaʊtonˌomˈistɐ	ˌaʊtonomˈistɐ
+basebolista	bˌazebolˈistɐ	bˌeɪzɪbɔlˈistɐ
+behaviorista	bˌeavˌioɾˈistɐ	bˌɪheɪvˌioɾˈistɐ
+carlista	kˌaɾlˈistɐ	karlˈistɐ
+darwinista	dˌaɾwinˈistɐ	darvinˈistɐ
+dietista	dʒˌietʃˈistɐ	daɪetʃˈistɐ
+docista	dˌosˈistɐ	dɔkˈistɐ
+handebolista	ˌɐ̃ndebolˈistɐ	hˌendʒɪbɔlˈistɐ
+ironista	ˌiɾonˈistɐ	aɪɾonˈistɐ
+jazzista	ʒˌazˈistɐ	dʒˌɪɛsˈistɐ
+legista	lˌeʒˈistɐ	lɛɡˈistɐ
+Leninista	lˌeninˈistɐ	leninˈistɐ
+lobista	lˌobˈistɐ	lɔbˈistɐ
+miserávelista	mˌizeɾˈavelistɐ	mˌizeɾˈavelˈistɐ
+musicista	mˌuzisˈistɐ	mjuzikˈistɐ
+personalista	pˌeɾsonalˈistɐ	peɾsˌonalˈistɐ
+petista	pˌetʃˈistɐ	pɛtʃˈistɐ
+prosista	pɾˌozˈistɐ	pɾozˈistɐ
+recordista	xˌekoɾdʒˈistɐ	xɛkoɾdʒˈistɐ
+surfista	sˌuɾfˈistɐ	səɾfˈistɐ
+Taylorista	tˌaɪloɾˈistɐ	teɪloɾˈistɐ
+trapista	tɾˌapˈistɐ	tɹɛpˈistɐ
+unionista	ˌunjonˈistɐ	junˌiənˈistɐ
+
+

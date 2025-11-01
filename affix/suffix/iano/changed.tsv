@@ -1,0 +1,24 @@
+paste ~/ismo.a.txt ~/ismo.b.txt | awk '$2 != $4 { print $1, $2, $4}'
+
+autopiano	ˌaʊtopˌiˈɐ̃nʊ	ˌaʊtopiˈɐ̃nʊ
+baconiano	bˌakoniˈɐ̃nʊ	beɪkˌoniˈɐ̃nʊ
+einsteiniano	ˌeĩnstˌeɪniˈɐ̃nʊ	aɪnstˌaɪniˈɐ̃nʊ
+freudiano	fɾˌeʊdʒiˈɐ̃nʊ	fɾɔɪdʒiˈɐ̃nʊ
+galoisiano	ɡˌaloɪziˈɐ̃nʊ	ɡˌalwaiˈɐ̃nʊ
+garrettiano	ɡˌaxetʃiˈɐ̃nʊ	ɡˌaxɛtʃiˈɐ̃nʊ
+gaussiano	ɡˌaʊsiˈɐ̃nʊ	ɡaʊsiˈɐ̃nʊ
+gregoriano	ɡɾˌeɡoɾiˈɐ̃nʊ	ɡɾɛɡˌoɾiˈɐ̃nʊ
+Gregoriano	ɡɾˌeɡoɾiˈɐ̃nʊ	ɡɾɛɡˌoɾiˈɐ̃nʊ
+hanoveriano	ˌɐnovˌeɾiˈɐ̃nʊ	hˌanovˌeɾiˈɐ̃nʊ
+hanseniano	ˌɐ̃nseniˈɐ̃nʊ	hɐnsˌeniˈɐ̃nʊ
+hegeliano	ˌeʒeliˈɐ̃nʊ	heɡˌeliˈɐ̃nʊ
+hertziano	ˌeɾtziˈɐ̃nʊ	hɛɾtsiˈɐ̃nʊ
+Justiniano	ʒˌustʃiniˈɐ̃nʊ	ʒustʃˌɪniˈɐ̃nʊ
+kepleriano	kˌepleɾiˈɐ̃nʊ	kɛplˌeɾiˈɐ̃nʊ
+Martiniano	mˌaɾtʃiniˈɐ̃nʊ	maɾtʃˌɪniˈɐ̃nʊ
+newtoniano	nˌewtoniˈɐ̃nʊ	nɪˌutoniˈɐ̃nʊ
+pasteuriano	pˌasteʊɾiˈɐ̃nʊ	pˌastɛɾiˈɐ̃nʊ
+shakespeariano	ʃˌakespˌeaɾiˈɐ̃nʊ	ʃeɪkspˌeɾiˈɐ̃nʊ
+voltairiano	vˌowtaɪɾiˈɐ̃nʊ	vˌowtɛɾiˈɐ̃nʊ
+washingtoniano	wˌaʃĩŋɡtˌoniˈɐ̃nʊ	wɔʃˌintoniˈɐ̃nʊ
+
