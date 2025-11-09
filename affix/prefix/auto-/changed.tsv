@@ -1,0 +1,5 @@
+$ paste ~/auto.a.txt ~/auto.b.txt | sed -E 's/ˌ//g' | awk '$2 != $4 { print $1, $2, $4}'
+
+autogoverno aʊtoɡovˈɛɾnʊ aʊtoɡovˈeɾnʊ
+autogovernos aʊtoɡovˈɛɾnʊs aʊtoɡovˈeɾnʊs
+

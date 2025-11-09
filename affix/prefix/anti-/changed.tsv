@@ -1,0 +1,31 @@
+$ paste ~/anti.a.txt ~/anti.b.txt | sed -E 's/ˌ//g' | awk '$2 != $4 { print $1, $2, $4}'
+
+antiabortos	ɐ̃ntʃiʲabˈɔɾtʊs	ɐ̃ntʃiʲabˈoɾtʊs
+anticorpos	ɐ̃ntʃikˈoɾpʊs	ɐ̃ntʃikˈɔɾpʊs
+antifogo	ɐ̃ntʃifˈɔɡʊ	ɐ̃ntʃifˈoɡʊ
+antiguidade	ɐ̃ntʃiɡwidˈadʒɪ	ɐ̃ntʃiɡidˈadʒɪ
+antiguidades	ɐ̃ntʃiɡwidˈadʒɪs	ɐ̃ntʃiɡidˈadʒɪs
+anti-herói	ɐ̃ntʃˈiʲeɾˈɔɪ	ɐ̃ntʃiʲeɾˈɔɪ
+anti-heróis	ɐ̃ntʃˈiʲeɾˈɔɪs	ɐ̃ntʃiʲeɾˈɔɪs
+anti-higiénica	ɐ̃ntʃˈiʲiʒjˈɛnikɐ	ɐ̃ntʃiʲiʒjˈɛnikɐ
+anti-higienicamente	ɐ̃ntʃˈiʲiʒiʲenikɐmˈeɪntʃɪ	ɐ̃ntʃiʲiʒiʲenikɐmˈeɪntʃɪ
+anti-higiénicas	ɐ̃ntʃˈiʲiʒjˈɛnikɐs	ɐ̃ntʃiʲiʒjˈɛnikɐs
+anti-higiénico	ɐ̃ntʃˈiʲiʒjˈɛnikʊ	ɐ̃ntʃiʲiʒjˈɛnikʊ
+anti-higiénicos	ɐ̃ntʃˈiʲiʒjˈɛnikʊs	ɐ̃ntʃiʲiʒjˈɛnikʊs
+anti-imperiais	ɐ̃ntʃˈiʲĩmpeɾiʲˈaɪs	ɐ̃ntʃiʲĩmpeɾiʲˈaɪs
+anti-imperial	ɐ̃ntʃˈiʲĩmpeɾiʲˈaʊ	ɐ̃ntʃiʲĩmpeɾiʲˈaʊ
+anti-imperialismo	ɐ̃ntʃˈiʲĩmpeɾiʲalˈizmʊ	ɐ̃ntʃiʲĩmpeɾiʲalˈizmʊ
+anti-imperialismos	ɐ̃ntʃˈiʲĩmpeɾiʲalˈizmʊs	ɐ̃ntʃiʲĩmpeɾiʲalˈizmʊs
+anti-imperialista	ɐ̃ntʃˈiʲĩmpeɾiʲalˈistɐ	ɐ̃ntʃiʲĩmpeɾiʲalˈistɐ
+anti-imperialistas	ɐ̃ntʃˈiʲĩmpeɾiʲalˈistɐs	ɐ̃ntʃiʲĩmpeɾiʲalˈistɐs
+anti-imperialmente	ɐ̃ntʃˈiʲĩmpeɾiʲaʊmˈeɪntʃɪ	ɐ̃ntʃiʲĩmpeɾiʲaʊmˈeɪntʃɪ
+anti-islâmica	ɐ̃ntʃˈiʲizlˈɐ̃mikɐ	ɐ̃ntʃiʲizlˈɐ̃mikɐ
+anti-islâmicas	ɐ̃ntʃˈiʲizlˈɐ̃mikɐs	ɐ̃ntʃiʲizlˈɐ̃mikɐs
+anti-islâmico	ɐ̃ntʃˈiʲizlˈɐ̃mikʊ	ɐ̃ntʃiʲizlˈɐ̃mikʊ
+anti-islâmicos	ɐ̃ntʃˈiʲizlˈɐ̃mikʊs	ɐ̃ntʃiʲizlˈɐ̃mikʊs
+anti-israelita	ɐ̃ntʃˈiʲizxaelˈitɐ	ɐ̃ntʃiʲizxaelˈitɐ
+anti-israelitas	ɐ̃ntʃˈiʲizxaelˈitɐs	ɐ̃ntʃiʲizxaelˈitɐs
+
+
+
+
