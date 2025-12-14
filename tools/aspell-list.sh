@@ -5,9 +5,10 @@
 # 
 # Usage
 #
-#     aspell-list file.txt
-#     aspell-list file.txt pt_BR pt_PT
-#     aspell-list file.txt pt_BR pt_PT en_US
+#     aspell-list.sh file.txt
+#     aspell-list.sh file.txt pt_BR pt_PT
+#     aspell-list.sh file.txt pt_BR pt_PT en_US
+#     aspell-list.sh file.txt pt_BR en_US fr | grep -E '[[:space:]][[:upper:]][[:lower:]]' # find names
 #
 # Install dicts:
 #
