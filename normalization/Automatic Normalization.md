@@ -1,6 +1,13 @@
 Automatic Normalization
 ==================================
 
+Punctuation
+----------------------------------
+
+For other kinds of normalization to work, it may be necessary to insert spaces to separate words from punctuation.
+
+Example script to separate words from punctuation: [awk/normalize-punct.awk].
+
 Numbers
 ----------------------------------
 
@@ -11,6 +18,8 @@ Numbers
 * 1.000,00 -> 1000,00
 * 1 000,00 -> 1000,00
 
+Example script to turn 1 000,00 into 1.000,00: [awk/normalize-1000.awk].
+
 ### Intervals
 
 * 1-10 -> 1--10
@@ -20,6 +29,13 @@ Numbers
 
 * 1.ª -> 1ª
 * 1.º -> 1º
+
+Sed command to normalize ordinals:
+
+```bash
+# normalize 1°, 1o, 1.°, 1.º, 1.o to 1º
+echo "1°" | sed -E 's/([0-9]+)[oa°]/\1º/' | sed -E 's/([0-9]+)\.[oaºª°]/\1º/'
+```
 
 #### Ordinals as superscripts
 
@@ -43,10 +59,20 @@ Numbers
 Dates
 ----------------------------------
 
-### sub-topic
+### Date
 
-### sub-topic
+* 01/01/1970 -> 1ª de janeiro de 1970
+* 01-01-1970 -> 1ª de janeiro de 1970
+* 01.01.1970 -> 1ª de janeiro de 1970
 
+Example script to normalize date: [awk/normalize-date.awk].
+
+### Time
+
+* 23:59 -> 23 horas e 59 minutos
+* 23h59 -> 23 horas e 59 minutos
+
+Example script to normalize time: [awk/normalize-time.awk].
 
 Abbreviations
 ----------------------------------
