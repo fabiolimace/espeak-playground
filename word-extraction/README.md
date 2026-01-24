@@ -26,7 +26,7 @@ This is the script used to extract the words from collecions of texts.
 
 ```bash
 COLLECTION=PRIVATE/ebook/ebook-collection
-LOCAL_REPO=~/git/espeak-ng-playground
+LOCAL_REPO=~/git/espeak-playground
 ```
 ```bash
 mkdir -p tmp
@@ -38,7 +38,9 @@ time find $COLLECTION -type f -name "*.txt" | sort | while read -r FILE; do
 	[ -f "tmp/$HASH".word-spacer.txt ] && continue;
 	echo "$FILE"
 	echo -e "$HASH\t$FILE" >> filename-hash.tsv
-	gawk -f $LOCAL_REPO/tools/word-spacer.awk "$FILE" > "tmp/$HASH".word-spacer.txt;
+	# Ignore lines with less than 200 characters
+	cat "$FILE" | sed -E 's/[[:space:]]+/ /;' | grep -E '^.{200,}$' | \
+	gawk -f $LOCAL_REPO/tools/word-spacer.awk > "tmp/$HASH".word-spacer.txt;
 	gawk -f $LOCAL_REPO/tools/word-counter.awk "tmp/$HASH".word-spacer.txt > "tmp/$HASH".word-counter.tsv;
 	gawk -f $LOCAL_REPO/tools/word-formats.awk "tmp/$HASH".word-spacer.txt > "tmp/$HASH".word-formats.tsv;
 	join -1 1 -2 1 -t'	' --header "tmp/$HASH".word-formats.tsv "tmp/$HASH".word-counter.tsv > "tmp/$HASH".text-tokens.tsv;

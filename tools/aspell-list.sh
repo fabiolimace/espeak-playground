@@ -9,6 +9,7 @@
 #     aspell-list.sh file.txt pt_BR pt_PT
 #     aspell-list.sh file.txt pt_BR pt_PT en_US
 #     aspell-list.sh file.txt pt_BR en_US fr | grep -E '[[:space:]][[:upper:]][[:lower:]]' # find names
+#     aspell-list.sh <(cat file.txt | awk -f word-spacer.awk | sed -E 's/[[:space:]]+/ /;' | grep -E '^.{200,}$'); # lines with more than 200 characters
 #
 # Install dicts:
 #
