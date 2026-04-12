@@ -13,7 +13,7 @@
 BEGIN {
 	OFS="\t";
 
-	PARTS_OF_SPEECH="abrev.;adj.;adj.2g.;adj.2g.2n;adv.;art.;art.def.;art.indef.;conj.;contr.;contr.prep.;elem.loc.;interj.;loc.;loc.adj.;loc.adv.;loc.conj.;loc.interj.;loc.prep.;loc.v.;num.card.;num.mult.;num.frac.;num.ord.;prep.;pron.;pron.dem.;pron.indef.;pron.int.;pron.pes.;pron.pos.;pron.rel.;s.2g.;s.m.;s.m.2n.;s.m.pl.;s.f.;s.f.2n.;s.f.pl.;v.;v.pron.;v.tr.;v.intr.;sig.";
+	PARTS_OF_SPEECH="abrev.;adj.;adj.2g.;adj.2g.2n;adv.;art.;art.def.;art.indef.;conj.;contr.;contr.prep.;elem.loc.;elem.expr.;interj.;loc.;loc.adj.;loc.adv.;loc.conj.;loc.interj.;loc.prep.;loc.v.;num.card.;num.mult.;num.frac.;num.ord.;prep.;pron.;pron.dem.;pron.indef.;pron.int.;pron.pes.;pron.pos.;pron.rel.;s.2g.;s.m.;s.m.2n.;s.m.pl.;s.f.;s.f.2n.;s.f.pl.;v.;v.pron.;v.t.;v.i.;sig.";
 	
 	split(PARTS_OF_SPEECH, POS, /;/);
 	for (x in POS) TAGS[POS[x]];
@@ -25,10 +25,12 @@ BEGIN {
 	gsub(/[()]/, "");
 	gsub(/\//, " / ");
 	gsub("sigla de", "sig.");
-	gsub(/art\. def\./, "art.def.");
-	gsub(/art\. indef\./, "art.indef.");
-	gsub(/contr\. prep\./, "contr.prep.");
+	gsub(/art\. ?def\./, "art.def.");
+	gsub(/art\. ?indef\./, "art.indef.");
+	gsub(/contr\. ?prep\./, "contr.prep.");
 	gsub(/elem\. da expr\./, "elem.expr.");
+	gsub(/v\. ?tr\./, "v.t.");
+	gsub(/v\. ?intr\./, "v.i.");
 }
 
 $1 ~ /^[[:alpha:].-]+$/ && $2 ~ /([[:alnum:]]+\.)+/ {

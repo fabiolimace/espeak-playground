@@ -1,0 +1,189 @@
+
+Source: https://www.academia.org.br/nossa-lingua/reducoes (with adaptations)
+
+----
+
+2g. 2 gêneros (m. e f.)
+2n. 2 números (invariável)
+abrev. abreviatura
+adj. adjetivo/adjetival
+adv. advérbio/adverbial
+art. artigo
+card. cardinal
+conj. conjunção/conjuncional
+contr. contração
+def. definido
+dem. demonstrativo
+dim. diminutivo
+elem. elemento
+expr. expressão
+f. feminino
+frac. fracionário
+indef. indefinido
+int. interrogativo
+interj. interjeição/interjecional
+loc. locução
+m. masculino
+mult. multiplicativo
+num. numeral
+ord. ordinal
+pes. pessoal
+pl. plural
+pos. possessivo
+prep. preposição/preposicional
+pron. pronome
+rel. relativo
+s. substantivo
+símb. símbolo
+v. verbo/verbal
+
+----
+
+abrev. abreviatura
+
+adj. adjetivo
+adj.bif. adjetivo biforme
+adj.s.2g. adjetivo e substantivo de dois gêneros
+adj.s.2g.2n. adjetivo e substantivo de dois gêneros e dois números
+adj.s.f. adjetivo e substantivo feminino
+adj.s.m. adjetivo e substantivo masculino
+adj.unif. adjetivo uniforme
+adj.2g. adjetivo de dois gêneros
+adj.2g.s.f. adjetivo de dois gêneros e substantivo feminino
+adj.2g.s.m. adjetivo de dois gêneros e substantivo masculino
+adj.2g.2n. adjetivo de dois gêneros e dois números
+
+adv. advérbio
+adv.af. advérbio de afirmação
+adv.conf. advérbio de confirmação
+adv.design. advérbio de designação
+adv.dúv. advérbio de dúvida
+adv.excl. advérbio de exclusão
+adv.int. advérbio interrogativo
+adv.lug. advérbio de lugar
+adv.lugar advérbio de lugar
+adv.mod. advérbio de modo
+adv.modo advérbio de modo
+adv.neg. advérbio de negação
+adv.num. advérbio numeral
+adv.quant. advérbio de quantidade
+adv.rel. advérbio relativo
+adv.temp. advérbio de tempo
+
+art. artigo
+art.def. artigo definido
+art.def.m. artigo definido masculino
+art.def.f. artigo definido masculino feminino
+art.indef. artigo indefinido
+art.indef.m. artigo indefinido masculino
+art.indef.f. artigo indefinido masculino
+
+conj. conjunção
+conj.adit. conjunção aditiva
+conj.adv. conjunção adversativa
+conj.advers. conjunção adversativa
+conj.alt. conjunção alternativa
+conj.cau. conjunção causal
+conj.caus. conjunção causal
+conj.causal conjunção causal
+conj.comp. conjunção comparativa
+conj.compar. conjunção comparativa
+conj.conc. conjunção concessiva
+conj.conces. conjunção concessiva
+conj.concl. conjunção conclusiva
+conj.cond. conjunção condicional
+conj.condic. conjunção condicional
+conj.conf. conjunção conformativa
+conj.cons. conjunção consecutiva
+conj.consec. conjunção consecutiva
+conj.coord. conjunção coordenativa
+conj.expl. conjunção explicativa
+conj.fin. conjunção final
+conj.final conjunção final
+conj.integr. conjunção integrante
+conj.prop. conjunção proporcional
+conj.sub. conjunção subordinativa
+conj.subord. conjunção subordinativa
+conj.temp. conjunção temporal
+
+contr. contração
+contr.prep. contração de preposição
+
+elem.expr. elemento de expressão
+elem.loc. elemento de locução
+
+interj. interjeição
+interj.excl. interjeição exclamativa
+interj.voc. interjeição vocativa
+
+loc. locução
+loc.adj. locução adjetiva
+loc.adv. locução adverbial
+loc.lat. locução latina
+loc.interj. locução interjetiva
+loc.adv.lat. locução adverbial latina
+loc.adv.mod. locução adverbial modal
+loc.adv.temp. locução adverbial temporal
+loc.prep. locução prepositiva
+loc.pron.pes. locução pronominal pessoal
+loc.s. locução substantiva
+loc.v. locução verbal
+
+num. numeral
+num.card. numeral cardinal
+num.distr. numeral distributivo
+num.frac. numeral fracionário
+num.mult. numeral multiplicativo
+num.ord. numeral ordinal
+
+part.irreg. particípio irregular
+
+prep. preposição
+
+pref. prefixo
+
+pron. pronome
+pron.dem. pronome demonstrativo
+pron.indef. pronome indefinido
+pron.int. pronome interrogativo
+pron.pes. pronome pessoal
+pron.pes.compl. pronome pessoal complemento
+pron.pes.suj. pronome pessoal sujeito
+pron.pos. pronome possessivo
+pron.refl. pronome reflexivo
+pron.rel. pronome relativo
+
+sig. sigla
+
+s. substantivo
+subst. substantivo
+s.2g. substantivo de dois gêneros
+s.2g.2n. substantivo de dois gêneros e dois números
+s.f. substantivo feminino
+s.f.2n. substantivo feminino de dois números
+s.f.m. substantivo feminino e masculino
+s.f.pl. substantivo feminino plural
+s.m. substantivo masculino
+s.m.2n. substantivo masculino de dois números
+s.m.f. substantivo masculino e feminino
+s.m.pl. substantivo masculino plural
+s.p. substantivo próprio
+s.p.loc. substantivo próprio locativo
+s.p.pers. substantivo próprio personativo
+
+suf. sufixo
+suf.adv. sufixo adverbial
+
+sup.abs. superlativo absoluto
+
+v. verbo
+verb. verbo
+v.i. verbo intransitivo
+v.impes. verbo impessoal
+v.lig.	verbo de ligação
+v.pron. verbo pronominal
+v.t.d. verbo transitivo direto
+v.t.i. verbo transitivo indireto
+v.t.d.i. verbo transitivo direto e indireto
+v.t.c. transitivo circunstancial
+
