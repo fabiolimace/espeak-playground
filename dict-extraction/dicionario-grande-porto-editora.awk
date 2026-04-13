@@ -62,10 +62,8 @@ BEGIN {
 # tries to fix as many nasals as possible
 function fix_nasals(word, pronunciation) {
 
-	if (word !~ /(ã|[aâ][nm][^aáâãeéêiíoóôõuú]|em$|ens$|ões$)/) return pronunciation;
+	if (word !~ /(ã|[aâ][nm][bcdfgjklmnpqrstvxzç]|em$|ens$|ões$)/) return pronunciation;
 
-	gsub(/[][]/, "", pronunciation);
-	
 	for (i in NASAL_ENDINGS) { # ão- ãoz ãos
 		split(NASAL_ENDINGS[i], NASAL_REPLACE, ";");
 		if (word ~ i) {
@@ -82,67 +80,66 @@ function fix_nasals(word, pronunciation) {
 			break;
 		}
 	}
-	
-	if (word ~ /^â[nm][^aáâãeéêiíoóôõuú]/ && pronunciation !~ /^ˈ?[ɐ̃ɐ]/) {
-		if (pronunciation ~ /^ˈ/) pronunciation = "ˈɐ̃" substr(pronunciation, 2);
-		else pronunciation = "ɐ̃" pronunciation;
-	} else if (word ~ /^a[nm][^aáâãeéêiíoóôõuú]/ && pronunciation !~ /^ˈ[ɐ̃ɐ]/) {
-		if (pronunciation ~ /^ˈ/) pronunciation = "ˈɐ̃" substr(pronunciation, 2);
-		else pronunciation = "ɐ̃" pronunciation;
-	} else if (word ~ /^[^h][aâ][nm][^aáâãeéêiíoóôõuú]/ && pronunciation !~ /^ˈ?.[ɐ̃ɐ]/) {
-		if (pronunciation ~ /^ˈ/) pronunciation = substr(pronunciation, 1, 2) "ɐ̃" substr(pronunciation, 3);
-		else pronunciation = substr(pronunciation, 1, 1) "ɐ̃" substr(pronunciation, 2);
-	} else if (word ~ /^[^h].[aâ][nm][^aáâãeéêiíoóôõuú]/ && pronunciation !~ /^ˈ?..[ɐ̃ɐ]/) {
-		if (pronunciation ~ /^ˈ/) pronunciation = substr(pronunciation, 1, 3) "ɐ̃" substr(pronunciation, 4);
-		else pronunciation = substr(pronunciation, 1, 2) "ɐ̃" substr(pronunciation, 3);
-	}
-	
-	split("ch;lh;nh;rr;ss;sc;sç;xc;qu;gu;[eéê]n;[eéê]m;[ií]n;[ií]m;[oóô]n;[oóô]m;[uú]n;[uú]m;c;g;s;x", REPL, ";")
-	if (word ~ /[aâ][nm][^aáâãeéêiíoóôõuú]/) {
 
-		match(word, /[aâ][nm][^aáâãeéêiíoóôõuú]/);
+	split("ch;lh;nh;rr;ss;sc;sç;xc;qu;gu;[eéê]n;[eéê]m;[ií]n;[ií]m;[oóô]n;[oóô]m;[uú]n;[uú]m", REPL, ";")
+	if (word ~ /[aâ][nm][bcdfgjklmnpqrstvxzç]/) {
 
-		w1 = substr(word, 1, RSTART-1)
-		w2 = substr(word, RSTART+2)
+		match(word, /[aâ][nm][bcdfgjklmnpqrstvxzç]/);
+
+		if (RSTART > 0)  {
+			w1 = substr(word, 1, RSTART-1)
+			w2 = substr(word, RSTART+2)
+		}
 
 		sub(/^h/, "", w1);
 
 		for(i in REPL) {
-			if (REPL[i] ~ "(sc|xc|gu|qu|c|g)") { sub(REPL[i] "[eéêií]", "..", w1); sub(REPL[i] "[eéêií]", "..", w2); }
+			if (REPL[i] ~ "(sc|xc|gu|qu)") { sub(REPL[i] "[eéêií]", "..", w1); sub(REPL[i] "[eéêií]", "..", w2); }
+			else if (REPL[i] ~ ".[nm]") { sub(REPL[i] "[bcdfgjklmnpqrstvxzç]", "..", w1); sub(REPL[i] "[bcdfgjklmnpqrstvxzç]", "..", w2); }
 			else { sub(REPL[i], ".", w1); sub(REPL[i], ".", w2); }
 		}
 
-		if (word ~ /[aâ][nm][^aáâãeéêiíoóôõuú]/) {
-			if ( length(pronunciation) == length( w1 "ˈ" w2 ) ) {
-				if ( pronunciation ~ "^" substr(w1, 1, length(w1)-1) "ˈ" ) {
-					pronunciation = substr(pronunciation, 1, length(w1) + 1) "ɐ̃" substr(pronunciation, length(w1) + 2);
-				} else if ( pronunciation ~ "ˈ" w2 "$" ) {
+		pronunciation_for_length = pronunciation
+		sub(/ˈ/, "", pronunciation_for_length); # remove prime
+		sub(/ɐ̃w̃/, "ɐw", pronunciation_for_length); # remove tilde
+		sub(/ɐ̃j̃/, "ɐj", pronunciation_for_length); # remove tilde
+		if ( length(pronunciation_for_length) == length( w1 w2 ) ) {
+		
+			if (substr(pronunciation, 1, length(w1)) ~ /ˈ/) {
+				pronunciation = substr(pronunciation, 1, length(w1) + 1) "ɐ̃" substr(pronunciation, length(w1) + 2);
+			} else {
+				if (word ~ /^[â][nm][bcdfgjklmnpqrstvxzç]/ && pronunciation ~ /^ˈ/) {
+					pronunciation = "ˈ" "ɐ̃" substr(pronunciation, 2);
+				} else {
 					pronunciation = substr(pronunciation, 1, length(w1)) "ɐ̃" substr(pronunciation, length(w1) + 1);
 				}
 			}
 		}
 	}
 
-	return "[" pronunciation "]";
+	return pronunciation;
 }
 
 $1 ~ /^[[:alpha:].-]+$/ && $2 ~ /\[[^]]+\]/ && $3 ~ /([[:alnum:]]+\.)+/ {
 
 	word=$1;
 	pronunciation=$2;
+	
+	gsub(/[][]/, "", pronunciation);
 
 	tags = null;
-	if (word ~ /(-se|\(-se\))$/) {
-		gsub(/(-se|\(-se\))$/, "", word);
+	if (word ~ /-se$/) {
+		sub(/-se$/, "", word);
+		sub(/sɨ$/, "", pronunciation);
 		tags = "v.pron.";
 	}
 	for (i = 3; i <= NF; i++) {
-		if ($i in TAGS) tags = tags (tags ? ";" : "") $i;
+		if ($i in TAGS && !index(";" tags ";", ";" $i ";")) tags = tags (tags ? ";" : "") $i;
 	}
-	
+
 	pronunciation = fix_nasals(word, pronunciation);
 	
-	if (tags) print word, pronunciation, tags;
+	if (tags) print word, "[" pronunciation "]", tags;
 }
 
 
