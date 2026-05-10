@@ -3,11 +3,14 @@
 # Extrai palavras do "Grande Dicionário da Língua Portuguesa da Porto Editora", da Porto Editora.
 # Este script gera um arquivo TSV de três colunas que contém apenas: as palavras, as pronúncias e as listas de classes gramaticais de cada palavra, separadas por ponto e vírgula.
 #
-# OBSERVAÇÃO: as pronúncias das palavras que contém a vogal /ã/ (ã, an, am, ân, âm) estão incompletas, pois a editora usou imagens em vez de caracteres para representar esses sons.
+# OBSERVAÇÃO:
+# As pronúncias das palavras que contém as vogais /ã j̃ w̃/ (ã, an, am, ão, ães, ens etc) estão incompletas, pois a editora usou imagens em vez de caracteres para representar esses sons. Para corrigir o problema da falta dos ditongos nasais, converta o ebook para HTMLZ no Calibre, extraia seu conteúdo e execute o script `replace-image-with-letter-and-combining-tilde.sh`.
 #
-# Exemplo de linhas geradas pelo script:
+# Se você NÃO executar o script o `replace-image-with-letter-and-combining-tilde.sh`, preencha o parâmetro FIX_NASALS com 1 para habilitar a função que tenta corrigir o máximo de ditongos nasais possível.
 #
-#   abstração	[ɐb∫traˈs]	s.f.	// note a ausência do ditongo na pronúncia (o script tentará corrigir casos como este)
+# Exemplo de linhas geradas por este script (sem a execução do outro script e com o parâmetro FIX_NASALS=0):
+#
+#   abstração	[ɐb∫traˈs]	s.f.	// note a ausência do ditongo na pronúncia
 #   abstracto	[ɐb∫ˈtratu]	adj.
 #   abstrair	[ɐb∫trɐˈir]	v.t.
 #
@@ -15,12 +18,14 @@
 BEGIN {
 	OFS="\t";
 
+	FIX_NASALS=0 # try to fix nasal diphtongs "ɐ̃w̃", "ɐ̃j̃" and "õj̃"
+
 	PARTS_OF_SPEECH="abrev.;adj.;adj.2g.;adj.2g.2n;adv.;art.;art.def.;art.indef.;conj.;contr.;contr.prep.;elem.loc.;elem.expr.;interj.;loc.;loc.adj.;loc.adv.;loc.conj.;loc.interj.;loc.prep.;loc.v.;num.card.;num.mult.;num.frac.;num.ord.;prep.;pron.;pron.dem.;pron.indef.;pron.int.;pron.pes.;pron.pos.;pron.rel.;s.2g.;s.m.;s.m.2n.;s.m.pl.;s.f.;s.f.2n.;s.f.pl.;v.;v.pron.;v.t.;v.i.;sig.";
 	
 	split(PARTS_OF_SPEECH, POS, /;/);
 	for (x in POS) TAGS[POS[x]];
 
-	# ɐ̃w̃ ɐ̃j̃ õj̃
+	# ditongos nasais: "ɐ̃w̃", "ɐ̃j̃" e "õj̃"
 	NASAL_ENDINGS["ã$"]="$;ɐ̃"
 	NASAL_ENDINGS["ão$"]="$;ɐ̃w̃"
 	NASAL_ENDINGS["ãe$"]="$;ɐ̃j̃"
@@ -137,7 +142,7 @@ $1 ~ /^[[:alpha:].-]+$/ && $2 ~ /\[[^]]+\]/ && $3 ~ /([[:alnum:]]+\.)+/ {
 		if ($i in TAGS && !index(";" tags ";", ";" $i ";")) tags = tags (tags ? ";" : "") $i;
 	}
 
-	pronunciation = fix_nasals(word, pronunciation);
+	if (FIX_NASALS) pronunciation = fix_nasals(word, pronunciation);
 	
 	if (tags) print word, "[" pronunciation "]", tags;
 }
