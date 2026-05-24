@@ -29,7 +29,7 @@ Extracts words from [Dicionário Porto Editora da Língua Portuguesa](https://ww
 ```bash
 gawk -f dicionario-porto-editora.awk "PRIVATE/Dicionário Porto Editora da Língua Portuguesa - Porto Editora.txt" | sort > "PRIVATE/Dicionário Porto Editora da Língua Portuguesa - Porto Editora.tsv"
 
-awk '{ n = split($3, A, ";"); for (i in A) print A[i]; }' "PRIVATE/Dicionário Porto Editora da Língua Portuguesa - Porto Editora.tsv" | sort | uniq -c | sort -rh > "PRIVATE/Dicionário Porto Editora da Língua Portuguesa - Porto Editora.pos.txt"
+awk '{ n = split($2, A, ";"); for (i in A) print A[i]; }' "PRIVATE/Dicionário Porto Editora da Língua Portuguesa - Porto Editora.tsv" | sort | uniq -c | sort -rh > "PRIVATE/Dicionário Porto Editora da Língua Portuguesa - Porto Editora.pos.txt"
 ```
 
 Extracts words from [Grande Dicionário da Língua Portuguesa da Porto Editora](https://www.amazon.com.br/dp/B00HGW83U4):
