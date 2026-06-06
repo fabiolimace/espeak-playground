@@ -1,11 +1,12 @@
 
 EBOOK_FOLDER=${1}
-
-cd "${EBOOK_FOLDER}";
+BASEDIR=`dirname "${0}"`
 
 function audiobook_folder {
 	local ESPEAK_VOICE=${1}
-	find . -type f -name "*.txt" | sort | while read -r EBOOK; do ~/git/espeak-playground/tools/audiobook.sh "${EBOOK}" "${ESPEAK_VOICE}"; done 2>&1 | tee -a audiobook-folder.log
+	find "${EBOOK_FOLDER}" -type f -name "*.txt" | sort \
+	| while read -r EBOOK; do "${BASEDIR}"/audiobook.sh "${EBOOK}" "${ESPEAK_VOICE}"; done 2>&1 \
+	| tee -a "${EBOOK_FOLDER}"/audiobook-folder.log
 }
 
 audiobook_folder pt-br;

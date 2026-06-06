@@ -1,7 +1,6 @@
 
 EBOOK_FOLDER=${1}
-
-cd "${EBOOK_FOLDER}";
+BASEDIR=`dirname "${0}"`
 
 function random {
 	local LIST="${1}"
@@ -10,9 +9,9 @@ function random {
 
 function audiobook_random {
 	local ESPEAK_VOICES="${1}"
-	find . -type f -name "*.txt" | sort | while read -r EBOOK; do
-		~/git/espeak-playground/tools/audiobook.sh "${EBOOK}" `random "${ESPEAK_VOICES}"`;
-	done 2>&1 | tee -a audiobook-random.log
+	find "${EBOOK_FOLDER}" -type f -name "*.txt" | sort | while read -r EBOOK; do
+		"${BASEDIR}"/audiobook.sh "${EBOOK}" `random "${ESPEAK_VOICES}"`;
+	done 2>&1 | tee -a "${EBOOK_FOLDER}"/audiobook-random.log
 }
 
 audiobook_random 'pt-pt pt-br mb-pt1 mb-br1 mb-br2 mb-br3 mb-br4';

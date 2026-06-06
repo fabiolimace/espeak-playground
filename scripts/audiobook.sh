@@ -54,10 +54,11 @@ function audiobook {
 	local VOICE=${2}
 
         local BASENAME="`basename "${FILE_TXT}"`"
+        local DIR_NAME="`dirname "${FILE_TXT}"`"
         local FILE_NAM="${BASENAME%.*}"
 	local FILE_SUF=${VOICE}_$(date -I)_${EPOCHSECONDS}
-	local FILE_WAV=$(echo "${FILE_NAM}")."${FILE_SUF}".wav
-	local FILE_MP3=$(echo "${FILE_NAM}")."${FILE_SUF}".mp3
+	local FILE_WAV=$(echo "${DIR_NAME}/${FILE_NAM}")."${FILE_SUF}".wav
+	local FILE_MP3=$(echo "${DIR_NAME}/${FILE_NAM}")."${FILE_SUF}".mp3
 
 	echo -e "\nConverting '${BASENAME}'";
 
