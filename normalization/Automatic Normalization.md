@@ -49,10 +49,25 @@ Example script to turn 1 000,00 into 1.000,00: [awk/normalize-1000.awk].
 
 		sed -E 's/\b([0-9]+)o\b/\1º/g' ebook.txt
 
-#### Ordinals as superscripts
+#### Ordinals in HTML
 
-* 1^a^ -> 1ª
-* 1^o^ -> 1º
+* 1&ordf;
+
+		echo '12&ordf;' | sed -E 's|\b([0-9]+)[.]?&ordf;|\1ª|g'
+* 1&ordm;
+
+		echo '12&ordf;' | sed -E 's|\b([0-9]+)[.]?&ordm;|\1º|g'
+
+#### Ordinals as superscripts in HTML
+
+* 1<sup>a</sup>
+
+		echo '1<sup>a</sup>' | sed -E 's|\b([0-9]+)[.]?<sup[^>]*>a</sup>|\1ª|g'
+
+* 1<sup>o</sup>
+
+		echo '1<sup>o</sup>' | sed -E 's|\b([0-9]+)[.]?<sup[^>]*>o</sup>|\1º|g'
+
 
 #### Ordinals as degrees
 
@@ -83,6 +98,12 @@ Example script to normalize date: [awk/normalize-date.awk].
 * 23h59 -> 23 horas e 59 minutos
 
 Example script to normalize time: [awk/normalize-time.awk].
+
+### Years ranges
+
+* 1939-1945 -> 1939–1945 (using en-dash for ranges instead of simple dash)
+
+		echo '1939-1945' | sed 's/\b([0-9]{4})-([0-9]{4})\b/\1–\2/g'
 
 Abbreviations
 ----------------------------------
