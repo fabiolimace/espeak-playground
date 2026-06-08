@@ -18,6 +18,10 @@ Numbers
 * 1.000,00 -> 1000,00
 * 1 000,00 -> 1000,00
 
+		echo '1 000,00' | sed -E 's/\b([0-9]{1,3})[ ]([0-9]{3}),([0-9]+)\b/\1.\2,\3/g'
+		echo '1 000 000,00' | sed -E 's/\b([0-9]{1,3})[ ]([0-9]{3})[ ]([0-9]{3}),([0-9]+)\b/\1.\2.\3,\4/g'
+		echo '1 000 000 000,00' | sed -E 's/\b([0-9]{1,3})[ ]([0-9]{3})[ ]([0-9]{3})[ ]([0-9]{3}),([0-9]+)\b/\1.\2.\3.\4,\5/g'
+
 Example script to turn 1 000,00 into 1.000,00: [awk/normalize-1000.awk].
 
 ### Intervals
@@ -28,28 +32,34 @@ Example script to turn 1 000,00 into 1.000,00: [awk/normalize-1000.awk].
 ### Ordinals
 
 * 1.ª -> 1ª
+
+		sed -E 's/\b([0-9]+)[.]ª\b/\1ª/g' ebook.txt
+
 * 1.º -> 1º
 
-Sed command to normalize ordinals:
+		sed -E 's/\b([0-9]+)[.]º\b/\1º/g' ebook.txt
 
-```bash
-# normalize 1°, 1o, 1.°, 1.º, 1.o to 1º
-echo "1°" | sed -E 's/([0-9]+)[oa°]/\1º/' | sed -E 's/([0-9]+)\.[oaºª°]/\1º/'
-```
+#### Ordinals as lowercases
+
+* 1a -> 1ª
+
+		sed -E 's/\b([0-9]+)a\b/\1ª/g' ebook.txt
+
+* 1o -> 1º
+
+		sed -E 's/\b([0-9]+)o\b/\1º/g' ebook.txt
 
 #### Ordinals as superscripts
 
 * 1^a^ -> 1ª
 * 1^o^ -> 1º
 
-#### Ordinals as lowercases
-
-* 1a -> 1ª
-* 1o -> 1º
-
 #### Ordinals as degrees
 
-* 1° -> 1º
+* 1°  -> 1º
+* 1.° -> 1º
+
+		sed -E 's/\b([0-9]+)[.]?°\b/\1º/g' ebook.txt
 
 #### Ordinals as ring above
 
@@ -79,7 +89,7 @@ Abbreviations
 
 ### Superscripts as ordinals
 
-* Sr.ª -> Sr.^a^
+* Sr.ª  -> Sr.^a^
 * Eng.º -> Eng.^o^
 
 ### Acronims
@@ -103,12 +113,14 @@ Degrees
 * 1°C -> 1 °C
 * 1°F -> 1 °F
 
+		sed -E 's/\b([0-9]+)[ ]?°(C|F)\b/\1 °\2/g' ebook.txt
+
 #### Degrees as ordinals
 
-* ºC -> °C
-* ºF -> °F
+* 1 ºC -> 1 °C
+* 1 ºF -> 1 °F
 
-### sub-topic
+		sed -E 's/\b([0-9]+)[ ]?º(C|F)\b/\1 °\2/g' ebook.txt
 
 
 Law
@@ -118,13 +130,21 @@ Law
 
 * Art. 1º  -> Artigo 1º.
 * Art. 1o  -> Artigo 1º.
-* Art. 10. -> Artigo 10.
+* Art. 1.º -> Artigo 1º.
+
+		echo 'Art. 1.º' | sed -E 's/\b(A|a)rt[.] ([0-9]+)[.]?[oº]\b/\1rtigo \2º/g' ebook.txt
+
 
 ### Parágrafo
 
 * § 1º  -> Parágrafo 1º.
 * § 1o  -> Parágrafo 1º.
-* § 10. -> Parágrafo 10.
+* § 1.º -> Parágrafo 1º.
+* §$ 1º ao 5º -> Parágrafos 1º ao 5º.
+
+		echo '§ 1.º' | sed -E 's/§ ([0-9]+)[.]?[oº]/Parágrafo \1º/g'  ebook.txt
+		echo '§§ 1.º ao 5º' | sed -E 's/§§ ([0-9]+)[.]?[oº]/Parágrafos \1º/g'  ebook.txt
+
 
 ### incisos
 
@@ -134,13 +154,28 @@ Law
 
 * a) -> a.
 
-#### Degrees as ordinals
+		echo 'a) ' | sed -E 's/^([a-z])[)]/\1. /'  ebook.txt
+
+
+#### Ordinals as degrees
 
 * ºC -> °C
 * ºF -> °F
 
 ### sub-topic
 
+Other fixes
+----------------------------------
+
+Remove numbers between brackets:
+
+```
+sed -E 's/\[[0-9]+\]//g' ebook.txt
+```
+
+```
+sed -E 's/\b([[:alpha:]]+)([.,:;!?])[0-9]+\b/\1\2/g' ebook.txt
+```
 
 References
 ----------------------------------
