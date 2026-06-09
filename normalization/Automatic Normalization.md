@@ -112,9 +112,13 @@ Example script to normalize time: [awk/normalize-time.awk].
 
 ### Years ranges
 
-* 1939-1945 -> 1939–1945 (using en-dash for ranges instead of simple dash)
+* 1939-1945 -> 1939–1945 (using en-dash for years ranges instead of simple dash)
 
 		echo '1939-1945' | sed 's/\b([0-9]{4})-([0-9]{4})\b/\1–\2/g'
+
+* 470-399 a.C -> 470–399 a.C
+
+		echo '470-399 a.C.' | sed -E 's/([0-9]{1,4})-([0-9]{1,4}) ([aA]\.C\.|[dD]\.C\.|[aA]\.E\.C\.|[dD]\.E\.C\.)/\1–\2 \3/g'
 
 Abbreviations
 ----------------------------------
@@ -199,15 +203,19 @@ Law
 Other fixes
 ----------------------------------
 
-Remove numbers between brackets:
+Remove numbers between brackets of ebooks converted from EPUB to TXT:
 
 ```
-sed -E 's/\[[0-9]+\]//g' ebook.txt
+sed -Ei 's/([[:punct:]])\[[0-9]+\]/\1/g' ebook.txt
 ```
 
+Remove numbers after puncts of ebooks converted from EPUB to TXT:
+
 ```
-sed -E 's/\b([[:alpha:]]+)([.,:;!?])[0-9]+\b/\1\2/g' ebook.txt
+sed -Ei 's/([[:alpha:]]+)([.,:;!?])[0-9]+([ ]|$)/\1\2\3/g' ebook.txt
 ```
+
+
 
 References
 ----------------------------------
