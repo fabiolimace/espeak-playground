@@ -81,6 +81,17 @@ Example script to turn 1 000,00 into 1.000,00: [awk/normalize-1000.awk].
 * 1U+02DA -> 1º
 
 
+#### Roman numbers in lowercase
+
+Século xxi -> Século XXI
+
+		awk '{ for (i=1; i<NF; i++) { if ($i ~ /^[[:punct:]]*[Ss]éculos?$/ && $(i+1) ~ /^[ivxlcm]+[[:punct:]]*$/ ) { $(i+1) = toupper($(i+1)) } }; print; }' ebook.txt
+
+(xxi) -> (XXI)
+
+		awk '{ for (i=1; i<NF; i++) { if ($i ~ /^\([ivxlcm]+\)$/ ) { $i = toupper($i) } }; print; }' ebook.txt
+
+
 Dates
 ----------------------------------
 
