@@ -69,3 +69,120 @@ Sometimes it's not possible to process all texts in our collection. This command
 find my-big-collection/ -type f -size +4k -size -9k | shuf | while read -r i; do [ $(( $RANDOM % 100 )) -gt 10 ] && continue; cp -v --update=none --parents "$i" smaller-collection/; done;
 ```
 
+Non-existing words
+----------------------------------
+
+Find all non-existing words of the ebook collection.
+
+	STAT_FILE=extracted-words/ebook-collection-words.tsv
+	DICT_FILE=/usr/share/dict/brazilian
+
+	cat "${STAT_FILE}" \
+		| awk -v "DICT_FILE=${DICT_FILE}" 'BEGIN { while (getline < DICT_FILE) { DICT[tolower($1)]=1; } } { if (!(tolower($1) in DICT)) { print $0 } }'
+
+
+Now list only proper names in the ebook collection:
+
+	cat "${STAT_FILE}" | awk '$2 == "S"' \
+		| awk -v "DICT_FILE=${DICT_FILE}" 'BEGIN { while (getline < DICT_FILE) { DICT[tolower($1)]=1; } } { if (!(tolower($1) in DICT)) { print $0 } }' \
+		| sort -h -t'	' -k3,3 | tac | head -n 10
+
+Now list the top 20 names in the ebook collection:
+
+
+	cat "${STAT_FILE}" | awk '$2 == "S"' \
+		| awk -v "DICT_FILE=${DICT_FILE}" 'BEGIN { while (getline < DICT_FILE) { DICT[tolower($1)]=1; } } { if (!(tolower($1) in DICT)) { print $0 } }' \
+		| sort -h -t'	' -k3,3 | tac | head -n 20
+
+
+	Cambridge	S	5404	0.00544304	316	0.406692
+	Robert	S	5073	0.00510965	418	0.537967
+	Marx	S	4874	0.00490921	267	0.343629
+	Kant	S	4777	0.00481151	194	0.249678
+	Oxford	S	4504	0.00453654	336	0.432432
+	Thomas	S	3846	0.00387378	425	0.546976
+	Philip	S	3816	0.00384357	142	0.182754
+	Smith	S	3793	0.0038204	279	0.359073
+	William	S	3591	0.00361694	417	0.53668
+	Hegel	S	3590	0.00361593	152	0.195624
+	Sócrates	S	3555	0.00358068	218	0.280566
+	Charles	S	3443	0.00346787	428	0.550837
+	James	S	3295	0.0033188	400	0.514801
+	Judá	S	3268	0.00329161	61	0.0785071
+	Zeus	S	3208	0.00323117	139	0.178893
+	Hans	S	2955	0.00297635	213	0.274131
+	Scarlett	S	2801	0.00282123	11	0.014157
+	Henry	S	2616	0.0026349	338	0.435006
+	Sartre	S	2568	0.00258655	108	0.138996
+	Anna	S	2557	0.00257547	143	0.184041
+
+
+Now pronounce the top 20 names using eSpeak NG:
+
+	cat "${STAT_FILE}" | awk '$2 == "S"' \
+		| awk -v "DICT_FILE=${DICT_FILE}" 'BEGIN { while (getline < DICT_FILE) { DICT[tolower($1)]=1; } } { if (!(tolower($1) in DICT)) { print $0 } }' \
+		| sort -h -t'	' -k3,3 | tac | head -n 20 \
+		| awk '{ print $1}' | while read word; do echo $word; espeak-ng -v pt-br --ipa $word; echo; done;
+
+
+	Cambridge
+	kˈembɹˌidʒɪ
+
+	Robert
+	xˈɔbɛɾtʃ
+
+	Marx
+	mˈaɾks
+
+	Kant
+	kˈɐ̃ntʃ
+
+	Oxford
+	oksfˈɔɾdʒ
+
+	Thomas
+	tˈomɐs
+
+	Philip
+	fˈilip
+
+	Smith
+	zmˈitʃ
+
+	William
+	wˈiliʲɐm
+
+	Hegel
+	hˈeɡew
+
+	Sócrates
+	sˈɔkɾɐtʃɪs
+
+	Charles
+	ʃˈaɾlɪs
+
+	James
+	dʒˈeɪmɪs
+
+	Judá
+	ʒudˈa
+
+	Zeus
+	zˈeʊs
+
+	Hans
+	hˈɐns
+
+	Scarlett
+	skˈaɾletʃ
+
+	Henry
+	ˈẽnxi
+
+	Sartre
+	sˈaɾtɾɪ
+
+	Anna
+	ˈɐ̃nɐ
+
+
