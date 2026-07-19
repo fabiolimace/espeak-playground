@@ -6,7 +6,7 @@
 # Usage
 #
 # 	# output: a.vi.'ãʊ 'bo.lə 'ka.zə
-#	echo "a.vi.ão bo.la ca.sa" | awk -f transcriber.awk
+#	echo "a.vi.ão bo.la ca.sa" | awk -f phonemizer.awk
 #
 
 BEGIN {
@@ -45,7 +45,7 @@ BEGIN {
 	SYLLABLE_ULTIMATE=-1;
 	
 	if (!ALPHABET) ALPHABET = 1 # IPA
-	if (!RULES_FILE) RULES_FILE = "./transcriber-rules.tsv";
+	if (!RULES_FILE) RULES_FILE = "./phonemizer-rules.tsv";
 	if (!STRESSED_SYLLABLE) STRESSED_SYLLABLE = SYLLABLE_PENULTIMATE;
 	
 	load_alphabets();

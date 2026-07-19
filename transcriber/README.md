@@ -1,5 +1,5 @@
 
-Transcriber
+Phonemizer
 ==================================
 
 Description
@@ -11,7 +11,7 @@ Structure of rules for a triad of syllables:
 
 ```
 +---------------------------------------------------------------------------------------+
-|                              Structure of Transcriber Rules                           |
+|                              Structure of Phonemizer Rules                           |
 +--------------------------+---------------+-------------------------+------------------+
 |          F1              |       F2      |          F3             |        F4        |
 +--------------------------+---------------+-------------------------+------------------+
@@ -37,7 +37,7 @@ Note: The apostrophe is also important to find rule matches. If a stress has bee
 
 ```
 +---------------------------------------------------------------------------------------+
-|                              Examples of Transcriber Rules                            |
+|                              Examples of Phonemizer Rules                            |
 +--------------------------+---------------+-------------------------+------------------+
 |          F1              |       F2      |           F3            |        F4        |
 +--------------------------+---------------+-------------------------+------------------+
@@ -99,19 +99,19 @@ Note: there's no need to implement a generic syllable which the nucleus or coda 
 Demonstration
 ----------------------------------
 
-Run the `transcriber.awk` script:
+Run the `phonemizer.awk` script:
 
 ```bash
 cat /usr/share/dict/brazilian | awk -f ../syllabificator/syllabificator.awk  \
-    | awk -f transcriber.awk 2> /dev/null | awk 'NF' > transcriber.output.txt
+    | awk -f phonemizer.awk 2> /dev/null | awk 'NF' > phonemizer.output.txt
 ```
 
-You need the syllabificator to generate the input for `transcriber.awk`.
+You need the syllabificator to generate the input for `phonemizer.awk`.
 
 Output sample:
 
 ```bash
-shuf -n 200  transcriber.output.txt  | sort
+shuf -n 200  phonemizer.output.txt  | sort
 ```
 ```
 a.dẽ.'ta.ɾẽɪ
