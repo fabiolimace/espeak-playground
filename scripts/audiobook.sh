@@ -63,13 +63,13 @@ function audiobook {
 	echo -e "\nConverting '${BASENAME}'";
 
 	[ -n "`which lame`" ] && ( \
-		espeak-ng --stdout -v "${VOICE}"  -f "${FILE_TXT}" | \
+		espeak-ng -v "${VOICE}" -f "${FILE_TXT}" --stdout | \
 		lame -b 32 - "${FILE_MP3}" ) && \
 		mp3tag "${FILE_NAM}" "${FILE_MP3}" && exit;
 
 	[ -n "`which ffmpeg`" ] && ( \
-		espeak-ng -v "${VOICE}" -f "${FILE_TXT}" -w "${FILE_WAV}" && \
-		ffmpeg -i "${FILE_WAV}" "${FILE_MP3}" && rm "${FILE_WAV}" ) && \
+		espeak-ng -v "${VOICE}" -f "${FILE_TXT}" --stdout | \
+		ffmpeg -i - "${FILE_MP3}" ) && \
 		mp3tag "${FILE_NAM}" "${FILE_MP3}" && exit;
 }
 
