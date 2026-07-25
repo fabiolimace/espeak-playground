@@ -4,7 +4,7 @@ BASEDIR=`dirname "${0}"`
 
 function audiobook_folder {
 	local ESPEAK_VOICE=${1}
-	find "${EBOOK_FOLDER}" -type f -name "*.txt" | sort \
+	find "${EBOOK_FOLDER}" -type f -name "*.txt" | sort -h \
 	| while read -r EBOOK; do "${BASEDIR}"/audiobook.sh "${EBOOK}" "${ESPEAK_VOICE}"; done 2>&1 \
 	| tee -a "${EBOOK_FOLDER}"/audiobook-folder.log
 }
