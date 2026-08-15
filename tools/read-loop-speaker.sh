@@ -19,10 +19,11 @@
 
 SIZE=${1:-2147483647} # 2^31-1 (safe limit)
 PAGE=${2:-1}
+VOICE=${3:-pt-br}
 
 MAX=$(expr $PAGE \* $SIZE)
 i=$(expr $MAX \- $SIZE)
 
 awk '/[^ \t]/' | head -n $MAX | tail -n $SIZE | \
-while read line; do i=$(expr $i \+ 1); echo; echo $i; echo $line; espeak-ng --ipa -v pt-br $line; done;
+while read line; do i=$(expr $i \+ 1); echo; echo "$i"; echo "$line"; espeak-ng --ipa -v $VOICE "$line"; done;
 
