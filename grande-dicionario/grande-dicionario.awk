@@ -1,10 +1,12 @@
 #!/usr/bin/mawk -f
 
 #
-# Produces a TSV that compares each Aeiouado's entries with espeak-ng outputs.
+# Produces a TSV that compares each Grande Dicionarios's entries with espeak-ng outputs.
+#
+# Based on and improved from `../aeiouado-ipa/aeiouado-ipa.awk`
 #
 # Usage:
-# awk -f aeiouado-ipa.awk aeiouado-ipa-01.csv | tee aeiouado-ipa.output.tsv
+# awk -f grande-dicionario.awk grande-dicionario.tsv | tee grande-dicionario.output.tsv
 #
 # EXPECTED INPUT:
 # WORD	IPA1
@@ -41,16 +43,55 @@ function max_length(a, b,    x, y) {
 {
     $1=tolower($1);
     
-    gsub("'", "", $2);
+    gsub("ˈ", "", $2);
     gsub("\\.", "", $2);
     $2=substr($2, 2, length($2)-2);
     
-    command = "espeak-ng -q -v pt-br --ipa \"" $1 "\" 2>/dev/null"
+    command = "espeak-ng -q -v pt-pt --ipa \"" $1 "\" 2>/dev/null"
     command | getline $3;
     close(command);
     
     gsub("ˈ", "", $3);
     gsub("ˌ", "", $3);
+        
+    gsub(/ɪɐ$/, "jɐ", $3);
+    gsub(/ɪʊ$/, "jʊ", $3);
+    gsub(/ɪɪ$/, "jɪ", $3);
+    gsub(/ɪɨ$/, "jɨ", $3);
+    
+    gsub(/aɪ/, "aj", $3);
+    gsub(/eɪ/, "ɐj", $3);
+    gsub(/ɛɪ/, "ɛj", $3);
+    gsub(/iɪ/, "ij", $3);
+    gsub(/oɪ/, "oj", $3);
+    gsub(/ɔɪ/, "ɔj", $3);
+    gsub(/uɪ/, "uj", $3);
+    
+    gsub(/aʊ/, "aw", $3);
+    gsub(/eʊ/, "ew", $3);
+    gsub(/ɛʊ/, "ɛw", $3);
+    gsub(/iʊ/, "iw", $3);
+    gsub(/oʊ/, "ow", $3);
+    gsub(/ɔʊ/, "ɔw", $3);
+    gsub(/uʊ/, "uw", $3);
+    
+    gsub(/ɪ̃/, "j̃", $3);
+    gsub(/ʊ̃/, "w̃", $3);
+    gsub(/ʊ/, "u", $3);
+
+    gsub(/ʁ/, "ʀ", $3);
+    gsub(/ɾ/, "r", $3);
+    gsub(/ŋ/, "n", $3);
+    
+    gsub(/β/, "b", $3);
+    gsub(/ð/, "d", $3);
+    gsub(/ɣ/, "ɡ", $3); # different bytes for g
+    
+    # fix $2 instead
+    gsub(/ł/, "ɫ", $2); # different bytes
+    gsub(/∫/, "ʃ", $2); # different bytes
+    gsub(/ε/, "ɛ", $2); # different bytes
+    gsub(/g/, "ɡ", $2); # different bytes
     
     n = max_length($2, $3);
     split($2, A, "");

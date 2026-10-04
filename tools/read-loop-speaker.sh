@@ -25,5 +25,5 @@ MAX=$(expr $PAGE \* $SIZE)
 i=$(expr $MAX \- $SIZE)
 
 awk '/[^ \t]/' | head -n $MAX | tail -n $SIZE | \
-while read line; do i=$(expr $i \+ 1); echo; echo "$i"; echo "$line"; espeak-ng --ipa -v $VOICE "$line"; done;
+while read line; do i=$(expr $i \+ 1); echo; echo "$i"; echo "$line"; echo "$line" | awk '{ print $1 }' | espeak-ng --ipa -v $VOICE; done;
 
