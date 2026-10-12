@@ -26,12 +26,13 @@ Nasal vowels:
 
 | Vowel | Unicode       |
 |-------|---------------|
+|   ã   | a      U+0303 |
 |   ɐ̃   | U+0250 U+0303 |
-|   ẽ   |               |
-|   ĩ   |               |
+|   ẽ   | e      U+0303 |
+|   ĩ   | i      U+0303 |
 |   ɪ̃   | U+026A U+0303 |
-|   õ   |               |
-|   ũ   |               |
+|   õ   | o      U+0303 |
+|   ũ   | u      U+0303 |
 |   ʊ̃   | U+028A U+0303 |
 
 Oral Semivowels:
@@ -47,9 +48,9 @@ Nasal Semivowels:
 
 | Vowel | Unicode              |
 |-------|----------------------|
-|   j̃   | j U+0303             |
+|   j̃   | j      U+0303        |
 |   ɪ̯̃   | U+026A U+0303 U+032F |
-|   w̃   | w U+0303             |
+|   w̃   | w      U+0303        |
 |   ʊ̯̃   | U+028A U+0303 U+032F |
 
 Consonants:
@@ -122,12 +123,21 @@ Regex for oral vowels:
 
 Regex for nasal vowels:
 
-	[ɐ̃ẽĩɪ̃õũʊ̃]
+	(ã|ɐ̃|ẽ|ĩ|ɪ̃|õ|ũ|ũ)
+
+Normalize the nasal vowels first:
+
+	s/ã/ã/g;
+	s/ẽ/ẽ/g;
+	s/ĩ/ĩ/g;
+	s/õ/õ/g;
+	s/ũ/ũ/g;
+	
+> TODO: properly normalize nasals.
 
 Regex for a possible stress:
 
 	[ˈˌ]?
-
 
 Change Vowels
 ----------------------------------
@@ -140,9 +150,9 @@ Sed script to replace /ɐ/ with /ə/:
 
 	s/ɐ/ə/g;
 
-Sed script to replace /ɐ̃/ with /ã/:
+Sed script to replace /ɐ̃/ with /ã/:
 
-	s/ɐ̃/ã/g;
+	s/ɐ̃/ã/g;
 
 Sed script to replace /ɨ/ with /ɨ̥/:
 
@@ -160,33 +170,28 @@ Sed script to replace /ej/ with /ɐj/:
 
 	s/ej/ɐj/g;
 
-Sed script to replace /ẽĩ/ with /ɐ̃ĩ/:
+Change Nasal Vowels
+----------------------------------
 
-	s/ẽĩ/ɐ̃ĩ/g;
+Sed script to replace /ẽĩ/ with /ɐ̃ĩ/:
+
+	s/ẽĩ/ɐ̃ĩ/g;
 
 Sed script to replace /ẽj̃/ with /ɐ̃j̃/:
 
 	s/ẽj̃/ɐ̃j̃/g;
 
-Sed script to replace /[ɐ̃ẽĩɪ̃õũʊ̃]ɪ̃/ with /[ɐ̃ẽĩɪ̃õũʊ̃]j̃/:
+Sed script to replace /eɪ[nŋm]/ with /ẽĩ/:
 
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])ɪ̃/\1j̃/g;
-
-Sed script to replace /[ɐ̃ẽĩɪ̃õũʊ̃]ʊ̃/ with /[ɐ̃ẽĩɪ̃õũʊ̃]w̃/:
-
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])ʊ̃/\1w̃/g;
-
-Sed script to replace /eɪ[nŋm]/ with /ẽĩ/:
-
-	s/eɪ([nŋm])/ẽĩ/g;
+	s/eɪ([nŋm])/ẽĩ/g;
 
 Sed script to replace /eɪ[nŋm]/ with /ẽj̃/:
 
 	s/eɪ([nŋm])/ẽj̃/g;
 
-Sed script to replace /eɪ[nŋm]/ with /ẽĩ[nŋm]/:
+Sed script to replace /eɪ[nŋm]/ with /ẽĩ[nŋm]/:
 
-	s/eɪ([nŋm])/ẽĩ\1/g;
+	s/eɪ([nŋm])/ẽĩ\1/g;
 
 Sed script to replace /eɪ[nŋm]/ with /ẽj̃[nŋm]/:
 
@@ -215,25 +220,28 @@ Sed script to replace /aja/ with /ajʲa/:
 
 	s/([aɐəɑeɛiɪɨoɔuʊ])j([aɐəɑeɛiɪɨoɔuʊ])/\1jʲ\2/g;
 
+Change Nasal Vowels With Context
+----------------------------------
+
 Sed script to replace /ɐ̃[nŋm]/ with /ɐ̃/:
 
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])[nŋm]([^aɐəɑeɛiɪɨoɔuʊ]|\>)/\1\2/g;
+	s/(ã|ɐ̃|ẽ|ĩ|ɪ̃|õ|ũ|ũ)[nŋm]([^aɐəɑeɛiɪɨoɔuʊ]|\>)/\1\2/g;
 
 Sed script to replace /ɐ̃n/ with /ɐ̃ⁿ/:
 
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])n([^aɐəɑeɛiɪɨoɔuʊ]|\>)/\1ⁿ\2/g;
+	s/(ã|ɐ̃|ẽ|ĩ|ɪ̃|õ|ũ|ũ)n([^aɐəɑeɛiɪɨoɔuʊ]|\>)/\1ⁿ\2/g;
 
 Sed script to replace /ɐ̃n/ with /ɐ̃ⁿ/:
 
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])ŋ([^aɐəɑeɛiɪɨoɔuʊ]|\>)/\1ᵑ\2/g;
+	s/(ã|ɐ̃|ẽ|ĩ|ɪ̃|õ|ũ|ũ)ŋ([^aɐəɑeɛiɪɨoɔuʊ]|\>)/\1ᵑ\2/g;
 
 Sed script to replace /ɐ̃m/ with /ɐ̃ᵐ/:
 
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])m([^pb]|\>)/\1ᵐ\2/g;
+	s/(ã|ɐ̃|ẽ|ĩ|ɪ̃|õ|ũ|ũ)m([pb]|\>)/\1ᵐ\2/g;
 
 Sed script to replace /ɐ̃n/ with /ɐ̃ᶬ/:
 
-	s/([ɐ̃ẽĩɪ̃õũʊ̃])n([fv])/\1ᶬ\2/g;
+	s/(ã|ɐ̃|ẽ|ĩ|ɪ̃|õ|ũ|ũ)n([fv])/\1ᶬ\2/g;
 
 Change Consonants
 ----------------------------------
@@ -319,11 +327,11 @@ Change Consonants With Context
 
 Sed script to replace /ɡw/(U+0261) with /ɡʷ/:
 
-	s/ɡw([ˈˌ]?[aɐəɑeɛiɪɨoɔuʊɐ̃ẽĩɪ̃õũʊ̃])/ɡʷ\1/g;
+	s/ɡw([ˈˌ]?[aɐəɑeɛiɪɨoɔuʊ])/ɡʷ\1/g;
 
 Sed script to replace /kw/(U+0261) with /kʷ/:
 
-	s/kw([ˈˌ]?[aɐəɑeɛiɪɨoɔuʊɐ̃ẽĩɪ̃õũʊ̃])/kʷ\1/g;
+	s/kw([ˈˌ]?[aɐəɑeɛiɪɨoɔuʊ])/kʷ\1/g;
 
 Sed script to replace intervocalic /b/(U+0261) with /β/:
 
@@ -360,6 +368,10 @@ Sed script to replace intervocalic /ɡɾ/(U+0261) with /ɣɾ/:
 Sed script to replace intervocalic /ɡl/(U+0261) with /ɣl/:
 
 	s/([aɐəɑeɛiɪɨoɔuʊ])ɡl([ˈˌ]?[aɐəɑeɛiɪɨoɔuʊ])/\1ɣl\2/g;
+	
+Sed script to replace /bˈa/ and /bɾˈa/ with /ˈba/ and /ˈbɾa/:
+
+	s/([^aɐəɑeɛiɪɨoɔuʊˈˌɾlɫw][ɾlɫw]?)([ˈˌ])([aɐəɑeɛiɪɨoɔuʊ])/\2\1\3/g;
 
 Change Crescent Diphthongs with /j, ɪ̯/
 ----------------------------------
@@ -463,6 +475,42 @@ Sed script to replace /aɪ/ with /aɪ̯/:
 	s/uɪ/uɪ̯/g;
 	s/ʊɪ/ʊɪ̯/g;
 
+Change Nasal Decrescent Diphthongs with /j̃, ɪ̯̃/
+----------------------------------
+
+Sed script to replace /ɐ̃j̃/ with /ɐ̃ɪ̃/:
+
+	s/ãj̃/ãɪ̃/g;
+	s/ɐ̃j̃/ɐ̃ɪ̃/g;
+	s/ẽj̃/ẽɪ̃/g;
+	s/ĩj̃/ĩɪ̃/g;
+	s/ɪ̃j̃/ɪ̃ɪ̃/g;
+	s/õj̃/õɪ̃/g;
+	s/ũj̃/ũɪ̃/g;
+	s/ʊ̃j̃/ʊ̃ɪ̃/g;
+
+Sed script to replace /ɐ̃ɪ̃/ with /ɐ̃j̃/:
+
+	s/ãɪ̃/ãj̃/g;
+	s/ɐ̃ɪ̃/ɐ̃j̃/g;
+	s/ẽɪ̃/ẽj̃/g;
+	s/ĩɪ̃/ĩj̃/g;
+	s/ɪ̃ɪ̃/ɪ̃j̃/g;
+	s/õɪ̃/õj̃/g;
+	s/ũɪ̃/ũj̃/g;
+	s/ʊ̃ɪ̃/ʊ̃j̃/g;
+
+Sed script to replace /ɐ̃ɪ̃/ with /ɐ̃ɪ̯̃/:
+
+	s/ãɪ̃/ãɪ̯̃/g;
+	s/ɐ̃ɪ̃/ɐ̃ɪ̯̃/g;
+	s/ẽɪ̃/ẽɪ̯̃/g;
+	s/ĩɪ̃/ĩɪ̯̃/g;
+	s/ɪ̃ɪ̃/ɪ̃ɪ̯̃/g;
+	s/õɪ̃/õɪ̯̃/g;
+	s/ũɪ̃/ũɪ̯̃/g;
+	s/ʊ̃ɪ̃/ʊ̃ɪ̯̃/g;
+
 Change Crescent Diphthongs with /w, ʊ̯/
 ----------------------------------
 
@@ -564,5 +612,41 @@ Sed script to replace /aʊ/ with /aʊ̯/:
 	s/ɔʊ/ɔʊ̯/g;
 	s/uʊ/uʊ̯/g;
 	s/ʊʊ/ʊʊ̯/g;
+
+Change Nasal Decrescent Diphthongs with /w̃, ʊ̯̃/
+----------------------------------
+
+Sed script to replace /ɐ̃w̃/ with /ɐ̃ʊ̃/:
+
+	s/ãw̃/ãʊ̃/g;
+	s/ɐ̃w̃/ɐ̃ʊ̃/g;
+	s/ẽw̃/ẽʊ̃/g;
+	s/ĩw̃/ĩʊ̃/g;
+	s/ɪ̃w̃/ɪ̃ʊ̃/g;
+	s/õw̃/õʊ̃/g;
+	s/ũw̃/ũʊ̃/g;
+	s/ʊ̃w̃/ʊ̃ʊ̃/g;
+
+Sed script to replace /ɐ̃ʊ̃/ with /ɐ̃w̃/:
+
+	s/ãʊ̃/ãw̃/g;
+	s/ɐ̃ʊ̃/ɐ̃w̃/g;
+	s/ẽʊ̃/ẽw̃/g;
+	s/ĩʊ̃/ĩw̃/g;
+	s/ɪ̃ʊ̃/ɪ̃w̃/g;
+	s/õʊ̃/õw̃/g;
+	s/ũʊ̃/ũw̃/g;
+	s/ʊ̃ʊ̃/ʊ̃w̃/g;
+
+Sed script to replace /ɐ̃ʊ̃/ with /ɐ̃ʊ̯̃/:
+
+	s/ãʊ̃/ãʊ̯̃/g;
+	s/ɐ̃ʊ̃/ɐ̃ʊ̯̃/g;
+	s/ẽʊ̃/ẽʊ̯̃/g;
+	s/ĩʊ̃/ĩʊ̯̃/g;
+	s/ɪ̃ʊ̃/ɪ̃ʊ̯̃/g;
+	s/õʊ̃/õʊ̯̃/g;
+	s/ũʊ̃/ũʊ̯̃/g;
+	s/ʊ̃ʊ̃/ʊ̃ʊ̯̃/g;
 
 
