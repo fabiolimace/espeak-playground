@@ -1,4 +1,4 @@
-IPA Normalization
+IPA Transformation
 ==================================
 
 Character Tables
