@@ -5,6 +5,8 @@
 # phonetic transcription used in the Grande Dicionário da Língua
 # Portuguesa, published by Porto Editora.
 #
+# To be used with the voice pt-PT.
+#
 
 sed -E -f <(cat <<-EOL
 

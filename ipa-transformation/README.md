@@ -70,6 +70,7 @@ Consonants:
 |   k   |         |
 |   l   |         |
 |   ɫ   | U+026B  |
+|   ʎ   | U+028E  |
 |   m   |         |
 |   n   |         |
 |   ɲ   | U+0272  |
@@ -254,6 +255,10 @@ Sed script to replace /ɐ̃n/ with /ɐ̃ᶬ/:
 
 Change Consonants
 ----------------------------------
+
+Sed script to replace /ʎ/ with /lʲ/:
+
+	s/ʎ/lʲ/g;
 
 Sed script to replace /g/ with /ɡ/(U+0261):
 

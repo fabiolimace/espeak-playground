@@ -1,47 +1,36 @@
+Grande Dicionario
+==================================
 
-Lista palavras do Grande Dicionário que se diferenciam:
+Iteration of improvements
+----------------------------------
 
-	time cat ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0' > grande-dicionario.tsv
+An iteration is a session of improvements in the rules of European Portuguese.
 
-Lista palavras do Grande Dicionário que se diferenciam entre /e/ e /ɨ/:
+First you generate the first OUTPUT file, with the number ZERO. All iterations will be compared with the first OUTPUT file.
 
-	time awk '$1 ~ /e/' ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0 && $4 ~ /^[^[:punct:]]*\[[eɨ]\]/ && $5 ~ /^[^[:punct:]]*\[[eɨ]\]/' > grande-dicionario-e1.tsv
+Then, you start another iteration by making improvements to the rules and exceptions.
 
-No caso acima, uma das coisas que se pode fazer é mudar a definição do fonema /e/ no arquivo ph_portugal para usar a instrução `ChangeIfNotStressed()` em vez de `ChangeIfUnstressed()`.
+After the improvements, you generate another OUTPUT file for the current iteration.
 
-	phoneme e
-	  vwl starttype #e endtype #e
-	  length 180
-	//ChangeIfUnstressed(y)
-	  ChangeIfNotStressed(y)
-	  FMT(vowel/e)
-	endphoneme
+Generate an output file for the current iteration:
 
+	i=0
+	time awk -f grande-dicionario.awk ../dict-extraction/PRIVATE/"Grande Dicionário da Língua Portuguesa da Porto Editora - Porto Editora.tsv" | tee OUTPUT.$i.tsv
+	
+Generate a file that lists all matches for the current iteration:
 
-Lista palavras do Grande Dicionário que se diferenciam entre /e/ e /ɛ/:
+	awk '$6 { print $1 }' OUTPUT.$i.tsv > MATCHES.$i.txt
 
-	time awk '$1 ~ /e/' ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0 && $4 ~ /^[^[:punct:]]*\[[eɛ]\]/ && $5 ~ /^[^[:punct:]]*\[[eɛ]\]/' > grande-dicionario-e2.tsv
+Count and list the words the current iteration fixed:
 
-Lista palavras do Grande Dicionário que se diferenciam entre /ɨ/ e /ɛ/:
+	diff MATCHES.0.txt MATCHES.$i.txt | grep -F '>' | wc -l
+	diff MATCHES.0.txt MATCHES.$i.txt | grep -F '>' > FIXED.$i.txt
 
-	time awk '$1 ~ /e/' ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0 && $4 ~ /^[^[:punct:]]*\[[ɨɛ]\]/ && $5 ~ /^[^[:punct:]]*\[[ɨɛ]\]/' > grande-dicionario-e3.tsv
+Count and list the words that the current iteration broke:
 
-Lista palavras do Grande Dicionário que se diferenciam entre /o/ e /u/:
+	diff MATCHES.0.txt MATCHES.$i.txt | grep -F '<' | wc -l
+	diff MATCHES.0.txt MATCHES.$i.txt | grep -F '<' > BROKEN.$i.txt
 
-	time awk '$1 ~ /o/' ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0 && $4 ~ /^[^[:punct:]]*\[[ou]\]/ && $5 ~ /^[^[:punct:]]*\[[ou]\]/' > grande-dicionario-o1.tsv
+Now you will try to fix the words you broke in the current iteration.
 
-Lista palavras do Grande Dicionário que se diferenciam entre /o/ e /ɔ/:
-
-	time awk '$1 ~ /o/' ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0 && $4 ~ /^[^[:punct:]]*\[[oɔ]\]/ && $5 ~ /^[^[:punct:]]*\[[oɔ]\]/' > grande-dicionario-o2.tsv
-
-Lista palavras do Grande Dicionário que se diferenciam entre /u/ e /ɔ/:
-
-	time awk '$1 ~ /o/' ../dict-extraction/PRIVATE/Grande\ Dicionário\ da\ Língua\ Portuguesa\ da\ Porto\ Editora\ -\ Porto\ Editora.tsv \
-	| awk -f grande-dicionario.awk | awk '$6 == 0 && $4 ~ /^[^[:punct:]]*\[[uɔ]\]/ && $5 ~ /^[^[:punct:]]*\[[uɔ]\]/' > grande-dicionario-o3.tsv
-
+Then start another iteration.
